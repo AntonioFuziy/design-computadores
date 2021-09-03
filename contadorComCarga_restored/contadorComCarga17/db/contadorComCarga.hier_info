@@ -1,0 +1,165 @@
+|contadorComCarga
+CLOCK_50 => edgedetector:detectorSub0.clk
+SW[0] => muxgenerico2x1:MUX.entradaA_MUX[0]
+SW[1] => muxgenerico2x1:MUX.entradaA_MUX[1]
+SW[2] => muxgenerico2x1:MUX.entradaA_MUX[2]
+SW[3] => muxgenerico2x1:MUX.entradaA_MUX[3]
+SW[4] => muxgenerico2x1:MUX.entradaA_MUX[4]
+SW[5] => muxgenerico2x1:MUX.entradaA_MUX[5]
+SW[6] => muxgenerico2x1:MUX.entradaA_MUX[6]
+SW[7] => muxgenerico2x1:MUX.entradaA_MUX[7]
+KEY[0] => edgedetector:detectorSub0.entrada
+KEY[1] => muxgenerico2x1:MUX.seletor_MUX
+HEX0[0] <= conversorhex7segduplo:nomeComponente.saida_UNIDADE_7seg[0]
+HEX0[1] <= conversorhex7segduplo:nomeComponente.saida_UNIDADE_7seg[1]
+HEX0[2] <= conversorhex7segduplo:nomeComponente.saida_UNIDADE_7seg[2]
+HEX0[3] <= conversorhex7segduplo:nomeComponente.saida_UNIDADE_7seg[3]
+HEX0[4] <= conversorhex7segduplo:nomeComponente.saida_UNIDADE_7seg[4]
+HEX0[5] <= conversorhex7segduplo:nomeComponente.saida_UNIDADE_7seg[5]
+HEX0[6] <= conversorhex7segduplo:nomeComponente.saida_UNIDADE_7seg[6]
+HEX1[0] <= conversorhex7segduplo:nomeComponente.saida_DEZENA_7seg[0]
+HEX1[1] <= conversorhex7segduplo:nomeComponente.saida_DEZENA_7seg[1]
+HEX1[2] <= conversorhex7segduplo:nomeComponente.saida_DEZENA_7seg[2]
+HEX1[3] <= conversorhex7segduplo:nomeComponente.saida_DEZENA_7seg[3]
+HEX1[4] <= conversorhex7segduplo:nomeComponente.saida_DEZENA_7seg[4]
+HEX1[5] <= conversorhex7segduplo:nomeComponente.saida_DEZENA_7seg[5]
+HEX1[6] <= conversorhex7segduplo:nomeComponente.saida_DEZENA_7seg[6]
+
+
+|contadorComCarga|muxGenerico2x1:MUX
+entradaA_MUX[0] => saida_MUX.DATAA
+entradaA_MUX[1] => saida_MUX.DATAA
+entradaA_MUX[2] => saida_MUX.DATAA
+entradaA_MUX[3] => saida_MUX.DATAA
+entradaA_MUX[4] => saida_MUX.DATAA
+entradaA_MUX[5] => saida_MUX.DATAA
+entradaA_MUX[6] => saida_MUX.DATAA
+entradaA_MUX[7] => saida_MUX.DATAA
+entradaB_MUX[0] => saida_MUX.DATAB
+entradaB_MUX[1] => saida_MUX.DATAB
+entradaB_MUX[2] => saida_MUX.DATAB
+entradaB_MUX[3] => saida_MUX.DATAB
+entradaB_MUX[4] => saida_MUX.DATAB
+entradaB_MUX[5] => saida_MUX.DATAB
+entradaB_MUX[6] => saida_MUX.DATAB
+entradaB_MUX[7] => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+seletor_MUX => saida_MUX.OUTPUTSELECT
+seletor_MUX => saida_MUX.OUTPUTSELECT
+seletor_MUX => saida_MUX.OUTPUTSELECT
+seletor_MUX => saida_MUX.OUTPUTSELECT
+seletor_MUX => saida_MUX.OUTPUTSELECT
+seletor_MUX => saida_MUX.OUTPUTSELECT
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX[0] <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+saida_MUX[1] <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+saida_MUX[2] <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+saida_MUX[3] <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+saida_MUX[4] <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+saida_MUX[5] <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+saida_MUX[6] <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+saida_MUX[7] <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|contadorComCarga|edgeDetector:detectorSub0
+clk => saidaQ.CLK
+entrada => saida.IN1
+entrada => saidaQ.DATAIN
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|contadorComCarga|registradorGenerico:CONTADOR
+DIN[0] => DOUT[0]~reg0.DATAIN
+DIN[1] => DOUT[1]~reg0.DATAIN
+DIN[2] => DOUT[2]~reg0.DATAIN
+DIN[3] => DOUT[3]~reg0.DATAIN
+DIN[4] => DOUT[4]~reg0.DATAIN
+DIN[5] => DOUT[5]~reg0.DATAIN
+DIN[6] => DOUT[6]~reg0.DATAIN
+DIN[7] => DOUT[7]~reg0.DATAIN
+DOUT[0] <= DOUT[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[1] <= DOUT[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[2] <= DOUT[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[3] <= DOUT[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[4] <= DOUT[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[5] <= DOUT[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[6] <= DOUT[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DOUT[7] <= DOUT[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ENABLE => DOUT[7]~reg0.ENA
+ENABLE => DOUT[6]~reg0.ENA
+ENABLE => DOUT[5]~reg0.ENA
+ENABLE => DOUT[4]~reg0.ENA
+ENABLE => DOUT[3]~reg0.ENA
+ENABLE => DOUT[2]~reg0.ENA
+ENABLE => DOUT[1]~reg0.ENA
+ENABLE => DOUT[0]~reg0.ENA
+CLK => DOUT[0]~reg0.CLK
+CLK => DOUT[1]~reg0.CLK
+CLK => DOUT[2]~reg0.CLK
+CLK => DOUT[3]~reg0.CLK
+CLK => DOUT[4]~reg0.CLK
+CLK => DOUT[5]~reg0.CLK
+CLK => DOUT[6]~reg0.CLK
+CLK => DOUT[7]~reg0.CLK
+RST => DOUT[0]~reg0.ACLR
+RST => DOUT[1]~reg0.ACLR
+RST => DOUT[2]~reg0.ACLR
+RST => DOUT[3]~reg0.ACLR
+RST => DOUT[4]~reg0.ACLR
+RST => DOUT[5]~reg0.ACLR
+RST => DOUT[6]~reg0.ACLR
+RST => DOUT[7]~reg0.ACLR
+
+
+|contadorComCarga|somaConstante:SOMADOR
+entrada[0] => Add0.IN16
+entrada[1] => Add0.IN15
+entrada[2] => Add0.IN14
+entrada[3] => Add0.IN13
+entrada[4] => Add0.IN12
+entrada[5] => Add0.IN11
+entrada[6] => Add0.IN10
+entrada[7] => Add0.IN9
+saida[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+saida[7] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|contadorComCarga|conversorHex7SegDuplo:nomeComponente
+dadoHex[0] => Mod0.IN15
+dadoHex[0] => Div0.IN11
+dadoHex[1] => Mod0.IN14
+dadoHex[1] => Div0.IN10
+dadoHex[2] => Mod0.IN13
+dadoHex[2] => Div0.IN9
+dadoHex[3] => Mod0.IN12
+dadoHex[3] => Div0.IN8
+dadoHex[4] => Mod0.IN11
+dadoHex[4] => Div0.IN7
+dadoHex[5] => Mod0.IN10
+dadoHex[5] => Div0.IN6
+dadoHex[6] => Mod0.IN9
+dadoHex[6] => Div0.IN5
+dadoHex[7] => Mod0.IN8
+dadoHex[7] => Div0.IN4
+saida_UNIDADE_7seg[0] <= rasc_UNIDADE_Saida7seg.DB_MAX_OUTPUT_PORT_TYPE
+saida_UNIDADE_7seg[1] <= rasc_UNIDADE_Saida7seg.DB_MAX_OUTPUT_PORT_TYPE
+saida_UNIDADE_7seg[2] <= rasc_UNIDADE_Saida7seg.DB_MAX_OUTPUT_PORT_TYPE
+saida_UNIDADE_7seg[3] <= rasc_UNIDADE_Saida7seg.DB_MAX_OUTPUT_PORT_TYPE
+saida_UNIDADE_7seg[4] <= rasc_UNIDADE_Saida7seg.DB_MAX_OUTPUT_PORT_TYPE
+saida_UNIDADE_7seg[5] <= rasc_UNIDADE_Saida7seg.DB_MAX_OUTPUT_PORT_TYPE
+saida_UNIDADE_7seg[6] <= rasc_UNIDADE_Saida7seg.DB_MAX_OUTPUT_PORT_TYPE
+saida_DEZENA_7seg[0] <= rasc_DEZENA_Saida7seg.DB_MAX_OUTPUT_PORT_TYPE
+saida_DEZENA_7seg[1] <= rasc_DEZENA_Saida7seg.DB_MAX_OUTPUT_PORT_TYPE
+saida_DEZENA_7seg[2] <= rasc_DEZENA_Saida7seg.DB_MAX_OUTPUT_PORT_TYPE
+saida_DEZENA_7seg[3] <= rasc_DEZENA_Saida7seg.DB_MAX_OUTPUT_PORT_TYPE
+saida_DEZENA_7seg[4] <= rasc_DEZENA_Saida7seg.DB_MAX_OUTPUT_PORT_TYPE
+saida_DEZENA_7seg[5] <= rasc_DEZENA_Saida7seg.DB_MAX_OUTPUT_PORT_TYPE
+saida_DEZENA_7seg[6] <= rasc_DEZENA_Saida7seg.DB_MAX_OUTPUT_PORT_TYPE
+
+

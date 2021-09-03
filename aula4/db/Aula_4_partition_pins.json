@@ -1,0 +1,93 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "LEDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SEL_MUX",
+					"strict" : false
+				},
+				{
+					"name" : "HABILITA",
+					"strict" : false
+				},
+				{
+					"name" : "OPERACAO[0]",
+					"strict" : false
+				},
+				{
+					"name" : "OPERACAO[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SAIDA_MUX[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SAIDA_MUX[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SAIDA_MUX[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SAIDA_MUX[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SAIDA_MUX[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SAIDA_MUX[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SAIDA_MUX[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SAIDA_MUX[7]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
