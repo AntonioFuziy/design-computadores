@@ -1,0 +1,15 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity logicaDesvio is
+    port (
+		 SelMUX_JMP_PC : in std_logic;
+       SelMUX_ROM : out std_logic_vector(1 downto 0);
+       RET, JSR, JEQ, FLAG_COMP : in std_logic
+	  );
+end entity;
+
+architecture comportamento of logicaDesvio is
+begin
+
+end architecture;
