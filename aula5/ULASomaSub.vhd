@@ -15,7 +15,7 @@ end entity;
 architecture comportamento of ULASomaSub is
    signal soma :      STD_LOGIC_VECTOR((larguraDados-1) downto 0);
    signal subtracao : STD_LOGIC_VECTOR((larguraDados-1) downto 0);
-	signal zero : std_logic_vector(larguraDados-1 downto 0) := (others => '0');
+	constant zero : std_logic_vector(larguraDados-1 downto 0) := (others => '0');
    begin
       soma      <= STD_LOGIC_VECTOR(unsigned(entradaA) + unsigned(entradaB));
       subtracao <= STD_LOGIC_VECTOR(unsigned(entradaA) - unsigned(entradaB));

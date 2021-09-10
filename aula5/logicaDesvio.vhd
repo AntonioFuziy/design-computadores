@@ -12,5 +12,9 @@ end entity;
 
 architecture comportamento of logicaDesvio is
 begin
-
+	SelMUX_ROM <= "01" when (JSR = '1') else 
+					  "01" when (JEQ = '1' and FLAG_COMP = '1') else
+					  "10" when (RET = '1') else
+					  "01" when (SelMUX_JMP_PC = '1') else
+					  "00";
 end architecture;

@@ -16,11 +16,14 @@ entity Aula5 is
   port   (
     CLOCK_50 : in std_logic;
     KEY: in std_logic_vector(3 downto 0);
-    LEDR: out std_logic_vector(9 downto 0);
-	 SEL_MUX: out std_logic;
+    entradaA: out std_logic_vector(7 downto 0);
+	 SEL_MUX_PC: out std_logic_vector(1 downto 0);
 	 HABILITA: out std_logic;
+	 FLAG: out std_logic;
+	 SAIDA_REG_FLAG : out std_logic;
 	 OPERACAO: out std_logic_vector(1 downto 0);
-	 SAIDA_MUX: out std_logic_vector(larguraDados-1 downto 0)
+	 entradaB: out std_logic_vector(7 downto 0);
+	 TESTE_ENDERECO_MEM: out std_logic_vector(larguraAddrROM-1 downto 0)
   );
 end entity;
 
@@ -31,13 +34,12 @@ architecture arquitetura of Aula5 is
   signal MUX_ULA : std_logic_vector (larguraDados-1 downto 0);
   signal REG1_ULA_A : std_logic_vector (larguraDados-1 downto 0);
   signal Saida_ULA : std_logic_vector (larguraDados-1 downto 0);
-  signal Sinais_Controle : std_logic_vector (10 downto 0);
+  signal Sinais_Controle : std_logic_vector (11 downto 0);
   signal PC_ROM : std_logic_vector (larguraAddrROM-1 downto 0);
   signal SomaUm_PC : std_logic_vector (larguraAddrROM-1 downto 0);
   signal CLK : std_logic;
   signal SelMUX : std_logic;
   signal Habilita_A : std_logic;
-  signal Reset_A : std_logic;
   signal Operacao_ULA : std_logic_vector(1 downto 0);
   signal Instrucao : std_logic_vector (larguraDadosROM-1 downto 0);
   signal RAM_MUX : std_logic_vector (larguraDadosRAM-1 downto 0);
@@ -45,7 +47,8 @@ architecture arquitetura of Aula5 is
   signal jeq : std_logic;
   signal ret : std_logic;
   signal jsr : std_logic;
-  signal Habilita_MEM : std_logic;
+  signal Habilita_Escrita_MEM : std_logic;
+  signal Habilita_Leitura_MEM : std_logic;
   signal Habilita_RET : std_logic;
   signal SelMux_JMP_PC : std_logic;
   signal Habilita_Flag_Igual : std_logic;
@@ -76,7 +79,7 @@ MUX1 :  entity work.muxGenerico2x1  generic map (larguraDados => larguraDados)
 
 -- O port map completo do Acumulador.
 REG1 : entity work.registradorGenerico   generic map (larguraDados => larguraDados)
-          port map (DIN => Saida_ULA, DOUT => REG1_ULA_A, ENABLE => Habilita_A, CLK => CLK, RST => Reset_A);
+          port map (DIN => Saida_ULA, DOUT => REG1_ULA_A, ENABLE => Habilita_A, CLK => CLK, RST => '0');
 
 -- O botao 3 faz o Reset da MEF:
 PC : entity work.registradorGenerico   generic map (larguraDados => larguraPC_ROM)
@@ -97,15 +100,15 @@ Decoder : entity work.Decoder
           port map (OPCODE => Instrucao(larguraDadosROM-1 downto 9), OUTPUT => Sinais_Controle);
 			 
 memoriaDados : entity work.memoriaRAM   generic map (dataWidth => larguraDadosRAM, addrWidth => larguraAddrRAM)
-          port map (addr => Instrucao(7 downto 0), we => Sinais_Controle(0), re => Sinais_Controle(1), habilita => Instrucao(8), dado_in => REG1_ULA_A, dado_out => RAM_MUX, clk => CLK);
+          port map (addr => Instrucao(7 downto 0), we => Habilita_Escrita_MEM, re => Habilita_Leitura_MEM, habilita => Instrucao(8), dado_in => REG1_ULA_A, dado_out => RAM_MUX, clk => CLK);
 
 -- Aula5 componentes novos ========================================================================================================			 
 
 FLAG_IGUAL : entity work.flagComparacao   generic map (larguraDados => larguraFLAG_IGUAL)
-          port map (DIN => ULA_FLAG, DOUT => saidaFLAG_LogicaDesvio, ENABLE => Habilita_Flag_Igual, CLK => CLK, RST => Reset_A);
+          port map (DIN => ULA_FLAG, DOUT => saidaFLAG_LogicaDesvio, ENABLE => Habilita_Flag_Igual, CLK => CLK, RST => '0');
 			 
 END_RET : entity work.enderecoRetorno   generic map (larguraDados => 9)
-          port map (DIN => SomaUm_MUX_Desvio, DOUT => REG_END_MUX, ENABLE => Habilita_RET, CLK => CLK, RST => Reset_A);
+          port map (DIN => SomaUm_MUX_Desvio, DOUT => REG_END_MUX, ENABLE => Habilita_RET, CLK => CLK, RST => '0');
 
 MUX4x2_PC :  entity work.muxGenerico4x2 generic map (larguraDados => 9)
         port map( 
@@ -120,21 +123,25 @@ MUX4x2_PC :  entity work.muxGenerico4x2 generic map (larguraDados => 9)
 LOGICA_DESVIO : entity work.logicaDesvio   generic map (larguraDados => larguraFLAG_IGUAL)
           port map (SelMUX_JMP_PC => SelMux_JMP_PC, RET => ret, JSR => jsr, JEQ => jeq, FLAG_COMP => saidaFLAG_LogicaDesvio, SelMUX_ROM => SelMux_MUXROM);
 			 
-Habilita_RET <= Sinais_Controle(10);
-SelMux_JMP_PC <= Sinais_Controle(9);
-ret <= Sinais_Controle(8);
-jsr <= Sinais_Controle(7);
-jeq <= Sinais_Controle(6);
-selMUX <= Sinais_Controle(5);
-Habilita_A <= Sinais_Controle(4);
-Operacao_ULA <= Sinais_Controle(3 downto 2);
-Habilita_Flag_Igual <= Sinais_Controle(1);
-Habilita_MEM <= Sinais_Controle(0);
+Habilita_RET <= Sinais_Controle(11);
+SelMux_JMP_PC <= Sinais_Controle(10);
+ret <= Sinais_Controle(9);
+jsr <= Sinais_Controle(8);
+jeq <= Sinais_Controle(7);
+selMUX <= Sinais_Controle(6);
+Habilita_A <= Sinais_Controle(5);
+Operacao_ULA <= Sinais_Controle(4 downto 3);
+Habilita_Flag_Igual <= Sinais_Controle(2);
+Habilita_Leitura_MEM <= Sinais_Controle(1);
+Habilita_Escrita_MEM <= Sinais_Controle(0);
 
-SEL_MUX <= SelMUX;
+SEL_MUX_PC <= SelMux_MUXROM;
 HABILITA <= Habilita_A;
 OPERACAO <= Operacao_ULA;
-SAIDA_MUX <= MUX_ULA;
-LEDR (7 downto 0) <= REG1_ULA_A;
+entradaB <= MUX_ULA;
+entradaA <= REG1_ULA_A;
+FLAG <= ULA_FLAG;
+SAIDA_REG_FLAG <= saidaFLAG_LogicaDesvio;
+TESTE_ENDERECO_MEM <= PC_ROM;
 
 end architecture;

@@ -1,0 +1,30 @@
+Quartus Prime Archive log --	/home/antonio/Desktop/descomp/aula5/Aula5.qarlog
+
+Archive:	/home/antonio/Desktop/descomp/aula5/Aula5.qar
+Date:		Fri Sep 10 19:17:03 2021
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+/home/antonio/Desktop/descomp/aula5/Aula5.qpf
+/home/antonio/Desktop/descomp/aula5/Aula5.qsf
+/home/antonio/Desktop/descomp/aula5/Aula5.vhd
+/home/antonio/Desktop/descomp/aula5/Decoder.vhd
+/home/antonio/Desktop/descomp/aula5/ROM.vhd
+/home/antonio/Desktop/descomp/aula5/ULASomaSub.vhd
+/home/antonio/Desktop/descomp/aula5/Waveform2.vwf
+/home/antonio/Desktop/descomp/aula5/Waveform3.vwf
+/home/antonio/Desktop/descomp/aula5/edgeDetector.vhd
+/home/antonio/Desktop/descomp/aula5/enderecoRetorno.vhd
+/home/antonio/Desktop/descomp/aula5/flagComparacao.vhd
+/home/antonio/Desktop/descomp/aula5/logicaDesvio.vhd
+/home/antonio/Desktop/descomp/aula5/memoriaDados.vhd
+/home/antonio/Desktop/descomp/aula5/muxGenerico2x1.vhd
+/home/antonio/Desktop/descomp/aula5/muxGenerico4x2.vhd
+/home/antonio/Desktop/descomp/aula5/registradorGenerico.vhd
+/home/antonio/Desktop/descomp/aula5/somaConstante.vhd
+/home/antonio/Desktop/descomp/aula5/somadorGenerico.vhd
+/home/antonio/intelFPGA_lite/20.1/quartus/linux64/assignment_defaults.qdf
+	======= Total: 19 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

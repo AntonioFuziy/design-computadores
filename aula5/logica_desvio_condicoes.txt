@@ -1,0 +1,7 @@
+SelMux  01 se for jump, else 00
+RET     10
+JSR     01
+JEQ     01 se flag = 1, else 00
+Flag    define o JEQ
+
+else    00

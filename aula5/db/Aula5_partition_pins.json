@@ -1,0 +1,141 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "entradaA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "entradaA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "entradaA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "entradaA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "entradaA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "entradaA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "entradaA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "entradaA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SEL_MUX_PC[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SEL_MUX_PC[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HABILITA",
+					"strict" : false
+				},
+				{
+					"name" : "FLAG",
+					"strict" : false
+				},
+				{
+					"name" : "SAIDA_REG_FLAG",
+					"strict" : false
+				},
+				{
+					"name" : "OPERACAO[0]",
+					"strict" : false
+				},
+				{
+					"name" : "OPERACAO[1]",
+					"strict" : false
+				},
+				{
+					"name" : "entradaB[0]",
+					"strict" : false
+				},
+				{
+					"name" : "entradaB[1]",
+					"strict" : false
+				},
+				{
+					"name" : "entradaB[2]",
+					"strict" : false
+				},
+				{
+					"name" : "entradaB[3]",
+					"strict" : false
+				},
+				{
+					"name" : "entradaB[4]",
+					"strict" : false
+				},
+				{
+					"name" : "entradaB[5]",
+					"strict" : false
+				},
+				{
+					"name" : "entradaB[6]",
+					"strict" : false
+				},
+				{
+					"name" : "entradaB[7]",
+					"strict" : false
+				},
+				{
+					"name" : "TESTE_ENDERECO_MEM[0]",
+					"strict" : false
+				},
+				{
+					"name" : "TESTE_ENDERECO_MEM[1]",
+					"strict" : false
+				},
+				{
+					"name" : "TESTE_ENDERECO_MEM[2]",
+					"strict" : false
+				},
+				{
+					"name" : "TESTE_ENDERECO_MEM[3]",
+					"strict" : false
+				},
+				{
+					"name" : "TESTE_ENDERECO_MEM[4]",
+					"strict" : false
+				},
+				{
+					"name" : "TESTE_ENDERECO_MEM[5]",
+					"strict" : false
+				},
+				{
+					"name" : "TESTE_ENDERECO_MEM[6]",
+					"strict" : false
+				},
+				{
+					"name" : "TESTE_ENDERECO_MEM[7]",
+					"strict" : false
+				},
+				{
+					"name" : "TESTE_ENDERECO_MEM[8]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
