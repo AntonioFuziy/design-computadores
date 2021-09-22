@@ -18,7 +18,8 @@ entity Aula7 is
 	 LEDR8: out std_logic;
 	 LEDR9: out std_logic;
 	 saida_ROM: out std_logic_vector(12 downto 0);
-	 saida_RAM: out std_logic_vector(7 downto 0)
+	 saida_RAM: out std_logic_vector(7 downto 0);
+	 Teste_Endereco: out std_logic_vector(8 downto 0)
   );
 end entity;
 
@@ -108,5 +109,6 @@ LEDR9 <= SaidaREG_LEDR9;
 
 saida_ROM <= instruction;
 saida_RAM <= Data_OUT;
+Teste_Endereco <= Addr_ROM;
 
 end architecture;

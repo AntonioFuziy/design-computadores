@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
 
--- DATE "09/21/2021 21:21:40"
+-- DATE "09/22/2021 16:00:25"
 
 -- 
 -- Device: Altera 5CEBA4F23C7 Package FBGA484
@@ -40,11 +40,12 @@ ENTITY 	Aula7 IS
     PORT (
 	CLOCK_50 : IN std_logic;
 	KEY : IN std_logic_vector(3 DOWNTO 0);
-	LEDR : BUFFER std_logic_vector(7 DOWNTO 0);
-	LEDR8 : BUFFER std_logic;
-	LEDR9 : BUFFER std_logic;
-	saida_ROM : BUFFER std_logic_vector(12 DOWNTO 0);
-	saida_RAM : BUFFER std_logic_vector(7 DOWNTO 0)
+	LEDR : OUT std_logic_vector(7 DOWNTO 0);
+	LEDR8 : OUT std_logic;
+	LEDR9 : OUT std_logic;
+	saida_ROM : OUT std_logic_vector(12 DOWNTO 0);
+	saida_RAM : OUT std_logic_vector(7 DOWNTO 0);
+	Teste_Endereco : OUT std_logic_vector(8 DOWNTO 0)
 	);
 END Aula7;
 
@@ -65,6 +66,7 @@ SIGNAL ww_LEDR8 : std_logic;
 SIGNAL ww_LEDR9 : std_logic;
 SIGNAL ww_saida_ROM : std_logic_vector(12 DOWNTO 0);
 SIGNAL ww_saida_RAM : std_logic_vector(7 DOWNTO 0);
+SIGNAL ww_Teste_Endereco : std_logic_vector(8 DOWNTO 0);
 SIGNAL \CLOCK_50~input_o\ : std_logic;
 SIGNAL \KEY[1]~input_o\ : std_logic;
 SIGNAL \KEY[2]~input_o\ : std_logic;
@@ -100,6 +102,15 @@ SIGNAL \saida_RAM[4]~output_o\ : std_logic;
 SIGNAL \saida_RAM[5]~output_o\ : std_logic;
 SIGNAL \saida_RAM[6]~output_o\ : std_logic;
 SIGNAL \saida_RAM[7]~output_o\ : std_logic;
+SIGNAL \Teste_Endereco[0]~output_o\ : std_logic;
+SIGNAL \Teste_Endereco[1]~output_o\ : std_logic;
+SIGNAL \Teste_Endereco[2]~output_o\ : std_logic;
+SIGNAL \Teste_Endereco[3]~output_o\ : std_logic;
+SIGNAL \Teste_Endereco[4]~output_o\ : std_logic;
+SIGNAL \Teste_Endereco[5]~output_o\ : std_logic;
+SIGNAL \Teste_Endereco[6]~output_o\ : std_logic;
+SIGNAL \Teste_Endereco[7]~output_o\ : std_logic;
+SIGNAL \Teste_Endereco[8]~output_o\ : std_logic;
 SIGNAL \KEY[0]~input_o\ : std_logic;
 SIGNAL \CPU|somaUm|Add0~5_sumout\ : std_logic;
 SIGNAL \ROM1|memROM~0_combout\ : std_logic;
@@ -231,30 +242,12 @@ SIGNAL \REGLEDR9|DOUT~q\ : std_logic;
 SIGNAL \REGLEDR|DOUT\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \CPU|REG1|DOUT\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \CPU|PC|DOUT\ : std_logic_vector(8 DOWNTO 0);
-SIGNAL \DECODER_ENDERECOS|ALT_INV_Equal7~0_combout\ : std_logic;
-SIGNAL \DECODER_BLOCOS|ALT_INV_Equal7~0_combout\ : std_logic;
-SIGNAL \ROM1|ALT_INV_memROM~2_combout\ : std_logic;
-SIGNAL \ROM1|ALT_INV_memROM~18_combout\ : std_logic;
-SIGNAL \ROM1|ALT_INV_memROM~1_combout\ : std_logic;
-SIGNAL \ROM1|ALT_INV_memROM~0_combout\ : std_logic;
-SIGNAL \REGLEDR9|ALT_INV_DOUT~q\ : std_logic;
-SIGNAL \ROM1|ALT_INV_memROM~17_combout\ : std_logic;
-SIGNAL \REGLEDR8|ALT_INV_DOUT~q\ : std_logic;
-SIGNAL \ROM1|ALT_INV_memROM~3_combout\ : std_logic;
-SIGNAL \ROM1|ALT_INV_memROM~12_combout\ : std_logic;
-SIGNAL \ROM1|ALT_INV_memROM~11_combout\ : std_logic;
-SIGNAL \ROM1|ALT_INV_memROM~10_combout\ : std_logic;
-SIGNAL \ROM1|ALT_INV_memROM~16_combout\ : std_logic;
-SIGNAL \ROM1|ALT_INV_memROM~9_combout\ : std_logic;
-SIGNAL \ROM1|ALT_INV_memROM~15_combout\ : std_logic;
-SIGNAL \ROM1|ALT_INV_memROM~8_combout\ : std_logic;
-SIGNAL \ROM1|ALT_INV_memROM~7_combout\ : std_logic;
-SIGNAL \ROM1|ALT_INV_memROM~6_combout\ : std_logic;
-SIGNAL \ROM1|ALT_INV_memROM~14_combout\ : std_logic;
-SIGNAL \ROM1|ALT_INV_memROM~5_combout\ : std_logic;
-SIGNAL \ROM1|ALT_INV_memROM~13_combout\ : std_logic;
-SIGNAL \ROM1|ALT_INV_memROM~4_combout\ : std_logic;
-SIGNAL \CPU|ULA1|ALT_INV_Add1~29_sumout\ : std_logic;
+SIGNAL \CPU|ULA1|ALT_INV_Add1~13_sumout\ : std_logic;
+SIGNAL \CPU|ULA1|ALT_INV_Add1~9_sumout\ : std_logic;
+SIGNAL \CPU|ULA1|ALT_INV_Add1~5_sumout\ : std_logic;
+SIGNAL \CPU|ULA1|ALT_INV_Add1~1_sumout\ : std_logic;
+SIGNAL \CPU|REG1|ALT_INV_DOUT\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \CPU|PC|ALT_INV_DOUT\ : std_logic_vector(8 DOWNTO 0);
 SIGNAL \ROM1|ALT_INV_memROM~22_combout\ : std_logic;
 SIGNAL \ROM1|ALT_INV_memROM~21_combout\ : std_logic;
 SIGNAL \ROM1|ALT_INV_memROM~20_combout\ : std_logic;
@@ -296,15 +289,33 @@ SIGNAL \memoriaDados|ALT_INV_ram~15_q\ : std_logic;
 SIGNAL \CPU|Decoder|ALT_INV_Equal1~1_combout\ : std_logic;
 SIGNAL \DECODER_ENDERECOS|ALT_INV_Equal7~2_combout\ : std_logic;
 SIGNAL \REGLEDR8|ALT_INV_DOUT~0_combout\ : std_logic;
+SIGNAL \DECODER_ENDERECOS|ALT_INV_Equal7~0_combout\ : std_logic;
+SIGNAL \DECODER_BLOCOS|ALT_INV_Equal7~0_combout\ : std_logic;
+SIGNAL \ROM1|ALT_INV_memROM~18_combout\ : std_logic;
+SIGNAL \ROM1|ALT_INV_memROM~17_combout\ : std_logic;
+SIGNAL \ROM1|ALT_INV_memROM~16_combout\ : std_logic;
+SIGNAL \ROM1|ALT_INV_memROM~15_combout\ : std_logic;
+SIGNAL \ROM1|ALT_INV_memROM~14_combout\ : std_logic;
+SIGNAL \ROM1|ALT_INV_memROM~13_combout\ : std_logic;
+SIGNAL \ROM1|ALT_INV_memROM~12_combout\ : std_logic;
+SIGNAL \ROM1|ALT_INV_memROM~11_combout\ : std_logic;
+SIGNAL \ROM1|ALT_INV_memROM~10_combout\ : std_logic;
+SIGNAL \ROM1|ALT_INV_memROM~9_combout\ : std_logic;
+SIGNAL \ROM1|ALT_INV_memROM~8_combout\ : std_logic;
+SIGNAL \ROM1|ALT_INV_memROM~7_combout\ : std_logic;
+SIGNAL \ROM1|ALT_INV_memROM~6_combout\ : std_logic;
+SIGNAL \ROM1|ALT_INV_memROM~5_combout\ : std_logic;
+SIGNAL \ROM1|ALT_INV_memROM~4_combout\ : std_logic;
+SIGNAL \ROM1|ALT_INV_memROM~3_combout\ : std_logic;
+SIGNAL \ROM1|ALT_INV_memROM~2_combout\ : std_logic;
+SIGNAL \ROM1|ALT_INV_memROM~1_combout\ : std_logic;
+SIGNAL \ROM1|ALT_INV_memROM~0_combout\ : std_logic;
+SIGNAL \REGLEDR9|ALT_INV_DOUT~q\ : std_logic;
+SIGNAL \REGLEDR8|ALT_INV_DOUT~q\ : std_logic;
+SIGNAL \CPU|ULA1|ALT_INV_Add1~29_sumout\ : std_logic;
 SIGNAL \CPU|ULA1|ALT_INV_Add1~25_sumout\ : std_logic;
 SIGNAL \CPU|ULA1|ALT_INV_Add1~21_sumout\ : std_logic;
 SIGNAL \CPU|ULA1|ALT_INV_Add1~17_sumout\ : std_logic;
-SIGNAL \CPU|ULA1|ALT_INV_Add1~13_sumout\ : std_logic;
-SIGNAL \CPU|ULA1|ALT_INV_Add1~9_sumout\ : std_logic;
-SIGNAL \CPU|ULA1|ALT_INV_Add1~5_sumout\ : std_logic;
-SIGNAL \CPU|ULA1|ALT_INV_Add1~1_sumout\ : std_logic;
-SIGNAL \CPU|REG1|ALT_INV_DOUT\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \CPU|PC|ALT_INV_DOUT\ : std_logic_vector(8 DOWNTO 0);
 
 BEGIN
 
@@ -315,33 +326,31 @@ LEDR8 <= ww_LEDR8;
 LEDR9 <= ww_LEDR9;
 saida_ROM <= ww_saida_ROM;
 saida_RAM <= ww_saida_RAM;
+Teste_Endereco <= ww_Teste_Endereco;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
-\DECODER_ENDERECOS|ALT_INV_Equal7~0_combout\ <= NOT \DECODER_ENDERECOS|Equal7~0_combout\;
-\DECODER_BLOCOS|ALT_INV_Equal7~0_combout\ <= NOT \DECODER_BLOCOS|Equal7~0_combout\;
-\ROM1|ALT_INV_memROM~2_combout\ <= NOT \ROM1|memROM~2_combout\;
-\ROM1|ALT_INV_memROM~18_combout\ <= NOT \ROM1|memROM~18_combout\;
-\ROM1|ALT_INV_memROM~1_combout\ <= NOT \ROM1|memROM~1_combout\;
-\ROM1|ALT_INV_memROM~0_combout\ <= NOT \ROM1|memROM~0_combout\;
-\REGLEDR9|ALT_INV_DOUT~q\ <= NOT \REGLEDR9|DOUT~q\;
-\ROM1|ALT_INV_memROM~17_combout\ <= NOT \ROM1|memROM~17_combout\;
-\REGLEDR8|ALT_INV_DOUT~q\ <= NOT \REGLEDR8|DOUT~q\;
-\ROM1|ALT_INV_memROM~3_combout\ <= NOT \ROM1|memROM~3_combout\;
-\ROM1|ALT_INV_memROM~12_combout\ <= NOT \ROM1|memROM~12_combout\;
-\ROM1|ALT_INV_memROM~11_combout\ <= NOT \ROM1|memROM~11_combout\;
-\ROM1|ALT_INV_memROM~10_combout\ <= NOT \ROM1|memROM~10_combout\;
-\ROM1|ALT_INV_memROM~16_combout\ <= NOT \ROM1|memROM~16_combout\;
-\ROM1|ALT_INV_memROM~9_combout\ <= NOT \ROM1|memROM~9_combout\;
-\ROM1|ALT_INV_memROM~15_combout\ <= NOT \ROM1|memROM~15_combout\;
-\ROM1|ALT_INV_memROM~8_combout\ <= NOT \ROM1|memROM~8_combout\;
-\ROM1|ALT_INV_memROM~7_combout\ <= NOT \ROM1|memROM~7_combout\;
-\ROM1|ALT_INV_memROM~6_combout\ <= NOT \ROM1|memROM~6_combout\;
-\ROM1|ALT_INV_memROM~14_combout\ <= NOT \ROM1|memROM~14_combout\;
-\ROM1|ALT_INV_memROM~5_combout\ <= NOT \ROM1|memROM~5_combout\;
-\ROM1|ALT_INV_memROM~13_combout\ <= NOT \ROM1|memROM~13_combout\;
-\ROM1|ALT_INV_memROM~4_combout\ <= NOT \ROM1|memROM~4_combout\;
-\CPU|ULA1|ALT_INV_Add1~29_sumout\ <= NOT \CPU|ULA1|Add1~29_sumout\;
+\CPU|ULA1|ALT_INV_Add1~13_sumout\ <= NOT \CPU|ULA1|Add1~13_sumout\;
+\CPU|ULA1|ALT_INV_Add1~9_sumout\ <= NOT \CPU|ULA1|Add1~9_sumout\;
+\CPU|ULA1|ALT_INV_Add1~5_sumout\ <= NOT \CPU|ULA1|Add1~5_sumout\;
+\CPU|ULA1|ALT_INV_Add1~1_sumout\ <= NOT \CPU|ULA1|Add1~1_sumout\;
+\CPU|REG1|ALT_INV_DOUT\(7) <= NOT \CPU|REG1|DOUT\(7);
+\CPU|REG1|ALT_INV_DOUT\(6) <= NOT \CPU|REG1|DOUT\(6);
+\CPU|REG1|ALT_INV_DOUT\(5) <= NOT \CPU|REG1|DOUT\(5);
+\CPU|REG1|ALT_INV_DOUT\(4) <= NOT \CPU|REG1|DOUT\(4);
+\CPU|REG1|ALT_INV_DOUT\(3) <= NOT \CPU|REG1|DOUT\(3);
+\CPU|REG1|ALT_INV_DOUT\(2) <= NOT \CPU|REG1|DOUT\(2);
+\CPU|REG1|ALT_INV_DOUT\(1) <= NOT \CPU|REG1|DOUT\(1);
+\CPU|REG1|ALT_INV_DOUT\(0) <= NOT \CPU|REG1|DOUT\(0);
+\CPU|PC|ALT_INV_DOUT\(7) <= NOT \CPU|PC|DOUT\(7);
+\CPU|PC|ALT_INV_DOUT\(6) <= NOT \CPU|PC|DOUT\(6);
+\CPU|PC|ALT_INV_DOUT\(5) <= NOT \CPU|PC|DOUT\(5);
+\CPU|PC|ALT_INV_DOUT\(4) <= NOT \CPU|PC|DOUT\(4);
+\CPU|PC|ALT_INV_DOUT\(3) <= NOT \CPU|PC|DOUT\(3);
+\CPU|PC|ALT_INV_DOUT\(2) <= NOT \CPU|PC|DOUT\(2);
+\CPU|PC|ALT_INV_DOUT\(1) <= NOT \CPU|PC|DOUT\(1);
+\CPU|PC|ALT_INV_DOUT\(0) <= NOT \CPU|PC|DOUT\(0);
+\CPU|PC|ALT_INV_DOUT\(8) <= NOT \CPU|PC|DOUT\(8);
 \ROM1|ALT_INV_memROM~22_combout\ <= NOT \ROM1|memROM~22_combout\;
 \ROM1|ALT_INV_memROM~21_combout\ <= NOT \ROM1|memROM~21_combout\;
 \ROM1|ALT_INV_memROM~20_combout\ <= NOT \ROM1|memROM~20_combout\;
@@ -383,30 +392,33 @@ ww_devpor <= devpor;
 \CPU|Decoder|ALT_INV_Equal1~1_combout\ <= NOT \CPU|Decoder|Equal1~1_combout\;
 \DECODER_ENDERECOS|ALT_INV_Equal7~2_combout\ <= NOT \DECODER_ENDERECOS|Equal7~2_combout\;
 \REGLEDR8|ALT_INV_DOUT~0_combout\ <= NOT \REGLEDR8|DOUT~0_combout\;
+\DECODER_ENDERECOS|ALT_INV_Equal7~0_combout\ <= NOT \DECODER_ENDERECOS|Equal7~0_combout\;
+\DECODER_BLOCOS|ALT_INV_Equal7~0_combout\ <= NOT \DECODER_BLOCOS|Equal7~0_combout\;
+\ROM1|ALT_INV_memROM~18_combout\ <= NOT \ROM1|memROM~18_combout\;
+\ROM1|ALT_INV_memROM~17_combout\ <= NOT \ROM1|memROM~17_combout\;
+\ROM1|ALT_INV_memROM~16_combout\ <= NOT \ROM1|memROM~16_combout\;
+\ROM1|ALT_INV_memROM~15_combout\ <= NOT \ROM1|memROM~15_combout\;
+\ROM1|ALT_INV_memROM~14_combout\ <= NOT \ROM1|memROM~14_combout\;
+\ROM1|ALT_INV_memROM~13_combout\ <= NOT \ROM1|memROM~13_combout\;
+\ROM1|ALT_INV_memROM~12_combout\ <= NOT \ROM1|memROM~12_combout\;
+\ROM1|ALT_INV_memROM~11_combout\ <= NOT \ROM1|memROM~11_combout\;
+\ROM1|ALT_INV_memROM~10_combout\ <= NOT \ROM1|memROM~10_combout\;
+\ROM1|ALT_INV_memROM~9_combout\ <= NOT \ROM1|memROM~9_combout\;
+\ROM1|ALT_INV_memROM~8_combout\ <= NOT \ROM1|memROM~8_combout\;
+\ROM1|ALT_INV_memROM~7_combout\ <= NOT \ROM1|memROM~7_combout\;
+\ROM1|ALT_INV_memROM~6_combout\ <= NOT \ROM1|memROM~6_combout\;
+\ROM1|ALT_INV_memROM~5_combout\ <= NOT \ROM1|memROM~5_combout\;
+\ROM1|ALT_INV_memROM~4_combout\ <= NOT \ROM1|memROM~4_combout\;
+\ROM1|ALT_INV_memROM~3_combout\ <= NOT \ROM1|memROM~3_combout\;
+\ROM1|ALT_INV_memROM~2_combout\ <= NOT \ROM1|memROM~2_combout\;
+\ROM1|ALT_INV_memROM~1_combout\ <= NOT \ROM1|memROM~1_combout\;
+\ROM1|ALT_INV_memROM~0_combout\ <= NOT \ROM1|memROM~0_combout\;
+\REGLEDR9|ALT_INV_DOUT~q\ <= NOT \REGLEDR9|DOUT~q\;
+\REGLEDR8|ALT_INV_DOUT~q\ <= NOT \REGLEDR8|DOUT~q\;
+\CPU|ULA1|ALT_INV_Add1~29_sumout\ <= NOT \CPU|ULA1|Add1~29_sumout\;
 \CPU|ULA1|ALT_INV_Add1~25_sumout\ <= NOT \CPU|ULA1|Add1~25_sumout\;
 \CPU|ULA1|ALT_INV_Add1~21_sumout\ <= NOT \CPU|ULA1|Add1~21_sumout\;
 \CPU|ULA1|ALT_INV_Add1~17_sumout\ <= NOT \CPU|ULA1|Add1~17_sumout\;
-\CPU|ULA1|ALT_INV_Add1~13_sumout\ <= NOT \CPU|ULA1|Add1~13_sumout\;
-\CPU|ULA1|ALT_INV_Add1~9_sumout\ <= NOT \CPU|ULA1|Add1~9_sumout\;
-\CPU|ULA1|ALT_INV_Add1~5_sumout\ <= NOT \CPU|ULA1|Add1~5_sumout\;
-\CPU|ULA1|ALT_INV_Add1~1_sumout\ <= NOT \CPU|ULA1|Add1~1_sumout\;
-\CPU|REG1|ALT_INV_DOUT\(7) <= NOT \CPU|REG1|DOUT\(7);
-\CPU|REG1|ALT_INV_DOUT\(6) <= NOT \CPU|REG1|DOUT\(6);
-\CPU|REG1|ALT_INV_DOUT\(5) <= NOT \CPU|REG1|DOUT\(5);
-\CPU|REG1|ALT_INV_DOUT\(4) <= NOT \CPU|REG1|DOUT\(4);
-\CPU|REG1|ALT_INV_DOUT\(3) <= NOT \CPU|REG1|DOUT\(3);
-\CPU|REG1|ALT_INV_DOUT\(2) <= NOT \CPU|REG1|DOUT\(2);
-\CPU|REG1|ALT_INV_DOUT\(1) <= NOT \CPU|REG1|DOUT\(1);
-\CPU|REG1|ALT_INV_DOUT\(0) <= NOT \CPU|REG1|DOUT\(0);
-\CPU|PC|ALT_INV_DOUT\(7) <= NOT \CPU|PC|DOUT\(7);
-\CPU|PC|ALT_INV_DOUT\(6) <= NOT \CPU|PC|DOUT\(6);
-\CPU|PC|ALT_INV_DOUT\(5) <= NOT \CPU|PC|DOUT\(5);
-\CPU|PC|ALT_INV_DOUT\(4) <= NOT \CPU|PC|DOUT\(4);
-\CPU|PC|ALT_INV_DOUT\(3) <= NOT \CPU|PC|DOUT\(3);
-\CPU|PC|ALT_INV_DOUT\(2) <= NOT \CPU|PC|DOUT\(2);
-\CPU|PC|ALT_INV_DOUT\(1) <= NOT \CPU|PC|DOUT\(1);
-\CPU|PC|ALT_INV_DOUT\(0) <= NOT \CPU|PC|DOUT\(0);
-\CPU|PC|ALT_INV_DOUT\(8) <= NOT \CPU|PC|DOUT\(8);
 
 \LEDR[0]~output\ : cyclonev_io_obuf
 -- pragma translate_off
@@ -779,6 +791,114 @@ PORT MAP (
 	i => \CPU|REG1|DOUT\(7),
 	devoe => ww_devoe,
 	o => \saida_RAM[7]~output_o\);
+
+\Teste_Endereco[0]~output\ : cyclonev_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false",
+	shift_series_termination_control => "false")
+-- pragma translate_on
+PORT MAP (
+	i => \CPU|PC|DOUT\(0),
+	devoe => ww_devoe,
+	o => \Teste_Endereco[0]~output_o\);
+
+\Teste_Endereco[1]~output\ : cyclonev_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false",
+	shift_series_termination_control => "false")
+-- pragma translate_on
+PORT MAP (
+	i => \CPU|PC|DOUT\(1),
+	devoe => ww_devoe,
+	o => \Teste_Endereco[1]~output_o\);
+
+\Teste_Endereco[2]~output\ : cyclonev_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false",
+	shift_series_termination_control => "false")
+-- pragma translate_on
+PORT MAP (
+	i => \CPU|PC|DOUT\(2),
+	devoe => ww_devoe,
+	o => \Teste_Endereco[2]~output_o\);
+
+\Teste_Endereco[3]~output\ : cyclonev_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false",
+	shift_series_termination_control => "false")
+-- pragma translate_on
+PORT MAP (
+	i => \CPU|PC|DOUT\(3),
+	devoe => ww_devoe,
+	o => \Teste_Endereco[3]~output_o\);
+
+\Teste_Endereco[4]~output\ : cyclonev_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false",
+	shift_series_termination_control => "false")
+-- pragma translate_on
+PORT MAP (
+	i => \CPU|PC|DOUT\(4),
+	devoe => ww_devoe,
+	o => \Teste_Endereco[4]~output_o\);
+
+\Teste_Endereco[5]~output\ : cyclonev_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false",
+	shift_series_termination_control => "false")
+-- pragma translate_on
+PORT MAP (
+	i => \CPU|PC|DOUT\(5),
+	devoe => ww_devoe,
+	o => \Teste_Endereco[5]~output_o\);
+
+\Teste_Endereco[6]~output\ : cyclonev_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false",
+	shift_series_termination_control => "false")
+-- pragma translate_on
+PORT MAP (
+	i => \CPU|PC|DOUT\(6),
+	devoe => ww_devoe,
+	o => \Teste_Endereco[6]~output_o\);
+
+\Teste_Endereco[7]~output\ : cyclonev_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false",
+	shift_series_termination_control => "false")
+-- pragma translate_on
+PORT MAP (
+	i => \CPU|PC|DOUT\(7),
+	devoe => ww_devoe,
+	o => \Teste_Endereco[7]~output_o\);
+
+\Teste_Endereco[8]~output\ : cyclonev_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false",
+	shift_series_termination_control => "false")
+-- pragma translate_on
+PORT MAP (
+	i => \CPU|PC|DOUT\(8),
+	devoe => ww_devoe,
+	o => \Teste_Endereco[8]~output_o\);
 
 \KEY[0]~input\ : cyclonev_io_ibuf
 -- pragma translate_off
@@ -3040,6 +3160,24 @@ ww_saida_RAM(5) <= \saida_RAM[5]~output_o\;
 ww_saida_RAM(6) <= \saida_RAM[6]~output_o\;
 
 ww_saida_RAM(7) <= \saida_RAM[7]~output_o\;
+
+ww_Teste_Endereco(0) <= \Teste_Endereco[0]~output_o\;
+
+ww_Teste_Endereco(1) <= \Teste_Endereco[1]~output_o\;
+
+ww_Teste_Endereco(2) <= \Teste_Endereco[2]~output_o\;
+
+ww_Teste_Endereco(3) <= \Teste_Endereco[3]~output_o\;
+
+ww_Teste_Endereco(4) <= \Teste_Endereco[4]~output_o\;
+
+ww_Teste_Endereco(5) <= \Teste_Endereco[5]~output_o\;
+
+ww_Teste_Endereco(6) <= \Teste_Endereco[6]~output_o\;
+
+ww_Teste_Endereco(7) <= \Teste_Endereco[7]~output_o\;
+
+ww_Teste_Endereco(8) <= \Teste_Endereco[8]~output_o\;
 END structure;
 
 

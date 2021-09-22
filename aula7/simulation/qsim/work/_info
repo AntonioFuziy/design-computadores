@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 d/home/antonio/Desktop/descomp/aula7/simulation/qsim
 Eaula7
-Z1 w1632270100
+Z1 w1632337226
 Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ^K2eeK[IVbX]]MLcdOEI91
 Z3 DPx8 cyclonev 19 cyclonev_components 0 22 GFL[QAd@dAZF:`jjOGn9>2
 Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3dzZ?YU_4FC5UU0cTXRET1
@@ -20,19 +20,19 @@ Z7 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
 Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z9 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 Z10 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
-!i122 0
+!i122 2
 R0
 Z11 8Aula7.vho
 Z12 FAula7.vho
 l0
 L39 1
-VGVDJA8_ikkY1B@AgRD:AF0
-!s100 g<BS<?dnOQeefoXFmc>O80
+VAlP1dn100TgUTj4^S:`ck1
+!s100 BVI`e1:WIzE=0TUz71e6M1
 Z13 OV;C;2020.1;71
 32
-Z14 !s110 1632270105
+Z14 !s110 1632337229
 !i10b 1
-Z15 !s108 1632270104.000000
+Z15 !s108 1632337229.000000
 Z16 !s90 -work|work|Aula7.vho|
 Z17 !s107 Aula7.vho|
 !i113 1
@@ -48,12 +48,12 @@ R7
 R8
 R9
 R10
-DEx4 work 5 aula7 0 22 GVDJA8_ikkY1B@AgRD:AF0
-!i122 0
-l309
-L51 2993
-Vk@h0VS4UInQc5z_RHn^=T1
-!s100 ]g]^:_7ja::P;AeZSO8Md0
+DEx4 work 5 aula7 0 22 AlP1dn100TgUTj4^S:`ck1
+!i122 2
+l320
+L52 3130
+VkZL56XMOhI4LQ73Z>dKIY3
+!s100 KKHd1d]:>i5oNV_6F_[=`1
 R13
 32
 R14
@@ -65,13 +65,13 @@ R17
 R18
 R19
 Eaula7_vhd_vec_tst
-Z20 w1632270099
+Z20 w1632337224
 R8
 R9
-!i122 1
+!i122 3
 R0
-Z21 8Waveform.vwf.vht
-Z22 FWaveform.vwf.vht
+Z21 8Waveform1.vwf.vht
+Z22 FWaveform1.vwf.vht
 l0
 L32 1
 Vo27gojjh?Q8YNZ?GOU_]F2
@@ -80,28 +80,28 @@ R13
 32
 R14
 !i10b 1
-Z23 !s108 1632270105.000000
-Z24 !s90 -work|work|Waveform.vwf.vht|
-!s107 Waveform.vwf.vht|
+R15
+Z23 !s90 -work|work|Waveform1.vwf.vht|
+!s107 Waveform1.vwf.vht|
 !i113 1
 R18
 R19
 Aaula7_arch
 R8
 R9
-DEx4 work 17 aula7_vhd_vec_tst 0 22 o27gojjh?Q8YNZ?GOU_]F2
-!i122 1
-l55
-L34 94
-ViH2a0U1:[3?Gz`FhdME1[1
-!s100 :?=ZNG_B>RYA5:JMMD9G`3
+Z24 DEx4 work 17 aula7_vhd_vec_tst 0 22 o27gojjh?Q8YNZ?GOU_]F2
+!i122 3
+l57
+L34 97
+VSRABE]VlLo1ePH4m5mzOb3
+!s100 o9ok=TK28PMN`Nd^`BFOR0
 R13
 32
 R14
 !i10b 1
+R15
 R23
-R24
-Z25 !s107 Waveform.vwf.vht|
+Z25 !s107 Waveform1.vwf.vht|
 !i113 1
 R18
 R19

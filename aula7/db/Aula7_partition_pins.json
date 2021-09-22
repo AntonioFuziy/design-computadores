@@ -124,6 +124,42 @@
 					"strict" : false
 				},
 				{
+					"name" : "Teste_Endereco[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Teste_Endereco[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Teste_Endereco[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Teste_Endereco[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Teste_Endereco[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Teste_Endereco[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Teste_Endereco[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Teste_Endereco[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Teste_Endereco[8]",
+					"strict" : false
+				},
+				{
 					"name" : "KEY[0]",
 					"strict" : false
 				}
