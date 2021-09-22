@@ -1,0 +1,36 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity Decoder is
+
+  port   (
+    -- Input ports
+	 OPCODE: in std_logic_vector(2 downto 0);
+	 OUTPUT: out std_logic_vector(7 downto 0)
+  );
+end entity;
+
+
+architecture arch_name of Decoder is
+  constant NOP  : std_logic_vector(3 downto 0) := "0000";
+  alias Habilita_Escrita_Ret : std_logic is OUTPUT(11);
+  
+begin
+				 
+	Habilita_Escrita_Mem <= '1' when (OPCODE = STA) else '0';
+	Habilita_Leitura_Mem <= '1' when (OPCODE = LDA or OPCODE = SOMA or OPCODE = SUB or OPCODE = CEQ) else '0';
+	Habilita_Flag_Igual <= '1' when (OPCODE = CEQ) else '0';
+	Operacao  <= "10" when (OPCODE = LDA or OPCODE = LDI) else 
+					 "01" when (OPCODE = SOMA) else
+					 "00" when (OPCODE = SUB) else
+					 "11";
+	Habilita_A <= '1' when (OPCODE = LDA or OPCODE = SOMA or OPCODE = SUB or OPCODE = LDI) else '0';
+	SelMUX <= '1' when (OPCODE = LDI) else '0';
+	jeq2 <= '1' when (OPCODE = JEQ) else '0';
+	jsr2 <= '1' when (OPCODE = JSR) else '0';
+	ret2 <= '1' when (OPCODE = RET) else '0';
+	SelMUX_JMP_PC <= '1' when (OPCODE = JMP) else '0';
+	Habilita_Escrita_Ret <= '1' when (OPCODE = JSR) else '0';
+	
+end architecture;
