@@ -1,0 +1,1449 @@
+Analysis & Synthesis report for Aula8
+Thu Sep 23 16:42:41 2021
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |Aula8
+ 12. Parameter Settings for User Entity Instance: CPU:CPU
+ 13. Parameter Settings for User Entity Instance: CPU:CPU|muxGenerico2x1:MUX1
+ 14. Parameter Settings for User Entity Instance: CPU:CPU|muxGenerico4x2:MUX4x2_PC
+ 15. Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:REG1
+ 16. Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:PC
+ 17. Parameter Settings for User Entity Instance: CPU:CPU|somaConstante:somaUm
+ 18. Parameter Settings for User Entity Instance: CPU:CPU|ULASomaSub:ULA1
+ 19. Parameter Settings for User Entity Instance: CPU:CPU|flagComparacao:FLAG_IGUAL
+ 20. Parameter Settings for User Entity Instance: CPU:CPU|enderecoRetorno:END_RET
+ 21. Parameter Settings for User Entity Instance: CPU:CPU|logicaDesvio:LOGICA_DESVIO
+ 22. Parameter Settings for User Entity Instance: ROM:ROM1
+ 23. Parameter Settings for User Entity Instance: memoriaDados:memoriaDados
+ 24. Parameter Settings for User Entity Instance: Decoder3x8:DECODER_BLOCOS
+ 25. Parameter Settings for User Entity Instance: Decoder3x8:DECODER_ENDERECOS
+ 26. Parameter Settings for User Entity Instance: registradorGenerico:REGLEDR
+ 27. Parameter Settings for User Entity Instance: registradorBit:REGLEDR8
+ 28. Parameter Settings for User Entity Instance: registradorBit:REGLEDR9
+ 29. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX0
+ 30. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX1
+ 31. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX2
+ 32. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX3
+ 33. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX4
+ 34. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX5
+ 35. Port Connectivity Checks: "conversorHex7Seg:LED_HEX5"
+ 36. Port Connectivity Checks: "registradorGenerico:REG_HEX5"
+ 37. Port Connectivity Checks: "conversorHex7Seg:LED_HEX4"
+ 38. Port Connectivity Checks: "registradorGenerico:REG_HEX4"
+ 39. Port Connectivity Checks: "conversorHex7Seg:LED_HEX3"
+ 40. Port Connectivity Checks: "registradorGenerico:REG_HEX3"
+ 41. Port Connectivity Checks: "conversorHex7Seg:LED_HEX2"
+ 42. Port Connectivity Checks: "registradorGenerico:REG_HEX2"
+ 43. Port Connectivity Checks: "conversorHex7Seg:LED_HEX1"
+ 44. Port Connectivity Checks: "registradorGenerico:REG_HEX1"
+ 45. Port Connectivity Checks: "conversorHex7Seg:LED_HEX0"
+ 46. Port Connectivity Checks: "registradorGenerico:REG_HEX0"
+ 47. Port Connectivity Checks: "registradorBit:REGLEDR9"
+ 48. Port Connectivity Checks: "registradorBit:REGLEDR8"
+ 49. Port Connectivity Checks: "registradorGenerico:REGLEDR"
+ 50. Port Connectivity Checks: "Decoder3x8:DECODER_ENDERECOS"
+ 51. Port Connectivity Checks: "Decoder3x8:DECODER_BLOCOS"
+ 52. Port Connectivity Checks: "CPU:CPU|enderecoRetorno:END_RET"
+ 53. Port Connectivity Checks: "CPU:CPU|flagComparacao:FLAG_IGUAL"
+ 54. Port Connectivity Checks: "CPU:CPU|registradorGenerico:PC"
+ 55. Port Connectivity Checks: "CPU:CPU|registradorGenerico:REG1"
+ 56. Port Connectivity Checks: "CPU:CPU|muxGenerico4x2:MUX4x2_PC"
+ 57. Port Connectivity Checks: "CPU:CPU"
+ 58. Post-Synthesis Netlist Statistics for Top Partition
+ 59. Elapsed Time Per Partition
+ 60. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Thu Sep 23 16:42:41 2021       ;
+; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                   ; Aula8                                       ;
+; Top-level Entity Name           ; Aula8                                       ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 88                                          ;
+; Total pins                      ; 87                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CEBA4F23C7        ;                    ;
+; Top-level entity name                                                           ; Aula8              ; Aula8              ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation                             ; All                ;                    ;
+; VHDL Show LMF Mapping Messages                                                  ; Off                ;                    ;
+; VHDL Version                                                                    ; VHDL_2008          ; VHDL_1993          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                       ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------+---------+
+; memoriaDados.vhd                 ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8/memoriaDados.vhd        ;         ;
+; logicaDesvio.vhd                 ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8/logicaDesvio.vhd        ;         ;
+; flagComparacao.vhd               ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8/flagComparacao.vhd      ;         ;
+; enderecoRetorno.vhd              ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8/enderecoRetorno.vhd     ;         ;
+; edgeDetector.vhd                 ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8/edgeDetector.vhd        ;         ;
+; Decoder3x8.vhd                   ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8/Decoder3x8.vhd          ;         ;
+; Decoder.vhd                      ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8/Decoder.vhd             ;         ;
+; CPU.vhd                          ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8/CPU.vhd                 ;         ;
+; Aula8.vhd                        ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8/Aula8.vhd               ;         ;
+; ULASomaSub.vhd                   ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8/ULASomaSub.vhd          ;         ;
+; somaConstante.vhd                ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8/somaConstante.vhd       ;         ;
+; ROM.vhd                          ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8/ROM.vhd                 ;         ;
+; registradorGenerico.vhd          ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8/registradorGenerico.vhd ;         ;
+; registradorBit.vhd               ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8/registradorBit.vhd      ;         ;
+; muxGenerico4x2.vhd               ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8/muxGenerico4x2.vhd      ;         ;
+; muxGenerico2x1.vhd               ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8/muxGenerico2x1.vhd      ;         ;
+; conversorHex7Seg.vhd             ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8/conversorHex7Seg.vhd    ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                           ;
++---------------------------------------------+-----------------------------------------+
+; Resource                                    ; Usage                                   ;
++---------------------------------------------+-----------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 90                                      ;
+;                                             ;                                         ;
+; Combinational ALUT usage for logic          ; 150                                     ;
+;     -- 7 input functions                    ; 0                                       ;
+;     -- 6 input functions                    ; 9                                       ;
+;     -- 5 input functions                    ; 30                                      ;
+;     -- 4 input functions                    ; 61                                      ;
+;     -- <=3 input functions                  ; 50                                      ;
+;                                             ;                                         ;
+; Dedicated logic registers                   ; 88                                      ;
+;                                             ;                                         ;
+; I/O pins                                    ; 87                                      ;
+;                                             ;                                         ;
+; Total DSP Blocks                            ; 0                                       ;
+;                                             ;                                         ;
+; Maximum fan-out node                        ; edgeDetector:\gravar:detectorSub0|saida ;
+; Maximum fan-out                             ; 70                                      ;
+; Total fan-out                               ; 1025                                    ;
+; Average fan-out                             ; 2.49                                    ;
++---------------------------------------------+-----------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                             ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                      ; Entity Name         ; Library Name ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------+---------------------+--------------+
+; |Aula8                                 ; 150 (8)             ; 88 (0)                    ; 0                 ; 0          ; 87   ; 0            ; |Aula8                                   ; Aula8               ; work         ;
+;    |CPU:CPU|                           ; 39 (0)              ; 17 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU                           ; CPU                 ; work         ;
+;       |Decoder:Decoder|                ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|Decoder:Decoder           ; Decoder             ; work         ;
+;       |ULASomaSub:ULA1|                ; 26 (26)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|ULASomaSub:ULA1           ; ULASomaSub          ; work         ;
+;       |registradorGenerico:PC|         ; 0 (0)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|registradorGenerico:PC    ; registradorGenerico ; work         ;
+;       |registradorGenerico:REG1|       ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|registradorGenerico:REG1  ; registradorGenerico ; work         ;
+;       |somaConstante:somaUm|           ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|CPU:CPU|somaConstante:somaUm      ; somaConstante       ; work         ;
+;    |ROM:ROM1|                          ; 21 (21)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|ROM:ROM1                          ; ROM                 ; work         ;
+;    |conversorHex7Seg:LED_HEX0|         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|conversorHex7Seg:LED_HEX0         ; conversorHex7Seg    ; work         ;
+;    |conversorHex7Seg:LED_HEX1|         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|conversorHex7Seg:LED_HEX1         ; conversorHex7Seg    ; work         ;
+;    |conversorHex7Seg:LED_HEX2|         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|conversorHex7Seg:LED_HEX2         ; conversorHex7Seg    ; work         ;
+;    |conversorHex7Seg:LED_HEX3|         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|conversorHex7Seg:LED_HEX3         ; conversorHex7Seg    ; work         ;
+;    |conversorHex7Seg:LED_HEX4|         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|conversorHex7Seg:LED_HEX4         ; conversorHex7Seg    ; work         ;
+;    |edgeDetector:\gravar:detectorSub0| ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|edgeDetector:\gravar:detectorSub0 ; edgeDetector        ; work         ;
+;    |memoriaDados:memoriaDados|         ; 43 (43)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |Aula8|memoriaDados:memoriaDados         ; memoriaDados        ; work         ;
+;    |registradorBit:REGLEDR8|           ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|registradorBit:REGLEDR8           ; registradorBit      ; work         ;
+;    |registradorBit:REGLEDR9|           ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|registradorBit:REGLEDR9           ; registradorBit      ; work         ;
+;    |registradorGenerico:REG_HEX0|      ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|registradorGenerico:REG_HEX0      ; registradorGenerico ; work         ;
+;    |registradorGenerico:REG_HEX1|      ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|registradorGenerico:REG_HEX1      ; registradorGenerico ; work         ;
+;    |registradorGenerico:REG_HEX2|      ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|registradorGenerico:REG_HEX2      ; registradorGenerico ; work         ;
+;    |registradorGenerico:REG_HEX3|      ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|registradorGenerico:REG_HEX3      ; registradorGenerico ; work         ;
+;    |registradorGenerico:REG_HEX4|      ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8|registradorGenerico:REG_HEX4      ; registradorGenerico ; work         ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                       ;
++--------------------------------------------+---------------------------------------------+
+; Register name                              ; Reason for Removal                          ;
++--------------------------------------------+---------------------------------------------+
+; CPU:CPU|enderecoRetorno:END_RET|DOUT[0]    ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|flagComparacao:FLAG_IGUAL|DOUT     ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|enderecoRetorno:END_RET|DOUT[1..8] ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~79           ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~80           ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~81           ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~82           ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~83           ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~84           ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~85           ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~86           ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~87           ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~88           ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~89           ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~90           ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~91           ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~92           ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~93           ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~94           ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~95           ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~96           ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~97           ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~98           ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~99           ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~100          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~101          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~102          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~103          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~104          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~105          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~106          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~107          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~108          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~109          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~110          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~111          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~112          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~113          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~114          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~115          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~116          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~117          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~118          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~119          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~120          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~121          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~122          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~123          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~124          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~125          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~126          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~127          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~128          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~129          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~130          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~131          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~132          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~133          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~134          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~135          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~136          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~137          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~138          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~139          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~140          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~141          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~142          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~143          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~144          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~145          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~146          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~147          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~148          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~149          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~150          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~151          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~152          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~153          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~154          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~155          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~156          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~157          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~158          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~159          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~160          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~161          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~162          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~163          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~164          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~165          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~166          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~167          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~168          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~169          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~170          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~171          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~172          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~173          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~174          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~175          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~176          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~177          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~178          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~179          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~180          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~181          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~182          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~183          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~184          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~185          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~186          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~187          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~188          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~189          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~190          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~191          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~192          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~193          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~194          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~195          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~196          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~197          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~198          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~199          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~200          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~201          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~202          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~203          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~204          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~205          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~206          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~207          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~208          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~209          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~210          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~211          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~212          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~213          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~214          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~215          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~216          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~217          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~218          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~219          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~220          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~221          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~222          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~223          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~224          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~225          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~226          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~227          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~228          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~229          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~230          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~231          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~232          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~233          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~234          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~235          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~236          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~237          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~238          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~239          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~240          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~241          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~242          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~243          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~244          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~245          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~246          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~247          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~248          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~249          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~250          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~251          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~252          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~253          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~254          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~255          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~256          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~257          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~258          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~259          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~260          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~261          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~262          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~263          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~264          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~265          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~266          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~267          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~268          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~269          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~270          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~335          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~336          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~337          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~338          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~339          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~340          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~341          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~342          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~343          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~344          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~345          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~346          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~347          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~348          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~349          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~350          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~351          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~352          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~353          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~354          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~355          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~356          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~357          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~358          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~359          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~360          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~361          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~362          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~363          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~364          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~365          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~366          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~367          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~368          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~369          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~370          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~371          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~372          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~373          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~374          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~375          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~376          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~377          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~378          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~379          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~380          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~381          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~382          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~383          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~384          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~385          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~386          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~387          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~388          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~389          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~390          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~391          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~392          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~393          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~394          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~395          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~396          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~397          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~398          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~399          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~400          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~401          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~402          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~403          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~404          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~405          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~406          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~407          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~408          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~409          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~410          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~411          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~412          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~413          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~414          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~415          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~416          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~417          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~418          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~419          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~420          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~421          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~422          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~423          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~424          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~425          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~426          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~427          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~428          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~429          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~430          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~431          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~432          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~433          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~434          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~435          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~436          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~437          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~438          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~439          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~440          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~441          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~442          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~443          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~444          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~445          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~446          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~447          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~448          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~449          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~450          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~451          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~452          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~453          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~454          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~455          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~456          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~457          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~458          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~459          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~460          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~461          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~462          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~463          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~464          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~465          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~466          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~467          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~468          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~469          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~470          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~471          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~472          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~473          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~474          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~475          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~476          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~477          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~478          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~479          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~480          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~481          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~482          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~483          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~484          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~485          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~486          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~487          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~488          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~489          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~490          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~491          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~492          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~493          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~494          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~495          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~496          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~497          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~498          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~499          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~500          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~501          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~502          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~503          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~504          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~505          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~506          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~507          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~508          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~509          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~510          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~511          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~512          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~513          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~514          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~515          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~516          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~517          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~518          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~519          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~520          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~521          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~522          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~523          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~524          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~525          ; Lost fanout                                 ;
+; memoriaDados:memoriaDados|ram~526          ; Lost fanout                                 ;
+; registradorGenerico:REGLEDR|DOUT[0..7]     ; Stuck at GND due to stuck port clock_enable ;
+; registradorGenerico:REG_HEX5|DOUT[0..3]    ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~23           ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~279          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~295          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~55           ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~327          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~271          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~287          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~47           ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~303          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~319          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~24           ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~56           ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~48           ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~280          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~272          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~304          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~296          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~288          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~328          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~320          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~25           ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~281          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~297          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~57           ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~329          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~273          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~289          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~49           ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~305          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~321          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~26           ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~58           ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~50           ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~282          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~274          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~306          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~298          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~290          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~330          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~322          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~27           ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~283          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~299          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~59           ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~331          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~275          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~291          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~51           ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~307          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~323          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~28           ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~60           ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~52           ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~284          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~276          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~308          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~300          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~292          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~332          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~324          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~29           ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~61           ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~53           ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~285          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~301          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~333          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~277          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~309          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~293          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~325          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~30           ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~62           ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~54           ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~286          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~278          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~302          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~294          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~310          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~334          ; Stuck at GND due to stuck port clock_enable ;
+; memoriaDados:memoriaDados|ram~326          ; Stuck at GND due to stuck port clock_enable ;
+; Total Number of Removed Registers = 486    ;                                             ;
++--------------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 88    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 17    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 76    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |Aula8|CPU:CPU|registradorGenerico:REG1|DOUT[0] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Aula8|CPU:CPU|Decoder:Decoder|OUTPUT[3]        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |Aula8 ;
++-----------------+-------+---------------------------------------------+
+; Parameter Name  ; Value ; Type                                        ;
++-----------------+-------+---------------------------------------------+
+; larguraDados    ; 8     ; Signed Integer                              ;
+; larguraAddrROM  ; 9     ; Signed Integer                              ;
+; larguraDadosROM ; 13    ; Signed Integer                              ;
+; larguraDadosRAM ; 8     ; Signed Integer                              ;
+; larguraAddrRAM  ; 6     ; Signed Integer                              ;
+; simulacao       ; false ; Enumerated                                  ;
++-----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU ;
++-------------------+-------+--------------------------+
+; Parameter Name    ; Value ; Type                     ;
++-------------------+-------+--------------------------+
+; larguradados      ; 8     ; Signed Integer           ;
+; larguraaddrrom    ; 9     ; Signed Integer           ;
+; largurapc_rom     ; 9     ; Signed Integer           ;
+; larguradadosrom   ; 12    ; Signed Integer           ;
+; larguradadosram   ; 8     ; Signed Integer           ;
+; larguraaddrram    ; 8     ; Signed Integer           ;
+; larguraflag_igual ; 2     ; Signed Integer           ;
+; simulacao         ; true  ; Enumerated               ;
++-------------------+-------+--------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|muxGenerico2x1:MUX1 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|muxGenerico4x2:MUX4x2_PC ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; larguradados   ; 9     ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:REG1 ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:PC ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; larguradados   ; 9     ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|somaConstante:somaUm ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; larguradados   ; 9     ; Signed Integer                                   ;
+; constante      ; 1     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|ULASomaSub:ULA1 ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|flagComparacao:FLAG_IGUAL ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; larguradados   ; 2     ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|enderecoRetorno:END_RET ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; larguradados   ; 9     ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|logicaDesvio:LOGICA_DESVIO ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; larguradados   ; 2     ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ROM:ROM1 ;
++----------------+-------+------------------------------+
+; Parameter Name ; Value ; Type                         ;
++----------------+-------+------------------------------+
+; datawidth      ; 13    ; Signed Integer               ;
+; addrwidth      ; 9     ; Signed Integer               ;
++----------------+-------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memoriaDados:memoriaDados ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; datawidth      ; 8     ; Signed Integer                                ;
+; addrwidth      ; 6     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Decoder3x8:DECODER_BLOCOS ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; datawidth      ; 8     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Decoder3x8:DECODER_ENDERECOS ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; datawidth      ; 8     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:REGLEDR ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorBit:REGLEDR8 ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; larguradados   ; 1     ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorBit:REGLEDR9 ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; larguradados   ; 1     ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX0 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX1 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX2 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX3 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX4 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX5 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:LED_HEX5" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "registradorGenerico:REG_HEX5" ;
++------+-------+----------+--------------------------------+
+; Port ; Type  ; Severity ; Details                        ;
++------+-------+----------+--------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                   ;
++------+-------+----------+--------------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:LED_HEX4" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "registradorGenerico:REG_HEX4" ;
++------+-------+----------+--------------------------------+
+; Port ; Type  ; Severity ; Details                        ;
++------+-------+----------+--------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                   ;
++------+-------+----------+--------------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:LED_HEX3" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "registradorGenerico:REG_HEX3" ;
++------+-------+----------+--------------------------------+
+; Port ; Type  ; Severity ; Details                        ;
++------+-------+----------+--------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                   ;
++------+-------+----------+--------------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:LED_HEX2" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "registradorGenerico:REG_HEX2" ;
++------+-------+----------+--------------------------------+
+; Port ; Type  ; Severity ; Details                        ;
++------+-------+----------+--------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                   ;
++------+-------+----------+--------------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:LED_HEX1" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "registradorGenerico:REG_HEX1" ;
++------+-------+----------+--------------------------------+
+; Port ; Type  ; Severity ; Details                        ;
++------+-------+----------+--------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                   ;
++------+-------+----------+--------------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:LED_HEX0" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "registradorGenerico:REG_HEX0" ;
++------+-------+----------+--------------------------------+
+; Port ; Type  ; Severity ; Details                        ;
++------+-------+----------+--------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                   ;
++------+-------+----------+--------------------------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "registradorBit:REGLEDR9" ;
++------+-------+----------+---------------------------+
+; Port ; Type  ; Severity ; Details                   ;
++------+-------+----------+---------------------------+
+; rst  ; Input ; Info     ; Stuck at GND              ;
++------+-------+----------+---------------------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "registradorBit:REGLEDR8" ;
++------+-------+----------+---------------------------+
+; Port ; Type  ; Severity ; Details                   ;
++------+-------+----------+---------------------------+
+; rst  ; Input ; Info     ; Stuck at GND              ;
++------+-------+----------+---------------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "registradorGenerico:REGLEDR" ;
++------+-------+----------+-------------------------------+
+; Port ; Type  ; Severity ; Details                       ;
++------+-------+----------+-------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                  ;
++------+-------+----------+-------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Decoder3x8:DECODER_ENDERECOS"                                                               ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; output[7..6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Decoder3x8:DECODER_BLOCOS"                                                                  ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; output[7..5] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; output[3..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "CPU:CPU|enderecoRetorno:END_RET" ;
++------+-------+----------+-----------------------------------+
+; Port ; Type  ; Severity ; Details                           ;
++------+-------+----------+-----------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                      ;
++------+-------+----------+-----------------------------------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "CPU:CPU|flagComparacao:FLAG_IGUAL" ;
++------+-------+----------+-------------------------------------+
+; Port ; Type  ; Severity ; Details                             ;
++------+-------+----------+-------------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                        ;
++------+-------+----------+-------------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "CPU:CPU|registradorGenerico:PC" ;
++--------+-------+----------+--------------------------------+
+; Port   ; Type  ; Severity ; Details                        ;
++--------+-------+----------+--------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                   ;
+; rst    ; Input ; Info     ; Stuck at GND                   ;
++--------+-------+----------+--------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "CPU:CPU|registradorGenerico:REG1" ;
++------+-------+----------+------------------------------------+
+; Port ; Type  ; Severity ; Details                            ;
++------+-------+----------+------------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                       ;
++------+-------+----------+------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "CPU:CPU|muxGenerico4x2:MUX4x2_PC" ;
++--------------+-------+----------+----------------------------+
+; Port         ; Type  ; Severity ; Details                    ;
++--------------+-------+----------+----------------------------+
+; entradad_mux ; Input ; Info     ; Stuck at GND               ;
++--------------+-------+----------+----------------------------+
+
+
++-----------------------------------------+
+; Port Connectivity Checks: "CPU:CPU"     ;
++-------+-------+----------+--------------+
+; Port  ; Type  ; Severity ; Details      ;
++-------+-------+----------+--------------+
+; reset ; Input ; Info     ; Stuck at GND ;
++-------+-------+----------+--------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 88                          ;
+;     ENA               ; 68                          ;
+;     ENA SLD           ; 8                           ;
+;     SLD               ; 9                           ;
+;     plain             ; 3                           ;
+; arriav_lcell_comb     ; 152                         ;
+;     arith             ; 26                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 9                           ;
+;         3 data inputs ; 8                           ;
+;         5 data inputs ; 8                           ;
+;     normal            ; 126                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 25                          ;
+;         4 data inputs ; 61                          ;
+;         5 data inputs ; 22                          ;
+;         6 data inputs ; 9                           ;
+; boundary_port         ; 87                          ;
+;                       ;                             ;
+; Max LUT depth         ; 6.70                        ;
+; Average LUT depth     ; 3.83                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Thu Sep 23 16:42:30 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Aula8 -c Aula8
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file memoriaDados.vhd
+    Info (12022): Found design unit 1: memoriaDados-rtl File: /home/antonio/Desktop/descomp/aula8/memoriaDados.vhd Line: 21
+    Info (12023): Found entity 1: memoriaDados File: /home/antonio/Desktop/descomp/aula8/memoriaDados.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file logicaDesvio.vhd
+    Info (12022): Found design unit 1: logicaDesvio-comportamento File: /home/antonio/Desktop/descomp/aula8/logicaDesvio.vhd Line: 13
+    Info (12023): Found entity 1: logicaDesvio File: /home/antonio/Desktop/descomp/aula8/logicaDesvio.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file flagComparacao.vhd
+    Info (12022): Found design unit 1: flagComparacao-comportamento File: /home/antonio/Desktop/descomp/aula8/flagComparacao.vhd Line: 15
+    Info (12023): Found entity 1: flagComparacao File: /home/antonio/Desktop/descomp/aula8/flagComparacao.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file enderecoRetorno.vhd
+    Info (12022): Found design unit 1: enderecoRetorno-comportamento File: /home/antonio/Desktop/descomp/aula8/enderecoRetorno.vhd Line: 15
+    Info (12023): Found entity 1: enderecoRetorno File: /home/antonio/Desktop/descomp/aula8/enderecoRetorno.vhd Line: 4
+Info (12021): Found 3 design units, including 1 entities, in source file edgeDetector.vhd
+    Info (12022): Found design unit 1: edgeDetector-bordaSubida File: /home/antonio/Desktop/descomp/aula8/edgeDetector.vhd Line: 10
+    Info (12022): Found design unit 2: edgeDetector-bordaDescida File: /home/antonio/Desktop/descomp/aula8/edgeDetector.vhd Line: 23
+    Info (12023): Found entity 1: edgeDetector File: /home/antonio/Desktop/descomp/aula8/edgeDetector.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file Decoder3x8.vhd
+    Info (12022): Found design unit 1: Decoder3x8-arch_name File: /home/antonio/Desktop/descomp/aula8/Decoder3x8.vhd Line: 18
+    Info (12023): Found entity 1: Decoder3x8 File: /home/antonio/Desktop/descomp/aula8/Decoder3x8.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file Decoder.vhd
+    Info (12022): Found design unit 1: Decoder-arch_name File: /home/antonio/Desktop/descomp/aula8/Decoder.vhd Line: 15
+    Info (12023): Found entity 1: Decoder File: /home/antonio/Desktop/descomp/aula8/Decoder.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file CPU.vhd
+    Info (12022): Found design unit 1: CPU-arquitetura File: /home/antonio/Desktop/descomp/aula8/CPU.vhd Line: 31
+    Info (12023): Found entity 1: CPU File: /home/antonio/Desktop/descomp/aula8/CPU.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file Aula8.vhd
+    Info (12022): Found design unit 1: Aula8-arquitetura File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 33
+    Info (12023): Found entity 1: Aula8 File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file ULASomaSub.vhd
+    Info (12022): Found design unit 1: ULASomaSub-comportamento File: /home/antonio/Desktop/descomp/aula8/ULASomaSub.vhd Line: 15
+    Info (12023): Found entity 1: ULASomaSub File: /home/antonio/Desktop/descomp/aula8/ULASomaSub.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file somadorGenerico.vhd
+    Info (12022): Found design unit 1: somadorGenerico-comportamento File: /home/antonio/Desktop/descomp/aula8/somadorGenerico.vhd Line: 17
+    Info (12023): Found entity 1: somadorGenerico File: /home/antonio/Desktop/descomp/aula8/somadorGenerico.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file somaConstante.vhd
+    Info (12022): Found design unit 1: somaConstante-comportamento File: /home/antonio/Desktop/descomp/aula8/somaConstante.vhd Line: 18
+    Info (12023): Found entity 1: somaConstante File: /home/antonio/Desktop/descomp/aula8/somaConstante.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file ROM.vhd
+    Info (12022): Found design unit 1: ROM-assincrona File: /home/antonio/Desktop/descomp/aula8/ROM.vhd Line: 16
+    Info (12023): Found entity 1: ROM File: /home/antonio/Desktop/descomp/aula8/ROM.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file registradorGenerico.vhd
+    Info (12022): Found design unit 1: registradorGenerico-comportamento File: /home/antonio/Desktop/descomp/aula8/registradorGenerico.vhd Line: 15
+    Info (12023): Found entity 1: registradorGenerico File: /home/antonio/Desktop/descomp/aula8/registradorGenerico.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file registradorBit.vhd
+    Info (12022): Found design unit 1: registradorBit-comportamento File: /home/antonio/Desktop/descomp/aula8/registradorBit.vhd Line: 15
+    Info (12023): Found entity 1: registradorBit File: /home/antonio/Desktop/descomp/aula8/registradorBit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file muxGenerico4x2.vhd
+    Info (12022): Found design unit 1: muxGenerico4x2-comportamento File: /home/antonio/Desktop/descomp/aula8/muxGenerico4x2.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico4x2 File: /home/antonio/Desktop/descomp/aula8/muxGenerico4x2.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file muxGenerico2x1.vhd
+    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: /home/antonio/Desktop/descomp/aula8/muxGenerico2x1.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico2x1 File: /home/antonio/Desktop/descomp/aula8/muxGenerico2x1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file conversorHex7Seg.vhd
+    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: /home/antonio/Desktop/descomp/aula8/conversorHex7Seg.vhd Line: 17
+    Info (12023): Found entity 1: conversorHex7Seg File: /home/antonio/Desktop/descomp/aula8/conversorHex7Seg.vhd Line: 4
+Info (12127): Elaborating entity "Aula8" for the top level hierarchy
+Info (12129): Elaborating entity "edgeDetector" using architecture "A:bordasubida" for hierarchy "edgeDetector:\gravar:detectorSub0" File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 82
+Info (12128): Elaborating entity "CPU" for hierarchy "CPU:CPU" File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 86
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "CPU:CPU|muxGenerico2x1:MUX1" File: /home/antonio/Desktop/descomp/aula8/CPU.vhd Line: 70
+Info (12128): Elaborating entity "muxGenerico4x2" for hierarchy "CPU:CPU|muxGenerico4x2:MUX4x2_PC" File: /home/antonio/Desktop/descomp/aula8/CPU.vhd Line: 78
+Info (12128): Elaborating entity "Decoder" for hierarchy "CPU:CPU|Decoder:Decoder" File: /home/antonio/Desktop/descomp/aula8/CPU.vhd Line: 88
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "CPU:CPU|registradorGenerico:REG1" File: /home/antonio/Desktop/descomp/aula8/CPU.vhd Line: 92
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "CPU:CPU|registradorGenerico:PC" File: /home/antonio/Desktop/descomp/aula8/CPU.vhd Line: 96
+Info (12128): Elaborating entity "somaConstante" for hierarchy "CPU:CPU|somaConstante:somaUm" File: /home/antonio/Desktop/descomp/aula8/CPU.vhd Line: 99
+Info (12128): Elaborating entity "ULASomaSub" for hierarchy "CPU:CPU|ULASomaSub:ULA1" File: /home/antonio/Desktop/descomp/aula8/CPU.vhd Line: 103
+Info (12128): Elaborating entity "flagComparacao" for hierarchy "CPU:CPU|flagComparacao:FLAG_IGUAL" File: /home/antonio/Desktop/descomp/aula8/CPU.vhd Line: 106
+Info (12128): Elaborating entity "enderecoRetorno" for hierarchy "CPU:CPU|enderecoRetorno:END_RET" File: /home/antonio/Desktop/descomp/aula8/CPU.vhd Line: 109
+Info (12128): Elaborating entity "logicaDesvio" for hierarchy "CPU:CPU|logicaDesvio:LOGICA_DESVIO" File: /home/antonio/Desktop/descomp/aula8/CPU.vhd Line: 112
+Info (12128): Elaborating entity "ROM" for hierarchy "ROM:ROM1" File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 101
+Info (12128): Elaborating entity "memoriaDados" for hierarchy "memoriaDados:memoriaDados" File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 107
+Info (12128): Elaborating entity "Decoder3x8" for hierarchy "Decoder3x8:DECODER_BLOCOS" File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 110
+Info (10041): Inferred latch for "OUTPUT[0]" at Decoder3x8.vhd(30) File: /home/antonio/Desktop/descomp/aula8/Decoder3x8.vhd Line: 30
+Info (10041): Inferred latch for "OUTPUT[1]" at Decoder3x8.vhd(30) File: /home/antonio/Desktop/descomp/aula8/Decoder3x8.vhd Line: 30
+Info (10041): Inferred latch for "OUTPUT[2]" at Decoder3x8.vhd(30) File: /home/antonio/Desktop/descomp/aula8/Decoder3x8.vhd Line: 30
+Info (10041): Inferred latch for "OUTPUT[3]" at Decoder3x8.vhd(30) File: /home/antonio/Desktop/descomp/aula8/Decoder3x8.vhd Line: 30
+Info (10041): Inferred latch for "OUTPUT[4]" at Decoder3x8.vhd(30) File: /home/antonio/Desktop/descomp/aula8/Decoder3x8.vhd Line: 30
+Info (10041): Inferred latch for "OUTPUT[5]" at Decoder3x8.vhd(30) File: /home/antonio/Desktop/descomp/aula8/Decoder3x8.vhd Line: 30
+Info (10041): Inferred latch for "OUTPUT[6]" at Decoder3x8.vhd(30) File: /home/antonio/Desktop/descomp/aula8/Decoder3x8.vhd Line: 30
+Info (10041): Inferred latch for "OUTPUT[7]" at Decoder3x8.vhd(30) File: /home/antonio/Desktop/descomp/aula8/Decoder3x8.vhd Line: 30
+Info (12128): Elaborating entity "registradorBit" for hierarchy "registradorBit:REGLEDR8" File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 119
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:REG_HEX0" File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 127
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:LED_HEX0" File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 130
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "memoriaDados:memoriaDados|ram" is uninferred due to asynchronous read logic File: /home/antonio/Desktop/descomp/aula8/memoriaDados.vhd Line: 27
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13049): Converted tri-state buffer "memoriaDados:memoriaDados|dado_out[0]" feeding internal logic into a wire File: /home/antonio/Desktop/descomp/aula8/memoriaDados.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaDados:memoriaDados|dado_out[1]" feeding internal logic into a wire File: /home/antonio/Desktop/descomp/aula8/memoriaDados.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaDados:memoriaDados|dado_out[2]" feeding internal logic into a wire File: /home/antonio/Desktop/descomp/aula8/memoriaDados.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaDados:memoriaDados|dado_out[3]" feeding internal logic into a wire File: /home/antonio/Desktop/descomp/aula8/memoriaDados.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaDados:memoriaDados|dado_out[4]" feeding internal logic into a wire File: /home/antonio/Desktop/descomp/aula8/memoriaDados.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaDados:memoriaDados|dado_out[5]" feeding internal logic into a wire File: /home/antonio/Desktop/descomp/aula8/memoriaDados.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaDados:memoriaDados|dado_out[6]" feeding internal logic into a wire File: /home/antonio/Desktop/descomp/aula8/memoriaDados.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaDados:memoriaDados|dado_out[7]" feeding internal logic into a wire File: /home/antonio/Desktop/descomp/aula8/memoriaDados.vhd Line: 17
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "saida_ROM[3]" is stuck at GND File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 20
+    Warning (13410): Pin "saida_ROM[4]" is stuck at GND File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 20
+    Warning (13410): Pin "saida_ROM[6]" is stuck at GND File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 20
+    Warning (13410): Pin "saida_ROM[7]" is stuck at GND File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 20
+    Warning (13410): Pin "saida_ROM[12]" is stuck at GND File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 20
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 384 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 3 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[1]" File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 16
+    Warning (15610): No output dependent on input pin "KEY[2]" File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 16
+    Warning (15610): No output dependent on input pin "KEY[3]" File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 16
+Info (21057): Implemented 305 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 82 output pins
+    Info (21061): Implemented 218 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
+    Info: Peak virtual memory: 481 megabytes
+    Info: Processing ended: Thu Sep 23 16:42:41 2021
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:28
+
+
