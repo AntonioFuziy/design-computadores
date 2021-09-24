@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Aula8
-Thu Sep 23 16:42:41 2021
+Thu Sep 23 17:18:56 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -92,7 +92,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Sep 23 16:42:41 2021       ;
+; Analysis & Synthesis Status     ; Successful - Thu Sep 23 17:18:56 2021       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Aula8                                       ;
 ; Top-level Entity Name           ; Aula8                                       ;
@@ -1326,7 +1326,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Sep 23 16:42:30 2021
+    Info: Processing started: Thu Sep 23 17:18:45 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Aula8 -c Aula8
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file memoriaDados.vhd
@@ -1386,7 +1386,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file convers
     Info (12023): Found entity 1: conversorHex7Seg File: /home/antonio/Desktop/descomp/aula8/conversorHex7Seg.vhd Line: 4
 Info (12127): Elaborating entity "Aula8" for the top level hierarchy
 Info (12129): Elaborating entity "edgeDetector" using architecture "A:bordasubida" for hierarchy "edgeDetector:\gravar:detectorSub0" File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 82
-Info (12128): Elaborating entity "CPU" for hierarchy "CPU:CPU" File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 86
+Info (12128): Elaborating entity "CPU" for hierarchy "CPU:CPU" File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 88
 Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "CPU:CPU|muxGenerico2x1:MUX1" File: /home/antonio/Desktop/descomp/aula8/CPU.vhd Line: 70
 Info (12128): Elaborating entity "muxGenerico4x2" for hierarchy "CPU:CPU|muxGenerico4x2:MUX4x2_PC" File: /home/antonio/Desktop/descomp/aula8/CPU.vhd Line: 78
 Info (12128): Elaborating entity "Decoder" for hierarchy "CPU:CPU|Decoder:Decoder" File: /home/antonio/Desktop/descomp/aula8/CPU.vhd Line: 88
@@ -1397,9 +1397,9 @@ Info (12128): Elaborating entity "ULASomaSub" for hierarchy "CPU:CPU|ULASomaSub:
 Info (12128): Elaborating entity "flagComparacao" for hierarchy "CPU:CPU|flagComparacao:FLAG_IGUAL" File: /home/antonio/Desktop/descomp/aula8/CPU.vhd Line: 106
 Info (12128): Elaborating entity "enderecoRetorno" for hierarchy "CPU:CPU|enderecoRetorno:END_RET" File: /home/antonio/Desktop/descomp/aula8/CPU.vhd Line: 109
 Info (12128): Elaborating entity "logicaDesvio" for hierarchy "CPU:CPU|logicaDesvio:LOGICA_DESVIO" File: /home/antonio/Desktop/descomp/aula8/CPU.vhd Line: 112
-Info (12128): Elaborating entity "ROM" for hierarchy "ROM:ROM1" File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 101
-Info (12128): Elaborating entity "memoriaDados" for hierarchy "memoriaDados:memoriaDados" File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 107
-Info (12128): Elaborating entity "Decoder3x8" for hierarchy "Decoder3x8:DECODER_BLOCOS" File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 110
+Info (12128): Elaborating entity "ROM" for hierarchy "ROM:ROM1" File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 103
+Info (12128): Elaborating entity "memoriaDados" for hierarchy "memoriaDados:memoriaDados" File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 109
+Info (12128): Elaborating entity "Decoder3x8" for hierarchy "Decoder3x8:DECODER_BLOCOS" File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 112
 Info (10041): Inferred latch for "OUTPUT[0]" at Decoder3x8.vhd(30) File: /home/antonio/Desktop/descomp/aula8/Decoder3x8.vhd Line: 30
 Info (10041): Inferred latch for "OUTPUT[1]" at Decoder3x8.vhd(30) File: /home/antonio/Desktop/descomp/aula8/Decoder3x8.vhd Line: 30
 Info (10041): Inferred latch for "OUTPUT[2]" at Decoder3x8.vhd(30) File: /home/antonio/Desktop/descomp/aula8/Decoder3x8.vhd Line: 30
@@ -1408,9 +1408,9 @@ Info (10041): Inferred latch for "OUTPUT[4]" at Decoder3x8.vhd(30) File: /home/a
 Info (10041): Inferred latch for "OUTPUT[5]" at Decoder3x8.vhd(30) File: /home/antonio/Desktop/descomp/aula8/Decoder3x8.vhd Line: 30
 Info (10041): Inferred latch for "OUTPUT[6]" at Decoder3x8.vhd(30) File: /home/antonio/Desktop/descomp/aula8/Decoder3x8.vhd Line: 30
 Info (10041): Inferred latch for "OUTPUT[7]" at Decoder3x8.vhd(30) File: /home/antonio/Desktop/descomp/aula8/Decoder3x8.vhd Line: 30
-Info (12128): Elaborating entity "registradorBit" for hierarchy "registradorBit:REGLEDR8" File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 119
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:REG_HEX0" File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 127
-Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:LED_HEX0" File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 130
+Info (12128): Elaborating entity "registradorBit" for hierarchy "registradorBit:REGLEDR8" File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 121
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:REG_HEX0" File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 129
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:LED_HEX0" File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 132
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276007): RAM logic "memoriaDados:memoriaDados|ram" is uninferred due to asynchronous read logic File: /home/antonio/Desktop/descomp/aula8/memoriaDados.vhd Line: 27
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
@@ -1441,9 +1441,9 @@ Info (21057): Implemented 305 device resources after synthesis - the final resou
     Info (21059): Implemented 82 output pins
     Info (21061): Implemented 218 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 481 megabytes
-    Info: Processing ended: Thu Sep 23 16:42:41 2021
+    Info: Peak virtual memory: 485 megabytes
+    Info: Processing ended: Thu Sep 23 17:18:56 2021
     Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:28
+    Info: Total CPU time (on all processors): 00:00:29
 
 

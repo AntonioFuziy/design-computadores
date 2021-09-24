@@ -14,6 +14,8 @@ entity Aula8_key is
   port   (
     CLOCK_50 : in std_logic;
     KEY: in std_logic_vector(3 downto 0);
+	 SW: in std_logic_vector(9 downto 0);
+	 FPGA_RESET: in std_logic;
 	 LEDR: out std_logic_vector(7 downto 0);
 	 LEDR8: out std_logic;
 	 LEDR9: out std_logic;
@@ -70,6 +72,15 @@ architecture arquitetura of Aula8_key is
 	signal AND_HEX3: std_logic;
 	signal AND_HEX4: std_logic;
 	signal AND_HEX5: std_logic;
+	
+	signal AND_ENABLE_BUFFER_8BITS: std_logic;
+	signal AND_ENABLE_BUFFER_BIT_SW8: std_logic;
+	signal AND_ENABLE_BUFFER_BIT_SW9: std_logic;
+	signal AND_ENABLE_BUFFER_BIT_KEY0: std_logic;
+	signal AND_ENABLE_BUFFER_BIT_KEY1: std_logic;
+	signal AND_ENABLE_BUFFER_BIT_KEY2: std_logic;
+	signal AND_ENABLE_BUFFER_BIT_KEY3: std_logic;
+	signal AND_ENABLE_BUFFER_BIT_FPGA_RESET: std_logic;
 
 begin
 
@@ -194,6 +205,32 @@ LED_HEX5 :  entity work.conversorHex7Seg
                  overFlow =>  '0',
                  saida7seg => HEX5);
 					  
+-- ================================================= KEYS and SWITCHES Manager ====================================================
+
+BUFFER_THREE_STATE_8BITS: entity work.bufferTreeState   generic map (dataWidth => 8)
+		 port map (INPUT => SW(7 downto 0), ENABLE => AND_ENABLE_BUFFER_8BITS, OUTPUT => Data_IN);
+		 
+BUFFER_THREE_STATE_BIT0: entity work.bufferThreeStateBit   generic map (dataWidth => 8)
+		 port map (INPUT => SW(8), ENABLE => AND_ENABLE_BUFFER_BIT_SW8, OUTPUT => Data_IN);
+		 
+BUFFER_THREE_STATE_BIT1: entity work.bufferThreeStateBit   generic map (dataWidth => 8)
+		 port map (INPUT => SW(9), ENABLE => AND_ENABLE_BUFFER_BIT_SW9, OUTPUT => Data_IN);
+		 
+BUFFER_THREE_STATE_BIT2: entity work.bufferThreeStateBit   generic map (dataWidth => 8)
+		 port map (INPUT => KEY(0), ENABLE => AND_ENABLE_BUFFER_BIT_KEY0, OUTPUT => Data_IN);
+		 
+BUFFER_THREE_STATE_BIT3: entity work.bufferThreeStateBit   generic map (dataWidth => 8)
+		 port map (INPUT => KEY(1), ENABLE => AND_ENABLE_BUFFER_BIT_KEY1, OUTPUT => Data_IN);
+		 
+BUFFER_THREE_STATE_BIT4: entity work.bufferThreeStateBit   generic map (dataWidth => 8)
+		 port map (INPUT => KEY(2), ENABLE => AND_ENABLE_BUFFER_BIT_KEY2, OUTPUT => Data_IN);
+		 
+BUFFER_THREE_STATE_BIT5: entity work.bufferThreeStateBit   generic map (dataWidth => 8)
+		 port map (INPUT => KEY(3), ENABLE => AND_ENABLE_BUFFER_BIT_KEY3, OUTPUT => Data_IN);
+		 
+BUFFER_THREE_STATE_BIT6: entity work.bufferThreeStateBit   generic map (dataWidth => 8)
+		 port map (INPUT => FPGA_RESET, ENABLE => AND_ENABLE_BUFFER_BIT_FPGA_RESET, OUTPUT => Data_IN);
+
 -- ================================================= Saidas e Operacoes ====================================================
 
 NOT_A5 <= not(Data_Address(5));
@@ -209,6 +246,15 @@ AND_HEX2 <= '1' when (Saida_Decoder_Addr(2) and Saida_Decoder_Blocos(4) and wr a
 AND_HEX3 <= '1' when (Saida_Decoder_Addr(3) and Saida_Decoder_Blocos(4) and wr and A5) else '0';
 AND_HEX4 <= '1' when (Saida_Decoder_Addr(4) and Saida_Decoder_Blocos(4) and wr and A5) else '0';
 AND_HEX5 <= '1' when (Saida_Decoder_Addr(5) and Saida_Decoder_Blocos(4) and wr and A5) else '0';
+
+AND_ENABLE_BUFFER_8BITS <= '1' when (rd and NOT_A5 and Saida_Decoder_Addr(0) and Saida_Decoder_Blocos(5)) else '0';
+AND_ENABLE_BUFFER_BIT_SW8 <= '1' when (rd and NOT_A5 and Saida_Decoder_Addr(1) and Saida_Decoder_Blocos(5)) else '0';
+AND_ENABLE_BUFFER_BIT_SW9 <= '1' when (rd and NOT_A5 and Saida_Decoder_Addr(2) and Saida_Decoder_Blocos(5)) else '0';
+AND_ENABLE_BUFFER_BIT_KEY0 <= '1' when (rd and A5 and Saida_Decoder_Addr(0) and Saida_Decoder_Blocos(5)) else '0';
+AND_ENABLE_BUFFER_BIT_KEY1 <= '1' when (rd and A5 and Saida_Decoder_Addr(1) and Saida_Decoder_Blocos(5)) else '0';
+AND_ENABLE_BUFFER_BIT_KEY2 <= '1' when (rd and A5 and Saida_Decoder_Addr(2) and Saida_Decoder_Blocos(5)) else '0';
+AND_ENABLE_BUFFER_BIT_KEY3 <= '1' when (rd and A5 and Saida_Decoder_Addr(3) and Saida_Decoder_Blocos(5)) else '0';
+AND_ENABLE_BUFFER_BIT_FPGA_RESET <= '1' when (rd and A5 and Saida_Decoder_Addr(4) and Saida_Decoder_Blocos(5)) else '0';
 
 LEDR <= SaidaREG_LEDR;
 LEDR8 <= SaidaREG_LEDR8;

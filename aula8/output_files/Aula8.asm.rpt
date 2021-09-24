@@ -1,5 +1,5 @@
 Assembler report for Aula8
-Thu Sep 23 16:43:16 2021
+Thu Sep 23 17:19:37 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Sep 23 16:43:16 2021 ;
+; Assembler Status      ; Successful - Thu Sep 23 17:19:37 2021 ;
 ; Revision Name         ; Aula8                                 ;
 ; Top-level Entity Name ; Aula8                                 ;
 ; Family                ; Cyclone V                             ;
@@ -67,8 +67,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------+--------------------+
 ; Option         ; Setting            ;
 +----------------+--------------------+
-; JTAG usercode  ; 0x0052030F         ;
-; Checksum       ; 0x0052030F         ;
+; JTAG usercode  ; 0x0051F303         ;
+; Checksum       ; 0x0051F303         ;
 +----------------+--------------------+
 
 
@@ -78,13 +78,13 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Sep 23 16:43:13 2021
+    Info: Processing started: Thu Sep 23 17:19:33 2021
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Aula8 -c Aula8
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 481 megabytes
-    Info: Processing ended: Thu Sep 23 16:43:16 2021
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 487 megabytes
+    Info: Processing ended: Thu Sep 23 17:19:37 2021
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
 
 
