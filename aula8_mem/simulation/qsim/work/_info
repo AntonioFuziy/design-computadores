@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 d/home/antonio/Desktop/descomp/aula8_mem/simulation/qsim
 Eaula8_mem
-Z1 w1632780301
+Z1 w1632835806
 Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ^K2eeK[IVbX]]MLcdOEI91
 Z3 DPx8 cyclonev 19 cyclonev_components 0 22 GFL[QAd@dAZF:`jjOGn9>2
 Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3dzZ?YU_4FC5UU0cTXRET1
@@ -20,7 +20,7 @@ Z7 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
 Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z9 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 Z10 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
-!i122 54
+!i122 70
 R0
 Z11 8Aula8_mem.vho
 Z12 FAula8_mem.vho
@@ -30,14 +30,14 @@ VXkF;]DUh2L?d;e78CYGYQ3
 !s100 GU2HJhY^o1=2HHgQTNai81
 Z13 OV;C;2020.1;71
 32
-!s110 1632780301
+Z14 !s110 1632835809
 !i10b 1
-Z14 !s108 1632780301.000000
-Z15 !s90 -work|work|Aula8_mem.vho|
-Z16 !s107 Aula8_mem.vho|
+Z15 !s108 1632835809.000000
+Z16 !s90 -work|work|Aula8_mem.vho|
+Z17 !s107 Aula8_mem.vho|
 !i113 1
-Z17 o-work work
-Z18 tExplicit 1 CvgOpt 0
+Z18 o-work work
+Z19 tExplicit 1 CvgOpt 0
 Astructure
 R2
 R3
@@ -49,26 +49,26 @@ R8
 R9
 R10
 DEx4 work 9 aula8_mem 0 22 XkF;]DUh2L?d;e78CYGYQ3
-!i122 54
-l2015
-L58 20415
-Vc3`7aLZ7_gD_]<2bPd_2?0
-!s100 [B;;EYCPfjOUOT=D<5T=<0
+!i122 70
+l2030
+L58 20557
+V=mMU2onQ1faQbGNZ8U8md3
+!s100 Z[W7P1^YXMOEiXCbW7n=92
 R13
 32
-Z19 !s110 1632780302
-!i10b 1
 R14
+!i10b 1
 R15
 R16
-!i113 1
 R17
+!i113 1
 R18
+R19
 Eaula8_mem_vhd_vec_tst
-Z20 w1632780299
+Z20 w1632835800
 R8
 R9
-!i122 55
+!i122 71
 R0
 Z21 8Waveform2.vwf.vht
 Z22 FWaveform2.vwf.vht
@@ -78,30 +78,30 @@ VRb2fEF8JjnAo]I58OYY_G1
 !s100 cKFG>l1BZboKjVPoFW1ja1
 R13
 32
-R19
+Z23 !s110 1632835810
 !i10b 1
-Z23 !s108 1632780302.000000
-Z24 !s90 -work|work|Waveform2.vwf.vht|
-Z25 !s107 Waveform2.vwf.vht|
+Z24 !s108 1632835810.000000
+Z25 !s90 -work|work|Waveform2.vwf.vht|
+Z26 !s107 Waveform2.vwf.vht|
 !i113 1
-R17
 R18
+R19
 Aaula8_mem_arch
 R8
 R9
-Z26 DEx4 work 21 aula8_mem_vhd_vec_tst 0 22 Rb2fEF8JjnAo]I58OYY_G1
-!i122 55
+Z27 DEx4 work 21 aula8_mem_vhd_vec_tst 0 22 Rb2fEF8JjnAo]I58OYY_G1
+!i122 71
 l69
-L34 231
-Vi0YbHbD_b<OXzkhUW3k3?1
-!s100 [lMCa1aoUEXKb@;B9``EU0
+Z28 L34 167
+VCM?;ffV@6T263]ia@EU=d0
+!s100 eXi0fdQdn9U0BbPeII<o13
 R13
 32
-R19
-!i10b 1
 R23
+!i10b 1
 R24
 R25
+R26
 !i113 1
-R17
 R18
+R19

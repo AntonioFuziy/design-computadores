@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Aula8_mem
-Mon Sep 27 18:42:04 2021
+Tue Sep 28 10:29:36 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -13,66 +13,65 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: Top-level Entity: |Aula8_mem
- 12. Parameter Settings for User Entity Instance: CPU:CPU
- 13. Parameter Settings for User Entity Instance: CPU:CPU|muxGenerico2x1:MUX1
- 14. Parameter Settings for User Entity Instance: CPU:CPU|muxGenerico4x2:MUX4x2_PC
- 15. Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:REG1
- 16. Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:PC
- 17. Parameter Settings for User Entity Instance: CPU:CPU|somaConstante:somaUm
- 18. Parameter Settings for User Entity Instance: CPU:CPU|ULASomaSub:ULA1
- 19. Parameter Settings for User Entity Instance: CPU:CPU|flagComparacao:FLAG_IGUAL
- 20. Parameter Settings for User Entity Instance: CPU:CPU|enderecoRetorno:END_RET
- 21. Parameter Settings for User Entity Instance: CPU:CPU|logicaDesvio:LOGICA_DESVIO
- 22. Parameter Settings for User Entity Instance: ROM:ROM1
- 23. Parameter Settings for User Entity Instance: memoriaDados:memoriaDados
- 24. Parameter Settings for User Entity Instance: Decoder3x8:DECODER_BLOCOS
- 25. Parameter Settings for User Entity Instance: Decoder3x8:DECODER_ENDERECOS
- 26. Parameter Settings for User Entity Instance: registradorGenerico:REGLEDR
- 27. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX0
- 28. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX1
- 29. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX2
- 30. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX3
- 31. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX4
- 32. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX5
- 33. Parameter Settings for User Entity Instance: bufferTreeState:BUFFER_THREE_STATE_8BITS
- 34. Parameter Settings for User Entity Instance: bufferThreeStateBit:BUFFER_THREE_STATE_BIT0
- 35. Parameter Settings for User Entity Instance: bufferThreeStateBit:BUFFER_THREE_STATE_BIT1
- 36. Parameter Settings for User Entity Instance: bufferThreeStateBit:BUFFER_THREE_STATE_BIT2
- 37. Parameter Settings for User Entity Instance: bufferThreeStateBit:BUFFER_THREE_STATE_BIT3
- 38. Parameter Settings for User Entity Instance: bufferThreeStateBit:BUFFER_THREE_STATE_BIT4
- 39. Parameter Settings for User Entity Instance: bufferThreeStateBit:BUFFER_THREE_STATE_BIT5
- 40. Parameter Settings for User Entity Instance: bufferThreeStateBit:BUFFER_THREE_STATE_BIT6
- 41. Port Connectivity Checks: "DebMemKey0:DEB_MEM_KEY0"
- 42. Port Connectivity Checks: "conversorHex7Seg:LED_HEX5"
- 43. Port Connectivity Checks: "registradorGenerico:REG_HEX5"
- 44. Port Connectivity Checks: "conversorHex7Seg:LED_HEX4"
- 45. Port Connectivity Checks: "registradorGenerico:REG_HEX4"
- 46. Port Connectivity Checks: "conversorHex7Seg:LED_HEX3"
- 47. Port Connectivity Checks: "registradorGenerico:REG_HEX3"
- 48. Port Connectivity Checks: "conversorHex7Seg:LED_HEX2"
- 49. Port Connectivity Checks: "registradorGenerico:REG_HEX2"
- 50. Port Connectivity Checks: "conversorHex7Seg:LED_HEX1"
- 51. Port Connectivity Checks: "registradorGenerico:REG_HEX1"
- 52. Port Connectivity Checks: "conversorHex7Seg:LED_HEX0"
- 53. Port Connectivity Checks: "registradorGenerico:REG_HEX0"
- 54. Port Connectivity Checks: "registradorBit:REGLEDR9"
- 55. Port Connectivity Checks: "registradorBit:REGLEDR8"
- 56. Port Connectivity Checks: "registradorGenerico:REGLEDR"
- 57. Port Connectivity Checks: "Decoder3x8:DECODER_ENDERECOS"
- 58. Port Connectivity Checks: "Decoder3x8:DECODER_BLOCOS"
- 59. Port Connectivity Checks: "CPU:CPU|enderecoRetorno:END_RET"
- 60. Port Connectivity Checks: "CPU:CPU|flagComparacao:FLAG_IGUAL"
- 61. Port Connectivity Checks: "CPU:CPU|registradorGenerico:PC"
- 62. Port Connectivity Checks: "CPU:CPU|registradorGenerico:REG1"
- 63. Port Connectivity Checks: "CPU:CPU|muxGenerico4x2:MUX4x2_PC"
- 64. Port Connectivity Checks: "CPU:CPU"
- 65. Post-Synthesis Netlist Statistics for Top Partition
- 66. Elapsed Time Per Partition
- 67. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |Aula8_mem
+ 11. Parameter Settings for User Entity Instance: CPU:CPU
+ 12. Parameter Settings for User Entity Instance: CPU:CPU|muxGenerico2x1:MUX1
+ 13. Parameter Settings for User Entity Instance: CPU:CPU|muxGenerico4x2:MUX4x2_PC
+ 14. Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:REG1
+ 15. Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:PC
+ 16. Parameter Settings for User Entity Instance: CPU:CPU|somaConstante:somaUm
+ 17. Parameter Settings for User Entity Instance: CPU:CPU|ULASomaSub:ULA1
+ 18. Parameter Settings for User Entity Instance: CPU:CPU|flagComparacao:FLAG_IGUAL
+ 19. Parameter Settings for User Entity Instance: CPU:CPU|enderecoRetorno:END_RET
+ 20. Parameter Settings for User Entity Instance: CPU:CPU|logicaDesvio:LOGICA_DESVIO
+ 21. Parameter Settings for User Entity Instance: ROM:ROM1
+ 22. Parameter Settings for User Entity Instance: memoriaDados:memoriaDados
+ 23. Parameter Settings for User Entity Instance: Decoder3x8:DECODER_BLOCOS
+ 24. Parameter Settings for User Entity Instance: Decoder3x8:DECODER_ENDERECOS
+ 25. Parameter Settings for User Entity Instance: registradorGenerico:REGLEDR
+ 26. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX0
+ 27. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX1
+ 28. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX2
+ 29. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX3
+ 30. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX4
+ 31. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX5
+ 32. Parameter Settings for User Entity Instance: bufferTreeState:BUFFER_THREE_STATE_8BITS
+ 33. Parameter Settings for User Entity Instance: bufferThreeStateBit:BUFFER_THREE_STATE_BIT0
+ 34. Parameter Settings for User Entity Instance: bufferThreeStateBit:BUFFER_THREE_STATE_BIT1
+ 35. Parameter Settings for User Entity Instance: bufferThreeStateBit:BUFFER_THREE_STATE_BIT2
+ 36. Parameter Settings for User Entity Instance: bufferThreeStateBit:BUFFER_THREE_STATE_BIT3
+ 37. Parameter Settings for User Entity Instance: bufferThreeStateBit:BUFFER_THREE_STATE_BIT4
+ 38. Parameter Settings for User Entity Instance: bufferThreeStateBit:BUFFER_THREE_STATE_BIT5
+ 39. Parameter Settings for User Entity Instance: bufferThreeStateBit:BUFFER_THREE_STATE_BIT6
+ 40. Port Connectivity Checks: "DebMemKey0:DEB_MEM_KEY0"
+ 41. Port Connectivity Checks: "conversorHex7Seg:LED_HEX5"
+ 42. Port Connectivity Checks: "registradorGenerico:REG_HEX5"
+ 43. Port Connectivity Checks: "conversorHex7Seg:LED_HEX4"
+ 44. Port Connectivity Checks: "registradorGenerico:REG_HEX4"
+ 45. Port Connectivity Checks: "conversorHex7Seg:LED_HEX3"
+ 46. Port Connectivity Checks: "registradorGenerico:REG_HEX3"
+ 47. Port Connectivity Checks: "conversorHex7Seg:LED_HEX2"
+ 48. Port Connectivity Checks: "registradorGenerico:REG_HEX2"
+ 49. Port Connectivity Checks: "conversorHex7Seg:LED_HEX1"
+ 50. Port Connectivity Checks: "registradorGenerico:REG_HEX1"
+ 51. Port Connectivity Checks: "conversorHex7Seg:LED_HEX0"
+ 52. Port Connectivity Checks: "registradorGenerico:REG_HEX0"
+ 53. Port Connectivity Checks: "registradorBit:REGLEDR9"
+ 54. Port Connectivity Checks: "registradorBit:REGLEDR8"
+ 55. Port Connectivity Checks: "registradorGenerico:REGLEDR"
+ 56. Port Connectivity Checks: "Decoder3x8:DECODER_ENDERECOS"
+ 57. Port Connectivity Checks: "Decoder3x8:DECODER_BLOCOS"
+ 58. Port Connectivity Checks: "CPU:CPU|enderecoRetorno:END_RET"
+ 59. Port Connectivity Checks: "CPU:CPU|flagComparacao:FLAG_IGUAL"
+ 60. Port Connectivity Checks: "CPU:CPU|registradorGenerico:PC"
+ 61. Port Connectivity Checks: "CPU:CPU|registradorGenerico:REG1"
+ 62. Port Connectivity Checks: "CPU:CPU|muxGenerico4x2:MUX4x2_PC"
+ 63. Port Connectivity Checks: "CPU:CPU"
+ 64. Post-Synthesis Netlist Statistics for Top Partition
+ 65. Elapsed Time Per Partition
+ 66. Analysis & Synthesis Messages
 
 
 
@@ -99,13 +98,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Sep 27 18:42:04 2021       ;
+; Analysis & Synthesis Status     ; Successful - Tue Sep 28 10:29:36 2021       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Aula8_mem                                   ;
 ; Top-level Entity Name           ; Aula8_mem                                   ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 573                                         ;
+; Total registers                 ; 575                                         ;
 ; Total pins                      ; 98                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -221,9 +220,9 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
+;     Processor 2            ;   0.2%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -243,6 +242,7 @@ https://fpgasoftware.intel.com/eula.
 ; memoriaDados.vhd                 ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8_mem/memoriaDados.vhd        ;         ;
 ; logicaDesvio.vhd                 ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8_mem/logicaDesvio.vhd        ;         ;
 ; flagComparacao.vhd               ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8_mem/flagComparacao.vhd      ;         ;
+; edgeDetector.vhd                 ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8_mem/edgeDetector.vhd        ;         ;
 ; Decoder3x8.vhd                   ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8_mem/Decoder3x8.vhd          ;         ;
 ; Decoder.vhd                      ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8_mem/Decoder.vhd             ;         ;
 ; DebMemKey0.vhd                   ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8_mem/DebMemKey0.vhd          ;         ;
@@ -254,31 +254,31 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                ;
-+---------------------------------------------+--------------+
-; Resource                                    ; Usage        ;
-+---------------------------------------------+--------------+
-; Estimate of Logic utilization (ALMs needed) ; 447          ;
-;                                             ;              ;
-; Combinational ALUT usage for logic          ; 447          ;
-;     -- 7 input functions                    ; 1            ;
-;     -- 6 input functions                    ; 252          ;
-;     -- 5 input functions                    ; 31           ;
-;     -- 4 input functions                    ; 63           ;
-;     -- <=3 input functions                  ; 100          ;
-;                                             ;              ;
-; Dedicated logic registers                   ; 573          ;
-;                                             ;              ;
-; I/O pins                                    ; 98           ;
-;                                             ;              ;
-; Total DSP Blocks                            ; 0            ;
-;                                             ;              ;
-; Maximum fan-out node                        ; KEY[0]~input ;
-; Maximum fan-out                             ; 573          ;
-; Total fan-out                               ; 4055         ;
-; Average fan-out                             ; 3.33         ;
-+---------------------------------------------+--------------+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 449            ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 453            ;
+;     -- 7 input functions                    ; 0              ;
+;     -- 6 input functions                    ; 251            ;
+;     -- 5 input functions                    ; 35             ;
+;     -- 4 input functions                    ; 64             ;
+;     -- <=3 input functions                  ; 103            ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 575            ;
+;                                             ;                ;
+; I/O pins                                    ; 98             ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 547            ;
+; Total fan-out                               ; 4075           ;
+; Average fan-out                             ; 3.33           ;
++---------------------------------------------+----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -286,7 +286,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                          ; Entity Name         ; Library Name ;
 +-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------+---------------------+--------------+
-; |Aula8_mem                        ; 447 (17)            ; 573 (0)                   ; 0                 ; 0          ; 98   ; 0            ; |Aula8_mem                                   ; Aula8_mem           ; work         ;
+; |Aula8_mem                        ; 453 (18)            ; 575 (0)                   ; 0                 ; 0          ; 98   ; 0            ; |Aula8_mem                                   ; Aula8_mem           ; work         ;
 ;    |CPU:CPU|                      ; 62 (0)              ; 27 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Aula8_mem|CPU:CPU                           ; CPU                 ; work         ;
 ;       |Decoder:Decoder|           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8_mem|CPU:CPU|Decoder:Decoder           ; Decoder             ; work         ;
 ;       |ULASomaSub:ULA1|           ; 26 (26)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8_mem|CPU:CPU|ULASomaSub:ULA1           ; ULASomaSub          ; work         ;
@@ -297,13 +297,15 @@ https://fpgasoftware.intel.com/eula.
 ;       |registradorGenerico:PC|    ; 0 (0)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8_mem|CPU:CPU|registradorGenerico:PC    ; registradorGenerico ; work         ;
 ;       |registradorGenerico:REG1|  ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8_mem|CPU:CPU|registradorGenerico:REG1  ; registradorGenerico ; work         ;
 ;       |somaConstante:somaUm|      ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8_mem|CPU:CPU|somaConstante:somaUm      ; somaConstante       ; work         ;
-;    |ROM:ROM1|                     ; 27 (27)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8_mem|ROM:ROM1                          ; ROM                 ; work         ;
+;    |DebMemKey0:DEB_MEM_KEY0|      ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8_mem|DebMemKey0:DEB_MEM_KEY0           ; DebMemKey0          ; work         ;
+;    |ROM:ROM1|                     ; 28 (28)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8_mem|ROM:ROM1                          ; ROM                 ; work         ;
 ;    |conversorHex7Seg:LED_HEX0|    ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8_mem|conversorHex7Seg:LED_HEX0         ; conversorHex7Seg    ; work         ;
 ;    |conversorHex7Seg:LED_HEX1|    ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8_mem|conversorHex7Seg:LED_HEX1         ; conversorHex7Seg    ; work         ;
 ;    |conversorHex7Seg:LED_HEX2|    ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8_mem|conversorHex7Seg:LED_HEX2         ; conversorHex7Seg    ; work         ;
 ;    |conversorHex7Seg:LED_HEX3|    ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8_mem|conversorHex7Seg:LED_HEX3         ; conversorHex7Seg    ; work         ;
 ;    |conversorHex7Seg:LED_HEX4|    ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8_mem|conversorHex7Seg:LED_HEX4         ; conversorHex7Seg    ; work         ;
 ;    |conversorHex7Seg:LED_HEX5|    ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8_mem|conversorHex7Seg:LED_HEX5         ; conversorHex7Seg    ; work         ;
+;    |edgeDetector:detectorSub0|    ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8_mem|edgeDetector:detectorSub0         ; edgeDetector        ; work         ;
 ;    |memoriaDados:memoriaDados|    ; 297 (297)           ; 512 (512)                 ; 0                 ; 0          ; 0    ; 0            ; |Aula8_mem|memoriaDados:memoriaDados         ; memoriaDados        ; work         ;
 ;    |registradorBit:REGLEDR8|      ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8_mem|registradorBit:REGLEDR8           ; registradorBit      ; work         ;
 ;    |registradorBit:REGLEDR9|      ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula8_mem|registradorBit:REGLEDR9           ; registradorBit      ; work         ;
@@ -318,25 +320,15 @@ https://fpgasoftware.intel.com/eula.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                           ;
-+---------------------------------------+--------------------------------------+
-; Register name                         ; Reason for Removal                   ;
-+---------------------------------------+--------------------------------------+
-; DebMemKey0:DEB_MEM_KEY0|DOUT          ; Stuck at GND due to stuck port clock ;
-; Total Number of Removed Registers = 1 ;                                      ;
-+---------------------------------------+--------------------------------------+
-
-
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 573   ;
+; Total registers                              ; 575   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 8     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 1     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 561   ;
 ; Number of registers using Preset             ; 0     ;
@@ -906,29 +898,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 573                         ;
+; arriav_ff             ; 575                         ;
+;     CLR               ; 1                           ;
 ;     ENA               ; 553                         ;
 ;     ENA SLD           ; 8                           ;
-;     plain             ; 12                          ;
-; arriav_lcell_comb     ; 447                         ;
+;     plain             ; 13                          ;
+; arriav_lcell_comb     ; 453                         ;
 ;     arith             ; 26                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 9                           ;
 ;         2 data inputs ; 6                           ;
 ;         4 data inputs ; 4                           ;
 ;         5 data inputs ; 6                           ;
-;     extend            ; 1                           ;
-;         7 data inputs ; 1                           ;
-;     normal            ; 420                         ;
-;         2 data inputs ; 70                          ;
+;     normal            ; 427                         ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 72                          ;
 ;         3 data inputs ; 14                          ;
-;         4 data inputs ; 59                          ;
-;         5 data inputs ; 25                          ;
-;         6 data inputs ; 252                         ;
+;         4 data inputs ; 60                          ;
+;         5 data inputs ; 29                          ;
+;         6 data inputs ; 251                         ;
 ; boundary_port         ; 98                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 9.30                        ;
-; Average LUT depth     ; 6.12                        ;
+; Max LUT depth         ; 9.40                        ;
+; Average LUT depth     ; 6.22                        ;
 +-----------------------+-----------------------------+
 
 
@@ -937,7 +929,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -947,7 +939,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Sep 27 18:41:50 2021
+    Info: Processing started: Tue Sep 28 10:29:09 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Aula8_mem -c Aula8_mem
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file enderecoRetorno.vhd
@@ -1018,8 +1010,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file Aula8_m
     Info (12022): Found design unit 1: Aula8_mem-arquitetura File: /home/antonio/Desktop/descomp/aula8_mem/Aula8_mem.vhd Line: 33
     Info (12023): Found entity 1: Aula8_mem File: /home/antonio/Desktop/descomp/aula8_mem/Aula8_mem.vhd Line: 4
 Info (12127): Elaborating entity "Aula8_mem" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at Aula8_mem.vhd(81): used implicit default value for signal "CLK_KEY0" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/antonio/Desktop/descomp/aula8_mem/Aula8_mem.vhd Line: 81
-Info (12128): Elaborating entity "CPU" for hierarchy "CPU:CPU" File: /home/antonio/Desktop/descomp/aula8_mem/Aula8_mem.vhd Line: 96
+Info (12129): Elaborating entity "edgeDetector" using architecture "A:bordasubida" for hierarchy "edgeDetector:detectorSub0" File: /home/antonio/Desktop/descomp/aula8_mem/Aula8_mem.vhd Line: 92
+Info (12128): Elaborating entity "CPU" for hierarchy "CPU:CPU" File: /home/antonio/Desktop/descomp/aula8_mem/Aula8_mem.vhd Line: 97
 Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "CPU:CPU|muxGenerico2x1:MUX1" File: /home/antonio/Desktop/descomp/aula8_mem/CPU.vhd Line: 70
 Info (12128): Elaborating entity "muxGenerico4x2" for hierarchy "CPU:CPU|muxGenerico4x2:MUX4x2_PC" File: /home/antonio/Desktop/descomp/aula8_mem/CPU.vhd Line: 78
 Info (12128): Elaborating entity "Decoder" for hierarchy "CPU:CPU|Decoder:Decoder" File: /home/antonio/Desktop/descomp/aula8_mem/CPU.vhd Line: 88
@@ -1030,9 +1022,9 @@ Info (12128): Elaborating entity "ULASomaSub" for hierarchy "CPU:CPU|ULASomaSub:
 Info (12128): Elaborating entity "flagComparacao" for hierarchy "CPU:CPU|flagComparacao:FLAG_IGUAL" File: /home/antonio/Desktop/descomp/aula8_mem/CPU.vhd Line: 106
 Info (12128): Elaborating entity "enderecoRetorno" for hierarchy "CPU:CPU|enderecoRetorno:END_RET" File: /home/antonio/Desktop/descomp/aula8_mem/CPU.vhd Line: 109
 Info (12128): Elaborating entity "logicaDesvio" for hierarchy "CPU:CPU|logicaDesvio:LOGICA_DESVIO" File: /home/antonio/Desktop/descomp/aula8_mem/CPU.vhd Line: 112
-Info (12128): Elaborating entity "ROM" for hierarchy "ROM:ROM1" File: /home/antonio/Desktop/descomp/aula8_mem/Aula8_mem.vhd Line: 111
-Info (12128): Elaborating entity "memoriaDados" for hierarchy "memoriaDados:memoriaDados" File: /home/antonio/Desktop/descomp/aula8_mem/Aula8_mem.vhd Line: 117
-Info (12128): Elaborating entity "Decoder3x8" for hierarchy "Decoder3x8:DECODER_BLOCOS" File: /home/antonio/Desktop/descomp/aula8_mem/Aula8_mem.vhd Line: 120
+Info (12128): Elaborating entity "ROM" for hierarchy "ROM:ROM1" File: /home/antonio/Desktop/descomp/aula8_mem/Aula8_mem.vhd Line: 112
+Info (12128): Elaborating entity "memoriaDados" for hierarchy "memoriaDados:memoriaDados" File: /home/antonio/Desktop/descomp/aula8_mem/Aula8_mem.vhd Line: 118
+Info (12128): Elaborating entity "Decoder3x8" for hierarchy "Decoder3x8:DECODER_BLOCOS" File: /home/antonio/Desktop/descomp/aula8_mem/Aula8_mem.vhd Line: 121
 Info (10041): Inferred latch for "OUTPUT[0]" at Decoder3x8.vhd(30) File: /home/antonio/Desktop/descomp/aula8_mem/Decoder3x8.vhd Line: 30
 Info (10041): Inferred latch for "OUTPUT[1]" at Decoder3x8.vhd(30) File: /home/antonio/Desktop/descomp/aula8_mem/Decoder3x8.vhd Line: 30
 Info (10041): Inferred latch for "OUTPUT[2]" at Decoder3x8.vhd(30) File: /home/antonio/Desktop/descomp/aula8_mem/Decoder3x8.vhd Line: 30
@@ -1041,12 +1033,12 @@ Info (10041): Inferred latch for "OUTPUT[4]" at Decoder3x8.vhd(30) File: /home/a
 Info (10041): Inferred latch for "OUTPUT[5]" at Decoder3x8.vhd(30) File: /home/antonio/Desktop/descomp/aula8_mem/Decoder3x8.vhd Line: 30
 Info (10041): Inferred latch for "OUTPUT[6]" at Decoder3x8.vhd(30) File: /home/antonio/Desktop/descomp/aula8_mem/Decoder3x8.vhd Line: 30
 Info (10041): Inferred latch for "OUTPUT[7]" at Decoder3x8.vhd(30) File: /home/antonio/Desktop/descomp/aula8_mem/Decoder3x8.vhd Line: 30
-Info (12128): Elaborating entity "registradorBit" for hierarchy "registradorBit:REGLEDR8" File: /home/antonio/Desktop/descomp/aula8_mem/Aula8_mem.vhd Line: 129
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:REG_HEX0" File: /home/antonio/Desktop/descomp/aula8_mem/Aula8_mem.vhd Line: 137
-Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:LED_HEX0" File: /home/antonio/Desktop/descomp/aula8_mem/Aula8_mem.vhd Line: 140
-Info (12128): Elaborating entity "bufferTreeState" for hierarchy "bufferTreeState:BUFFER_THREE_STATE_8BITS" File: /home/antonio/Desktop/descomp/aula8_mem/Aula8_mem.vhd Line: 209
-Info (12128): Elaborating entity "bufferThreeStateBit" for hierarchy "bufferThreeStateBit:BUFFER_THREE_STATE_BIT0" File: /home/antonio/Desktop/descomp/aula8_mem/Aula8_mem.vhd Line: 212
-Info (12128): Elaborating entity "DebMemKey0" for hierarchy "DebMemKey0:DEB_MEM_KEY0" File: /home/antonio/Desktop/descomp/aula8_mem/Aula8_mem.vhd Line: 233
+Info (12128): Elaborating entity "registradorBit" for hierarchy "registradorBit:REGLEDR8" File: /home/antonio/Desktop/descomp/aula8_mem/Aula8_mem.vhd Line: 130
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:REG_HEX0" File: /home/antonio/Desktop/descomp/aula8_mem/Aula8_mem.vhd Line: 138
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:LED_HEX0" File: /home/antonio/Desktop/descomp/aula8_mem/Aula8_mem.vhd Line: 141
+Info (12128): Elaborating entity "bufferTreeState" for hierarchy "bufferTreeState:BUFFER_THREE_STATE_8BITS" File: /home/antonio/Desktop/descomp/aula8_mem/Aula8_mem.vhd Line: 210
+Info (12128): Elaborating entity "bufferThreeStateBit" for hierarchy "bufferThreeStateBit:BUFFER_THREE_STATE_BIT0" File: /home/antonio/Desktop/descomp/aula8_mem/Aula8_mem.vhd Line: 213
+Info (12128): Elaborating entity "DebMemKey0" for hierarchy "DebMemKey0:DEB_MEM_KEY0" File: /home/antonio/Desktop/descomp/aula8_mem/Aula8_mem.vhd Line: 234
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276007): RAM logic "memoriaDados:memoriaDados|ram" is uninferred due to asynchronous read logic File: /home/antonio/Desktop/descomp/aula8_mem/memoriaDados.vhd Line: 27
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
@@ -1061,16 +1053,14 @@ Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "CLOCK_50" File: /home/antonio/Desktop/descomp/aula8_mem/Aula8_mem.vhd Line: 15
-Info (21057): Implemented 1098 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1105 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 82 output pins
-    Info (21061): Implemented 1000 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 482 megabytes
-    Info: Processing ended: Mon Sep 27 18:42:04 2021
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:37
+    Info (21061): Implemented 1007 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 497 megabytes
+    Info: Processing ended: Tue Sep 28 10:29:36 2021
+    Info: Elapsed time: 00:00:27
+    Info: Total CPU time (on all processors): 00:01:09
 
 

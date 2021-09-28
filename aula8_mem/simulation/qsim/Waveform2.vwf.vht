@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "09/27/2021 19:04:59"
+-- Generated on "09/28/2021 10:30:00"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          Aula8_mem
 -- 
@@ -141,124 +141,60 @@ END PROCESS t_prcs_KEY_0;
 t_prcs_SW_9: PROCESS
 BEGIN
 	SW(9) <= '0';
-	WAIT FOR 512000 ps;
-	SW(9) <= '1';
 WAIT;
 END PROCESS t_prcs_SW_9;
 -- SW[8]
 t_prcs_SW_8: PROCESS
 BEGIN
 	SW(8) <= '0';
-	WAIT FOR 256000 ps;
-	SW(8) <= '1';
-	WAIT FOR 256000 ps;
-	SW(8) <= '0';
-	WAIT FOR 256000 ps;
-	SW(8) <= '1';
 WAIT;
 END PROCESS t_prcs_SW_8;
 -- SW[7]
 t_prcs_SW_7: PROCESS
 BEGIN
-	FOR i IN 1 TO 3
-	LOOP
-		SW(7) <= '0';
-		WAIT FOR 128000 ps;
-		SW(7) <= '1';
-		WAIT FOR 128000 ps;
-	END LOOP;
 	SW(7) <= '0';
-	WAIT FOR 128000 ps;
-	SW(7) <= '1';
 WAIT;
 END PROCESS t_prcs_SW_7;
 -- SW[6]
 t_prcs_SW_6: PROCESS
 BEGIN
-	FOR i IN 1 TO 7
-	LOOP
-		SW(6) <= '0';
-		WAIT FOR 64000 ps;
-		SW(6) <= '1';
-		WAIT FOR 64000 ps;
-	END LOOP;
 	SW(6) <= '0';
-	WAIT FOR 64000 ps;
-	SW(6) <= '1';
 WAIT;
 END PROCESS t_prcs_SW_6;
 -- SW[5]
 t_prcs_SW_5: PROCESS
 BEGIN
-	FOR i IN 1 TO 15
-	LOOP
-		SW(5) <= '0';
-		WAIT FOR 32000 ps;
-		SW(5) <= '1';
-		WAIT FOR 32000 ps;
-	END LOOP;
 	SW(5) <= '0';
-	WAIT FOR 32000 ps;
-	SW(5) <= '1';
 WAIT;
 END PROCESS t_prcs_SW_5;
 -- SW[4]
 t_prcs_SW_4: PROCESS
 BEGIN
-	FOR i IN 1 TO 31
-	LOOP
-		SW(4) <= '0';
-		WAIT FOR 16000 ps;
-		SW(4) <= '1';
-		WAIT FOR 16000 ps;
-	END LOOP;
 	SW(4) <= '0';
 WAIT;
 END PROCESS t_prcs_SW_4;
 -- SW[3]
 t_prcs_SW_3: PROCESS
 BEGIN
-	FOR i IN 1 TO 62
-	LOOP
-		SW(3) <= '0';
-		WAIT FOR 8000 ps;
-		SW(3) <= '1';
-		WAIT FOR 8000 ps;
-	END LOOP;
 	SW(3) <= '0';
 WAIT;
 END PROCESS t_prcs_SW_3;
 -- SW[2]
 t_prcs_SW_2: PROCESS
 BEGIN
-LOOP
 	SW(2) <= '0';
-	WAIT FOR 4000 ps;
-	SW(2) <= '1';
-	WAIT FOR 4000 ps;
-	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
-END LOOP;
+WAIT;
 END PROCESS t_prcs_SW_2;
 -- SW[1]
 t_prcs_SW_1: PROCESS
 BEGIN
-LOOP
 	SW(1) <= '0';
-	WAIT FOR 2000 ps;
-	SW(1) <= '1';
-	WAIT FOR 2000 ps;
-	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
-END LOOP;
+WAIT;
 END PROCESS t_prcs_SW_1;
 -- SW[0]
 t_prcs_SW_0: PROCESS
 BEGIN
-LOOP
 	SW(0) <= '0';
-	WAIT FOR 1000 ps;
-	SW(0) <= '1';
-	WAIT FOR 1000 ps;
-	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
-END LOOP;
+WAIT;
 END PROCESS t_prcs_SW_0;
 END Aula8_mem_arch;

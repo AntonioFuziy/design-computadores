@@ -86,12 +86,13 @@ begin
 -- Instanciando os componentes:
 
 -- Para simular, fica mais simples tirar o edgeDetector
-gravar:  if simulacao generate
-	CLK <= KEY(0);
-else generate
+--gravar:  if simulacao generate
+--	CLK <= KEY(0);
+--else generate
 	detectorSub0: work.edgeDetector(bordaSubida)
 			  port map (clk => CLOCK_50, entrada => (not KEY(0)), saida => CLK_KEY0);
-end generate;
+--end generate;
+CLK <= CLOCK_50;
 
 CPU : entity work.CPU
 		 port map (

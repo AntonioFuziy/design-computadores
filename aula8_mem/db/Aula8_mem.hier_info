@@ -1,17 +1,18 @@
 |Aula8_mem
-CLOCK_50 => ~NO_FANOUT~
+CLOCK_50 => edgedetector:detectorSub0.clk
+CLOCK_50 => cpu:CPU.CLOCK_50
+CLOCK_50 => memoriadados:memoriaDados.clk
+CLOCK_50 => registradorgenerico:REGLEDR.CLK
+CLOCK_50 => registradorbit:REGLEDR8.CLK
+CLOCK_50 => registradorbit:REGLEDR9.CLK
+CLOCK_50 => registradorgenerico:REG_HEX0.CLK
+CLOCK_50 => registradorgenerico:REG_HEX1.CLK
+CLOCK_50 => registradorgenerico:REG_HEX2.CLK
+CLOCK_50 => registradorgenerico:REG_HEX3.CLK
+CLOCK_50 => registradorgenerico:REG_HEX4.CLK
+CLOCK_50 => registradorgenerico:REG_HEX5.CLK
 KEY[0] => cpu:CPU.KEY[0]
-KEY[0] => cpu:CPU.CLOCK_50
-KEY[0] => memoriadados:memoriaDados.clk
-KEY[0] => registradorgenerico:REGLEDR.CLK
-KEY[0] => registradorbit:REGLEDR8.CLK
-KEY[0] => registradorbit:REGLEDR9.CLK
-KEY[0] => registradorgenerico:REG_HEX0.CLK
-KEY[0] => registradorgenerico:REG_HEX1.CLK
-KEY[0] => registradorgenerico:REG_HEX2.CLK
-KEY[0] => registradorgenerico:REG_HEX3.CLK
-KEY[0] => registradorgenerico:REG_HEX4.CLK
-KEY[0] => registradorgenerico:REG_HEX5.CLK
+KEY[0] => edgedetector:detectorSub0.entrada
 KEY[1] => cpu:CPU.KEY[1]
 KEY[1] => bufferthreestatebit:BUFFER_THREE_STATE_BIT3.INPUT
 KEY[2] => cpu:CPU.KEY[2]
@@ -111,6 +112,13 @@ HEX5[3] <= conversorhex7seg:LED_HEX5.saida7seg[3]
 HEX5[4] <= conversorhex7seg:LED_HEX5.saida7seg[4]
 HEX5[5] <= conversorhex7seg:LED_HEX5.saida7seg[5]
 HEX5[6] <= conversorhex7seg:LED_HEX5.saida7seg[6]
+
+
+|Aula8_mem|edgeDetector:detectorSub0
+clk => saidaQ.CLK
+entrada => saida.IN1
+entrada => saidaQ.DATAIN
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Aula8_mem|CPU:CPU

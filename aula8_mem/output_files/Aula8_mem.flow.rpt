@@ -1,5 +1,5 @@
 Flow report for Aula8_mem
-Mon Sep 27 19:05:01 2021
+Tue Sep 28 10:30:06 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Mon Sep 27 19:05:01 2021       ;
+; Flow Status                     ; Successful - Tue Sep 28 10:30:06 2021       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Aula8_mem                                   ;
 ; Top-level Entity Name           ; Aula8_mem                                   ;
@@ -49,7 +49,7 @@ https://fpgasoftware.intel.com/eula.
 ; Device                          ; 5CEBA4F23C7                                 ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 573                                         ;
+; Total registers                 ; 575                                         ;
 ; Total pins                      ; 98                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/27/2021 18:41:50 ;
+; Start date & time ; 09/28/2021 10:29:10 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Aula8_mem           ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 44230874719727.163277891020279         ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 44230874719727.163283575036435         ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -106,14 +106,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 480 MB              ; 00:00:37                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 662 MB              ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 670 MB              ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 662 MB              ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 670 MB              ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 663 MB              ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 670 MB              ; 00:00:01                           ;
-; Total                ; 00:00:16     ; --                      ; --                  ; 00:00:41                           ;
+; Analysis & Synthesis ; 00:00:26     ; 1.0                     ; 495 MB              ; 00:01:08                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 662 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 669 MB              ; 00:00:03                           ;
+; Total                ; 00:00:30     ; --                      ; --                  ; 00:01:12                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -125,10 +121,6 @@ https://fpgasoftware.intel.com/eula.
 ; Analysis & Synthesis ; antonio          ; Ubuntu 20.04.3 ; 20         ; x86_64         ;
 ; EDA Netlist Writer   ; antonio          ; Ubuntu 20.04.3 ; 20         ; x86_64         ;
 ; EDA Netlist Writer   ; antonio          ; Ubuntu 20.04.3 ; 20         ; x86_64         ;
-; EDA Netlist Writer   ; antonio          ; Ubuntu 20.04.3 ; 20         ; x86_64         ;
-; EDA Netlist Writer   ; antonio          ; Ubuntu 20.04.3 ; 20         ; x86_64         ;
-; EDA Netlist Writer   ; antonio          ; Ubuntu 20.04.3 ; 20         ; x86_64         ;
-; EDA Netlist Writer   ; antonio          ; Ubuntu 20.04.3 ; 20         ; x86_64         ;
 +----------------------+------------------+----------------+------------+----------------+
 
 
@@ -136,10 +128,6 @@ https://fpgasoftware.intel.com/eula.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off Aula8_mem -c Aula8_mem
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Aula8_mem -c Aula8_mem --vector_source=/home/antonio/Desktop/descomp/aula8_mem/Waveform2.vwf --testbench_file=/home/antonio/Desktop/descomp/aula8_mem/simulation/qsim/Waveform2.vwf.vht
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/antonio/Desktop/descomp/aula8_mem/simulation/qsim/ Aula8_mem -c Aula8_mem
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Aula8_mem -c Aula8_mem --vector_source=/home/antonio/Desktop/descomp/aula8_mem/Waveform2.vwf --testbench_file=/home/antonio/Desktop/descomp/aula8_mem/simulation/qsim/Waveform2.vwf.vht
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/antonio/Desktop/descomp/aula8_mem/simulation/qsim/ Aula8_mem -c Aula8_mem
 quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Aula8_mem -c Aula8_mem --vector_source=/home/antonio/Desktop/descomp/aula8_mem/Waveform2.vwf --testbench_file=/home/antonio/Desktop/descomp/aula8_mem/simulation/qsim/Waveform2.vwf.vht
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/antonio/Desktop/descomp/aula8_mem/simulation/qsim/ Aula8_mem -c Aula8_mem
 

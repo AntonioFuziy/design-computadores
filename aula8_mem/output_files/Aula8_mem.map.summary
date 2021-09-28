@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Mon Sep 27 18:42:04 2021
+Analysis & Synthesis Status : Successful - Tue Sep 28 10:29:36 2021
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : Aula8_mem
 Top-level Entity Name : Aula8_mem
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 573
+Total registers : 575
 Total pins : 98
 Total virtual pins : 0
 Total block memory bits : 0
