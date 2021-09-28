@@ -1,0 +1,40 @@
+Quartus Prime Archive log --	/home/antonio/Desktop/descomp/aula8_mem/Aula8_mem.qarlog
+
+Archive:	/home/antonio/Desktop/descomp/aula8_mem/Aula8_mem.qar
+Date:		Tue Sep 28 10:36:42 2021
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+/home/antonio/Desktop/descomp/aula8_mem/Aula8_mem.qpf
+/home/antonio/Desktop/descomp/aula8_mem/Aula8_mem.qsf
+/home/antonio/Desktop/descomp/aula8_mem/Aula8_mem.vhd
+/home/antonio/Desktop/descomp/aula8_mem/Aula8_parte2.vwf
+/home/antonio/Desktop/descomp/aula8_mem/CPU.vhd
+/home/antonio/Desktop/descomp/aula8_mem/DebMemKey0.vhd
+/home/antonio/Desktop/descomp/aula8_mem/Decoder.vhd
+/home/antonio/Desktop/descomp/aula8_mem/Decoder3x8.vhd
+/home/antonio/Desktop/descomp/aula8_mem/ROM.vhd
+/home/antonio/Desktop/descomp/aula8_mem/ULASomaSub.vhd
+/home/antonio/Desktop/descomp/aula8_mem/Waveform.vwf
+/home/antonio/Desktop/descomp/aula8_mem/Waveform1.vwf
+/home/antonio/Desktop/descomp/aula8_mem/Waveform2.vwf
+/home/antonio/Desktop/descomp/aula8_mem/bufferThreeStateBit.vhd
+/home/antonio/Desktop/descomp/aula8_mem/bufferTreeState.vhd
+/home/antonio/Desktop/descomp/aula8_mem/conversorHex7Seg.vhd
+/home/antonio/Desktop/descomp/aula8_mem/edgeDetector.vhd
+/home/antonio/Desktop/descomp/aula8_mem/enderecoRetorno.vhd
+/home/antonio/Desktop/descomp/aula8_mem/flagComparacao.vhd
+/home/antonio/Desktop/descomp/aula8_mem/logicaDesvio.vhd
+/home/antonio/Desktop/descomp/aula8_mem/memoriaDados.vhd
+/home/antonio/Desktop/descomp/aula8_mem/muxGenerico2x1.vhd
+/home/antonio/Desktop/descomp/aula8_mem/muxGenerico4x2.vhd
+/home/antonio/Desktop/descomp/aula8_mem/registradorBit.vhd
+/home/antonio/Desktop/descomp/aula8_mem/registradorGenerico.vhd
+/home/antonio/Desktop/descomp/aula8_mem/registradorHEX.vhd
+/home/antonio/Desktop/descomp/aula8_mem/somaConstante.vhd
+/home/antonio/Desktop/descomp/aula8_mem/somadorGenerico.vhd
+/home/antonio/intelFPGA_lite/20.1/quartus/linux64/assignment_defaults.qdf
+	======= Total: 29 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
