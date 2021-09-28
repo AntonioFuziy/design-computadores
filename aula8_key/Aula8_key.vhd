@@ -9,7 +9,7 @@ entity Aula8_key is
 	larguraDadosROM: natural := 13;
 	larguraDadosRAM: natural := 8;
 	larguraAddrRAM: natural := 6;
-	simulacao : boolean := FALSE -- para gravar na placa, altere de TRUE para FALSE
+	simulacao : boolean := TRUE -- para gravar na placa, altere de TRUE para FALSE
   );
   port   (
     CLOCK_50 : in std_logic;
@@ -81,6 +81,9 @@ architecture arquitetura of Aula8_key is
 	signal AND_ENABLE_BUFFER_BIT_KEY2: std_logic;
 	signal AND_ENABLE_BUFFER_BIT_KEY3: std_logic;
 	signal AND_ENABLE_BUFFER_BIT_FPGA_RESET: std_logic;
+	
+	signal CLK_KEY0: std_logic;
+	signal DebMemKey_OUT: std_logic;
 
 begin
 
@@ -91,7 +94,7 @@ gravar:  if simulacao generate
 CLK <= KEY(0);
 else generate
 detectorSub0: work.edgeDetector(bordaSubida)
-        port map (clk => CLOCK_50, entrada => (not KEY(0)), saida => CLK);
+        port map (clk => CLOCK_50, entrada => (not KEY(0)), saida => CLK_KEY0);
 end generate;
 
 CPU : entity work.CPU
@@ -217,7 +220,7 @@ BUFFER_THREE_STATE_BIT1: entity work.bufferThreeStateBit   generic map (dataWidt
 		 port map (INPUT => SW(9), ENABLE => AND_ENABLE_BUFFER_BIT_SW9, OUTPUT => Data_IN);
 		 
 BUFFER_THREE_STATE_BIT2: entity work.bufferThreeStateBit   generic map (dataWidth => 8)
-		 port map (INPUT => KEY(0), ENABLE => AND_ENABLE_BUFFER_BIT_KEY0, OUTPUT => Data_IN);
+		 port map (INPUT => DebMemKey_OUT, ENABLE => AND_ENABLE_BUFFER_BIT_KEY0, OUTPUT => Data_IN);
 		 
 BUFFER_THREE_STATE_BIT3: entity work.bufferThreeStateBit   generic map (dataWidth => 8)
 		 port map (INPUT => KEY(1), ENABLE => AND_ENABLE_BUFFER_BIT_KEY1, OUTPUT => Data_IN);
@@ -230,6 +233,22 @@ BUFFER_THREE_STATE_BIT5: entity work.bufferThreeStateBit   generic map (dataWidt
 		 
 BUFFER_THREE_STATE_BIT6: entity work.bufferThreeStateBit   generic map (dataWidth => 8)
 		 port map (INPUT => FPGA_RESET, ENABLE => AND_ENABLE_BUFFER_BIT_FPGA_RESET, OUTPUT => Data_IN);
+		  
+DEB_MEM_KEY0: work.DebMemKey0
+		 port map (
+			 DIN => '1', 
+			 DOUT => DebMemKey_OUT,
+			 CLK => CLK_KEY0, 
+			 RST => Data_Address(0) and 
+			 Data_Address(1) and 
+			 Data_Address(2) and 
+			 Data_Address(3) and 
+			 Data_Address(4) and 
+			 Data_Address(5) and 
+			 Data_Address(6) and 
+			 Data_Address(7) and 
+			 Data_Address(8)
+		 );
 
 -- ================================================= Saidas e Operacoes ====================================================
 

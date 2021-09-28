@@ -56,11 +56,23 @@
 					"strict" : false
 				},
 				{
+					"name" : "saida_ROM[3]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_ROM[4]",
+					"strict" : false
+				},
+				{
 					"name" : "saida_ROM[5]",
 					"strict" : false
 				},
 				{
 					"name" : "saida_ROM[6]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_ROM[7]",
 					"strict" : false
 				},
 				{
@@ -77,6 +89,10 @@
 				},
 				{
 					"name" : "saida_ROM[11]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_ROM[12]",
 					"strict" : false
 				},
 				{
@@ -320,19 +336,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "KEY[2]",
-					"strict" : false
-				},
-				{
-					"name" : "KEY[3]",
-					"strict" : false
-				},
-				{
 					"name" : "SW[0]",
-					"strict" : false
-				},
-				{
-					"name" : "KEY[1]",
 					"strict" : false
 				},
 				{
@@ -340,7 +344,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "KEY[1]",
+					"strict" : false
+				},
+				{
 					"name" : "SW[9]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[3]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[2]",
 					"strict" : false
 				},
 				{
@@ -373,10 +389,6 @@
 				},
 				{
 					"name" : "SW[7]",
-					"strict" : false
-				},
-				{
-					"name" : "CLOCK_50",
 					"strict" : false
 				}
 			]
