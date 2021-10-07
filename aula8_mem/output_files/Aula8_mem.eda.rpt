@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Aula8_mem
-Tue Sep 28 10:30:06 2021
+Thu Oct  7 18:58:47 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Sep 28 10:30:06 2021 ;
+; EDA Netlist Writer Status ; Successful - Thu Oct  7 18:58:47 2021 ;
 ; Revision Name             ; Aula8_mem                             ;
 ; Top-level Entity Name     ; Aula8_mem                             ;
 ; Family                    ; Cyclone V                             ;
@@ -66,13 +66,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------------------------+------------------------+
 
 
-+------------------------------------------------------------------------+
-; Simulation Generated Files                                             ;
-+------------------------------------------------------------------------+
-; Generated Files                                                        ;
-+------------------------------------------------------------------------+
-; /home/antonio/Desktop/descomp/aula8_mem/simulation/qsim//Aula8_mem.vho ;
-+------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                           ;
++--------------------------------------------------------------------------------------+
+; Generated Files                                                                      ;
++--------------------------------------------------------------------------------------+
+; /home/antonio/Desktop/6_semestre/descomp/aula8_mem/simulation/modelsim/Aula8_mem.vho ;
++--------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -81,28 +81,13 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Copyright (C) 2020  Intel Corporation. All rights reserved.
-    Info: Your use of Intel Corporation's design tools, logic functions 
-    Info: and other software and tools, and any partner logic 
-    Info: functions, and any output files from any of the foregoing 
-    Info: (including device programming or simulation files), and any 
-    Info: associated documentation or information are expressly subject 
-    Info: to the terms and conditions of the Intel Program License 
-    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
-    Info: the Intel FPGA IP License Agreement, or other applicable license
-    Info: agreement, including, without limitation, that your use is for
-    Info: the sole purpose of programming logic devices manufactured by
-    Info: Intel and sold by Intel or its authorized distributors.  Please
-    Info: refer to the applicable agreement for further details, at
-    Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Tue Sep 28 10:30:03 2021
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/antonio/Desktop/descomp/aula8_mem/simulation/qsim/ Aula8_mem -c Aula8_mem
-Info (119006): Selected device 5CEBA4F23C7 for design "Aula8_mem"
-Info (204019): Generated file Aula8_mem.vho in folder "/home/antonio/Desktop/descomp/aula8_mem/simulation/qsim//" for EDA simulation tool
+    Info: Processing started: Thu Oct  7 18:58:46 2021
+Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off Aula8_mem -c Aula8_mem
+Info (204019): Generated file Aula8_mem.vho in folder "/home/antonio/Desktop/6_semestre/descomp/aula8_mem/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 669 megabytes
-    Info: Processing ended: Tue Sep 28 10:30:06 2021
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 666 megabytes
+    Info: Processing ended: Thu Oct  7 18:58:47 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 

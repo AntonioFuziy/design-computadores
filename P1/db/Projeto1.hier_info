@@ -1,5 +1,6 @@
 |Projeto1
 CLOCK_50 => edgedetector:detectorSub0.clk
+CLOCK_50 => edgedetector:detectorSub1.clk
 CLOCK_50 => cpu:CPU.CLOCK_50
 CLOCK_50 => memoriadados:memoriaDados.clk
 CLOCK_50 => registradorgenerico:REGLEDR.CLK
@@ -14,7 +15,7 @@ CLOCK_50 => registradorgenerico:REG_HEX5.CLK
 KEY[0] => cpu:CPU.KEY[0]
 KEY[0] => edgedetector:detectorSub0.entrada
 KEY[1] => cpu:CPU.KEY[1]
-KEY[1] => bufferthreestatebit:BUFFER_THREE_STATE_BIT3.INPUT
+KEY[1] => edgedetector:detectorSub1.entrada
 KEY[2] => cpu:CPU.KEY[2]
 KEY[2] => bufferthreestatebit:BUFFER_THREE_STATE_BIT4.INPUT
 KEY[3] => cpu:CPU.KEY[3]
@@ -29,6 +30,7 @@ SW[6] => buffertreestate:BUFFER_THREE_STATE_8BITS.INPUT[6]
 SW[7] => buffertreestate:BUFFER_THREE_STATE_8BITS.INPUT[7]
 SW[8] => bufferthreestatebit:BUFFER_THREE_STATE_BIT0.INPUT
 SW[9] => bufferthreestatebit:BUFFER_THREE_STATE_BIT1.INPUT
+FPGA_RESET => cpu:CPU.RESET
 FPGA_RESET => bufferthreestatebit:BUFFER_THREE_STATE_BIT6.INPUT
 LEDR[0] <= registradorgenerico:REGLEDR.DOUT[0]
 LEDR[1] <= registradorgenerico:REGLEDR.DOUT[1]
@@ -40,27 +42,6 @@ LEDR[6] <= registradorgenerico:REGLEDR.DOUT[6]
 LEDR[7] <= registradorgenerico:REGLEDR.DOUT[7]
 LEDR[8] <= registradorbit:REGLEDR8.DOUT
 LEDR[9] <= registradorbit:REGLEDR9.DOUT
-saida_ROM[0] <= rom:ROM1.Dado[0]
-saida_ROM[1] <= rom:ROM1.Dado[1]
-saida_ROM[2] <= rom:ROM1.Dado[2]
-saida_ROM[3] <= rom:ROM1.Dado[3]
-saida_ROM[4] <= rom:ROM1.Dado[4]
-saida_ROM[5] <= rom:ROM1.Dado[5]
-saida_ROM[6] <= rom:ROM1.Dado[6]
-saida_ROM[7] <= rom:ROM1.Dado[7]
-saida_ROM[8] <= rom:ROM1.Dado[8]
-saida_ROM[9] <= rom:ROM1.Dado[9]
-saida_ROM[10] <= rom:ROM1.Dado[10]
-saida_ROM[11] <= rom:ROM1.Dado[11]
-saida_ROM[12] <= rom:ROM1.Dado[12]
-saida_RAM[0] <= cpu:CPU.Data_OUT[0]
-saida_RAM[1] <= cpu:CPU.Data_OUT[1]
-saida_RAM[2] <= cpu:CPU.Data_OUT[2]
-saida_RAM[3] <= cpu:CPU.Data_OUT[3]
-saida_RAM[4] <= cpu:CPU.Data_OUT[4]
-saida_RAM[5] <= cpu:CPU.Data_OUT[5]
-saida_RAM[6] <= cpu:CPU.Data_OUT[6]
-saida_RAM[7] <= cpu:CPU.Data_OUT[7]
 Teste_Endereco[0] <= cpu:CPU.ROM_Address[0]
 Teste_Endereco[1] <= cpu:CPU.ROM_Address[1]
 Teste_Endereco[2] <= cpu:CPU.ROM_Address[2]
@@ -115,6 +96,13 @@ HEX5[6] <= conversorhex7seg:LED_HEX5.saida7seg[6]
 
 
 |Projeto1|edgeDetector:detectorSub0
+clk => saidaQ.CLK
+entrada => saida.IN1
+entrada => saidaQ.DATAIN
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Projeto1|edgeDetector:detectorSub1
 clk => saidaQ.CLK
 entrada => saida.IN1
 entrada => saidaQ.DATAIN
@@ -188,11 +176,11 @@ ROM_Address[5] <= registradorgenerico:PC.DOUT[5]
 ROM_Address[6] <= registradorgenerico:PC.DOUT[6]
 ROM_Address[7] <= registradorgenerico:PC.DOUT[7]
 ROM_Address[8] <= registradorgenerico:PC.DOUT[8]
-CLOCK_50 => ~NO_FANOUT~
-KEY[0] => registradorgenerico:REG1.CLK
-KEY[0] => registradorgenerico:PC.CLK
-KEY[0] => flagcomparacao:FLAG_IGUAL.CLK
-KEY[0] => enderecoretorno:END_RET.CLK
+CLOCK_50 => registradorgenerico:REG1.CLK
+CLOCK_50 => registradorgenerico:PC.CLK
+CLOCK_50 => flagcomparacao:FLAG_IGUAL.CLK
+CLOCK_50 => enderecoretorno:END_RET.CLK
+KEY[0] => ~NO_FANOUT~
 KEY[1] => ~NO_FANOUT~
 KEY[2] => ~NO_FANOUT~
 KEY[3] => ~NO_FANOUT~
@@ -1523,14 +1511,13 @@ OUTPUT <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
 DIN => DOUT~reg0.DATAIN
 DOUT <= DOUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
 CLK => DOUT~reg0.CLK
-RST[0] => Equal0.IN8
-RST[1] => Equal0.IN7
-RST[2] => Equal0.IN6
-RST[3] => Equal0.IN5
-RST[4] => Equal0.IN4
-RST[5] => Equal0.IN3
-RST[6] => Equal0.IN2
-RST[7] => Equal0.IN1
-RST[8] => Equal0.IN0
+RST => DOUT~reg0.ACLR
+
+
+|Projeto1|DebMemKey0:DEB_MEM_KEY1
+DIN => DOUT~reg0.DATAIN
+DOUT <= DOUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CLK => DOUT~reg0.CLK
+RST => DOUT~reg0.ACLR
 
 

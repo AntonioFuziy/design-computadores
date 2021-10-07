@@ -79,7 +79,13 @@ architecture arquitetura of Aula8_mem is
 	signal AND_ENABLE_BUFFER_BIT_FPGA_RESET: std_logic;
 	
 	signal CLK_KEY0: std_logic;
-	signal DebMemKey_OUT: std_logic;
+	signal DebMemKey0_OUT: std_logic;
+	
+	signal CLK_KEY1: std_logic;
+	signal DebMemKey1_OUT: std_logic;
+	
+	signal RESET_KEY0: std_logic;
+	signal RESET_KEY1: std_logic;
 
 begin
 
@@ -89,10 +95,14 @@ begin
 --gravar:  if simulacao generate
 --	CLK <= KEY(0);
 --else generate
+	CLK <= CLOCK_50;
+	
 	detectorSub0: work.edgeDetector(bordaSubida)
 			  port map (clk => CLOCK_50, entrada => (not KEY(0)), saida => CLK_KEY0);
---end generate;
-CLK <= CLOCK_50;
+
+	detectorSub1: work.edgeDetector(bordaSubida)
+			  port map (clk => CLOCK_50, entrada => (not KEY(1)), saida => CLK_KEY1);
+			  --end generate;
 
 CPU : entity work.CPU
 		 port map (
@@ -217,10 +227,10 @@ BUFFER_THREE_STATE_BIT1: entity work.bufferThreeStateBit
 		 port map (INPUT => SW(9), ENABLE => AND_ENABLE_BUFFER_BIT_SW9, OUTPUT => Data_IN(0));
 		 
 BUFFER_THREE_STATE_BIT2: entity work.bufferThreeStateBit
-		 port map (INPUT => DebMemKey_OUT, ENABLE => AND_ENABLE_BUFFER_BIT_KEY0, OUTPUT => Data_IN(0));
+		 port map (INPUT => DebMemKey0_OUT, ENABLE => AND_ENABLE_BUFFER_BIT_KEY0, OUTPUT => Data_IN(0));
 		 
 BUFFER_THREE_STATE_BIT3: entity work.bufferThreeStateBit
-		 port map (INPUT => KEY(1), ENABLE => AND_ENABLE_BUFFER_BIT_KEY1, OUTPUT => Data_IN(0));
+		 port map (INPUT => DebMemKey1_OUT, ENABLE => AND_ENABLE_BUFFER_BIT_KEY1, OUTPUT => Data_IN(0));
 		 
 BUFFER_THREE_STATE_BIT4: entity work.bufferThreeStateBit
 		 port map (INPUT => KEY(2), ENABLE => AND_ENABLE_BUFFER_BIT_KEY2, OUTPUT => Data_IN(0));
@@ -234,9 +244,17 @@ BUFFER_THREE_STATE_BIT6: entity work.bufferThreeStateBit
 DEB_MEM_KEY0: work.DebMemKey0
 	 port map (
 		 DIN => '1', 
-		 DOUT => DebMemKey_OUT,
+		 DOUT => DebMemKey0_OUT,
 		 CLK => CLK_KEY0, 
-		 RST => Data_Address(8 downto 0)
+		 RST => RESET_KEY0
+	 );
+	  
+DEB_MEM_KEY1: work.DebMemKey0
+	 port map (
+		 DIN => '1', 
+		 DOUT => DebMemKey1_OUT,
+		 CLK => CLK_KEY1, 
+		 RST => RESET_KEY1
 	 );
 
 -- ================================================= Saidas e Operacoes ====================================================
@@ -263,6 +281,9 @@ AND_ENABLE_BUFFER_BIT_KEY1 <= '1' when (rd and A5 and Saida_Decoder_Addr(1) and 
 AND_ENABLE_BUFFER_BIT_KEY2 <= '1' when (rd and A5 and Saida_Decoder_Addr(2) and Saida_Decoder_Blocos(5)) else '0';
 AND_ENABLE_BUFFER_BIT_KEY3 <= '1' when (rd and A5 and Saida_Decoder_Addr(3) and Saida_Decoder_Blocos(5)) else '0';
 AND_ENABLE_BUFFER_BIT_FPGA_RESET <= '1' when (rd and A5 and Saida_Decoder_Addr(4) and Saida_Decoder_Blocos(5)) else '0';
+
+RESET_KEY0 <= '1' when (Data_Address(0) and Data_Address(1) and Data_Address(2) and Data_Address(3) and Data_Address(4) and Data_Address(5) and Data_Address(6) and Data_Address(7) and Data_Address(8)) else '0';
+RESET_KEY1 <= '1' when ((not Data_Address(0)) and Data_Address(1) and Data_Address(2) and Data_Address(3) and Data_Address(4) and Data_Address(5) and Data_Address(6) and Data_Address(7) and Data_Address(8)) else '0';
 
 LEDR <= SaidaREG_LEDR;
 

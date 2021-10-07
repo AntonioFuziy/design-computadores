@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Aula8
-Thu Sep 23 17:18:56 2021
+Thu Oct  7 15:34:37 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -92,7 +92,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Sep 23 17:18:56 2021       ;
+; Analysis & Synthesis Status     ; Successful - Thu Oct  7 15:34:37 2021       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Aula8                                       ;
 ; Top-level Entity Name           ; Aula8                                       ;
@@ -218,29 +218,29 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                       ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------+---------+
-; memoriaDados.vhd                 ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8/memoriaDados.vhd        ;         ;
-; logicaDesvio.vhd                 ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8/logicaDesvio.vhd        ;         ;
-; flagComparacao.vhd               ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8/flagComparacao.vhd      ;         ;
-; enderecoRetorno.vhd              ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8/enderecoRetorno.vhd     ;         ;
-; edgeDetector.vhd                 ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8/edgeDetector.vhd        ;         ;
-; Decoder3x8.vhd                   ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8/Decoder3x8.vhd          ;         ;
-; Decoder.vhd                      ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8/Decoder.vhd             ;         ;
-; CPU.vhd                          ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8/CPU.vhd                 ;         ;
-; Aula8.vhd                        ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8/Aula8.vhd               ;         ;
-; ULASomaSub.vhd                   ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8/ULASomaSub.vhd          ;         ;
-; somaConstante.vhd                ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8/somaConstante.vhd       ;         ;
-; ROM.vhd                          ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8/ROM.vhd                 ;         ;
-; registradorGenerico.vhd          ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8/registradorGenerico.vhd ;         ;
-; registradorBit.vhd               ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8/registradorBit.vhd      ;         ;
-; muxGenerico4x2.vhd               ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8/muxGenerico4x2.vhd      ;         ;
-; muxGenerico2x1.vhd               ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8/muxGenerico2x1.vhd      ;         ;
-; conversorHex7Seg.vhd             ; yes             ; User VHDL File  ; /home/antonio/Desktop/descomp/aula8/conversorHex7Seg.vhd    ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                  ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                           ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------+---------+
+; memoriaDados.vhd                 ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/aula8/memoriaDados.vhd        ;         ;
+; logicaDesvio.vhd                 ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/aula8/logicaDesvio.vhd        ;         ;
+; flagComparacao.vhd               ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/aula8/flagComparacao.vhd      ;         ;
+; enderecoRetorno.vhd              ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/aula8/enderecoRetorno.vhd     ;         ;
+; edgeDetector.vhd                 ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/aula8/edgeDetector.vhd        ;         ;
+; Decoder3x8.vhd                   ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/aula8/Decoder3x8.vhd          ;         ;
+; Decoder.vhd                      ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/aula8/Decoder.vhd             ;         ;
+; CPU.vhd                          ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/aula8/CPU.vhd                 ;         ;
+; Aula8.vhd                        ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/aula8/Aula8.vhd               ;         ;
+; ULASomaSub.vhd                   ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/aula8/ULASomaSub.vhd          ;         ;
+; somaConstante.vhd                ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/aula8/somaConstante.vhd       ;         ;
+; ROM.vhd                          ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/aula8/ROM.vhd                 ;         ;
+; registradorGenerico.vhd          ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/aula8/registradorGenerico.vhd ;         ;
+; registradorBit.vhd               ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/aula8/registradorBit.vhd      ;         ;
+; muxGenerico4x2.vhd               ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/aula8/muxGenerico4x2.vhd      ;         ;
+; muxGenerico2x1.vhd               ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/aula8/muxGenerico2x1.vhd      ;         ;
+; conversorHex7Seg.vhd             ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/aula8/conversorHex7Seg.vhd    ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------------------------------+
@@ -1326,124 +1326,124 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Sep 23 17:18:45 2021
+    Info: Processing started: Thu Oct  7 15:34:26 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Aula8 -c Aula8
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file memoriaDados.vhd
-    Info (12022): Found design unit 1: memoriaDados-rtl File: /home/antonio/Desktop/descomp/aula8/memoriaDados.vhd Line: 21
-    Info (12023): Found entity 1: memoriaDados File: /home/antonio/Desktop/descomp/aula8/memoriaDados.vhd Line: 5
+    Info (12022): Found design unit 1: memoriaDados-rtl File: /home/antonio/Desktop/6_semestre/descomp/aula8/memoriaDados.vhd Line: 21
+    Info (12023): Found entity 1: memoriaDados File: /home/antonio/Desktop/6_semestre/descomp/aula8/memoriaDados.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file logicaDesvio.vhd
-    Info (12022): Found design unit 1: logicaDesvio-comportamento File: /home/antonio/Desktop/descomp/aula8/logicaDesvio.vhd Line: 13
-    Info (12023): Found entity 1: logicaDesvio File: /home/antonio/Desktop/descomp/aula8/logicaDesvio.vhd Line: 5
+    Info (12022): Found design unit 1: logicaDesvio-comportamento File: /home/antonio/Desktop/6_semestre/descomp/aula8/logicaDesvio.vhd Line: 13
+    Info (12023): Found entity 1: logicaDesvio File: /home/antonio/Desktop/6_semestre/descomp/aula8/logicaDesvio.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file flagComparacao.vhd
-    Info (12022): Found design unit 1: flagComparacao-comportamento File: /home/antonio/Desktop/descomp/aula8/flagComparacao.vhd Line: 15
-    Info (12023): Found entity 1: flagComparacao File: /home/antonio/Desktop/descomp/aula8/flagComparacao.vhd Line: 4
+    Info (12022): Found design unit 1: flagComparacao-comportamento File: /home/antonio/Desktop/6_semestre/descomp/aula8/flagComparacao.vhd Line: 15
+    Info (12023): Found entity 1: flagComparacao File: /home/antonio/Desktop/6_semestre/descomp/aula8/flagComparacao.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file enderecoRetorno.vhd
-    Info (12022): Found design unit 1: enderecoRetorno-comportamento File: /home/antonio/Desktop/descomp/aula8/enderecoRetorno.vhd Line: 15
-    Info (12023): Found entity 1: enderecoRetorno File: /home/antonio/Desktop/descomp/aula8/enderecoRetorno.vhd Line: 4
+    Info (12022): Found design unit 1: enderecoRetorno-comportamento File: /home/antonio/Desktop/6_semestre/descomp/aula8/enderecoRetorno.vhd Line: 15
+    Info (12023): Found entity 1: enderecoRetorno File: /home/antonio/Desktop/6_semestre/descomp/aula8/enderecoRetorno.vhd Line: 4
 Info (12021): Found 3 design units, including 1 entities, in source file edgeDetector.vhd
-    Info (12022): Found design unit 1: edgeDetector-bordaSubida File: /home/antonio/Desktop/descomp/aula8/edgeDetector.vhd Line: 10
-    Info (12022): Found design unit 2: edgeDetector-bordaDescida File: /home/antonio/Desktop/descomp/aula8/edgeDetector.vhd Line: 23
-    Info (12023): Found entity 1: edgeDetector File: /home/antonio/Desktop/descomp/aula8/edgeDetector.vhd Line: 4
+    Info (12022): Found design unit 1: edgeDetector-bordaSubida File: /home/antonio/Desktop/6_semestre/descomp/aula8/edgeDetector.vhd Line: 10
+    Info (12022): Found design unit 2: edgeDetector-bordaDescida File: /home/antonio/Desktop/6_semestre/descomp/aula8/edgeDetector.vhd Line: 23
+    Info (12023): Found entity 1: edgeDetector File: /home/antonio/Desktop/6_semestre/descomp/aula8/edgeDetector.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file Decoder3x8.vhd
-    Info (12022): Found design unit 1: Decoder3x8-arch_name File: /home/antonio/Desktop/descomp/aula8/Decoder3x8.vhd Line: 18
-    Info (12023): Found entity 1: Decoder3x8 File: /home/antonio/Desktop/descomp/aula8/Decoder3x8.vhd Line: 5
+    Info (12022): Found design unit 1: Decoder3x8-arch_name File: /home/antonio/Desktop/6_semestre/descomp/aula8/Decoder3x8.vhd Line: 18
+    Info (12023): Found entity 1: Decoder3x8 File: /home/antonio/Desktop/6_semestre/descomp/aula8/Decoder3x8.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file Decoder.vhd
-    Info (12022): Found design unit 1: Decoder-arch_name File: /home/antonio/Desktop/descomp/aula8/Decoder.vhd Line: 15
-    Info (12023): Found entity 1: Decoder File: /home/antonio/Desktop/descomp/aula8/Decoder.vhd Line: 5
+    Info (12022): Found design unit 1: Decoder-arch_name File: /home/antonio/Desktop/6_semestre/descomp/aula8/Decoder.vhd Line: 15
+    Info (12023): Found entity 1: Decoder File: /home/antonio/Desktop/6_semestre/descomp/aula8/Decoder.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file CPU.vhd
-    Info (12022): Found design unit 1: CPU-arquitetura File: /home/antonio/Desktop/descomp/aula8/CPU.vhd Line: 31
-    Info (12023): Found entity 1: CPU File: /home/antonio/Desktop/descomp/aula8/CPU.vhd Line: 4
+    Info (12022): Found design unit 1: CPU-arquitetura File: /home/antonio/Desktop/6_semestre/descomp/aula8/CPU.vhd Line: 31
+    Info (12023): Found entity 1: CPU File: /home/antonio/Desktop/6_semestre/descomp/aula8/CPU.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file Aula8.vhd
-    Info (12022): Found design unit 1: Aula8-arquitetura File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 33
-    Info (12023): Found entity 1: Aula8 File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 4
+    Info (12022): Found design unit 1: Aula8-arquitetura File: /home/antonio/Desktop/6_semestre/descomp/aula8/Aula8.vhd Line: 33
+    Info (12023): Found entity 1: Aula8 File: /home/antonio/Desktop/6_semestre/descomp/aula8/Aula8.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file ULASomaSub.vhd
-    Info (12022): Found design unit 1: ULASomaSub-comportamento File: /home/antonio/Desktop/descomp/aula8/ULASomaSub.vhd Line: 15
-    Info (12023): Found entity 1: ULASomaSub File: /home/antonio/Desktop/descomp/aula8/ULASomaSub.vhd Line: 5
+    Info (12022): Found design unit 1: ULASomaSub-comportamento File: /home/antonio/Desktop/6_semestre/descomp/aula8/ULASomaSub.vhd Line: 15
+    Info (12023): Found entity 1: ULASomaSub File: /home/antonio/Desktop/6_semestre/descomp/aula8/ULASomaSub.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file somadorGenerico.vhd
-    Info (12022): Found design unit 1: somadorGenerico-comportamento File: /home/antonio/Desktop/descomp/aula8/somadorGenerico.vhd Line: 17
-    Info (12023): Found entity 1: somadorGenerico File: /home/antonio/Desktop/descomp/aula8/somadorGenerico.vhd Line: 5
+    Info (12022): Found design unit 1: somadorGenerico-comportamento File: /home/antonio/Desktop/6_semestre/descomp/aula8/somadorGenerico.vhd Line: 17
+    Info (12023): Found entity 1: somadorGenerico File: /home/antonio/Desktop/6_semestre/descomp/aula8/somadorGenerico.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file somaConstante.vhd
-    Info (12022): Found design unit 1: somaConstante-comportamento File: /home/antonio/Desktop/descomp/aula8/somaConstante.vhd Line: 18
-    Info (12023): Found entity 1: somaConstante File: /home/antonio/Desktop/descomp/aula8/somaConstante.vhd Line: 5
+    Info (12022): Found design unit 1: somaConstante-comportamento File: /home/antonio/Desktop/6_semestre/descomp/aula8/somaConstante.vhd Line: 18
+    Info (12023): Found entity 1: somaConstante File: /home/antonio/Desktop/6_semestre/descomp/aula8/somaConstante.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file ROM.vhd
-    Info (12022): Found design unit 1: ROM-assincrona File: /home/antonio/Desktop/descomp/aula8/ROM.vhd Line: 16
-    Info (12023): Found entity 1: ROM File: /home/antonio/Desktop/descomp/aula8/ROM.vhd Line: 5
+    Info (12022): Found design unit 1: ROM-assincrona File: /home/antonio/Desktop/6_semestre/descomp/aula8/ROM.vhd Line: 16
+    Info (12023): Found entity 1: ROM File: /home/antonio/Desktop/6_semestre/descomp/aula8/ROM.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file registradorGenerico.vhd
-    Info (12022): Found design unit 1: registradorGenerico-comportamento File: /home/antonio/Desktop/descomp/aula8/registradorGenerico.vhd Line: 15
-    Info (12023): Found entity 1: registradorGenerico File: /home/antonio/Desktop/descomp/aula8/registradorGenerico.vhd Line: 4
+    Info (12022): Found design unit 1: registradorGenerico-comportamento File: /home/antonio/Desktop/6_semestre/descomp/aula8/registradorGenerico.vhd Line: 15
+    Info (12023): Found entity 1: registradorGenerico File: /home/antonio/Desktop/6_semestre/descomp/aula8/registradorGenerico.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file registradorBit.vhd
-    Info (12022): Found design unit 1: registradorBit-comportamento File: /home/antonio/Desktop/descomp/aula8/registradorBit.vhd Line: 15
-    Info (12023): Found entity 1: registradorBit File: /home/antonio/Desktop/descomp/aula8/registradorBit.vhd Line: 4
+    Info (12022): Found design unit 1: registradorBit-comportamento File: /home/antonio/Desktop/6_semestre/descomp/aula8/registradorBit.vhd Line: 15
+    Info (12023): Found entity 1: registradorBit File: /home/antonio/Desktop/6_semestre/descomp/aula8/registradorBit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file muxGenerico4x2.vhd
-    Info (12022): Found design unit 1: muxGenerico4x2-comportamento File: /home/antonio/Desktop/descomp/aula8/muxGenerico4x2.vhd Line: 14
-    Info (12023): Found entity 1: muxGenerico4x2 File: /home/antonio/Desktop/descomp/aula8/muxGenerico4x2.vhd Line: 4
+    Info (12022): Found design unit 1: muxGenerico4x2-comportamento File: /home/antonio/Desktop/6_semestre/descomp/aula8/muxGenerico4x2.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico4x2 File: /home/antonio/Desktop/6_semestre/descomp/aula8/muxGenerico4x2.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file muxGenerico2x1.vhd
-    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: /home/antonio/Desktop/descomp/aula8/muxGenerico2x1.vhd Line: 14
-    Info (12023): Found entity 1: muxGenerico2x1 File: /home/antonio/Desktop/descomp/aula8/muxGenerico2x1.vhd Line: 4
+    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: /home/antonio/Desktop/6_semestre/descomp/aula8/muxGenerico2x1.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico2x1 File: /home/antonio/Desktop/6_semestre/descomp/aula8/muxGenerico2x1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file conversorHex7Seg.vhd
-    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: /home/antonio/Desktop/descomp/aula8/conversorHex7Seg.vhd Line: 17
-    Info (12023): Found entity 1: conversorHex7Seg File: /home/antonio/Desktop/descomp/aula8/conversorHex7Seg.vhd Line: 4
+    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: /home/antonio/Desktop/6_semestre/descomp/aula8/conversorHex7Seg.vhd Line: 17
+    Info (12023): Found entity 1: conversorHex7Seg File: /home/antonio/Desktop/6_semestre/descomp/aula8/conversorHex7Seg.vhd Line: 4
 Info (12127): Elaborating entity "Aula8" for the top level hierarchy
-Info (12129): Elaborating entity "edgeDetector" using architecture "A:bordasubida" for hierarchy "edgeDetector:\gravar:detectorSub0" File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 82
-Info (12128): Elaborating entity "CPU" for hierarchy "CPU:CPU" File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 88
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "CPU:CPU|muxGenerico2x1:MUX1" File: /home/antonio/Desktop/descomp/aula8/CPU.vhd Line: 70
-Info (12128): Elaborating entity "muxGenerico4x2" for hierarchy "CPU:CPU|muxGenerico4x2:MUX4x2_PC" File: /home/antonio/Desktop/descomp/aula8/CPU.vhd Line: 78
-Info (12128): Elaborating entity "Decoder" for hierarchy "CPU:CPU|Decoder:Decoder" File: /home/antonio/Desktop/descomp/aula8/CPU.vhd Line: 88
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "CPU:CPU|registradorGenerico:REG1" File: /home/antonio/Desktop/descomp/aula8/CPU.vhd Line: 92
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "CPU:CPU|registradorGenerico:PC" File: /home/antonio/Desktop/descomp/aula8/CPU.vhd Line: 96
-Info (12128): Elaborating entity "somaConstante" for hierarchy "CPU:CPU|somaConstante:somaUm" File: /home/antonio/Desktop/descomp/aula8/CPU.vhd Line: 99
-Info (12128): Elaborating entity "ULASomaSub" for hierarchy "CPU:CPU|ULASomaSub:ULA1" File: /home/antonio/Desktop/descomp/aula8/CPU.vhd Line: 103
-Info (12128): Elaborating entity "flagComparacao" for hierarchy "CPU:CPU|flagComparacao:FLAG_IGUAL" File: /home/antonio/Desktop/descomp/aula8/CPU.vhd Line: 106
-Info (12128): Elaborating entity "enderecoRetorno" for hierarchy "CPU:CPU|enderecoRetorno:END_RET" File: /home/antonio/Desktop/descomp/aula8/CPU.vhd Line: 109
-Info (12128): Elaborating entity "logicaDesvio" for hierarchy "CPU:CPU|logicaDesvio:LOGICA_DESVIO" File: /home/antonio/Desktop/descomp/aula8/CPU.vhd Line: 112
-Info (12128): Elaborating entity "ROM" for hierarchy "ROM:ROM1" File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 103
-Info (12128): Elaborating entity "memoriaDados" for hierarchy "memoriaDados:memoriaDados" File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 109
-Info (12128): Elaborating entity "Decoder3x8" for hierarchy "Decoder3x8:DECODER_BLOCOS" File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 112
-Info (10041): Inferred latch for "OUTPUT[0]" at Decoder3x8.vhd(30) File: /home/antonio/Desktop/descomp/aula8/Decoder3x8.vhd Line: 30
-Info (10041): Inferred latch for "OUTPUT[1]" at Decoder3x8.vhd(30) File: /home/antonio/Desktop/descomp/aula8/Decoder3x8.vhd Line: 30
-Info (10041): Inferred latch for "OUTPUT[2]" at Decoder3x8.vhd(30) File: /home/antonio/Desktop/descomp/aula8/Decoder3x8.vhd Line: 30
-Info (10041): Inferred latch for "OUTPUT[3]" at Decoder3x8.vhd(30) File: /home/antonio/Desktop/descomp/aula8/Decoder3x8.vhd Line: 30
-Info (10041): Inferred latch for "OUTPUT[4]" at Decoder3x8.vhd(30) File: /home/antonio/Desktop/descomp/aula8/Decoder3x8.vhd Line: 30
-Info (10041): Inferred latch for "OUTPUT[5]" at Decoder3x8.vhd(30) File: /home/antonio/Desktop/descomp/aula8/Decoder3x8.vhd Line: 30
-Info (10041): Inferred latch for "OUTPUT[6]" at Decoder3x8.vhd(30) File: /home/antonio/Desktop/descomp/aula8/Decoder3x8.vhd Line: 30
-Info (10041): Inferred latch for "OUTPUT[7]" at Decoder3x8.vhd(30) File: /home/antonio/Desktop/descomp/aula8/Decoder3x8.vhd Line: 30
-Info (12128): Elaborating entity "registradorBit" for hierarchy "registradorBit:REGLEDR8" File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 121
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:REG_HEX0" File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 129
-Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:LED_HEX0" File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 132
+Info (12129): Elaborating entity "edgeDetector" using architecture "A:bordasubida" for hierarchy "edgeDetector:\gravar:detectorSub0" File: /home/antonio/Desktop/6_semestre/descomp/aula8/Aula8.vhd Line: 82
+Info (12128): Elaborating entity "CPU" for hierarchy "CPU:CPU" File: /home/antonio/Desktop/6_semestre/descomp/aula8/Aula8.vhd Line: 88
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "CPU:CPU|muxGenerico2x1:MUX1" File: /home/antonio/Desktop/6_semestre/descomp/aula8/CPU.vhd Line: 70
+Info (12128): Elaborating entity "muxGenerico4x2" for hierarchy "CPU:CPU|muxGenerico4x2:MUX4x2_PC" File: /home/antonio/Desktop/6_semestre/descomp/aula8/CPU.vhd Line: 78
+Info (12128): Elaborating entity "Decoder" for hierarchy "CPU:CPU|Decoder:Decoder" File: /home/antonio/Desktop/6_semestre/descomp/aula8/CPU.vhd Line: 88
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "CPU:CPU|registradorGenerico:REG1" File: /home/antonio/Desktop/6_semestre/descomp/aula8/CPU.vhd Line: 92
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "CPU:CPU|registradorGenerico:PC" File: /home/antonio/Desktop/6_semestre/descomp/aula8/CPU.vhd Line: 96
+Info (12128): Elaborating entity "somaConstante" for hierarchy "CPU:CPU|somaConstante:somaUm" File: /home/antonio/Desktop/6_semestre/descomp/aula8/CPU.vhd Line: 99
+Info (12128): Elaborating entity "ULASomaSub" for hierarchy "CPU:CPU|ULASomaSub:ULA1" File: /home/antonio/Desktop/6_semestre/descomp/aula8/CPU.vhd Line: 103
+Info (12128): Elaborating entity "flagComparacao" for hierarchy "CPU:CPU|flagComparacao:FLAG_IGUAL" File: /home/antonio/Desktop/6_semestre/descomp/aula8/CPU.vhd Line: 106
+Info (12128): Elaborating entity "enderecoRetorno" for hierarchy "CPU:CPU|enderecoRetorno:END_RET" File: /home/antonio/Desktop/6_semestre/descomp/aula8/CPU.vhd Line: 109
+Info (12128): Elaborating entity "logicaDesvio" for hierarchy "CPU:CPU|logicaDesvio:LOGICA_DESVIO" File: /home/antonio/Desktop/6_semestre/descomp/aula8/CPU.vhd Line: 112
+Info (12128): Elaborating entity "ROM" for hierarchy "ROM:ROM1" File: /home/antonio/Desktop/6_semestre/descomp/aula8/Aula8.vhd Line: 103
+Info (12128): Elaborating entity "memoriaDados" for hierarchy "memoriaDados:memoriaDados" File: /home/antonio/Desktop/6_semestre/descomp/aula8/Aula8.vhd Line: 109
+Info (12128): Elaborating entity "Decoder3x8" for hierarchy "Decoder3x8:DECODER_BLOCOS" File: /home/antonio/Desktop/6_semestre/descomp/aula8/Aula8.vhd Line: 112
+Info (10041): Inferred latch for "OUTPUT[0]" at Decoder3x8.vhd(30) File: /home/antonio/Desktop/6_semestre/descomp/aula8/Decoder3x8.vhd Line: 30
+Info (10041): Inferred latch for "OUTPUT[1]" at Decoder3x8.vhd(30) File: /home/antonio/Desktop/6_semestre/descomp/aula8/Decoder3x8.vhd Line: 30
+Info (10041): Inferred latch for "OUTPUT[2]" at Decoder3x8.vhd(30) File: /home/antonio/Desktop/6_semestre/descomp/aula8/Decoder3x8.vhd Line: 30
+Info (10041): Inferred latch for "OUTPUT[3]" at Decoder3x8.vhd(30) File: /home/antonio/Desktop/6_semestre/descomp/aula8/Decoder3x8.vhd Line: 30
+Info (10041): Inferred latch for "OUTPUT[4]" at Decoder3x8.vhd(30) File: /home/antonio/Desktop/6_semestre/descomp/aula8/Decoder3x8.vhd Line: 30
+Info (10041): Inferred latch for "OUTPUT[5]" at Decoder3x8.vhd(30) File: /home/antonio/Desktop/6_semestre/descomp/aula8/Decoder3x8.vhd Line: 30
+Info (10041): Inferred latch for "OUTPUT[6]" at Decoder3x8.vhd(30) File: /home/antonio/Desktop/6_semestre/descomp/aula8/Decoder3x8.vhd Line: 30
+Info (10041): Inferred latch for "OUTPUT[7]" at Decoder3x8.vhd(30) File: /home/antonio/Desktop/6_semestre/descomp/aula8/Decoder3x8.vhd Line: 30
+Info (12128): Elaborating entity "registradorBit" for hierarchy "registradorBit:REGLEDR8" File: /home/antonio/Desktop/6_semestre/descomp/aula8/Aula8.vhd Line: 121
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:REG_HEX0" File: /home/antonio/Desktop/6_semestre/descomp/aula8/Aula8.vhd Line: 129
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:LED_HEX0" File: /home/antonio/Desktop/6_semestre/descomp/aula8/Aula8.vhd Line: 132
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276007): RAM logic "memoriaDados:memoriaDados|ram" is uninferred due to asynchronous read logic File: /home/antonio/Desktop/descomp/aula8/memoriaDados.vhd Line: 27
+    Info (276007): RAM logic "memoriaDados:memoriaDados|ram" is uninferred due to asynchronous read logic File: /home/antonio/Desktop/6_semestre/descomp/aula8/memoriaDados.vhd Line: 27
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13049): Converted tri-state buffer "memoriaDados:memoriaDados|dado_out[0]" feeding internal logic into a wire File: /home/antonio/Desktop/descomp/aula8/memoriaDados.vhd Line: 17
-    Warning (13049): Converted tri-state buffer "memoriaDados:memoriaDados|dado_out[1]" feeding internal logic into a wire File: /home/antonio/Desktop/descomp/aula8/memoriaDados.vhd Line: 17
-    Warning (13049): Converted tri-state buffer "memoriaDados:memoriaDados|dado_out[2]" feeding internal logic into a wire File: /home/antonio/Desktop/descomp/aula8/memoriaDados.vhd Line: 17
-    Warning (13049): Converted tri-state buffer "memoriaDados:memoriaDados|dado_out[3]" feeding internal logic into a wire File: /home/antonio/Desktop/descomp/aula8/memoriaDados.vhd Line: 17
-    Warning (13049): Converted tri-state buffer "memoriaDados:memoriaDados|dado_out[4]" feeding internal logic into a wire File: /home/antonio/Desktop/descomp/aula8/memoriaDados.vhd Line: 17
-    Warning (13049): Converted tri-state buffer "memoriaDados:memoriaDados|dado_out[5]" feeding internal logic into a wire File: /home/antonio/Desktop/descomp/aula8/memoriaDados.vhd Line: 17
-    Warning (13049): Converted tri-state buffer "memoriaDados:memoriaDados|dado_out[6]" feeding internal logic into a wire File: /home/antonio/Desktop/descomp/aula8/memoriaDados.vhd Line: 17
-    Warning (13049): Converted tri-state buffer "memoriaDados:memoriaDados|dado_out[7]" feeding internal logic into a wire File: /home/antonio/Desktop/descomp/aula8/memoriaDados.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaDados:memoriaDados|dado_out[0]" feeding internal logic into a wire File: /home/antonio/Desktop/6_semestre/descomp/aula8/memoriaDados.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaDados:memoriaDados|dado_out[1]" feeding internal logic into a wire File: /home/antonio/Desktop/6_semestre/descomp/aula8/memoriaDados.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaDados:memoriaDados|dado_out[2]" feeding internal logic into a wire File: /home/antonio/Desktop/6_semestre/descomp/aula8/memoriaDados.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaDados:memoriaDados|dado_out[3]" feeding internal logic into a wire File: /home/antonio/Desktop/6_semestre/descomp/aula8/memoriaDados.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaDados:memoriaDados|dado_out[4]" feeding internal logic into a wire File: /home/antonio/Desktop/6_semestre/descomp/aula8/memoriaDados.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaDados:memoriaDados|dado_out[5]" feeding internal logic into a wire File: /home/antonio/Desktop/6_semestre/descomp/aula8/memoriaDados.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaDados:memoriaDados|dado_out[6]" feeding internal logic into a wire File: /home/antonio/Desktop/6_semestre/descomp/aula8/memoriaDados.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaDados:memoriaDados|dado_out[7]" feeding internal logic into a wire File: /home/antonio/Desktop/6_semestre/descomp/aula8/memoriaDados.vhd Line: 17
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "saida_ROM[3]" is stuck at GND File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 20
-    Warning (13410): Pin "saida_ROM[4]" is stuck at GND File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 20
-    Warning (13410): Pin "saida_ROM[6]" is stuck at GND File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 20
-    Warning (13410): Pin "saida_ROM[7]" is stuck at GND File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 20
-    Warning (13410): Pin "saida_ROM[12]" is stuck at GND File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 20
+    Warning (13410): Pin "saida_ROM[3]" is stuck at GND File: /home/antonio/Desktop/6_semestre/descomp/aula8/Aula8.vhd Line: 20
+    Warning (13410): Pin "saida_ROM[4]" is stuck at GND File: /home/antonio/Desktop/6_semestre/descomp/aula8/Aula8.vhd Line: 20
+    Warning (13410): Pin "saida_ROM[6]" is stuck at GND File: /home/antonio/Desktop/6_semestre/descomp/aula8/Aula8.vhd Line: 20
+    Warning (13410): Pin "saida_ROM[7]" is stuck at GND File: /home/antonio/Desktop/6_semestre/descomp/aula8/Aula8.vhd Line: 20
+    Warning (13410): Pin "saida_ROM[12]" is stuck at GND File: /home/antonio/Desktop/6_semestre/descomp/aula8/Aula8.vhd Line: 20
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 384 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 3 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[1]" File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 16
-    Warning (15610): No output dependent on input pin "KEY[2]" File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 16
-    Warning (15610): No output dependent on input pin "KEY[3]" File: /home/antonio/Desktop/descomp/aula8/Aula8.vhd Line: 16
+    Warning (15610): No output dependent on input pin "KEY[1]" File: /home/antonio/Desktop/6_semestre/descomp/aula8/Aula8.vhd Line: 16
+    Warning (15610): No output dependent on input pin "KEY[2]" File: /home/antonio/Desktop/6_semestre/descomp/aula8/Aula8.vhd Line: 16
+    Warning (15610): No output dependent on input pin "KEY[3]" File: /home/antonio/Desktop/6_semestre/descomp/aula8/Aula8.vhd Line: 16
 Info (21057): Implemented 305 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 82 output pins
     Info (21061): Implemented 218 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 485 megabytes
-    Info: Processing ended: Thu Sep 23 17:18:56 2021
+    Info: Peak virtual memory: 482 megabytes
+    Info: Processing ended: Thu Oct  7 15:34:37 2021
     Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:29
+    Info: Total CPU time (on all processors): 00:00:27
 
 

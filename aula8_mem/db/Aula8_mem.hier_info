@@ -1,5 +1,6 @@
 |Aula8_mem
 CLOCK_50 => edgedetector:detectorSub0.clk
+CLOCK_50 => edgedetector:detectorSub1.clk
 CLOCK_50 => cpu:CPU.CLOCK_50
 CLOCK_50 => memoriadados:memoriaDados.clk
 CLOCK_50 => registradorgenerico:REGLEDR.CLK
@@ -14,7 +15,7 @@ CLOCK_50 => registradorgenerico:REG_HEX5.CLK
 KEY[0] => cpu:CPU.KEY[0]
 KEY[0] => edgedetector:detectorSub0.entrada
 KEY[1] => cpu:CPU.KEY[1]
-KEY[1] => bufferthreestatebit:BUFFER_THREE_STATE_BIT3.INPUT
+KEY[1] => edgedetector:detectorSub1.entrada
 KEY[2] => cpu:CPU.KEY[2]
 KEY[2] => bufferthreestatebit:BUFFER_THREE_STATE_BIT4.INPUT
 KEY[3] => cpu:CPU.KEY[3]
@@ -121,6 +122,13 @@ entrada => saidaQ.DATAIN
 saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|Aula8_mem|edgeDetector:detectorSub1
+clk => saidaQ.CLK
+entrada => saida.IN1
+entrada => saidaQ.DATAIN
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |Aula8_mem|CPU:CPU
 RD <= decoder:Decoder.OUTPUT[1]
 WR <= decoder:Decoder.OUTPUT[0]
@@ -189,10 +197,7 @@ ROM_Address[6] <= registradorgenerico:PC.DOUT[6]
 ROM_Address[7] <= registradorgenerico:PC.DOUT[7]
 ROM_Address[8] <= registradorgenerico:PC.DOUT[8]
 CLOCK_50 => ~NO_FANOUT~
-KEY[0] => registradorgenerico:REG1.CLK
-KEY[0] => registradorgenerico:PC.CLK
-KEY[0] => flagcomparacao:FLAG_IGUAL.CLK
-KEY[0] => enderecoretorno:END_RET.CLK
+KEY[0] => ~NO_FANOUT~
 KEY[1] => ~NO_FANOUT~
 KEY[2] => ~NO_FANOUT~
 KEY[3] => ~NO_FANOUT~
@@ -698,14 +703,14 @@ INPUT[2] => Equal4.IN0
 INPUT[2] => Equal5.IN0
 INPUT[2] => Equal6.IN0
 INPUT[2] => Equal7.IN0
-OUTPUT[0] <= OUTPUT[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
-OUTPUT[1] <= OUTPUT[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
-OUTPUT[2] <= OUTPUT[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
-OUTPUT[3] <= OUTPUT[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
-OUTPUT[4] <= OUTPUT[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
-OUTPUT[5] <= OUTPUT[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
-OUTPUT[6] <= OUTPUT[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
-OUTPUT[7] <= OUTPUT[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[0] <= Equal7.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[1] <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[2] <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[3] <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[4] <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[5] <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[6] <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[7] <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Aula8_mem|Decoder3x8:DECODER_ENDERECOS
@@ -733,14 +738,14 @@ INPUT[2] => Equal4.IN0
 INPUT[2] => Equal5.IN0
 INPUT[2] => Equal6.IN0
 INPUT[2] => Equal7.IN0
-OUTPUT[0] <= OUTPUT[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
-OUTPUT[1] <= OUTPUT[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
-OUTPUT[2] <= OUTPUT[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
-OUTPUT[3] <= OUTPUT[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
-OUTPUT[4] <= OUTPUT[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
-OUTPUT[5] <= OUTPUT[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
-OUTPUT[6] <= OUTPUT[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
-OUTPUT[7] <= OUTPUT[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[0] <= Equal7.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[1] <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[2] <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[3] <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[4] <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[5] <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[6] <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[7] <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Aula8_mem|registradorGenerico:REGLEDR
@@ -1523,14 +1528,13 @@ OUTPUT <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
 DIN => DOUT~reg0.DATAIN
 DOUT <= DOUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
 CLK => DOUT~reg0.CLK
-RST[0] => Equal0.IN8
-RST[1] => Equal0.IN7
-RST[2] => Equal0.IN6
-RST[3] => Equal0.IN5
-RST[4] => Equal0.IN4
-RST[5] => Equal0.IN3
-RST[6] => Equal0.IN2
-RST[7] => Equal0.IN1
-RST[8] => Equal0.IN0
+RST => DOUT~reg0.ACLR
+
+
+|Aula8_mem|DebMemKey0:DEB_MEM_KEY1
+DIN => DOUT~reg0.DATAIN
+DOUT <= DOUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CLK => DOUT~reg0.CLK
+RST => DOUT~reg0.ACLR
 
 

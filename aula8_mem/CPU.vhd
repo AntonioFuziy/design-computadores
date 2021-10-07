@@ -10,8 +10,7 @@ entity CPU is
 	larguraDadosROM: natural := 12;
 	larguraDadosRAM: natural := 8;
 	larguraAddrRAM: natural := 8;
-	larguraFLAG_IGUAL: natural := 2;
-	simulacao : boolean := TRUE -- para gravar na placa, altere de TRUE para FALSE
+	larguraFLAG_IGUAL: natural := 2
   );
   port   (
 	RD: out std_logic;
@@ -55,16 +54,6 @@ architecture arquitetura of CPU is
   signal MUX_Desvio_PC : std_logic_vector (larguraPC_ROM-1 downto 0);
 
 begin
-
--- Instanciando os componentes:
-
--- Para simular, fica mais simples tirar o edgeDetector
-gravar:  if simulacao generate
-CLK <= KEY(0);
-else generate
-detectorSub0: work.edgeDetector(bordaSubida)
-        port map (clk => CLOCK_50, entrada => (not KEY(0)), saida => CLK);
-end generate;
 
 -- O port map completo do MUX.
 MUX1 :  entity work.muxGenerico2x1  generic map (larguraDados => larguraDados)

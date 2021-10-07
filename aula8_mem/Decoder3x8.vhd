@@ -34,6 +34,7 @@ begin
 				 Bloco4 when (INPUT = "100") else
 				 Bloco5 when (INPUT = "101") else
 				 Bloco6 when (INPUT = "110") else
-				 Bloco7 when (INPUT = "111");
+				 Bloco7 when (INPUT = "111") else
+				 "00000000";
 	
 end architecture;

@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
 
--- DATE "09/23/2021 17:19:45"
+-- DATE "10/07/2021 15:35:18"
 
 -- 
 -- Device: Altera 5CEBA4F23C7 Package FBGA484
@@ -450,8 +450,6 @@ SIGNAL \CPU|REG1|DOUT\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \CPU|PC|DOUT\ : std_logic_vector(8 DOWNTO 0);
 SIGNAL \REG_HEX0|DOUT\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \REG_HEX1|DOUT\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \memoriaDados|ALT_INV_ram~311_q\ : std_logic;
-SIGNAL \memoriaDados|ALT_INV_ram~528_combout\ : std_logic;
 SIGNAL \memoriaDados|ALT_INV_ram~39_q\ : std_logic;
 SIGNAL \CPU|Decoder|ALT_INV_Equal5~1_combout\ : std_logic;
 SIGNAL \REGLEDR9|ALT_INV_DOUT~0_combout\ : std_logic;
@@ -503,9 +501,6 @@ SIGNAL \CPU|somaUm|ALT_INV_Add0~9_sumout\ : std_logic;
 SIGNAL \CPU|somaUm|ALT_INV_Add0~1_sumout\ : std_logic;
 SIGNAL \CPU|REG1|ALT_INV_DOUT\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \CPU|PC|ALT_INV_DOUT\ : std_logic_vector(8 DOWNTO 0);
-SIGNAL \memoriaDados|ALT_INV_ram~559_combout\ : std_logic;
-SIGNAL \memoriaDados|ALT_INV_ram~38_q\ : std_logic;
-SIGNAL \memoriaDados|ALT_INV_ram~46_q\ : std_logic;
 SIGNAL \memoriaDados|ALT_INV_ram~22_q\ : std_logic;
 SIGNAL \memoriaDados|ALT_INV_ram~558_combout\ : std_logic;
 SIGNAL \memoriaDados|ALT_INV_ram~557_combout\ : std_logic;
@@ -578,6 +573,8 @@ SIGNAL \memoriaDados|ALT_INV_ram~31_q\ : std_logic;
 SIGNAL \memoriaDados|ALT_INV_ram~15_q\ : std_logic;
 SIGNAL \memoriaDados|ALT_INV_ram~529_combout\ : std_logic;
 SIGNAL \memoriaDados|ALT_INV_ram~71_q\ : std_logic;
+SIGNAL \memoriaDados|ALT_INV_ram~311_q\ : std_logic;
+SIGNAL \memoriaDados|ALT_INV_ram~528_combout\ : std_logic;
 SIGNAL \REG_HEX4|ALT_INV_DOUT[2]~DUPLICATE_q\ : std_logic;
 SIGNAL \REG_HEX2|ALT_INV_DOUT[2]~DUPLICATE_q\ : std_logic;
 SIGNAL \REG_HEX2|ALT_INV_DOUT[0]~DUPLICATE_q\ : std_logic;
@@ -606,6 +603,9 @@ SIGNAL \memoriaDados|ALT_INV_ram~318_q\ : std_logic;
 SIGNAL \memoriaDados|ALT_INV_ram~560_combout\ : std_logic;
 SIGNAL \memoriaDados|ALT_INV_ram~70_q\ : std_logic;
 SIGNAL \memoriaDados|ALT_INV_ram~78_q\ : std_logic;
+SIGNAL \memoriaDados|ALT_INV_ram~559_combout\ : std_logic;
+SIGNAL \memoriaDados|ALT_INV_ram~38_q\ : std_logic;
+SIGNAL \memoriaDados|ALT_INV_ram~46_q\ : std_logic;
 
 BEGIN
 
@@ -626,8 +626,6 @@ HEX5 <= ww_HEX5;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
-\memoriaDados|ALT_INV_ram~311_q\ <= NOT \memoriaDados|ram~311_q\;
-\memoriaDados|ALT_INV_ram~528_combout\ <= NOT \memoriaDados|ram~528_combout\;
 \memoriaDados|ALT_INV_ram~39_q\ <= NOT \memoriaDados|ram~39_q\;
 \CPU|Decoder|ALT_INV_Equal5~1_combout\ <= NOT \CPU|Decoder|Equal5~1_combout\;
 \REGLEDR9|ALT_INV_DOUT~0_combout\ <= NOT \REGLEDR9|DOUT~0_combout\;
@@ -709,9 +707,6 @@ ww_devpor <= devpor;
 \CPU|PC|ALT_INV_DOUT\(2) <= NOT \CPU|PC|DOUT\(2);
 \CPU|PC|ALT_INV_DOUT\(1) <= NOT \CPU|PC|DOUT\(1);
 \CPU|PC|ALT_INV_DOUT\(0) <= NOT \CPU|PC|DOUT\(0);
-\memoriaDados|ALT_INV_ram~559_combout\ <= NOT \memoriaDados|ram~559_combout\;
-\memoriaDados|ALT_INV_ram~38_q\ <= NOT \memoriaDados|ram~38_q\;
-\memoriaDados|ALT_INV_ram~46_q\ <= NOT \memoriaDados|ram~46_q\;
 \memoriaDados|ALT_INV_ram~22_q\ <= NOT \memoriaDados|ram~22_q\;
 \memoriaDados|ALT_INV_ram~558_combout\ <= NOT \memoriaDados|ram~558_combout\;
 \memoriaDados|ALT_INV_ram~557_combout\ <= NOT \memoriaDados|ram~557_combout\;
@@ -784,6 +779,8 @@ ww_devpor <= devpor;
 \memoriaDados|ALT_INV_ram~15_q\ <= NOT \memoriaDados|ram~15_q\;
 \memoriaDados|ALT_INV_ram~529_combout\ <= NOT \memoriaDados|ram~529_combout\;
 \memoriaDados|ALT_INV_ram~71_q\ <= NOT \memoriaDados|ram~71_q\;
+\memoriaDados|ALT_INV_ram~311_q\ <= NOT \memoriaDados|ram~311_q\;
+\memoriaDados|ALT_INV_ram~528_combout\ <= NOT \memoriaDados|ram~528_combout\;
 \REG_HEX4|ALT_INV_DOUT[2]~DUPLICATE_q\ <= NOT \REG_HEX4|DOUT[2]~DUPLICATE_q\;
 \REG_HEX2|ALT_INV_DOUT[2]~DUPLICATE_q\ <= NOT \REG_HEX2|DOUT[2]~DUPLICATE_q\;
 \REG_HEX2|ALT_INV_DOUT[0]~DUPLICATE_q\ <= NOT \REG_HEX2|DOUT[0]~DUPLICATE_q\;
@@ -812,6 +809,9 @@ ww_devpor <= devpor;
 \memoriaDados|ALT_INV_ram~560_combout\ <= NOT \memoriaDados|ram~560_combout\;
 \memoriaDados|ALT_INV_ram~70_q\ <= NOT \memoriaDados|ram~70_q\;
 \memoriaDados|ALT_INV_ram~78_q\ <= NOT \memoriaDados|ram~78_q\;
+\memoriaDados|ALT_INV_ram~559_combout\ <= NOT \memoriaDados|ram~559_combout\;
+\memoriaDados|ALT_INV_ram~38_q\ <= NOT \memoriaDados|ram~38_q\;
+\memoriaDados|ALT_INV_ram~46_q\ <= NOT \memoriaDados|ram~46_q\;
 
 -- Location: IOOBUF_X0_Y18_N79
 \LEDR[0]~output\ : cyclonev_io_obuf

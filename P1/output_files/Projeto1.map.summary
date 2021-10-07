@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Wed Oct  6 16:20:51 2021
+Analysis & Synthesis Status : Successful - Thu Oct  7 19:21:23 2021
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : Projeto1
 Top-level Entity Name : Projeto1
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 307
-Total pins : 98
+Total registers : 577
+Total pins : 77
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0
