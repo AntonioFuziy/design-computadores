@@ -103,11 +103,12 @@ architecture assincrona of ROM is
 		-- ========================================================================	
 		tmp(17) := LDI & '0' & x"00"; -- Carregando 0 no acumulador
 		tmp(18) := STA & '0' & x"0A"; -- Armazenando incremento no MEM[10]
+		
 		tmp(19) := LDI & '0' & x"01"; -- Carregando 1 no acumulador
 		tmp(20) := STA & '0' & x"0B"; -- Armazenando incremento no MEM[11]
+
 		tmp(21) := LDI & '0' & x"09"; -- Carregando 9 no acumulador
-		tmp(22) := STA & '0' & x"0C"; -- Valor de comparacao no MEM[12]
-		
+		tmp(22) := STA & '0' & x"0C"; -- Valor de comparacao no MEM[12]		
 		tmp(24) := STA & '0' & x"14"; -- Armazenando limite no MEM[20]
 		tmp(25) := STA & '0' & x"15"; -- Armazenando limite no MEM[21]
 		tmp(26) := STA & '0' & x"16"; -- Armazenando limite no MEM[22]
@@ -134,18 +135,19 @@ architecture assincrona of ROM is
 		
 		tmp(40) := LDA & '1' & x"61"; -- Observa o valor da KEY1
 		tmp(41) := CEQ & '0' & x"0A"; -- Compara o valor da KEY1 com 1		
-		tmp(42) := JEQ & '0' & x"2C"; -- Caso a KEY1 for igual a 1, pula para a definicao do limite
+		tmp(42) := JEQ & '0' & x"2D"; -- Caso a KEY1 for igual a 1, pula para a definicao do limite
 		tmp(43) := JSR & '0' & x"BD"; -- Caso a KEY1 for igual a 1, pula para o limite
-		tmp(44) := JSR & '0' & x"A1"; -- Pula pra limite de contagem
+		tmp(44) := NOP & '0' & x"00";
+		tmp(45) := JSR & '0' & x"A1"; -- Pula pra limite de contagem
 		
 		
-		tmp(45) := LDA & '1' & x"64"; -- Observa o valor do FPGA RESET
-		tmp(46) := CEQ & '0' & x"0B"; -- Compara o valor do FPGA RESET com 1		
-		tmp(47) := JEQ & '0' & x"31"; -- Caso a FPGA RESET for igual a 1, pula para a reset
-		tmp(48) := JSR & '0' & x"96"; -- Caso a FPGA RESET for igual a 1, pula para o resetar a placa
+		tmp(46) := LDA & '1' & x"64"; -- Observa o valor do FPGA RESET
+		tmp(47) := CEQ & '0' & x"0B"; -- Compara o valor do FPGA RESET com 1		
+		tmp(48) := JEQ & '0' & x"32"; -- Caso a FPGA RESET for igual a 1, pula para a reset
+		tmp(49) := JSR & '0' & x"96"; -- Caso a FPGA RESET for igual a 1, pula para o resetar a placa
 		
-		tmp(49) := JSR & '0' & x"78"; -- Pula para atualizar os DISPLAYS
-		tmp(50) := JMP & '0' & x"20"; -- Volta para o loop principal
+		tmp(50) := JSR & '0' & x"78"; -- Pula para atualizar os DISPLAYS
+		tmp(51) := JMP & '0' & x"20"; -- Volta para o loop principal
 		
 		-- ========================================================================
 		-- LOOP DE INCREMENTO (KEY0 SUB-ROTINA)
@@ -157,7 +159,7 @@ architecture assincrona of ROM is
 		tmp(57) := STA & '0' & x"00"; -- Armazena valor da soma no MEM[0]
 		tmp(58) := CEQ & '0' & x"0D"; -- Compara o valor de MEM[0] com 10
 		tmp(59) := JEQ & '0' & x"3D"; -- Pula pra checar a dezena
-		tmp(60) := JMP & '0' & x"6F"; -- Vai pra sub-rotina do incremento
+		tmp(60) := RET & '0' & x"00"; -- Vai pra sub-rotina do incremento
 		
 		
 		tmp(61) := LDA & '0' & x"0A"; -- Carrega MEM[10] = 0
@@ -168,7 +170,7 @@ architecture assincrona of ROM is
 		tmp(65) := STA & '0' & x"01"; -- Armazena valor da soma no MEM[1]
 		tmp(66) := CEQ & '0' & x"0D"; -- Compara o valor de MEM[1] com 10
 		tmp(67) := JEQ & '0' & x"45"; -- Pula pra checar a centena
-		tmp(68) := JMP & '0' & x"6F"; -- Vai pra sub-rotina do incremento
+		tmp(68) := RET & '0' & x"00"; -- Vai pra sub-rotina do incremento
 		
 		
 		tmp(69) := LDA & '0' & x"0A"; -- Carrega MEM[10] = 0
@@ -179,7 +181,7 @@ architecture assincrona of ROM is
 		tmp(73) := STA & '0' & x"02"; -- Armazena valor da soma no MEM[2]
 		tmp(74) := CEQ & '0' & x"0D"; -- Compara o valor de MEM[2] com 10
 		tmp(75) := JEQ & '0' & x"4D"; -- Pula pra checar a unidade de milhar
-		tmp(76) := JMP & '0' & x"6F"; -- Vai pra sub-rotina do incremento
+		tmp(76) := RET & '0' & x"00"; -- Vai pra sub-rotina do incremento
 		
 		
 		tmp(77) := LDA & '0' & x"0A"; -- Carrega MEM[10] = 0
@@ -190,7 +192,7 @@ architecture assincrona of ROM is
 		tmp(81) := STA & '0' & x"03"; -- Armazena valor da soma no MEM[3]
 		tmp(82) := CEQ & '0' & x"0D"; -- Compara o valor de MEM[3] com 10
 		tmp(83) := JEQ & '0' & x"55"; -- Pula pra checar dezena de milhar
-		tmp(84) := JMP & '0' & x"6F"; -- Vai pra sub-rotina do incremento
+		tmp(84) := RET & '0' & x"00"; -- Vai pra sub-rotina do incremento
 		
 		
 		tmp(85) := LDA & '0' & x"0A"; -- Carrega MEM[10] = 0
@@ -201,7 +203,7 @@ architecture assincrona of ROM is
 		tmp(89) := STA & '0' & x"04"; -- Armazena valor da soma no MEM[4]
 		tmp(90) := CEQ & '0' & x"0D"; -- Compara o valor de MEM[4] com 10
 		tmp(91) := JEQ & '0' & x"5D"; -- Pula pra checar a centena de milhar
-		tmp(92) := JMP & '0' & x"6F"; -- Vai pra sub-rotina do incremento
+		tmp(92) := RET & '0' & x"00"; -- Vai pra sub-rotina do incremento
 		
 		
 		tmp(93) := LDA & '0' & x"0A"; -- Carrega MEM[10] = 0
@@ -212,7 +214,7 @@ architecture assincrona of ROM is
 		tmp(97) := STA & '0' & x"05"; -- Armazena valor da soma no MEM[5]
 		tmp(98) := CEQ & '0' & x"0D"; -- Compara o valor de MEM[5] com 10
 		tmp(99) := JEQ & '0' & x"65"; -- Pula pra flag de inibir contagem
-		tmp(100) := JMP & '0' & x"6F"; -- Vai pra sub-rotina do incremento
+		tmp(100) := RET & '0' & x"00"; -- Vai pra sub-rotina do incremento
 		
 		tmp(101) := LDA & '0' & x"0B"; -- Carrega MEM[11] = 1
 		tmp(102) := STA & '0' & x"06"; -- Ativa Flag de inibir contagem
@@ -242,7 +244,7 @@ architecture assincrona of ROM is
 		tmp(130) := LDA & '0' & x"05"; -- Carrega MEM[5]
 		tmp(131) := STA & '1' & x"25"; -- Carrega o valor de MEM[5] no HEX5 = MEM[293]
 		
-		tmp(132) := JMP & '0' & x"19"; -- Volta para o LOOP PRINCIPAL
+		tmp(132) := RET & '0' & x"00"; -- Volta para o LOOP PRINCIPAL
 
 
 		-- ========================================================================
@@ -270,37 +272,37 @@ architecture assincrona of ROM is
 		
 		--checando unidade
 		tmp(161) := LDA & '0' & x"14"; -- Carrega limite unidade = MEM[20]
-		tmp(162) := CEQ & '0' & x"0C"; -- Compara o valor de MEM[12] com a unidade
+		tmp(162) := CEQ & '0' & x"00"; -- Compara o valor de MEM[12] com a unidade
 		tmp(163) := JEQ & '0' & x"A5"; -- Pula pra checar a unidade
 		tmp(164) := RET & '0' & x"00"; -- Retorna da sub-rotina da checagem
 		
 		--checando centena
 		tmp(165) := LDA & '0' & x"15"; -- Carrega limite dezena = MEM[21]
-		tmp(166) := CEQ & '0' & x"0D"; -- Compara o valor de MEM[12] com a dezena
+		tmp(166) := CEQ & '0' & x"01"; -- Compara o valor de MEM[12] com a dezena
 		tmp(167) := JEQ & '0' & x"A9"; -- Pula pra checar a dezena
 		tmp(168) := RET & '0' & x"00"; -- Retorna da sub-rotina da checagem
 		
 		--checando centena
 		tmp(169) := LDA & '0' & x"16"; -- Carrega limite centena = MEM[22]
-		tmp(170) := CEQ & '0' & x"0D"; -- Compara o valor de MEM[12] com a centena
+		tmp(170) := CEQ & '0' & x"02"; -- Compara o valor de MEM[12] com a centena
 		tmp(171) := JEQ & '0' & x"AD"; -- Pula pra checar a centena
 		tmp(172) := RET & '0' & x"00"; -- Retorna da sub-rotina da checagem
 		
 		--checando unidade de milhar
 		tmp(173) := LDA & '0' & x"17"; -- Carrega limite unidade de milhar = MEM[23]
-		tmp(174) := CEQ & '0' & x"0D"; -- Compara o valor de MEM[12] com a unidade de milhar
+		tmp(174) := CEQ & '0' & x"03"; -- Compara o valor de MEM[12] com a unidade de milhar
 		tmp(175) := JEQ & '0' & x"B1"; -- Pula pra checar a unidade de milhar
 		tmp(176) := RET & '0' & x"00"; -- Retorna da sub-rotina da checagem
 		
 		--checando dezena de milhar
 		tmp(177) := LDA & '0' & x"18"; -- Carrega limite dezena de milhar = MEM[24]
-		tmp(178) := CEQ & '0' & x"0D"; -- Compara o valor de MEM[12] com a dezena de milhar
+		tmp(178) := CEQ & '0' & x"04"; -- Compara o valor de MEM[12] com a dezena de milhar
 		tmp(179) := JEQ & '0' & x"B5"; -- Pula pra checar a dezena de milhar
 		tmp(180) := RET & '0' & x"00"; -- Retorna da sub-rotina da checagem
 		
 		--checando centena de milhar
 		tmp(181) := LDA & '0' & x"19"; -- Carrega limite centena de milhar = MEM[25]
-		tmp(182) := CEQ & '0' & x"0D"; -- Compara o valor de MEM[12] com a centena de milhar
+		tmp(182) := CEQ & '0' & x"05"; -- Compara o valor de MEM[12] com a centena de milhar
 		tmp(183) := JEQ & '0' & x"B9"; -- Pula pra checar a centena de milhar
 		tmp(184) := RET & '0' & x"00"; -- Retorna da sub-rotina da checagem
 		
@@ -317,74 +319,74 @@ architecture assincrona of ROM is
 		-- ========================================================================	
 		
 		tmp(189) := STA & '1' & x"FE"; -- Zera a KEY1
-		tmp(191) := LDA & '0' & x"0B"; -- Carrega ROM[11] = 1
-		tmp(190) := STA & '1' & x"00"; -- Ativa LED7
+		tmp(190) := LDA & '0' & x"0B"; -- Carrega ROM[11] = 1
+		tmp(191) := STA & '1' & x"00"; -- Ativa LED7
 		
-		tmp(191) := LDA & '1' & x"61"; -- Olha pra KEY1
-		tmp(192) := CEQ & '0' & x"0A"; -- Compara o valor da KEY1 com 0
-		tmp(193) := LDA & '1' & x"40"; -- Verifica SW(7)
-		tmp(194) := JEQ & '0' & x"C4"; -- Pula para dezena
-		tmp(195) := STA & '0' & x"14"; -- Armazena novo limite para unidade
-		
-		
-		tmp(196) := STA & '1' & x"FE"; -- Zera a KEY1
-		tmp(197) := LDI & '0' & x"02"; -- Carrega 2 no imediato
-		tmp(198) := STA & '1' & x"00"; -- Ativa LED7
-		
-		tmp(199) := LDA & '1' & x"61"; -- Olha pra KEY1
-		tmp(200) := CEQ & '0' & x"0A"; -- Compara o valor da KEY1 com 0
-		tmp(201) := LDA & '1' & x"40"; -- Verifica SW(7)
-		tmp(202) := JEQ & '0' & x"CC"; -- Pula para dezena
-		tmp(203) := STA & '0' & x"15"; -- Armazena novo limite para dezena
+		tmp(192) := LDA & '1' & x"61"; -- Olha pra KEY1
+		tmp(193) := CEQ & '0' & x"0A"; -- Compara o valor da KEY1 com 0
+		tmp(194) := LDA & '1' & x"40"; -- Verifica SW(7)
+		tmp(195) := JEQ & '0' & x"BE"; -- Pula para dezena
+		tmp(196) := STA & '0' & x"14"; -- Armazena novo limite para unidade
 		
 		
-		tmp(204) := STA & '1' & x"FE"; -- Zera a KEY1
-		tmp(205) := LDI & '0' & x"04"; -- Carrega 4 no imediato
-		tmp(206) := STA & '1' & x"00"; -- Ativa LED7
+		tmp(197) := STA & '1' & x"FE"; -- Zera a KEY1
+		tmp(198) := LDI & '0' & x"03"; -- Carrega 2 no imediato
+		tmp(199) := STA & '1' & x"00"; -- Ativa LED7
 		
-		tmp(207) := LDA & '1' & x"61"; -- Olha pra KEY1
-		tmp(208) := CEQ & '0' & x"0A"; -- Compara o valor da KEY1 com 0
-		tmp(209) := LDA & '1' & x"40"; -- Verifica SW(7)
-		tmp(210) := JEQ & '0' & x"D4"; -- Pula para dezena
-		tmp(211) := STA & '0' & x"16"; -- Armazena novo limite para centena
+		tmp(200) := LDA & '1' & x"61"; -- Olha pra KEY1
+		tmp(201) := CEQ & '0' & x"0A"; -- Compara o valor da KEY1 com 0
+		tmp(202) := LDA & '1' & x"40"; -- Verifica SW(7)
+		tmp(203) := JEQ & '0' & x"C6"; -- Pula para dezena
+		tmp(204) := STA & '0' & x"15"; -- Armazena novo limite para dezena
+	
 		
+		tmp(205) := STA & '1' & x"FE"; -- Zera a KEY1
+		tmp(206) := LDI & '0' & x"07"; -- Carrega 4 no imediato
+		tmp(207) := STA & '1' & x"00"; -- Ativa LED7
 		
-		tmp(212) := STA & '1' & x"FE"; -- Zera a KEY1
-		tmp(213) := LDI & '0' & x"08"; -- Carrega 8 no imediato
-		tmp(214) := STA & '1' & x"00"; -- Ativa LED7
-		
-		tmp(215) := LDA & '1' & x"61"; -- Olha pra KEY1
-		tmp(216) := CEQ & '0' & x"0A"; -- Compara o valor da KEY1 com 0
-		tmp(217) := LDA & '1' & x"40"; -- Verifica SW(7)
-		tmp(218) := JEQ & '0' & x"DC"; -- Pula para dezena
-		tmp(219) := STA & '0' & x"17"; -- Armazena novo limite para unidade de milhar
-		
-		
-		tmp(220) := STA & '1' & x"FE"; -- Zera a KEY1
-		tmp(221) := LDI & '0' & x"10"; -- Carrega 16 no imediato
-		tmp(222) := STA & '1' & x"00"; -- Ativa LED7
-		
-		tmp(223) := LDA & '1' & x"61"; -- Olha pra KEY1
-		tmp(224) := CEQ & '0' & x"0A"; -- Compara o valor da KEY1 com 0
-		tmp(225) := LDA & '1' & x"40"; -- Verifica SW(7)
-		tmp(226) := JEQ & '0' & x"E4"; -- Pula para dezena
-		tmp(227) := STA & '0' & x"18"; -- Armazena novo limite para dezena de milhar
+		tmp(208) := LDA & '1' & x"61"; -- Olha pra KEY1
+		tmp(209) := CEQ & '0' & x"0A"; -- Compara o valor da KEY1 com 0
+		tmp(210) := LDA & '1' & x"40"; -- Verifica SW(7)
+		tmp(211) := JEQ & '0' & x"CE"; -- Pula para dezena
+		tmp(212) := STA & '0' & x"16"; -- Armazena novo limite para centena
 		
 		
-		tmp(228) := STA & '1' & x"FE"; -- Zera a KEY1
-		tmp(229) := LDI & '0' & x"20"; -- Carrega 32 no imediato
-		tmp(230) := STA & '1' & x"00"; -- Ativa LED7
+		tmp(213) := STA & '1' & x"FE"; -- Zera a KEY1
+		tmp(214) := LDI & '0' & x"0F"; -- Carrega 8 no imediato
+		tmp(215) := STA & '1' & x"00"; -- Ativa LED7
 		
-		tmp(231) := LDA & '1' & x"61"; -- Olha pra KEY1
-		tmp(232) := CEQ & '0' & x"0A"; -- Compara o valor da KEY1 com 0
-		tmp(233) := LDA & '1' & x"40"; -- Verifica SW(7)
-		tmp(234) := JEQ & '0' & x"EC"; -- Pula para Zerar KEY1
-		tmp(235) := STA & '0' & x"19"; -- Armazena novo limite para centena de milhar
+		tmp(216) := LDA & '1' & x"61"; -- Olha pra KEY1
+		tmp(217) := CEQ & '0' & x"0A"; -- Compara o valor da KEY1 com 0
+		tmp(218) := LDA & '1' & x"40"; -- Verifica SW(7)
+		tmp(219) := JEQ & '0' & x"D6"; -- Pula para dezena
+		tmp(220) := STA & '0' & x"17"; -- Armazena novo limite para unidade de milhar
 		
-		tmp(236) := STA & '1' & x"FE"; -- Zerando KEY1
-		tmp(237) := LDA & '0' & x"0A"; -- Carrega 0 no imediato
-		tmp(238) := STA & '1' & x"00"; -- Zera o LED7
-		tmp(239) := RET & '0' & x"00"; -- Zerando KEY1
+		
+		tmp(221) := STA & '1' & x"FE"; -- Zera a KEY1
+		tmp(222) := LDI & '0' & x"1F"; -- Carrega 16 no imediato
+		tmp(223) := STA & '1' & x"00"; -- Ativa LED7
+	
+		tmp(224) := LDA & '1' & x"61"; -- Olha pra KEY1
+		tmp(225) := CEQ & '0' & x"0A"; -- Compara o valor da KEY1 com 0
+		tmp(226) := LDA & '1' & x"40"; -- Verifica SW(7)
+		tmp(227) := JEQ & '0' & x"DE"; -- Pula para dezena
+		tmp(228) := STA & '0' & x"18"; -- Armazena novo limite para dezena de milhar
+		
+		
+		tmp(229) := STA & '1' & x"FE"; -- Zera a KEY1
+		tmp(230) := LDI & '0' & x"3F"; -- Carrega 32 no imediato
+		tmp(231) := STA & '1' & x"00"; -- Ativa LED7
+		
+		tmp(232) := LDA & '1' & x"61"; -- Olha pra KEY1
+		tmp(233) := CEQ & '0' & x"0A"; -- Compara o valor da KEY1 com 0
+		tmp(234) := LDA & '1' & x"40"; -- Verifica SW(7)
+		tmp(235) := JEQ & '0' & x"E6"; -- Pula para Zerar KEY1
+		tmp(236) := STA & '0' & x"19"; -- Armazena novo limite para centena de milhar
+		
+		tmp(237) := STA & '1' & x"FE"; -- Zerando KEY1
+		tmp(238) := LDA & '0' & x"0A"; -- Carrega 0 no imediato
+		tmp(239) := STA & '1' & x"00"; -- Zera o LED7
+		tmp(240) := RET & '0' & x"00"; -- Zerando KEY1
 		
 		
 
