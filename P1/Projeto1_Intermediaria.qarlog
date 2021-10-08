@@ -1,0 +1,37 @@
+Quartus Prime Archive log --	/home/antonio/Desktop/6_semestre/descomp/P1/Projeto1_Intermediaria.qarlog
+
+Archive:	/home/antonio/Desktop/6_semestre/descomp/P1/Projeto1_Intermediaria.qar
+Date:		Fri Oct  8 17:06:50 2021
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+/home/antonio/Desktop/6_semestre/descomp/P1/CPU.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1/DebMemKey0.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1/Decoder.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1/Decoder3x8.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1/Projeto1.qpf
+/home/antonio/Desktop/6_semestre/descomp/P1/Projeto1.qsf
+/home/antonio/Desktop/6_semestre/descomp/P1/Projeto1.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1/ROM.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1/ULASomaSub.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1/bufferThreeStateBit.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1/bufferTreeState.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1/conversorHex7Seg.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1/edgeDetector.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1/enderecoRetorno.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1/flagComparacao.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1/logicaDesvio.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1/memoriaDados.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1/muxGenerico2x1.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1/muxGenerico4x2.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1/output_files/Waveform.vwf
+/home/antonio/Desktop/6_semestre/descomp/P1/registradorBit.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1/registradorGenerico.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1/registradorHEX.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1/somaConstante.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1/somadorGenerico.vhd
+/home/antonio/intelFPGA_lite/20.1/quartus/linux64/assignment_defaults.qdf
+	======= Total: 26 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
