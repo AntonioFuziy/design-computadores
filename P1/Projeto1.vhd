@@ -15,7 +15,7 @@ entity Projeto1 is
     CLOCK_50 : in std_logic;
     KEY: in std_logic_vector(3 downto 0);
 	 SW: in std_logic_vector(9 downto 0);
-	 FPGA_RESET: in std_logic;
+	 FPGA_RESET_N: in std_logic;
 	 LEDR: out std_logic_vector(9 downto 0);
 	 Teste_Endereco: out std_logic_vector(8 downto 0);
 	 HEX0 : out std_logic_vector(6 downto 0);
@@ -106,7 +106,7 @@ CPU : entity work.CPU
 			ROM_Address => Addr_ROM,
 			CLOCK_50 => CLK,
 			KEY => KEY,
-			RESET => FPGA_RESET,
+			RESET => FPGA_RESET_N,
 			RD => rd,
 			WR => wr 
 		 );
@@ -232,7 +232,7 @@ BUFFER_THREE_STATE_BIT5: entity work.bufferThreeStateBit
 		 port map (INPUT => KEY(3), ENABLE => AND_ENABLE_BUFFER_BIT_KEY3, OUTPUT => Data_IN(0));
 		 
 BUFFER_THREE_STATE_BIT6: entity work.bufferThreeStateBit
-		 port map (INPUT => FPGA_RESET, ENABLE => AND_ENABLE_BUFFER_BIT_FPGA_RESET, OUTPUT => Data_IN(0));
+		 port map (INPUT => FPGA_RESET_N, ENABLE => AND_ENABLE_BUFFER_BIT_FPGA_RESET, OUTPUT => Data_IN(0));
 		  
 DEB_MEM_KEY0: work.DebMemKey0
 	 port map (

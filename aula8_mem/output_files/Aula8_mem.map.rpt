@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Aula8_mem
-Thu Oct  7 18:58:08 2021
+Thu Oct  7 23:00:51 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -101,7 +101,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Oct  7 18:58:08 2021       ;
+; Analysis & Synthesis Status     ; Successful - Thu Oct  7 23:00:51 2021       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Aula8_mem                                   ;
 ; Top-level Entity Name           ; Aula8_mem                                   ;
@@ -296,30 +296,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------+---------------------------------------------+
 ; Register name                               ; Reason for Removal                          ;
 +---------------------------------------------+---------------------------------------------+
-; CPU:CPU|registradorGenerico:PC|DOUT[0]      ; Stuck at GND due to stuck port clock        ;
-; CPU:CPU|enderecoRetorno:END_RET|DOUT[0]     ; Lost fanout                                 ;
-; CPU:CPU|registradorGenerico:PC|DOUT[1]      ; Stuck at GND due to stuck port clock        ;
-; CPU:CPU|enderecoRetorno:END_RET|DOUT[1]     ; Lost fanout                                 ;
-; CPU:CPU|registradorGenerico:PC|DOUT[2]      ; Stuck at GND due to stuck port clock        ;
-; CPU:CPU|enderecoRetorno:END_RET|DOUT[2]     ; Lost fanout                                 ;
-; CPU:CPU|registradorGenerico:PC|DOUT[3]      ; Stuck at GND due to stuck port clock        ;
-; CPU:CPU|enderecoRetorno:END_RET|DOUT[3]     ; Lost fanout                                 ;
-; CPU:CPU|registradorGenerico:PC|DOUT[4]      ; Stuck at GND due to stuck port clock        ;
-; CPU:CPU|enderecoRetorno:END_RET|DOUT[4]     ; Lost fanout                                 ;
-; CPU:CPU|registradorGenerico:PC|DOUT[5]      ; Stuck at GND due to stuck port clock        ;
-; CPU:CPU|enderecoRetorno:END_RET|DOUT[5]     ; Lost fanout                                 ;
-; CPU:CPU|registradorGenerico:PC|DOUT[6]      ; Stuck at GND due to stuck port clock        ;
-; CPU:CPU|enderecoRetorno:END_RET|DOUT[6]     ; Lost fanout                                 ;
-; CPU:CPU|registradorGenerico:PC|DOUT[7]      ; Stuck at GND due to stuck port clock        ;
-; CPU:CPU|enderecoRetorno:END_RET|DOUT[7]     ; Lost fanout                                 ;
-; CPU:CPU|registradorGenerico:PC|DOUT[8]      ; Stuck at GND due to stuck port clock        ;
-; CPU:CPU|flagComparacao:FLAG_IGUAL|DOUT      ; Lost fanout                                 ;
-; CPU:CPU|enderecoRetorno:END_RET|DOUT[8]     ; Lost fanout                                 ;
-; CPU:CPU|registradorGenerico:REG1|DOUT[0..7] ; Stuck at GND due to stuck port clock        ;
-; DebMemKey0:DEB_MEM_KEY0|DOUT                ; Lost fanout                                 ;
+; CPU:CPU|enderecoRetorno:END_RET|DOUT[0]     ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|flagComparacao:FLAG_IGUAL|DOUT      ; Stuck at GND due to stuck port clock_enable ;
+; CPU:CPU|enderecoRetorno:END_RET|DOUT[1..8]  ; Stuck at GND due to stuck port clock_enable ;
+; DebMemKey0:DEB_MEM_KEY0|DOUT                ; Stuck at VCC due to stuck port data_in      ;
 ; edgeDetector:detectorSub0|saidaQ            ; Lost fanout                                 ;
-; DebMemKey0:DEB_MEM_KEY1|DOUT                ; Lost fanout                                 ;
+; DebMemKey0:DEB_MEM_KEY1|DOUT                ; Stuck at VCC due to stuck port data_in      ;
 ; edgeDetector:detectorSub1|saidaQ            ; Lost fanout                                 ;
+; CPU:CPU|registradorGenerico:PC|DOUT[0..8]   ; Stuck at GND due to stuck port clock        ;
+; CPU:CPU|registradorGenerico:REG1|DOUT[0..7] ; Stuck at GND due to stuck port clock        ;
 ; registradorGenerico:REG_HEX0|DOUT[0..3]     ; Stuck at GND due to stuck port data_in      ;
 ; registradorGenerico:REG_HEX1|DOUT[0..3]     ; Stuck at GND due to stuck port data_in      ;
 ; registradorGenerico:REG_HEX2|DOUT[0..3]     ; Stuck at GND due to stuck port data_in      ;
@@ -333,53 +318,46 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------+---------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                              ;
-+------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
-; Register name                            ; Reason for Removal      ; Registers Removed due to This Register                                              ;
-+------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
-; CPU:CPU|registradorGenerico:PC|DOUT[0]   ; Stuck at GND            ; CPU:CPU|enderecoRetorno:END_RET|DOUT[0], CPU:CPU|enderecoRetorno:END_RET|DOUT[1],   ;
-;                                          ; due to stuck port clock ; CPU:CPU|flagComparacao:FLAG_IGUAL|DOUT, CPU:CPU|registradorGenerico:REG1|DOUT[0],   ;
-;                                          ;                         ; CPU:CPU|registradorGenerico:REG1|DOUT[1], CPU:CPU|registradorGenerico:REG1|DOUT[2], ;
-;                                          ;                         ; CPU:CPU|registradorGenerico:REG1|DOUT[3], CPU:CPU|registradorGenerico:REG1|DOUT[4], ;
-;                                          ;                         ; CPU:CPU|registradorGenerico:REG1|DOUT[5], registradorGenerico:REG_HEX0|DOUT[1],     ;
-;                                          ;                         ; registradorGenerico:REG_HEX0|DOUT[2], registradorGenerico:REG_HEX0|DOUT[3],         ;
-;                                          ;                         ; registradorGenerico:REG_HEX0|DOUT[0], registradorGenerico:REG_HEX1|DOUT[1],         ;
-;                                          ;                         ; registradorGenerico:REG_HEX1|DOUT[2], registradorGenerico:REG_HEX1|DOUT[3],         ;
-;                                          ;                         ; registradorGenerico:REG_HEX1|DOUT[0], registradorGenerico:REG_HEX2|DOUT[1],         ;
-;                                          ;                         ; registradorGenerico:REG_HEX2|DOUT[2], registradorGenerico:REG_HEX2|DOUT[3],         ;
-;                                          ;                         ; registradorGenerico:REG_HEX2|DOUT[0], registradorGenerico:REG_HEX3|DOUT[1],         ;
-;                                          ;                         ; registradorGenerico:REG_HEX3|DOUT[2], registradorGenerico:REG_HEX3|DOUT[3],         ;
-;                                          ;                         ; registradorGenerico:REG_HEX3|DOUT[0], registradorGenerico:REG_HEX4|DOUT[1],         ;
-;                                          ;                         ; registradorGenerico:REG_HEX4|DOUT[2], registradorGenerico:REG_HEX4|DOUT[3],         ;
-;                                          ;                         ; registradorGenerico:REG_HEX4|DOUT[0], registradorGenerico:REG_HEX5|DOUT[1],         ;
-;                                          ;                         ; registradorGenerico:REG_HEX5|DOUT[2], registradorGenerico:REG_HEX5|DOUT[3],         ;
-;                                          ;                         ; registradorGenerico:REG_HEX5|DOUT[0], registradorGenerico:REGLEDR|DOUT[0],          ;
-;                                          ;                         ; registradorGenerico:REGLEDR|DOUT[1], registradorGenerico:REGLEDR|DOUT[2],           ;
-;                                          ;                         ; registradorGenerico:REGLEDR|DOUT[3], registradorGenerico:REGLEDR|DOUT[4],           ;
-;                                          ;                         ; registradorGenerico:REGLEDR|DOUT[5], registradorBit:REGLEDR8|DOUT,                  ;
-;                                          ;                         ; registradorBit:REGLEDR9|DOUT                                                        ;
-; CPU:CPU|registradorGenerico:PC|DOUT[2]   ; Stuck at GND            ; CPU:CPU|enderecoRetorno:END_RET|DOUT[2]                                             ;
-;                                          ; due to stuck port clock ;                                                                                     ;
-; CPU:CPU|registradorGenerico:PC|DOUT[3]   ; Stuck at GND            ; CPU:CPU|enderecoRetorno:END_RET|DOUT[3]                                             ;
-;                                          ; due to stuck port clock ;                                                                                     ;
-; CPU:CPU|registradorGenerico:PC|DOUT[4]   ; Stuck at GND            ; CPU:CPU|enderecoRetorno:END_RET|DOUT[4]                                             ;
-;                                          ; due to stuck port clock ;                                                                                     ;
-; CPU:CPU|registradorGenerico:PC|DOUT[5]   ; Stuck at GND            ; CPU:CPU|enderecoRetorno:END_RET|DOUT[5]                                             ;
-;                                          ; due to stuck port clock ;                                                                                     ;
-; CPU:CPU|registradorGenerico:PC|DOUT[6]   ; Stuck at GND            ; CPU:CPU|enderecoRetorno:END_RET|DOUT[6]                                             ;
-;                                          ; due to stuck port clock ;                                                                                     ;
-; CPU:CPU|registradorGenerico:PC|DOUT[7]   ; Stuck at GND            ; CPU:CPU|enderecoRetorno:END_RET|DOUT[7]                                             ;
-;                                          ; due to stuck port clock ;                                                                                     ;
-; CPU:CPU|registradorGenerico:PC|DOUT[8]   ; Stuck at GND            ; CPU:CPU|enderecoRetorno:END_RET|DOUT[8]                                             ;
-;                                          ; due to stuck port clock ;                                                                                     ;
-; CPU:CPU|registradorGenerico:REG1|DOUT[6] ; Stuck at GND            ; registradorGenerico:REGLEDR|DOUT[6]                                                 ;
-;                                          ; due to stuck port clock ;                                                                                     ;
-; CPU:CPU|registradorGenerico:REG1|DOUT[7] ; Stuck at GND            ; registradorGenerico:REGLEDR|DOUT[7]                                                 ;
-;                                          ; due to stuck port clock ;                                                                                     ;
-; DebMemKey0:DEB_MEM_KEY0|DOUT             ; Lost Fanouts            ; edgeDetector:detectorSub0|saidaQ                                                    ;
-; DebMemKey0:DEB_MEM_KEY1|DOUT             ; Lost Fanouts            ; edgeDetector:detectorSub1|saidaQ                                                    ;
-+------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                    ;
++-----------------------------------------+--------------------------------+-------------------------------------------------------------------------------------+
+; Register name                           ; Reason for Removal             ; Registers Removed due to This Register                                              ;
++-----------------------------------------+--------------------------------+-------------------------------------------------------------------------------------+
+; CPU:CPU|enderecoRetorno:END_RET|DOUT[0] ; Stuck at GND                   ; CPU:CPU|registradorGenerico:PC|DOUT[0], CPU:CPU|registradorGenerico:REG1|DOUT[1],   ;
+;                                         ; due to stuck port clock_enable ; registradorGenerico:REG_HEX0|DOUT[1], registradorGenerico:REG_HEX0|DOUT[2],         ;
+;                                         ;                                ; registradorGenerico:REG_HEX0|DOUT[3], registradorGenerico:REG_HEX0|DOUT[0],         ;
+;                                         ;                                ; registradorGenerico:REG_HEX1|DOUT[1], registradorGenerico:REG_HEX1|DOUT[2],         ;
+;                                         ;                                ; registradorGenerico:REG_HEX1|DOUT[3], registradorGenerico:REG_HEX1|DOUT[0],         ;
+;                                         ;                                ; registradorGenerico:REG_HEX2|DOUT[1], registradorGenerico:REG_HEX2|DOUT[2],         ;
+;                                         ;                                ; registradorGenerico:REG_HEX2|DOUT[3], registradorGenerico:REG_HEX2|DOUT[0],         ;
+;                                         ;                                ; registradorGenerico:REG_HEX3|DOUT[1], registradorGenerico:REG_HEX3|DOUT[2],         ;
+;                                         ;                                ; registradorGenerico:REG_HEX3|DOUT[3], registradorGenerico:REG_HEX3|DOUT[0],         ;
+;                                         ;                                ; registradorGenerico:REG_HEX4|DOUT[1], registradorGenerico:REG_HEX4|DOUT[2],         ;
+;                                         ;                                ; registradorGenerico:REG_HEX4|DOUT[3], registradorGenerico:REG_HEX4|DOUT[0],         ;
+;                                         ;                                ; registradorGenerico:REG_HEX5|DOUT[1], registradorGenerico:REG_HEX5|DOUT[2],         ;
+;                                         ;                                ; registradorGenerico:REG_HEX5|DOUT[3], registradorGenerico:REG_HEX5|DOUT[0],         ;
+;                                         ;                                ; registradorGenerico:REGLEDR|DOUT[0], registradorGenerico:REGLEDR|DOUT[1],           ;
+;                                         ;                                ; registradorGenerico:REGLEDR|DOUT[2], registradorGenerico:REGLEDR|DOUT[3],           ;
+;                                         ;                                ; registradorGenerico:REGLEDR|DOUT[4], registradorGenerico:REGLEDR|DOUT[5],           ;
+;                                         ;                                ; registradorGenerico:REGLEDR|DOUT[6], registradorGenerico:REGLEDR|DOUT[7],           ;
+;                                         ;                                ; registradorBit:REGLEDR8|DOUT, registradorBit:REGLEDR9|DOUT                          ;
+; DebMemKey0:DEB_MEM_KEY0|DOUT            ; Stuck at VCC                   ; edgeDetector:detectorSub0|saidaQ, CPU:CPU|registradorGenerico:REG1|DOUT[0],         ;
+;                                         ; due to stuck port data_in      ; CPU:CPU|registradorGenerico:REG1|DOUT[2], CPU:CPU|registradorGenerico:REG1|DOUT[3], ;
+;                                         ;                                ; CPU:CPU|registradorGenerico:REG1|DOUT[4], CPU:CPU|registradorGenerico:REG1|DOUT[5], ;
+;                                         ;                                ; CPU:CPU|registradorGenerico:REG1|DOUT[6], CPU:CPU|registradorGenerico:REG1|DOUT[7]  ;
+; CPU:CPU|flagComparacao:FLAG_IGUAL|DOUT  ; Stuck at GND                   ; CPU:CPU|registradorGenerico:PC|DOUT[2], CPU:CPU|registradorGenerico:PC|DOUT[3],     ;
+;                                         ; due to stuck port clock_enable ; CPU:CPU|registradorGenerico:PC|DOUT[4], CPU:CPU|registradorGenerico:PC|DOUT[5]      ;
+; CPU:CPU|enderecoRetorno:END_RET|DOUT[1] ; Stuck at GND                   ; CPU:CPU|registradorGenerico:PC|DOUT[1]                                              ;
+;                                         ; due to stuck port clock_enable ;                                                                                     ;
+; CPU:CPU|enderecoRetorno:END_RET|DOUT[6] ; Stuck at GND                   ; CPU:CPU|registradorGenerico:PC|DOUT[6]                                              ;
+;                                         ; due to stuck port clock_enable ;                                                                                     ;
+; CPU:CPU|enderecoRetorno:END_RET|DOUT[7] ; Stuck at GND                   ; CPU:CPU|registradorGenerico:PC|DOUT[7]                                              ;
+;                                         ; due to stuck port clock_enable ;                                                                                     ;
+; CPU:CPU|enderecoRetorno:END_RET|DOUT[8] ; Stuck at GND                   ; CPU:CPU|registradorGenerico:PC|DOUT[8]                                              ;
+;                                         ; due to stuck port clock_enable ;                                                                                     ;
+; DebMemKey0:DEB_MEM_KEY1|DOUT            ; Stuck at VCC                   ; edgeDetector:detectorSub1|saidaQ                                                    ;
+;                                         ; due to stuck port data_in      ;                                                                                     ;
++-----------------------------------------+--------------------------------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -397,17 +375,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |Aula8_mem|CPU:CPU|registradorGenerico:REG1|DOUT[7]         ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |Aula8_mem|CPU:CPU|registradorGenerico:PC|DOUT[8]           ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Aula8_mem|CPU:CPU|Decoder:Decoder|OUTPUT[4]                ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Aula8_mem|CPU:CPU|logicaDesvio:LOGICA_DESVIO|SelMUX_ROM[1] ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |Aula8_mem|CPU:CPU|muxGenerico2x1:MUX1|saida_MUX[7]         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |Aula8_mem|CPU:CPU|registradorGenerico:REG1|DOUT[0] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Aula8_mem|CPU:CPU|Decoder:Decoder|OUTPUT[3]        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Aula8_mem|CPU:CPU|muxGenerico2x1:MUX1|saida_MUX[7] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Aula8_mem|CPU:CPU|muxGenerico2x1:MUX1|saida_MUX[6] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
 
 
 +---------------------------------------------------------------------------+
@@ -993,7 +970,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Oct  7 18:57:54 2021
+    Info: Processing started: Thu Oct  7 23:00:37 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Aula8_mem -c Aula8_mem
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file enderecoRetorno.vhd
@@ -1115,12 +1092,12 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "saida_ROM[3]" is stuck at GND File: /home/antonio/Desktop/6_semestre/descomp/aula8_mem/Aula8_mem.vhd Line: 20
     Warning (13410): Pin "saida_ROM[4]" is stuck at GND File: /home/antonio/Desktop/6_semestre/descomp/aula8_mem/Aula8_mem.vhd Line: 20
     Warning (13410): Pin "saida_ROM[5]" is stuck at GND File: /home/antonio/Desktop/6_semestre/descomp/aula8_mem/Aula8_mem.vhd Line: 20
-    Warning (13410): Pin "saida_ROM[6]" is stuck at GND File: /home/antonio/Desktop/6_semestre/descomp/aula8_mem/Aula8_mem.vhd Line: 20
+    Warning (13410): Pin "saida_ROM[6]" is stuck at VCC File: /home/antonio/Desktop/6_semestre/descomp/aula8_mem/Aula8_mem.vhd Line: 20
     Warning (13410): Pin "saida_ROM[7]" is stuck at GND File: /home/antonio/Desktop/6_semestre/descomp/aula8_mem/Aula8_mem.vhd Line: 20
-    Warning (13410): Pin "saida_ROM[8]" is stuck at GND File: /home/antonio/Desktop/6_semestre/descomp/aula8_mem/Aula8_mem.vhd Line: 20
-    Warning (13410): Pin "saida_ROM[9]" is stuck at GND File: /home/antonio/Desktop/6_semestre/descomp/aula8_mem/Aula8_mem.vhd Line: 20
+    Warning (13410): Pin "saida_ROM[8]" is stuck at VCC File: /home/antonio/Desktop/6_semestre/descomp/aula8_mem/Aula8_mem.vhd Line: 20
+    Warning (13410): Pin "saida_ROM[9]" is stuck at VCC File: /home/antonio/Desktop/6_semestre/descomp/aula8_mem/Aula8_mem.vhd Line: 20
     Warning (13410): Pin "saida_ROM[10]" is stuck at GND File: /home/antonio/Desktop/6_semestre/descomp/aula8_mem/Aula8_mem.vhd Line: 20
-    Warning (13410): Pin "saida_ROM[11]" is stuck at VCC File: /home/antonio/Desktop/6_semestre/descomp/aula8_mem/Aula8_mem.vhd Line: 20
+    Warning (13410): Pin "saida_ROM[11]" is stuck at GND File: /home/antonio/Desktop/6_semestre/descomp/aula8_mem/Aula8_mem.vhd Line: 20
     Warning (13410): Pin "saida_ROM[12]" is stuck at GND File: /home/antonio/Desktop/6_semestre/descomp/aula8_mem/Aula8_mem.vhd Line: 20
     Warning (13410): Pin "saida_RAM[0]" is stuck at GND File: /home/antonio/Desktop/6_semestre/descomp/aula8_mem/Aula8_mem.vhd Line: 21
     Warning (13410): Pin "saida_RAM[1]" is stuck at GND File: /home/antonio/Desktop/6_semestre/descomp/aula8_mem/Aula8_mem.vhd Line: 21
@@ -1181,10 +1158,12 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX5[4]" is stuck at GND File: /home/antonio/Desktop/6_semestre/descomp/aula8_mem/Aula8_mem.vhd Line: 28
     Warning (13410): Pin "HEX5[5]" is stuck at GND File: /home/antonio/Desktop/6_semestre/descomp/aula8_mem/Aula8_mem.vhd Line: 28
     Warning (13410): Pin "HEX5[6]" is stuck at VCC File: /home/antonio/Desktop/6_semestre/descomp/aula8_mem/Aula8_mem.vhd Line: 28
-Info (17049): 14 registers lost all their fanouts during netlist optimizations.
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 16 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[0]" File: /home/antonio/Desktop/6_semestre/descomp/aula8_mem/Aula8_mem.vhd Line: 16
+    Warning (15610): No output dependent on input pin "KEY[1]" File: /home/antonio/Desktop/6_semestre/descomp/aula8_mem/Aula8_mem.vhd Line: 16
     Warning (15610): No output dependent on input pin "CLOCK_50" File: /home/antonio/Desktop/6_semestre/descomp/aula8_mem/Aula8_mem.vhd Line: 15
     Warning (15610): No output dependent on input pin "SW[7]" File: /home/antonio/Desktop/6_semestre/descomp/aula8_mem/Aula8_mem.vhd Line: 17
     Warning (15610): No output dependent on input pin "SW[6]" File: /home/antonio/Desktop/6_semestre/descomp/aula8_mem/Aula8_mem.vhd Line: 17
@@ -1199,15 +1178,13 @@ Warning (21074): Design contains 16 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[2]" File: /home/antonio/Desktop/6_semestre/descomp/aula8_mem/Aula8_mem.vhd Line: 16
     Warning (15610): No output dependent on input pin "KEY[3]" File: /home/antonio/Desktop/6_semestre/descomp/aula8_mem/Aula8_mem.vhd Line: 16
     Warning (15610): No output dependent on input pin "FPGA_RESET" File: /home/antonio/Desktop/6_semestre/descomp/aula8_mem/Aula8_mem.vhd Line: 18
-    Warning (15610): No output dependent on input pin "KEY[0]" File: /home/antonio/Desktop/6_semestre/descomp/aula8_mem/Aula8_mem.vhd Line: 16
-    Warning (15610): No output dependent on input pin "KEY[1]" File: /home/antonio/Desktop/6_semestre/descomp/aula8_mem/Aula8_mem.vhd Line: 16
 Info (21057): Implemented 98 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 82 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 110 warnings
     Info: Peak virtual memory: 480 megabytes
-    Info: Processing ended: Thu Oct  7 18:58:08 2021
+    Info: Processing ended: Thu Oct  7 23:00:51 2021
     Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:36
+    Info: Total CPU time (on all processors): 00:00:35
 
 

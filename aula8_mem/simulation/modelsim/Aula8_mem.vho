@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
 
--- DATE "10/07/2021 18:58:47"
+-- DATE "10/07/2021 23:01:28"
 
 -- 
 -- Device: Altera 5CEBA4F23C7 Package FBGA484
@@ -65,31 +65,31 @@ END Aula8_mem;
 -- LEDR[8]	=>  Location: PIN_L2,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- LEDR[9]	=>  Location: PIN_L1,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- saida_ROM[0]	=>  Location: PIN_C9,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- saida_ROM[1]	=>  Location: PIN_B5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- saida_ROM[1]	=>  Location: PIN_B10,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- saida_ROM[2]	=>  Location: PIN_C13,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- saida_ROM[3]	=>  Location: PIN_E15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- saida_ROM[3]	=>  Location: PIN_A14,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- saida_ROM[4]	=>  Location: PIN_A15,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- saida_ROM[5]	=>  Location: PIN_G17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- saida_ROM[5]	=>  Location: PIN_H16,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- saida_ROM[6]	=>  Location: PIN_A13,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- saida_ROM[7]	=>  Location: PIN_B16,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- saida_ROM[8]	=>  Location: PIN_F10,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- saida_ROM[9]	=>  Location: PIN_F13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- saida_ROM[9]	=>  Location: PIN_C15,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- saida_ROM[10]	=>  Location: PIN_F14,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- saida_ROM[11]	=>  Location: PIN_H13,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- saida_ROM[12]	=>  Location: PIN_F12,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- saida_RAM[0]	=>  Location: PIN_U10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- saida_RAM[0]	=>  Location: PIN_L18,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- saida_RAM[1]	=>  Location: PIN_A7,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- saida_RAM[2]	=>  Location: PIN_D6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- saida_RAM[2]	=>  Location: PIN_E10,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- saida_RAM[3]	=>  Location: PIN_G18,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- saida_RAM[4]	=>  Location: PIN_H18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- saida_RAM[4]	=>  Location: PIN_G2,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- saida_RAM[5]	=>  Location: PIN_P6,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- saida_RAM[6]	=>  Location: PIN_T15,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- saida_RAM[7]	=>  Location: PIN_B7,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- Teste_Endereco[0]	=>  Location: PIN_A14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- Teste_Endereco[0]	=>  Location: PIN_E14,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- Teste_Endereco[1]	=>  Location: PIN_C11,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- Teste_Endereco[2]	=>  Location: PIN_P22,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- Teste_Endereco[3]	=>  Location: PIN_B10,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- Teste_Endereco[4]	=>  Location: PIN_E14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- Teste_Endereco[3]	=>  Location: PIN_A9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- Teste_Endereco[4]	=>  Location: PIN_G8,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- Teste_Endereco[5]	=>  Location: PIN_AA9,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- Teste_Endereco[6]	=>  Location: PIN_A5,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- Teste_Endereco[7]	=>  Location: PIN_B15,	 I/O Standard: 2.5 V,	 Current Strength: Default
@@ -136,6 +136,8 @@ END Aula8_mem;
 -- HEX5[4]	=>  Location: PIN_C1,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- HEX5[5]	=>  Location: PIN_C2,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- HEX5[6]	=>  Location: PIN_W19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- KEY[0]	=>  Location: PIN_U7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- KEY[1]	=>  Location: PIN_W9,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- CLOCK_50	=>  Location: PIN_M9,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- SW[7]	=>  Location: PIN_AA13,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- SW[6]	=>  Location: PIN_AA14,	 I/O Standard: 2.5 V,	 Current Strength: Default
@@ -150,8 +152,6 @@ END Aula8_mem;
 -- KEY[2]	=>  Location: PIN_M7,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- KEY[3]	=>  Location: PIN_M6,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- FPGA_RESET	=>  Location: PIN_J17,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- KEY[0]	=>  Location: PIN_U7,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- KEY[1]	=>  Location: PIN_W9,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 ARCHITECTURE structure OF Aula8_mem IS
@@ -178,6 +178,8 @@ SIGNAL ww_HEX2 : std_logic_vector(6 DOWNTO 0);
 SIGNAL ww_HEX3 : std_logic_vector(6 DOWNTO 0);
 SIGNAL ww_HEX4 : std_logic_vector(6 DOWNTO 0);
 SIGNAL ww_HEX5 : std_logic_vector(6 DOWNTO 0);
+SIGNAL \KEY[0]~input_o\ : std_logic;
+SIGNAL \KEY[1]~input_o\ : std_logic;
 SIGNAL \CLOCK_50~input_o\ : std_logic;
 SIGNAL \SW[7]~input_o\ : std_logic;
 SIGNAL \SW[6]~input_o\ : std_logic;
@@ -192,8 +194,6 @@ SIGNAL \SW[9]~input_o\ : std_logic;
 SIGNAL \KEY[2]~input_o\ : std_logic;
 SIGNAL \KEY[3]~input_o\ : std_logic;
 SIGNAL \FPGA_RESET~input_o\ : std_logic;
-SIGNAL \KEY[0]~input_o\ : std_logic;
-SIGNAL \KEY[1]~input_o\ : std_logic;
 SIGNAL \~QUARTUS_CREATED_GND~I_combout\ : std_logic;
 
 BEGIN
@@ -359,7 +359,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => ww_saida_ROM(0));
 
--- Location: IOOBUF_X16_Y45_N93
+-- Location: IOOBUF_X16_Y45_N42
 \saida_ROM[1]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -385,7 +385,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => ww_saida_ROM(2));
 
--- Location: IOOBUF_X46_Y45_N42
+-- Location: IOOBUF_X46_Y45_N93
 \saida_ROM[3]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -411,7 +411,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => ww_saida_ROM(4));
 
--- Location: IOOBUF_X50_Y45_N36
+-- Location: IOOBUF_X44_Y45_N2
 \saida_ROM[5]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -433,7 +433,7 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => GND,
+	i => VCC,
 	devoe => ww_devoe,
 	o => ww_saida_ROM(6));
 
@@ -459,11 +459,11 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => GND,
+	i => VCC,
 	devoe => ww_devoe,
 	o => ww_saida_ROM(8));
 
--- Location: IOOBUF_X40_Y45_N59
+-- Location: IOOBUF_X43_Y45_N2
 \saida_ROM[9]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -472,7 +472,7 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => GND,
+	i => VCC,
 	devoe => ww_devoe,
 	o => ww_saida_ROM(9));
 
@@ -498,7 +498,7 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => VCC,
+	i => GND,
 	devoe => ww_devoe,
 	o => ww_saida_ROM(11));
 
@@ -515,7 +515,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => ww_saida_ROM(12));
 
--- Location: IOOBUF_X19_Y0_N2
+-- Location: IOOBUF_X54_Y21_N22
 \saida_RAM[0]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -541,7 +541,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => ww_saida_RAM(1));
 
--- Location: IOOBUF_X12_Y45_N53
+-- Location: IOOBUF_X14_Y45_N2
 \saida_RAM[2]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -567,7 +567,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => ww_saida_RAM(3));
 
--- Location: IOOBUF_X48_Y45_N19
+-- Location: IOOBUF_X0_Y21_N5
 \saida_RAM[4]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -619,7 +619,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => ww_saida_RAM(7));
 
--- Location: IOOBUF_X46_Y45_N93
+-- Location: IOOBUF_X40_Y45_N42
 \Teste_Endereco[0]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -658,7 +658,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => ww_Teste_Endereco(2));
 
--- Location: IOOBUF_X16_Y45_N42
+-- Location: IOOBUF_X18_Y45_N53
 \Teste_Endereco[3]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -671,7 +671,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => ww_Teste_Endereco(3));
 
--- Location: IOOBUF_X40_Y45_N42
+-- Location: IOOBUF_X20_Y45_N53
 \Teste_Endereco[4]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -1282,6 +1282,28 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => ww_HEX5(6));
 
+-- Location: IOIBUF_X10_Y0_N92
+\KEY[0]~input\ : cyclonev_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_KEY(0),
+	o => \KEY[0]~input_o\);
+
+-- Location: IOIBUF_X11_Y0_N35
+\KEY[1]~input\ : cyclonev_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_KEY(1),
+	o => \KEY[1]~input_o\);
+
 -- Location: IOIBUF_X22_Y0_N1
 \CLOCK_50~input\ : cyclonev_io_ibuf
 -- pragma translate_off
@@ -1436,29 +1458,7 @@ PORT MAP (
 	i => ww_FPGA_RESET,
 	o => \FPGA_RESET~input_o\);
 
--- Location: IOIBUF_X10_Y0_N92
-\KEY[0]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_KEY(0),
-	o => \KEY[0]~input_o\);
-
--- Location: IOIBUF_X11_Y0_N35
-\KEY[1]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_KEY(1),
-	o => \KEY[1]~input_o\);
-
--- Location: LABCELL_X41_Y36_N3
+-- Location: LABCELL_X40_Y36_N0
 \~QUARTUS_CREATED_GND~I\ : cyclonev_lcell_comb
 -- Equation(s):
 

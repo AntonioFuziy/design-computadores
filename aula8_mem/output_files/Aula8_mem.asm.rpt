@@ -1,5 +1,5 @@
 Assembler report for Aula8_mem
-Thu Oct  7 18:58:38 2021
+Thu Oct  7 23:01:20 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Oct  7 18:58:38 2021 ;
+; Assembler Status      ; Successful - Thu Oct  7 23:01:20 2021 ;
 ; Revision Name         ; Aula8_mem                             ;
 ; Top-level Entity Name ; Aula8_mem                             ;
 ; Family                ; Cyclone V                             ;
@@ -67,8 +67,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------+------------------------+
 ; Option         ; Setting                ;
 +----------------+------------------------+
-; JTAG usercode  ; 0x004E44E5             ;
-; Checksum       ; 0x004E44E5             ;
+; JTAG usercode  ; 0x004E42BF             ;
+; Checksum       ; 0x004E42BF             ;
 +----------------+------------------------+
 
 
@@ -78,12 +78,12 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Oct  7 18:58:35 2021
+    Info: Processing started: Thu Oct  7 23:01:17 2021
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Aula8_mem -c Aula8_mem
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 481 megabytes
-    Info: Processing ended: Thu Oct  7 18:58:38 2021
+    Info: Peak virtual memory: 479 megabytes
+    Info: Processing ended: Thu Oct  7 23:01:20 2021
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:04
 

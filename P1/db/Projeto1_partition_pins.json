@@ -264,15 +264,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[9]",
-					"strict" : false
-				},
-				{
 					"name" : "SW[8]",
 					"strict" : false
 				},
 				{
-					"name" : "FPGA_RESET",
+					"name" : "SW[9]",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_RESET_N",
 					"strict" : false
 				},
 				{
