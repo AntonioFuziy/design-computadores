@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Projeto1
-Fri Oct  8 15:06:42 2021
+Fri Oct  8 16:24:21 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -98,7 +98,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Oct  8 15:06:42 2021       ;
+; Analysis & Synthesis Status     ; Successful - Fri Oct  8 16:24:21 2021       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Projeto1                                    ;
 ; Top-level Entity Name           ; Projeto1                                    ;
@@ -259,14 +259,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 477            ;
+; Estimate of Logic utilization (ALMs needed) ; 479            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 505            ;
-;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 304            ;
+; Combinational ALUT usage for logic          ; 504            ;
+;     -- 7 input functions                    ; 4              ;
+;     -- 6 input functions                    ; 302            ;
 ;     -- 5 input functions                    ; 40             ;
-;     -- 4 input functions                    ; 53             ;
-;     -- <=3 input functions                  ; 108            ;
+;     -- 4 input functions                    ; 52             ;
+;     -- <=3 input functions                  ; 106            ;
 ;                                             ;                ;
 ; Dedicated logic registers                   ; 577            ;
 ;                                             ;                ;
@@ -276,8 +276,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 575            ;
-; Total fan-out                               ; 4342           ;
-; Average fan-out                             ; 3.51           ;
+; Total fan-out                               ; 4351           ;
+; Average fan-out                             ; 3.52           ;
 +---------------------------------------------+----------------+
 
 
@@ -286,7 +286,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                         ; Entity Name         ; Library Name ;
 +-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------+---------------------+--------------+
-; |Projeto1                         ; 505 (23)            ; 577 (0)                   ; 0                 ; 0          ; 77   ; 0            ; |Projeto1                                   ; Projeto1            ; work         ;
+; |Projeto1                         ; 504 (22)            ; 577 (0)                   ; 0                 ; 0          ; 77   ; 0            ; |Projeto1                                   ; Projeto1            ; work         ;
 ;    |CPU:CPU|                      ; 61 (0)              ; 27 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Projeto1|CPU:CPU                           ; CPU                 ; work         ;
 ;       |Decoder:Decoder|           ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1|CPU:CPU|Decoder:Decoder           ; Decoder             ; work         ;
 ;       |ULASomaSub:ULA1|           ; 26 (26)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1|CPU:CPU|ULASomaSub:ULA1           ; ULASomaSub          ; work         ;
@@ -299,8 +299,8 @@ https://fpgasoftware.intel.com/eula.
 ;       |somaConstante:somaUm|      ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1|CPU:CPU|somaConstante:somaUm      ; somaConstante       ; work         ;
 ;    |DebMemKey0:DEB_MEM_KEY0|      ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1|DebMemKey0:DEB_MEM_KEY0           ; DebMemKey0          ; work         ;
 ;    |DebMemKey0:DEB_MEM_KEY1|      ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1|DebMemKey0:DEB_MEM_KEY1           ; DebMemKey0          ; work         ;
-;    |Decoder3x8:DECODER_BLOCOS|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1|Decoder3x8:DECODER_BLOCOS         ; Decoder3x8          ; work         ;
-;    |ROM:ROM1|                     ; 74 (74)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1|ROM:ROM1                          ; ROM                 ; work         ;
+;    |Decoder3x8:DECODER_BLOCOS|    ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1|Decoder3x8:DECODER_BLOCOS         ; Decoder3x8          ; work         ;
+;    |ROM:ROM1|                     ; 73 (73)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1|ROM:ROM1                          ; ROM                 ; work         ;
 ;    |conversorHex7Seg:LED_HEX0|    ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1|conversorHex7Seg:LED_HEX0         ; conversorHex7Seg    ; work         ;
 ;    |conversorHex7Seg:LED_HEX1|    ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1|conversorHex7Seg:LED_HEX1         ; conversorHex7Seg    ; work         ;
 ;    |conversorHex7Seg:LED_HEX2|    ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1|conversorHex7Seg:LED_HEX2         ; conversorHex7Seg    ; work         ;
@@ -906,23 +906,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA               ; 553                         ;
 ;     ENA SLD           ; 8                           ;
 ;     plain             ; 14                          ;
-; arriav_lcell_comb     ; 505                         ;
+; arriav_lcell_comb     ; 504                         ;
 ;     arith             ; 26                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 9                           ;
 ;         2 data inputs ; 6                           ;
 ;         5 data inputs ; 10                          ;
-;     normal            ; 479                         ;
+;     extend            ; 4                           ;
+;         7 data inputs ; 4                           ;
+;     normal            ; 474                         ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 79                          ;
-;         3 data inputs ; 11                          ;
-;         4 data inputs ; 53                          ;
+;         2 data inputs ; 76                          ;
+;         3 data inputs ; 12                          ;
+;         4 data inputs ; 52                          ;
 ;         5 data inputs ; 30                          ;
-;         6 data inputs ; 304                         ;
+;         6 data inputs ; 302                         ;
 ; boundary_port         ; 77                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 10.30                       ;
-; Average LUT depth     ; 6.69                        ;
+; Average LUT depth     ; 6.57                        ;
 +-----------------------+-----------------------------+
 
 
@@ -941,7 +943,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Fri Oct  8 15:06:27 2021
+    Info: Processing started: Fri Oct  8 16:24:07 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Projeto1 -c Projeto1
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file Projeto1.vhd
@@ -1047,14 +1049,14 @@ Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1137 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1136 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 61 output pins
-    Info (21061): Implemented 1060 logic cells
+    Info (21061): Implemented 1059 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 485 megabytes
-    Info: Processing ended: Fri Oct  8 15:06:42 2021
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:34
+    Info: Peak virtual memory: 486 megabytes
+    Info: Processing ended: Fri Oct  8 16:24:21 2021
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:33
 
 
