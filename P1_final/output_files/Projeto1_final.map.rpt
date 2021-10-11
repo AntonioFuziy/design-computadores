@@ -1,0 +1,1059 @@
+Analysis & Synthesis report for Projeto1_final
+Mon Oct 11 19:59:52 2021
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |Projeto1_final
+ 11. Parameter Settings for User Entity Instance: CPU:CPU
+ 12. Parameter Settings for User Entity Instance: CPU:CPU|bancoRegistradores:Banco_Registradores
+ 13. Parameter Settings for User Entity Instance: CPU:CPU|muxGenerico2x1:MUX1
+ 14. Parameter Settings for User Entity Instance: CPU:CPU|muxGenerico4x2:MUX4x2_PC
+ 15. Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:PC
+ 16. Parameter Settings for User Entity Instance: CPU:CPU|somaConstante:somaUm
+ 17. Parameter Settings for User Entity Instance: CPU:CPU|ULASomaSub:ULA1
+ 18. Parameter Settings for User Entity Instance: CPU:CPU|flagComparacao:FLAG_IGUAL
+ 19. Parameter Settings for User Entity Instance: CPU:CPU|enderecoRetorno:END_RET
+ 20. Parameter Settings for User Entity Instance: CPU:CPU|logicaDesvio:LOGICA_DESVIO
+ 21. Parameter Settings for User Entity Instance: ROM:ROM1
+ 22. Parameter Settings for User Entity Instance: memoriaDados:memoriaDados
+ 23. Parameter Settings for User Entity Instance: Decoder3x8:DECODER_BLOCOS
+ 24. Parameter Settings for User Entity Instance: Decoder3x8:DECODER_ENDERECOS
+ 25. Parameter Settings for User Entity Instance: registradorGenerico:REGLEDR
+ 26. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX0
+ 27. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX1
+ 28. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX2
+ 29. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX3
+ 30. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX4
+ 31. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX5
+ 32. Parameter Settings for User Entity Instance: bufferTreeState:BUFFER_THREE_STATE_8BITS
+ 33. Parameter Settings for User Entity Instance: bufferThreeStateBit:BUFFER_THREE_STATE_BIT0
+ 34. Parameter Settings for User Entity Instance: bufferThreeStateBit:BUFFER_THREE_STATE_BIT1
+ 35. Parameter Settings for User Entity Instance: bufferThreeStateBit:BUFFER_THREE_STATE_BIT2
+ 36. Parameter Settings for User Entity Instance: bufferThreeStateBit:BUFFER_THREE_STATE_BIT3
+ 37. Parameter Settings for User Entity Instance: bufferThreeStateBit:BUFFER_THREE_STATE_BIT4
+ 38. Parameter Settings for User Entity Instance: bufferThreeStateBit:BUFFER_THREE_STATE_BIT5
+ 39. Parameter Settings for User Entity Instance: bufferThreeStateBit:BUFFER_THREE_STATE_BIT6
+ 40. Port Connectivity Checks: "DebMemKey0:DEB_MEM_KEY1"
+ 41. Port Connectivity Checks: "DebMemKey0:DEB_MEM_KEY0"
+ 42. Port Connectivity Checks: "conversorHex7Seg:LED_HEX5"
+ 43. Port Connectivity Checks: "registradorGenerico:REG_HEX5"
+ 44. Port Connectivity Checks: "conversorHex7Seg:LED_HEX4"
+ 45. Port Connectivity Checks: "registradorGenerico:REG_HEX4"
+ 46. Port Connectivity Checks: "conversorHex7Seg:LED_HEX3"
+ 47. Port Connectivity Checks: "registradorGenerico:REG_HEX3"
+ 48. Port Connectivity Checks: "conversorHex7Seg:LED_HEX2"
+ 49. Port Connectivity Checks: "registradorGenerico:REG_HEX2"
+ 50. Port Connectivity Checks: "conversorHex7Seg:LED_HEX1"
+ 51. Port Connectivity Checks: "registradorGenerico:REG_HEX1"
+ 52. Port Connectivity Checks: "conversorHex7Seg:LED_HEX0"
+ 53. Port Connectivity Checks: "registradorGenerico:REG_HEX0"
+ 54. Port Connectivity Checks: "registradorBit:REGLEDR9"
+ 55. Port Connectivity Checks: "registradorBit:REGLEDR8"
+ 56. Port Connectivity Checks: "registradorGenerico:REGLEDR"
+ 57. Port Connectivity Checks: "Decoder3x8:DECODER_ENDERECOS"
+ 58. Port Connectivity Checks: "Decoder3x8:DECODER_BLOCOS"
+ 59. Port Connectivity Checks: "CPU:CPU|enderecoRetorno:END_RET"
+ 60. Port Connectivity Checks: "CPU:CPU|flagComparacao:FLAG_IGUAL"
+ 61. Port Connectivity Checks: "CPU:CPU|registradorGenerico:PC"
+ 62. Port Connectivity Checks: "CPU:CPU|muxGenerico4x2:MUX4x2_PC"
+ 63. Post-Synthesis Netlist Statistics for Top Partition
+ 64. Elapsed Time Per Partition
+ 65. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon Oct 11 19:59:52 2021       ;
+; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                   ; Projeto1_final                              ;
+; Top-level Entity Name           ; Projeto1_final                              ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 601                                         ;
+; Total pins                      ; 77                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CEBA4F23C7        ;                    ;
+; Top-level entity name                                                           ; Projeto1_final     ; Projeto1_final     ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation                             ; All                ;                    ;
+; VHDL Show LMF Mapping Messages                                                  ; Off                ;                    ;
+; VHDL Version                                                                    ; VHDL_2008          ; VHDL_1993          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                     ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                              ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------+---------+
+; ULASomaSub.vhd                   ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/P1_final/ULASomaSub.vhd          ;         ;
+; somaConstante.vhd                ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/P1_final/somaConstante.vhd       ;         ;
+; ROM.vhd                          ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/P1_final/ROM.vhd                 ;         ;
+; registradorGenerico.vhd          ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/P1_final/registradorGenerico.vhd ;         ;
+; registradorBit.vhd               ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/P1_final/registradorBit.vhd      ;         ;
+; Projeto1_final.vhd               ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd      ;         ;
+; muxGenerico4x2.vhd               ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/P1_final/muxGenerico4x2.vhd      ;         ;
+; muxGenerico2x1.vhd               ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/P1_final/muxGenerico2x1.vhd      ;         ;
+; memoriaDados.vhd                 ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/P1_final/memoriaDados.vhd        ;         ;
+; logicaDesvio.vhd                 ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/P1_final/logicaDesvio.vhd        ;         ;
+; flagComparacao.vhd               ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/P1_final/flagComparacao.vhd      ;         ;
+; enderecoRetorno.vhd              ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/P1_final/enderecoRetorno.vhd     ;         ;
+; edgeDetector.vhd                 ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/P1_final/edgeDetector.vhd        ;         ;
+; Decoder3x8.vhd                   ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/P1_final/Decoder3x8.vhd          ;         ;
+; Decoder.vhd                      ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/P1_final/Decoder.vhd             ;         ;
+; DebMemKey0.vhd                   ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/P1_final/DebMemKey0.vhd          ;         ;
+; CPU.vhd                          ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/P1_final/CPU.vhd                 ;         ;
+; conversorHex7Seg.vhd             ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/P1_final/conversorHex7Seg.vhd    ;         ;
+; bufferTreeState.vhd              ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/P1_final/bufferTreeState.vhd     ;         ;
+; bufferThreeStateBit.vhd          ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/P1_final/bufferThreeStateBit.vhd ;         ;
+; bancoRegistradores.vhd           ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/P1_final/bancoRegistradores.vhd  ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 494            ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 522            ;
+;     -- 7 input functions                    ; 4              ;
+;     -- 6 input functions                    ; 311            ;
+;     -- 5 input functions                    ; 43             ;
+;     -- 4 input functions                    ; 57             ;
+;     -- <=3 input functions                  ; 107            ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 601            ;
+;                                             ;                ;
+; I/O pins                                    ; 77             ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 599            ;
+; Total fan-out                               ; 4564           ;
+; Average fan-out                             ; 3.57           ;
++---------------------------------------------+----------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                           ;
++------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                     ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                            ; Entity Name         ; Library Name ;
++------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------+---------------------+--------------+
+; |Projeto1_final                                ; 522 (22)            ; 601 (0)                   ; 0                 ; 0          ; 77   ; 0            ; |Projeto1_final                                                ; Projeto1_final      ; work         ;
+;    |CPU:CPU|                                   ; 73 (0)              ; 51 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|CPU:CPU                                        ; CPU                 ; work         ;
+;       |Decoder:Decoder|                        ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|CPU:CPU|Decoder:Decoder                        ; Decoder             ; work         ;
+;       |ULASomaSub:ULA1|                        ; 26 (26)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|CPU:CPU|ULASomaSub:ULA1                        ; ULASomaSub          ; work         ;
+;       |bancoRegistradores:Banco_Registradores| ; 13 (13)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|CPU:CPU|bancoRegistradores:Banco_Registradores ; bancoRegistradores  ; work         ;
+;       |enderecoRetorno:END_RET|                ; 0 (0)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|CPU:CPU|enderecoRetorno:END_RET                ; enderecoRetorno     ; work         ;
+;       |flagComparacao:FLAG_IGUAL|              ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|CPU:CPU|flagComparacao:FLAG_IGUAL              ; flagComparacao      ; work         ;
+;       |muxGenerico2x1:MUX1|                    ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|CPU:CPU|muxGenerico2x1:MUX1                    ; muxGenerico2x1      ; work         ;
+;       |muxGenerico4x2:MUX4x2_PC|               ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|CPU:CPU|muxGenerico4x2:MUX4x2_PC               ; muxGenerico4x2      ; work         ;
+;       |registradorGenerico:PC|                 ; 0 (0)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|CPU:CPU|registradorGenerico:PC                 ; registradorGenerico ; work         ;
+;       |somaConstante:somaUm|                   ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|CPU:CPU|somaConstante:somaUm                   ; somaConstante       ; work         ;
+;    |DebMemKey0:DEB_MEM_KEY0|                   ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|DebMemKey0:DEB_MEM_KEY0                        ; DebMemKey0          ; work         ;
+;    |DebMemKey0:DEB_MEM_KEY1|                   ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|DebMemKey0:DEB_MEM_KEY1                        ; DebMemKey0          ; work         ;
+;    |Decoder3x8:DECODER_BLOCOS|                 ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|Decoder3x8:DECODER_BLOCOS                      ; Decoder3x8          ; work         ;
+;    |ROM:ROM1|                                  ; 79 (79)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|ROM:ROM1                                       ; ROM                 ; work         ;
+;    |conversorHex7Seg:LED_HEX0|                 ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|conversorHex7Seg:LED_HEX0                      ; conversorHex7Seg    ; work         ;
+;    |conversorHex7Seg:LED_HEX1|                 ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|conversorHex7Seg:LED_HEX1                      ; conversorHex7Seg    ; work         ;
+;    |conversorHex7Seg:LED_HEX2|                 ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|conversorHex7Seg:LED_HEX2                      ; conversorHex7Seg    ; work         ;
+;    |conversorHex7Seg:LED_HEX3|                 ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|conversorHex7Seg:LED_HEX3                      ; conversorHex7Seg    ; work         ;
+;    |conversorHex7Seg:LED_HEX4|                 ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|conversorHex7Seg:LED_HEX4                      ; conversorHex7Seg    ; work         ;
+;    |conversorHex7Seg:LED_HEX5|                 ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|conversorHex7Seg:LED_HEX5                      ; conversorHex7Seg    ; work         ;
+;    |edgeDetector:detectorSub0|                 ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|edgeDetector:detectorSub0                      ; edgeDetector        ; work         ;
+;    |edgeDetector:detectorSub1|                 ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|edgeDetector:detectorSub1                      ; edgeDetector        ; work         ;
+;    |memoriaDados:memoriaDados|                 ; 298 (298)           ; 512 (512)                 ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|memoriaDados:memoriaDados                      ; memoriaDados        ; work         ;
+;    |registradorBit:REGLEDR8|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|registradorBit:REGLEDR8                        ; registradorBit      ; work         ;
+;    |registradorBit:REGLEDR9|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|registradorBit:REGLEDR9                        ; registradorBit      ; work         ;
+;    |registradorGenerico:REGLEDR|               ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|registradorGenerico:REGLEDR                    ; registradorGenerico ; work         ;
+;    |registradorGenerico:REG_HEX0|              ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|registradorGenerico:REG_HEX0                   ; registradorGenerico ; work         ;
+;    |registradorGenerico:REG_HEX1|              ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|registradorGenerico:REG_HEX1                   ; registradorGenerico ; work         ;
+;    |registradorGenerico:REG_HEX2|              ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|registradorGenerico:REG_HEX2                   ; registradorGenerico ; work         ;
+;    |registradorGenerico:REG_HEX3|              ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|registradorGenerico:REG_HEX3                   ; registradorGenerico ; work         ;
+;    |registradorGenerico:REG_HEX4|              ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|registradorGenerico:REG_HEX4                   ; registradorGenerico ; work         ;
+;    |registradorGenerico:REG_HEX5|              ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|registradorGenerico:REG_HEX5                   ; registradorGenerico ; work         ;
++------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 601   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 32    ;
+; Number of registers using Asynchronous Clear ; 2     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 585   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
+; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |Projeto1_final|CPU:CPU|registradorGenerico:PC|DOUT[0]           ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Projeto1_final|CPU:CPU|Decoder:Decoder|OUTPUT[4]                ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Projeto1_final|CPU:CPU|logicaDesvio:LOGICA_DESVIO|SelMUX_ROM[0] ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |Projeto1_final|CPU:CPU|muxGenerico2x1:MUX1|saida_MUX[5]         ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Projeto1_final|CPU:CPU|ULASomaSub:ULA1|saida[3]                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |Projeto1_final ;
++-----------------+-------+------------------------------------------------------+
+; Parameter Name  ; Value ; Type                                                 ;
++-----------------+-------+------------------------------------------------------+
+; larguraDados    ; 8     ; Signed Integer                                       ;
+; larguraAddrROM  ; 9     ; Signed Integer                                       ;
+; larguraDadosROM ; 15    ; Signed Integer                                       ;
+; larguraDadosRAM ; 8     ; Signed Integer                                       ;
+; larguraAddrRAM  ; 6     ; Signed Integer                                       ;
+; simulacao       ; false ; Enumerated                                           ;
++-----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU ;
++-------------------+-------+--------------------------+
+; Parameter Name    ; Value ; Type                     ;
++-------------------+-------+--------------------------+
+; larguradados      ; 8     ; Signed Integer           ;
+; larguraaddrrom    ; 9     ; Signed Integer           ;
+; largurapc_rom     ; 9     ; Signed Integer           ;
+; larguradadosrom   ; 12    ; Signed Integer           ;
+; larguradadosram   ; 8     ; Signed Integer           ;
+; larguraaddrram    ; 8     ; Signed Integer           ;
+; larguraflag_igual ; 2     ; Signed Integer           ;
+; simulacao         ; false ; Enumerated               ;
++-------------------+-------+--------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|bancoRegistradores:Banco_Registradores ;
++---------------------+-------+---------------------------------------------------------------+
+; Parameter Name      ; Value ; Type                                                          ;
++---------------------+-------+---------------------------------------------------------------+
+; larguradados        ; 8     ; Signed Integer                                                ;
+; larguraendbancoregs ; 2     ; Signed Integer                                                ;
++---------------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|muxGenerico2x1:MUX1 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|muxGenerico4x2:MUX4x2_PC ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; larguradados   ; 9     ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:PC ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; larguradados   ; 9     ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|somaConstante:somaUm ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; larguradados   ; 9     ; Signed Integer                                   ;
+; constante      ; 1     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|ULASomaSub:ULA1 ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|flagComparacao:FLAG_IGUAL ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; larguradados   ; 2     ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|enderecoRetorno:END_RET ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; larguradados   ; 9     ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|logicaDesvio:LOGICA_DESVIO ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; larguradados   ; 2     ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ROM:ROM1 ;
++----------------+-------+------------------------------+
+; Parameter Name ; Value ; Type                         ;
++----------------+-------+------------------------------+
+; datawidth      ; 15    ; Signed Integer               ;
+; addrwidth      ; 9     ; Signed Integer               ;
++----------------+-------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memoriaDados:memoriaDados ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; datawidth      ; 8     ; Signed Integer                                ;
+; addrwidth      ; 6     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Decoder3x8:DECODER_BLOCOS ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; datawidth      ; 8     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Decoder3x8:DECODER_ENDERECOS ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; datawidth      ; 8     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:REGLEDR ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX0 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX1 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX2 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX3 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX4 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX5 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bufferTreeState:BUFFER_THREE_STATE_8BITS ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; datawidth      ; 8     ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bufferThreeStateBit:BUFFER_THREE_STATE_BIT0 ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; datawidth      ; 8     ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bufferThreeStateBit:BUFFER_THREE_STATE_BIT1 ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; datawidth      ; 8     ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bufferThreeStateBit:BUFFER_THREE_STATE_BIT2 ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; datawidth      ; 8     ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bufferThreeStateBit:BUFFER_THREE_STATE_BIT3 ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; datawidth      ; 8     ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bufferThreeStateBit:BUFFER_THREE_STATE_BIT4 ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; datawidth      ; 8     ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bufferThreeStateBit:BUFFER_THREE_STATE_BIT5 ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; datawidth      ; 8     ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bufferThreeStateBit:BUFFER_THREE_STATE_BIT6 ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; datawidth      ; 8     ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "DebMemKey0:DEB_MEM_KEY1" ;
++------+-------+----------+---------------------------+
+; Port ; Type  ; Severity ; Details                   ;
++------+-------+----------+---------------------------+
+; din  ; Input ; Info     ; Stuck at VCC              ;
++------+-------+----------+---------------------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "DebMemKey0:DEB_MEM_KEY0" ;
++------+-------+----------+---------------------------+
+; Port ; Type  ; Severity ; Details                   ;
++------+-------+----------+---------------------------+
+; din  ; Input ; Info     ; Stuck at VCC              ;
++------+-------+----------+---------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:LED_HEX5" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "registradorGenerico:REG_HEX5" ;
++------+-------+----------+--------------------------------+
+; Port ; Type  ; Severity ; Details                        ;
++------+-------+----------+--------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                   ;
++------+-------+----------+--------------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:LED_HEX4" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "registradorGenerico:REG_HEX4" ;
++------+-------+----------+--------------------------------+
+; Port ; Type  ; Severity ; Details                        ;
++------+-------+----------+--------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                   ;
++------+-------+----------+--------------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:LED_HEX3" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "registradorGenerico:REG_HEX3" ;
++------+-------+----------+--------------------------------+
+; Port ; Type  ; Severity ; Details                        ;
++------+-------+----------+--------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                   ;
++------+-------+----------+--------------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:LED_HEX2" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "registradorGenerico:REG_HEX2" ;
++------+-------+----------+--------------------------------+
+; Port ; Type  ; Severity ; Details                        ;
++------+-------+----------+--------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                   ;
++------+-------+----------+--------------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:LED_HEX1" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "registradorGenerico:REG_HEX1" ;
++------+-------+----------+--------------------------------+
+; Port ; Type  ; Severity ; Details                        ;
++------+-------+----------+--------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                   ;
++------+-------+----------+--------------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:LED_HEX0" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "registradorGenerico:REG_HEX0" ;
++------+-------+----------+--------------------------------+
+; Port ; Type  ; Severity ; Details                        ;
++------+-------+----------+--------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                   ;
++------+-------+----------+--------------------------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "registradorBit:REGLEDR9" ;
++------+-------+----------+---------------------------+
+; Port ; Type  ; Severity ; Details                   ;
++------+-------+----------+---------------------------+
+; rst  ; Input ; Info     ; Stuck at GND              ;
++------+-------+----------+---------------------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "registradorBit:REGLEDR8" ;
++------+-------+----------+---------------------------+
+; Port ; Type  ; Severity ; Details                   ;
++------+-------+----------+---------------------------+
+; rst  ; Input ; Info     ; Stuck at GND              ;
++------+-------+----------+---------------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "registradorGenerico:REGLEDR" ;
++------+-------+----------+-------------------------------+
+; Port ; Type  ; Severity ; Details                       ;
++------+-------+----------+-------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                  ;
++------+-------+----------+-------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Decoder3x8:DECODER_ENDERECOS"                                                               ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; output[7..6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Decoder3x8:DECODER_BLOCOS"                                                                  ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; output[7..6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; output[3..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "CPU:CPU|enderecoRetorno:END_RET" ;
++------+-------+----------+-----------------------------------+
+; Port ; Type  ; Severity ; Details                           ;
++------+-------+----------+-----------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                      ;
++------+-------+----------+-----------------------------------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "CPU:CPU|flagComparacao:FLAG_IGUAL" ;
++------+-------+----------+-------------------------------------+
+; Port ; Type  ; Severity ; Details                             ;
++------+-------+----------+-------------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                        ;
++------+-------+----------+-------------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "CPU:CPU|registradorGenerico:PC" ;
++--------+-------+----------+--------------------------------+
+; Port   ; Type  ; Severity ; Details                        ;
++--------+-------+----------+--------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                   ;
+; rst    ; Input ; Info     ; Stuck at GND                   ;
++--------+-------+----------+--------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "CPU:CPU|muxGenerico4x2:MUX4x2_PC" ;
++--------------+-------+----------+----------------------------+
+; Port         ; Type  ; Severity ; Details                    ;
++--------------+-------+----------+----------------------------+
+; entradad_mux ; Input ; Info     ; Stuck at GND               ;
++--------------+-------+----------+----------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 601                         ;
+;     CLR               ; 2                           ;
+;     ENA               ; 553                         ;
+;     ENA SLD           ; 32                          ;
+;     plain             ; 14                          ;
+; arriav_lcell_comb     ; 522                         ;
+;     arith             ; 26                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 9                           ;
+;         2 data inputs ; 6                           ;
+;         5 data inputs ; 10                          ;
+;     extend            ; 4                           ;
+;         7 data inputs ; 4                           ;
+;     normal            ; 492                         ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 75                          ;
+;         3 data inputs ; 14                          ;
+;         4 data inputs ; 57                          ;
+;         5 data inputs ; 33                          ;
+;         6 data inputs ; 311                         ;
+; boundary_port         ; 77                          ;
+;                       ;                             ;
+; Max LUT depth         ; 10.30                       ;
+; Average LUT depth     ; 6.51                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Mon Oct 11 19:59:41 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Projeto1_final -c Projeto1_final
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file somadorGenerico.vhd
+    Info (12022): Found design unit 1: somadorGenerico-comportamento File: /home/antonio/Desktop/6_semestre/descomp/P1_final/somadorGenerico.vhd Line: 17
+    Info (12023): Found entity 1: somadorGenerico File: /home/antonio/Desktop/6_semestre/descomp/P1_final/somadorGenerico.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file ULASomaSub.vhd
+    Info (12022): Found design unit 1: ULASomaSub-comportamento File: /home/antonio/Desktop/6_semestre/descomp/P1_final/ULASomaSub.vhd Line: 15
+    Info (12023): Found entity 1: ULASomaSub File: /home/antonio/Desktop/6_semestre/descomp/P1_final/ULASomaSub.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file somaConstante.vhd
+    Info (12022): Found design unit 1: somaConstante-comportamento File: /home/antonio/Desktop/6_semestre/descomp/P1_final/somaConstante.vhd Line: 18
+    Info (12023): Found entity 1: somaConstante File: /home/antonio/Desktop/6_semestre/descomp/P1_final/somaConstante.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file ROM.vhd
+    Info (12022): Found design unit 1: ROM-assincrona File: /home/antonio/Desktop/6_semestre/descomp/P1_final/ROM.vhd Line: 16
+    Info (12023): Found entity 1: ROM File: /home/antonio/Desktop/6_semestre/descomp/P1_final/ROM.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file registradorHEX.vhd
+    Info (12022): Found design unit 1: registradorHEX-comportamento File: /home/antonio/Desktop/6_semestre/descomp/P1_final/registradorHEX.vhd Line: 15
+    Info (12023): Found entity 1: registradorHEX File: /home/antonio/Desktop/6_semestre/descomp/P1_final/registradorHEX.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file registradorGenerico.vhd
+    Info (12022): Found design unit 1: registradorGenerico-comportamento File: /home/antonio/Desktop/6_semestre/descomp/P1_final/registradorGenerico.vhd Line: 15
+    Info (12023): Found entity 1: registradorGenerico File: /home/antonio/Desktop/6_semestre/descomp/P1_final/registradorGenerico.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file registradorBit.vhd
+    Info (12022): Found design unit 1: registradorBit-comportamento File: /home/antonio/Desktop/6_semestre/descomp/P1_final/registradorBit.vhd Line: 12
+    Info (12023): Found entity 1: registradorBit File: /home/antonio/Desktop/6_semestre/descomp/P1_final/registradorBit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file Projeto1_final.vhd
+    Info (12022): Found design unit 1: Projeto1_final-arquitetura File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 31
+    Info (12023): Found entity 1: Projeto1_final File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file muxGenerico4x2.vhd
+    Info (12022): Found design unit 1: muxGenerico4x2-comportamento File: /home/antonio/Desktop/6_semestre/descomp/P1_final/muxGenerico4x2.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico4x2 File: /home/antonio/Desktop/6_semestre/descomp/P1_final/muxGenerico4x2.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file muxGenerico2x1.vhd
+    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: /home/antonio/Desktop/6_semestre/descomp/P1_final/muxGenerico2x1.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico2x1 File: /home/antonio/Desktop/6_semestre/descomp/P1_final/muxGenerico2x1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file memoriaDados.vhd
+    Info (12022): Found design unit 1: memoriaDados-rtl File: /home/antonio/Desktop/6_semestre/descomp/P1_final/memoriaDados.vhd Line: 21
+    Info (12023): Found entity 1: memoriaDados File: /home/antonio/Desktop/6_semestre/descomp/P1_final/memoriaDados.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file logicaDesvio.vhd
+    Info (12022): Found design unit 1: logicaDesvio-comportamento File: /home/antonio/Desktop/6_semestre/descomp/P1_final/logicaDesvio.vhd Line: 13
+    Info (12023): Found entity 1: logicaDesvio File: /home/antonio/Desktop/6_semestre/descomp/P1_final/logicaDesvio.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file flagComparacao.vhd
+    Info (12022): Found design unit 1: flagComparacao-comportamento File: /home/antonio/Desktop/6_semestre/descomp/P1_final/flagComparacao.vhd Line: 15
+    Info (12023): Found entity 1: flagComparacao File: /home/antonio/Desktop/6_semestre/descomp/P1_final/flagComparacao.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file enderecoRetorno.vhd
+    Info (12022): Found design unit 1: enderecoRetorno-comportamento File: /home/antonio/Desktop/6_semestre/descomp/P1_final/enderecoRetorno.vhd Line: 15
+    Info (12023): Found entity 1: enderecoRetorno File: /home/antonio/Desktop/6_semestre/descomp/P1_final/enderecoRetorno.vhd Line: 4
+Info (12021): Found 3 design units, including 1 entities, in source file edgeDetector.vhd
+    Info (12022): Found design unit 1: edgeDetector-bordaSubida File: /home/antonio/Desktop/6_semestre/descomp/P1_final/edgeDetector.vhd Line: 10
+    Info (12022): Found design unit 2: edgeDetector-bordaDescida File: /home/antonio/Desktop/6_semestre/descomp/P1_final/edgeDetector.vhd Line: 23
+    Info (12023): Found entity 1: edgeDetector File: /home/antonio/Desktop/6_semestre/descomp/P1_final/edgeDetector.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file Decoder3x8.vhd
+    Info (12022): Found design unit 1: Decoder3x8-arch_name File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Decoder3x8.vhd Line: 18
+    Info (12023): Found entity 1: Decoder3x8 File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Decoder3x8.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file Decoder.vhd
+    Info (12022): Found design unit 1: Decoder-arch_name File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Decoder.vhd Line: 15
+    Info (12023): Found entity 1: Decoder File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Decoder.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file DebMemKey0.vhd
+    Info (12022): Found design unit 1: DebMemKey0-comportamento File: /home/antonio/Desktop/6_semestre/descomp/P1_final/DebMemKey0.vhd Line: 11
+    Info (12023): Found entity 1: DebMemKey0 File: /home/antonio/Desktop/6_semestre/descomp/P1_final/DebMemKey0.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file CPU.vhd
+    Info (12022): Found design unit 1: CPU-arquitetura File: /home/antonio/Desktop/6_semestre/descomp/P1_final/CPU.vhd Line: 31
+    Info (12023): Found entity 1: CPU File: /home/antonio/Desktop/6_semestre/descomp/P1_final/CPU.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file conversorHex7Seg.vhd
+    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: /home/antonio/Desktop/6_semestre/descomp/P1_final/conversorHex7Seg.vhd Line: 17
+    Info (12023): Found entity 1: conversorHex7Seg File: /home/antonio/Desktop/6_semestre/descomp/P1_final/conversorHex7Seg.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file bufferTreeState.vhd
+    Info (12022): Found design unit 1: bufferTreeState-arch_name File: /home/antonio/Desktop/6_semestre/descomp/P1_final/bufferTreeState.vhd Line: 18
+    Info (12023): Found entity 1: bufferTreeState File: /home/antonio/Desktop/6_semestre/descomp/P1_final/bufferTreeState.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file bufferThreeStateBit.vhd
+    Info (12022): Found design unit 1: bufferThreeStateBit-arch_name File: /home/antonio/Desktop/6_semestre/descomp/P1_final/bufferThreeStateBit.vhd Line: 18
+    Info (12023): Found entity 1: bufferThreeStateBit File: /home/antonio/Desktop/6_semestre/descomp/P1_final/bufferThreeStateBit.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file bancoRegistradores.vhd
+    Info (12022): Found design unit 1: bancoRegistradores-comportamento File: /home/antonio/Desktop/6_semestre/descomp/P1_final/bancoRegistradores.vhd Line: 23
+    Info (12023): Found entity 1: bancoRegistradores File: /home/antonio/Desktop/6_semestre/descomp/P1_final/bancoRegistradores.vhd Line: 5
+Info (12127): Elaborating entity "Projeto1_final" for the top level hierarchy
+Info (12129): Elaborating entity "edgeDetector" using architecture "A:bordasubida" for hierarchy "edgeDetector:detectorSub0" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 94
+Info (12128): Elaborating entity "CPU" for hierarchy "CPU:CPU" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 100
+Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "CPU:CPU|bancoRegistradores:Banco_Registradores" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/CPU.vhd Line: 60
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "CPU:CPU|muxGenerico2x1:MUX1" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/CPU.vhd Line: 70
+Info (12128): Elaborating entity "muxGenerico4x2" for hierarchy "CPU:CPU|muxGenerico4x2:MUX4x2_PC" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/CPU.vhd Line: 78
+Info (12128): Elaborating entity "Decoder" for hierarchy "CPU:CPU|Decoder:Decoder" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/CPU.vhd Line: 88
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "CPU:CPU|registradorGenerico:PC" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/CPU.vhd Line: 96
+Info (12128): Elaborating entity "somaConstante" for hierarchy "CPU:CPU|somaConstante:somaUm" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/CPU.vhd Line: 99
+Info (12128): Elaborating entity "ULASomaSub" for hierarchy "CPU:CPU|ULASomaSub:ULA1" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/CPU.vhd Line: 103
+Info (12128): Elaborating entity "flagComparacao" for hierarchy "CPU:CPU|flagComparacao:FLAG_IGUAL" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/CPU.vhd Line: 106
+Info (12128): Elaborating entity "enderecoRetorno" for hierarchy "CPU:CPU|enderecoRetorno:END_RET" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/CPU.vhd Line: 109
+Info (12128): Elaborating entity "logicaDesvio" for hierarchy "CPU:CPU|logicaDesvio:LOGICA_DESVIO" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/CPU.vhd Line: 112
+Info (12128): Elaborating entity "ROM" for hierarchy "ROM:ROM1" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 115
+Info (12128): Elaborating entity "memoriaDados" for hierarchy "memoriaDados:memoriaDados" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 121
+Info (12128): Elaborating entity "Decoder3x8" for hierarchy "Decoder3x8:DECODER_BLOCOS" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 124
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:REGLEDR" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 130
+Info (12128): Elaborating entity "registradorBit" for hierarchy "registradorBit:REGLEDR8" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 133
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:REG_HEX0" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 141
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:LED_HEX0" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 144
+Info (12128): Elaborating entity "bufferTreeState" for hierarchy "bufferTreeState:BUFFER_THREE_STATE_8BITS" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 213
+Info (12128): Elaborating entity "bufferThreeStateBit" for hierarchy "bufferThreeStateBit:BUFFER_THREE_STATE_BIT0" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 216
+Info (12128): Elaborating entity "DebMemKey0" for hierarchy "DebMemKey0:DEB_MEM_KEY0" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 237
+Info (276014): Found 2 instances of uninferred RAM logic
+    Info (276007): RAM logic "memoriaDados:memoriaDados|ram" is uninferred due to asynchronous read logic File: /home/antonio/Desktop/6_semestre/descomp/P1_final/memoriaDados.vhd Line: 27
+    Info (276004): RAM logic "CPU:CPU|bancoRegistradores:Banco_Registradores|registrador" is uninferred due to inappropriate RAM size File: /home/antonio/Desktop/6_semestre/descomp/P1_final/bancoRegistradores.vhd Line: 29
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13048): Converted tri-state node "Data_IN[7]" into a selector File: /home/antonio/Desktop/6_semestre/descomp/P1_final/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_IN[6]" into a selector File: /home/antonio/Desktop/6_semestre/descomp/P1_final/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_IN[5]" into a selector File: /home/antonio/Desktop/6_semestre/descomp/P1_final/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_IN[4]" into a selector File: /home/antonio/Desktop/6_semestre/descomp/P1_final/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_IN[3]" into a selector File: /home/antonio/Desktop/6_semestre/descomp/P1_final/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_IN[2]" into a selector File: /home/antonio/Desktop/6_semestre/descomp/P1_final/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_IN[1]" into a selector File: /home/antonio/Desktop/6_semestre/descomp/P1_final/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_IN[0]" into a selector File: /home/antonio/Desktop/6_semestre/descomp/P1_final/muxGenerico2x1.vhd Line: 10
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1186 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 16 input pins
+    Info (21059): Implemented 61 output pins
+    Info (21061): Implemented 1109 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 488 megabytes
+    Info: Processing ended: Mon Oct 11 19:59:52 2021
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:24
+
+
