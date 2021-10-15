@@ -84,6 +84,10 @@ architecture arquitetura of Projeto1_final is
 	
 	signal RESET_KEY0: std_logic;
 	signal RESET_KEY1: std_logic;
+	
+	signal saidaclk_rap: std_logic;
+	signal saidaclk_1seg: std_logic;
+	signal CLK_TEMPO: std_logic;
 
 begin
 
@@ -210,6 +214,7 @@ LED_HEX5 :  entity work.conversorHex7Seg
 					  
 -- ================================================= KEYS and SWITCHES Manager ====================================================
 
+
 BUFFER_THREE_STATE_8BITS: entity work.bufferTreeState   generic map (dataWidth => 8)
 		 port map (INPUT => SW(7 downto 0), ENABLE => AND_ENABLE_BUFFER_8BITS, OUTPUT => Data_IN);
 		 
@@ -233,12 +238,28 @@ BUFFER_THREE_STATE_BIT5: entity work.bufferThreeStateBit
 		 
 BUFFER_THREE_STATE_BIT6: entity work.bufferThreeStateBit
 		 port map (INPUT => FPGA_RESET_N, ENABLE => AND_ENABLE_BUFFER_BIT_FPGA_RESET, OUTPUT => Data_IN(0));
-		  
+
+baseTempo: entity work.divisorGenerico
+	  generic map (divisor => 25000000)   -- passando contador ate 25 milhoes
+	  port map (clk => CLK, saida_clk => saidaclk_1seg);
+	  
+baseTempo_Quick: entity work.divisorGenerico
+	  generic map (divisor => 10000)   -- passando contador ate 10k
+	  port map (clk => CLK, saida_clk => saidaclk_rap);
+
+MUX_Base_Tempo: entity work.muxGenerico2x1_Bit
+	  port map(
+		  entradaA_MUX => saidaclk_1seg,
+		  entradaB_MUX =>  saidaclk_rap,
+		  seletor_MUX => SW(9),
+		  saida_MUX => CLK_TEMPO
+	  );
+
 DEB_MEM_KEY0: work.DebMemKey0
 	 port map (
 		 DIN => '1', 
 		 DOUT => DebMemKey0_OUT,
-		 CLK => CLK_KEY0, 
+		 CLK => CLK_TEMPO, 
 		 RST => RESET_KEY0
 	 );
 	 
@@ -254,6 +275,10 @@ DEB_MEM_KEY1: work.DebMemKey0
 
 NOT_A5 <= not(Data_Address(5));
 A5 <= Data_Address(5);
+
+--HAB_LEITURA_TEMPO <= '1' when (rd and A5 and Saida_Decoder_Addr(5) and Saida_Decoder_Blocos(5)) else '0';
+--RST_LEITURA_TEMPO <= '1' when (Data_Address(0) and (not Data_Address(1)) and Data_Address(2) and Data_Address(3) and Data_Address(4) and Data_Address(5) and Data_Address(6) and Data_Address(7) and Data_Address(8)) else '0';
+
 
 ANDLEDR <= '1' when (Saida_Decoder_Addr(0) and Saida_Decoder_Blocos(4) and wr and NOT_A5) else '0';
 ANDLEDR8 <= '1' when (Saida_Decoder_Addr(1) and Saida_Decoder_Blocos(4) and wr and NOT_A5) else '0';

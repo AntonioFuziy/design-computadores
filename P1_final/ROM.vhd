@@ -127,15 +127,25 @@ architecture assincrona of ROM is
 -- Armazenando limite de contagem
 -- ========================================================================	
 	tmp(24) := STA & R0 & '0' & x"14"; -- Armazenando limite da unidade no MEM[20]
-	tmp(25) := STA & R0 & '0' & x"15"; -- Armazenando limite da dezena no MEM[21]
-	tmp(26) := STA & R0 & '0' & x"16"; -- Armazenando limite da centena no MEM[22]
-	tmp(27) := STA & R0 & '0' & x"17"; -- Armazenando limite da unidade de milhar no MEM[23]
-	tmp(28) := STA & R0 & '0' & x"18"; -- Armazenando limite da dezena de milhar no MEM[24]
-	tmp(29) := STA & R0 & '0' & x"19"; -- Armazenando limite da centena de milhar no MEM[25]
+--	tmp(25) := STA & R0 & '0' & x"15"; -- Armazenando limite da dezena no MEM[21]
+	tmp(25) := STA & R0 & '0' & x"16"; -- Armazenando limite da centena no MEM[22]
+--	tmp(27) := STA & R0 & '0' & x"17"; -- Armazenando limite da unidade de milhar no MEM[23]
+--	tmp(28) := STA & R0 & '0' & x"18"; -- Armazenando limite da dezena de milhar no MEM[24]
+--	tmp(29) := STA & R0 & '0' & x"19"; -- Armazenando limite da centena de milhar no MEM[25]
+	
+	tmp(26) := LDI & R0 & '0' & x"05"; -- Carregando 5 no Registrador 0
+	tmp(27) := STA & R0 & '0' & x"15"; -- Armazenando limite da unidade no MEM[20]
+	tmp(28) := STA & R0 & '0' & x"17"; -- Armazenando limite da unidade no MEM[20]
+	
+	tmp(29) := LDI & R0 & '0' & x"03"; -- Carregando 5 no Registrador 0
+	tmp(30) := STA & R0 & '0' & x"18"; -- Armazenando limite da unidade no MEM[20]
+	
+	tmp(31) := LDI & R0 & '0' & x"02"; -- Carregando 5 no Registrador 0
+	tmp(32) := STA & R0 & '0' & x"19"; -- Armazenando limite da unidade no MEM[20]
 	
 	--Carregando 10 no MEM[13]
-	tmp(30) := LDI & R0 & '0' & x"0A"; -- Carregando 10 no acumulador
-	tmp(31) := STA & R0 & '0' & x"0D"; -- Valor de comparacao armazenado no MEM[13]
+	tmp(33) := LDI & R0 & '0' & x"0A"; -- Carregando 10 no acumulador
+	tmp(34) := STA & R0 & '0' & x"0D"; -- Valor de comparacao armazenado no MEM[13]
 
 
 -- ========================================================================
@@ -145,135 +155,135 @@ architecture assincrona of ROM is
 	-- ========================================================================
 	-- Checando flag de inibir contagem
 	-- ========================================================================
-		tmp(32) := NOP & R0 & '0' & x"00"; -- Retorno ao loop principal
-		tmp(33) := LDA & R0 & '0' & x"06"; -- Olha pro valor da flag de inibir
-		tmp(34) := CEQ & R0 & '0' & x"0B"; -- Compara o valor da flag com 1
-		tmp(35) := JEQ & R0 & '0' & x"28"; -- Pula quando a flag esta zerada ignorando a KEY0
+		tmp(38) := NOP & R0 & '0' & x"00"; -- Retorno ao loop principal
+		tmp(39) := LDA & R0 & '0' & x"06"; -- Olha pro valor da flag de inibir
+		tmp(40) := CEQ & R0 & '0' & x"0B"; -- Compara o valor da flag com 1
+		tmp(41) := JEQ & R0 & '0' & x"2E"; -- Pula quando a flag esta zerada ignorando a KEY0
 
 	-- ========================================================================
 	--OBSERVANDO A KEY0
 	-- ========================================================================
 	
-		tmp(36) := LDA & R0 & '1' & x"60"; -- Observa o valor da KEY0
-		tmp(37) := CEQ & R0 & '0' & x"0A"; -- Verifica se a KEY0 foi ativada
-		tmp(38) := JEQ & R0 & '0' & x"28"; -- Caso a KEY0 for igual a 1, pula para o incremento
-		tmp(39) := JSR & R0 & '0' & x"36"; -- Caso a KEY0 for igual a 1, pula para o incremento
+		tmp(42) := LDA & R0 & '1' & x"60"; -- Observa o valor da KEY0
+		tmp(43) := CEQ & R0 & '0' & x"0A"; -- Verifica se a KEY0 foi ativada
+		tmp(44) := JEQ & R0 & '0' & x"2E"; -- Caso a KEY0 for igual a 1, pula para o incremento
+		tmp(45) := JSR & R0 & '0' & x"3A"; -- Caso a KEY0 for igual a 1, pula para o incremento
 	
 	-- ========================================================================
 	--OBSERVANDO A KEY1
 	-- ========================================================================
 	
-		tmp(40) := LDA & R0 & '1' & x"61"; -- Observa o valor da KEY1
-		tmp(41) := CEQ & R0 & '0' & x"0A"; -- Verifica se a KEY1 foi ativada		
-		tmp(42) := JEQ & R0 & '0' & x"2D"; -- Caso a KEY1 for igual a 1, pula para a definicao do limite
-		tmp(43) := JSR & R0 & '0' & x"BD"; -- Caso a KEY1 for igual a 1, pula para o limite
-		tmp(44) := NOP & R0 & '0' & x"00"; -- Pausa entre sub-rotinas
-		tmp(45) := JSR & R0 & '0' & x"A1"; -- Pula pra limite de contagem
+		tmp(46) := LDA & R0 & '1' & x"61"; -- Observa o valor da KEY1
+		tmp(47) := CEQ & R0 & '0' & x"0A"; -- Verifica se a KEY1 foi ativada		
+		tmp(48) := JEQ & R0 & '0' & x"33"; -- Caso a KEY1 for igual a 1, pula para a definicao do limite
+		tmp(49) := JSR & R0 & '0' & x"BD"; -- Caso a KEY1 for igual a 1, pula para o limite
+		tmp(50) := NOP & R0 & '0' & x"00"; -- Pausa entre sub-rotinas
+		tmp(51) := JSR & R0 & '0' & x"A1"; -- Pula pra limite de contagem
 	
 	-- ========================================================================
 	--OBSERVANDO A FPGA_RESET
 	-- ========================================================================
 	
-		tmp(46) := LDA & R0 & '1' & x"64"; -- Observa o valor do FPGA RESET
-		tmp(47) := CEQ & R0 & '0' & x"0B"; -- Compara o valor do FPGA RESET com 1		
-		tmp(48) := JEQ & R0 & '0' & x"32"; -- Caso a FPGA RESET for igual a 1, pula para a reset
-		tmp(49) := JSR & R0 & '0' & x"78"; -- Caso a FPGA RESET for igual a 1, pula para o resetar a placa
-		tmp(50) := JSR & R0 & '0' & x"8D"; -- Pula para atualizar os DISPLAYS
-		tmp(51) := JMP & R0 & '0' & x"20"; -- Volta para o loop principal
+		tmp(52) := LDA & R0 & '1' & x"64"; -- Observa o valor do FPGA RESET
+		tmp(53) := CEQ & R0 & '0' & x"0B"; -- Compara o valor do FPGA RESET com 1		
+		tmp(54) := JEQ & R0 & '0' & x"38"; -- Caso a FPGA RESET for igual a 1, pula para a reset
+		tmp(55) := JSR & R0 & '0' & x"78"; -- Caso a FPGA RESET for igual a 1, pula para o resetar a placa
+		tmp(56) := JSR & R0 & '0' & x"8D"; -- Pula para atualizar os DISPLAYS
+		tmp(57) := JMP & R0 & '0' & x"26"; -- Volta para o loop principal
 
 -- ========================================================================
 -- LOOP DE INCREMENTO (KEY0 SUB-ROTINA)
 -- ========================================================================	
-		tmp(54) := STA & R0 & '1' & x"FF"; -- Zerar KEY0
+		tmp(58) := STA & R0 & '1' & x"FF"; -- Zerar KEY0
 	
 	-- ========================================================================
 	-- Incremento da unidade
 	-- ========================================================================
-		tmp(55) := LDA & R0 & '0' & x"00"; -- Carrega MEM[0]
-		tmp(56) := SOMA & R0 & '0' & x"0B"; -- Soma 1 na unidade
-		tmp(57) := STA & R0 & '0' & x"00"; -- Armazena valor da soma no MEM[0]
-		tmp(58) := CEQ & R0 & '0' & x"0D"; -- Compara o valor de MEM[0] com 10
-		tmp(59) := JEQ & R0 & '0' & x"3D"; -- Pula pra checar a dezena
-		tmp(60) := RET & R0 & '0' & x"00"; -- Volta para o loop principal
+		tmp(59) := LDA & R0 & '0' & x"00"; -- Carrega MEM[0]
+		tmp(60) := SOMA & R0 & '0' & x"0B"; -- Soma 1 na unidade
+		tmp(61) := STA & R0 & '0' & x"00"; -- Armazena valor da soma no MEM[0]
+		tmp(62) := CEQ & R0 & '0' & x"0D"; -- Compara o valor de MEM[0] com 10
+		tmp(63) := JEQ & R0 & '0' & x"41"; -- Pula pra checar a dezena
+		tmp(64) := RET & R0 & '0' & x"00"; -- Volta para o loop principal
 	
 	
 	-- ========================================================================
 	-- Incremento da dezena
 	-- ========================================================================
-		tmp(61) := LDA & R0 & '0' & x"0A"; -- Carrega MEM[10] = 0
-		tmp(62) := STA & R0 & '0' & x"00"; -- Zera a unidade
+		tmp(65) := LDA & R0 & '0' & x"0A"; -- Carrega MEM[10] = 0
+		tmp(66) := STA & R0 & '0' & x"00"; -- Zera a unidade
 		
-		tmp(63) := LDA & R0 & '0' & x"01"; -- Carrega MEM[1]
-		tmp(64) := SOMA & R0 & '0' & x"0B"; -- Soma 1 na dezena
-		tmp(65) := STA & R0 & '0' & x"01"; -- Armazena valor da soma no MEM[1]
-		tmp(66) := CEQ & R0 & '0' & x"0D"; -- Compara o valor de MEM[1] com 10
-		tmp(67) := JEQ & R0 & '0' & x"45"; -- Pula pra checar a centena
-		tmp(68) := RET & R0 & '0' & x"00"; -- Volta para o loop principal
+		tmp(67) := LDA & R0 & '0' & x"01"; -- Carrega MEM[1]
+		tmp(68) := SOMA & R0 & '0' & x"0B"; -- Soma 1 na dezena
+		tmp(69) := STA & R0 & '0' & x"01"; -- Armazena valor da soma no MEM[1]
+		tmp(70) := CEQ & R0 & '0' & x"0D"; -- Compara o valor de MEM[1] com 10
+		tmp(71) := JEQ & R0 & '0' & x"49"; -- Pula pra checar a centena
+		tmp(72) := RET & R0 & '0' & x"00"; -- Volta para o loop principal
 	
 	
 	-- ========================================================================
 	-- Incremento da centena
 	-- ========================================================================
-		tmp(69) := LDA & R0 & '0' & x"0A"; -- Carrega MEM[10] = 0
-		tmp(70) := STA & R0 & '0' & x"00"; -- Zera a dezena
+		tmp(73) := LDA & R0 & '0' & x"0A"; -- Carrega MEM[10] = 0
+		tmp(74) := STA & R0 & '0' & x"00"; -- Zera a dezena
 		
-		tmp(71) := LDA & R0 & '0' & x"02"; -- Carrega MEM[2]
-		tmp(72) := SOMA & R0 & '0' & x"0B"; -- Soma 1 na centena
-		tmp(73) := STA & R0 & '0' & x"02"; -- Armazena valor da soma no MEM[2]
-		tmp(74) := CEQ & R0 & '0' & x"0D"; -- Compara o valor de MEM[2] com 10
-		tmp(75) := JEQ & R0 & '0' & x"4D"; -- Pula pra checar a unidade de milhar
-		tmp(76) := RET & R0 & '0' & x"00"; -- Volta para o loop principal
+		tmp(75) := LDA & R0 & '0' & x"02"; -- Carrega MEM[2]
+		tmp(76) := SOMA & R0 & '0' & x"0B"; -- Soma 1 na centena
+		tmp(77) := STA & R0 & '0' & x"02"; -- Armazena valor da soma no MEM[2]
+		tmp(78) := CEQ & R0 & '0' & x"0D"; -- Compara o valor de MEM[2] com 10
+		tmp(79) := JEQ & R0 & '0' & x"51"; -- Pula pra checar a unidade de milhar
+		tmp(80) := RET & R0 & '0' & x"00"; -- Volta para o loop principal
 	
 	
 	-- ========================================================================
 	-- Incremento da unidade de milhar
 	-- ========================================================================
-		tmp(77) := LDA & R0 & '0' & x"0A"; -- Carrega MEM[10] = 0
-		tmp(78) := STA & R0 & '0' & x"00"; -- Zera a centena
+		tmp(81) := LDA & R0 & '0' & x"0A"; -- Carrega MEM[10] = 0
+		tmp(82) := STA & R0 & '0' & x"00"; -- Zera a centena
 		
-		tmp(79) := LDA & R0 & '0' & x"03"; -- Carrega MEM[3]
-		tmp(80) := SOMA & R0 & '0' & x"0B"; -- Soma 1 na unidade de milhar
-		tmp(81) := STA & R0 & '0' & x"03"; -- Armazena valor da soma no MEM[3]
-		tmp(82) := CEQ & R0 & '0' & x"0D"; -- Compara o valor de MEM[3] com 10
-		tmp(83) := JEQ & R0 & '0' & x"55"; -- Pula pra checar dezena de milhar
-		tmp(84) := RET & R0 & '0' & x"00"; -- Volta para o loop principal
+		tmp(83) := LDA & R0 & '0' & x"03"; -- Carrega MEM[3]
+		tmp(84) := SOMA & R0 & '0' & x"0B"; -- Soma 1 na unidade de milhar
+		tmp(85) := STA & R0 & '0' & x"03"; -- Armazena valor da soma no MEM[3]
+		tmp(86) := CEQ & R0 & '0' & x"0D"; -- Compara o valor de MEM[3] com 10
+		tmp(87) := JEQ & R0 & '0' & x"59"; -- Pula pra checar dezena de milhar
+		tmp(88) := RET & R0 & '0' & x"00"; -- Volta para o loop principal
 	
 	
 	-- ========================================================================
 	-- Incremento da dezena de milhar
 	-- ========================================================================
-		tmp(85) := LDA & R0 & '0' & x"0A"; -- Carrega MEM[10] = 0
-		tmp(86) := STA & R0 & '0' & x"00"; -- Zera a unidade de milhar
+		tmp(89) := LDA & R0 & '0' & x"0A"; -- Carrega MEM[10] = 0
+		tmp(90) := STA & R0 & '0' & x"00"; -- Zera a unidade de milhar
 		
-		tmp(87) := LDA & R0 & '0' & x"04"; -- Carrega MEM[4]
-		tmp(88) := SOMA & R0 & '0' & x"0B"; -- Soma 1 na dezena de milhar
-		tmp(89) := STA & R0 & '0' & x"04"; -- Armazena valor da soma no MEM[4]
-		tmp(90) := CEQ & R0 & '0' & x"0D"; -- Compara o valor de MEM[4] com 10
-		tmp(91) := JEQ & R0 & '0' & x"5D"; -- Pula pra checar a centena de milhar
-		tmp(92) := RET & R0 & '0' & x"00"; -- Volta para o loop principal
+		tmp(91) := LDA & R0 & '0' & x"04"; -- Carrega MEM[4]
+		tmp(92) := SOMA & R0 & '0' & x"0B"; -- Soma 1 na dezena de milhar
+		tmp(93) := STA & R0 & '0' & x"04"; -- Armazena valor da soma no MEM[4]
+		tmp(94) := CEQ & R0 & '0' & x"0D"; -- Compara o valor de MEM[4] com 10
+		tmp(95) := JEQ & R0 & '0' & x"61"; -- Pula pra checar a centena de milhar
+		tmp(96) := RET & R0 & '0' & x"00"; -- Volta para o loop principal
 	
 	
 	-- ========================================================================
 	-- Incremento da centena de milhar
 	-- ========================================================================
-		tmp(93) := LDA & R0 & '0' & x"0A"; -- Carrega MEM[10] = 0
-		tmp(94) := STA & R0 & '0' & x"00"; -- Zera a dezena de milhar
+		tmp(97) := LDA & R0 & '0' & x"0A"; -- Carrega MEM[10] = 0
+		tmp(98) := STA & R0 & '0' & x"00"; -- Zera a dezena de milhar
 		
-		tmp(95) := LDA & R0 & '0' & x"05"; -- Carrega MEM[5]
-		tmp(96) := SOMA & R0 & '0' & x"0B"; -- Soma 1 na centena de milhar
-		tmp(97) := STA & R0 & '0' & x"05"; -- Armazena valor da soma no MEM[5]
-		tmp(98) := CEQ & R0 & '0' & x"0D"; -- Compara o valor de MEM[5] com 10
-		tmp(99) := JEQ & R0 & '0' & x"65"; -- Pula pra flag de inibir contagem
-		tmp(100) := RET & R0 & '0' & x"00"; -- Volta para o loop principal
+		tmp(99) := LDA & R0 & '0' & x"05"; -- Carrega MEM[5]
+		tmp(100) := SOMA & R0 & '0' & x"0B"; -- Soma 1 na centena de milhar
+		tmp(101) := STA & R0 & '0' & x"05"; -- Armazena valor da soma no MEM[5]
+		tmp(102) := CEQ & R0 & '0' & x"0D"; -- Compara o valor de MEM[5] com 10
+		tmp(103) := JEQ & R0 & '0' & x"69"; -- Pula pra flag de inibir contagem
+		tmp(104) := RET & R0 & '0' & x"00"; -- Volta para o loop principal
 	
 	-- ========================================================================
 	-- Ativacao dos LEDS
 	-- ========================================================================
-		tmp(101) := LDA & R0 & '0' & x"0B"; -- Carrega MEM[11] = 1
-		tmp(102) := STA & R0 & '0' & x"06"; -- Ativa Flag de inibir contagem
-		tmp(103) := STA & R0 & '1' & x"02"; -- Ativa LED9 de limite da contagem
+		tmp(105) := LDA & R0 & '0' & x"0B"; -- Carrega MEM[11] = 1
+		tmp(106) := STA & R0 & '0' & x"06"; -- Ativa Flag de inibir contagem
+		tmp(107) := STA & R0 & '1' & x"02"; -- Ativa LED9 de limite da contagem
 		
-		tmp(104) := RET & R0 & '0' & x"00"; -- Retorna para loop principal
+		tmp(108) := RET & R0 & '0' & x"00"; -- Retorna para loop principal
 
 
 -- ========================================================================

@@ -12,6 +12,8 @@ CLOCK_50 => registradorgenerico:REG_HEX2.CLK
 CLOCK_50 => registradorgenerico:REG_HEX3.CLK
 CLOCK_50 => registradorgenerico:REG_HEX4.CLK
 CLOCK_50 => registradorgenerico:REG_HEX5.CLK
+CLOCK_50 => divisorgenerico:baseTempo.clk
+CLOCK_50 => divisorgenerico:baseTempo_Quick.clk
 KEY[0] => cpu:CPU.KEY[0]
 KEY[0] => edgedetector:detectorSub0.entrada
 KEY[1] => cpu:CPU.KEY[1]
@@ -30,6 +32,7 @@ SW[6] => buffertreestate:BUFFER_THREE_STATE_8BITS.INPUT[6]
 SW[7] => buffertreestate:BUFFER_THREE_STATE_8BITS.INPUT[7]
 SW[8] => bufferthreestatebit:BUFFER_THREE_STATE_BIT0.INPUT
 SW[9] => bufferthreestatebit:BUFFER_THREE_STATE_BIT1.INPUT
+SW[9] => muxgenerico2x1_bit:MUX_Base_Tempo.seletor_MUX
 FPGA_RESET_N => cpu:CPU.RESET
 FPGA_RESET_N => bufferthreestatebit:BUFFER_THREE_STATE_BIT6.INPUT
 LEDR[0] <= registradorgenerico:REGLEDR.DOUT[0]
@@ -1513,6 +1516,62 @@ OUTPUT <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
 INPUT => OUTPUT.DATAIN
 ENABLE => OUTPUT.OE
 OUTPUT <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Projeto1_final|divisorGenerico:baseTempo
+clk => tick.CLK
+clk => contador[0].CLK
+clk => contador[1].CLK
+clk => contador[2].CLK
+clk => contador[3].CLK
+clk => contador[4].CLK
+clk => contador[5].CLK
+clk => contador[6].CLK
+clk => contador[7].CLK
+clk => contador[8].CLK
+clk => contador[9].CLK
+clk => contador[10].CLK
+clk => contador[11].CLK
+clk => contador[12].CLK
+clk => contador[13].CLK
+clk => contador[14].CLK
+clk => contador[15].CLK
+clk => contador[16].CLK
+clk => contador[17].CLK
+clk => contador[18].CLK
+clk => contador[19].CLK
+clk => contador[20].CLK
+clk => contador[21].CLK
+clk => contador[22].CLK
+clk => contador[23].CLK
+clk => contador[24].CLK
+saida_clk <= tick.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Projeto1_final|divisorGenerico:baseTempo_Quick
+clk => tick.CLK
+clk => contador[0].CLK
+clk => contador[1].CLK
+clk => contador[2].CLK
+clk => contador[3].CLK
+clk => contador[4].CLK
+clk => contador[5].CLK
+clk => contador[6].CLK
+clk => contador[7].CLK
+clk => contador[8].CLK
+clk => contador[9].CLK
+clk => contador[10].CLK
+clk => contador[11].CLK
+clk => contador[12].CLK
+clk => contador[13].CLK
+saida_clk <= tick.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Projeto1_final|muxGenerico2x1_Bit:MUX_Base_Tempo
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Projeto1_final|DebMemKey0:DEB_MEM_KEY0

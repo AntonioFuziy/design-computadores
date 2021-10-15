@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Projeto1_final
-Mon Oct 11 19:59:52 2021
+Fri Oct 15 20:22:29 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -45,32 +45,35 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
  37. Parameter Settings for User Entity Instance: bufferThreeStateBit:BUFFER_THREE_STATE_BIT4
  38. Parameter Settings for User Entity Instance: bufferThreeStateBit:BUFFER_THREE_STATE_BIT5
  39. Parameter Settings for User Entity Instance: bufferThreeStateBit:BUFFER_THREE_STATE_BIT6
- 40. Port Connectivity Checks: "DebMemKey0:DEB_MEM_KEY1"
- 41. Port Connectivity Checks: "DebMemKey0:DEB_MEM_KEY0"
- 42. Port Connectivity Checks: "conversorHex7Seg:LED_HEX5"
- 43. Port Connectivity Checks: "registradorGenerico:REG_HEX5"
- 44. Port Connectivity Checks: "conversorHex7Seg:LED_HEX4"
- 45. Port Connectivity Checks: "registradorGenerico:REG_HEX4"
- 46. Port Connectivity Checks: "conversorHex7Seg:LED_HEX3"
- 47. Port Connectivity Checks: "registradorGenerico:REG_HEX3"
- 48. Port Connectivity Checks: "conversorHex7Seg:LED_HEX2"
- 49. Port Connectivity Checks: "registradorGenerico:REG_HEX2"
- 50. Port Connectivity Checks: "conversorHex7Seg:LED_HEX1"
- 51. Port Connectivity Checks: "registradorGenerico:REG_HEX1"
- 52. Port Connectivity Checks: "conversorHex7Seg:LED_HEX0"
- 53. Port Connectivity Checks: "registradorGenerico:REG_HEX0"
- 54. Port Connectivity Checks: "registradorBit:REGLEDR9"
- 55. Port Connectivity Checks: "registradorBit:REGLEDR8"
- 56. Port Connectivity Checks: "registradorGenerico:REGLEDR"
- 57. Port Connectivity Checks: "Decoder3x8:DECODER_ENDERECOS"
- 58. Port Connectivity Checks: "Decoder3x8:DECODER_BLOCOS"
- 59. Port Connectivity Checks: "CPU:CPU|enderecoRetorno:END_RET"
- 60. Port Connectivity Checks: "CPU:CPU|flagComparacao:FLAG_IGUAL"
- 61. Port Connectivity Checks: "CPU:CPU|registradorGenerico:PC"
- 62. Port Connectivity Checks: "CPU:CPU|muxGenerico4x2:MUX4x2_PC"
- 63. Post-Synthesis Netlist Statistics for Top Partition
- 64. Elapsed Time Per Partition
- 65. Analysis & Synthesis Messages
+ 40. Parameter Settings for User Entity Instance: divisorGenerico:baseTempo
+ 41. Parameter Settings for User Entity Instance: divisorGenerico:baseTempo_Quick
+ 42. Port Connectivity Checks: "DebMemKey0:DEB_MEM_KEY1"
+ 43. Port Connectivity Checks: "DebMemKey0:DEB_MEM_KEY0"
+ 44. Port Connectivity Checks: "conversorHex7Seg:LED_HEX5"
+ 45. Port Connectivity Checks: "registradorGenerico:REG_HEX5"
+ 46. Port Connectivity Checks: "conversorHex7Seg:LED_HEX4"
+ 47. Port Connectivity Checks: "registradorGenerico:REG_HEX4"
+ 48. Port Connectivity Checks: "conversorHex7Seg:LED_HEX3"
+ 49. Port Connectivity Checks: "registradorGenerico:REG_HEX3"
+ 50. Port Connectivity Checks: "conversorHex7Seg:LED_HEX2"
+ 51. Port Connectivity Checks: "registradorGenerico:REG_HEX2"
+ 52. Port Connectivity Checks: "conversorHex7Seg:LED_HEX1"
+ 53. Port Connectivity Checks: "registradorGenerico:REG_HEX1"
+ 54. Port Connectivity Checks: "conversorHex7Seg:LED_HEX0"
+ 55. Port Connectivity Checks: "registradorGenerico:REG_HEX0"
+ 56. Port Connectivity Checks: "registradorBit:REGLEDR9"
+ 57. Port Connectivity Checks: "registradorBit:REGLEDR8"
+ 58. Port Connectivity Checks: "registradorGenerico:REGLEDR"
+ 59. Port Connectivity Checks: "Decoder3x8:DECODER_ENDERECOS"
+ 60. Port Connectivity Checks: "Decoder3x8:DECODER_BLOCOS"
+ 61. Port Connectivity Checks: "CPU:CPU|enderecoRetorno:END_RET"
+ 62. Port Connectivity Checks: "CPU:CPU|flagComparacao:FLAG_IGUAL"
+ 63. Port Connectivity Checks: "CPU:CPU|registradorGenerico:PC"
+ 64. Port Connectivity Checks: "CPU:CPU|muxGenerico4x2:MUX4x2_PC"
+ 65. Port Connectivity Checks: "edgeDetector:detectorSub0"
+ 66. Post-Synthesis Netlist Statistics for Top Partition
+ 67. Elapsed Time Per Partition
+ 68. Analysis & Synthesis Messages
 
 
 
@@ -97,13 +100,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Oct 11 19:59:52 2021       ;
+; Analysis & Synthesis Status     ; Successful - Fri Oct 15 20:22:29 2021       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Projeto1_final                              ;
 ; Top-level Entity Name           ; Projeto1_final                              ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 601                                         ;
+; Total registers                 ; 641                                         ;
 ; Total pins                      ; 77                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -251,6 +254,8 @@ https://fpgasoftware.intel.com/eula.
 ; bufferTreeState.vhd              ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/P1_final/bufferTreeState.vhd     ;         ;
 ; bufferThreeStateBit.vhd          ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/P1_final/bufferThreeStateBit.vhd ;         ;
 ; bancoRegistradores.vhd           ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/P1_final/bancoRegistradores.vhd  ;         ;
+; divisorGenerico.vhd              ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/P1_final/divisorGenerico.vhd     ;         ;
+; muxGenerico2x1_Bit.vhd           ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/P1_final/muxGenerico2x1_Bit.vhd  ;         ;
 +----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------+---------+
 
 
@@ -259,25 +264,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 494            ;
+; Estimate of Logic utilization (ALMs needed) ; 517            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 522            ;
-;     -- 7 input functions                    ; 4              ;
-;     -- 6 input functions                    ; 311            ;
-;     -- 5 input functions                    ; 43             ;
-;     -- 4 input functions                    ; 57             ;
-;     -- <=3 input functions                  ; 107            ;
+; Combinational ALUT usage for logic          ; 573            ;
+;     -- 7 input functions                    ; 0              ;
+;     -- 6 input functions                    ; 320            ;
+;     -- 5 input functions                    ; 45             ;
+;     -- 4 input functions                    ; 60             ;
+;     -- <=3 input functions                  ; 148            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 601            ;
+; Dedicated logic registers                   ; 641            ;
 ;                                             ;                ;
 ; I/O pins                                    ; 77             ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 599            ;
-; Total fan-out                               ; 4564           ;
-; Average fan-out                             ; 3.57           ;
+; Maximum fan-out                             ; 639            ;
+; Total fan-out                               ; 4812           ;
+; Average fan-out                             ; 3.52           ;
 +---------------------------------------------+----------------+
 
 
@@ -286,7 +291,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                     ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                            ; Entity Name         ; Library Name ;
 +------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------+---------------------+--------------+
-; |Projeto1_final                                ; 522 (22)            ; 601 (0)                   ; 0                 ; 0          ; 77   ; 0            ; |Projeto1_final                                                ; Projeto1_final      ; work         ;
+; |Projeto1_final                                ; 573 (23)            ; 641 (0)                   ; 0                 ; 0          ; 77   ; 0            ; |Projeto1_final                                                ; Projeto1_final      ; work         ;
 ;    |CPU:CPU|                                   ; 73 (0)              ; 51 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|CPU:CPU                                        ; CPU                 ; work         ;
 ;       |Decoder:Decoder|                        ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|CPU:CPU|Decoder:Decoder                        ; Decoder             ; work         ;
 ;       |ULASomaSub:ULA1|                        ; 26 (26)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|CPU:CPU|ULASomaSub:ULA1                        ; ULASomaSub          ; work         ;
@@ -299,17 +304,19 @@ https://fpgasoftware.intel.com/eula.
 ;       |somaConstante:somaUm|                   ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|CPU:CPU|somaConstante:somaUm                   ; somaConstante       ; work         ;
 ;    |DebMemKey0:DEB_MEM_KEY0|                   ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|DebMemKey0:DEB_MEM_KEY0                        ; DebMemKey0          ; work         ;
 ;    |DebMemKey0:DEB_MEM_KEY1|                   ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|DebMemKey0:DEB_MEM_KEY1                        ; DebMemKey0          ; work         ;
-;    |Decoder3x8:DECODER_BLOCOS|                 ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|Decoder3x8:DECODER_BLOCOS                      ; Decoder3x8          ; work         ;
-;    |ROM:ROM1|                                  ; 79 (79)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|ROM:ROM1                                       ; ROM                 ; work         ;
+;    |Decoder3x8:DECODER_BLOCOS|                 ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|Decoder3x8:DECODER_BLOCOS                      ; Decoder3x8          ; work         ;
+;    |ROM:ROM1|                                  ; 80 (80)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|ROM:ROM1                                       ; ROM                 ; work         ;
 ;    |conversorHex7Seg:LED_HEX0|                 ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|conversorHex7Seg:LED_HEX0                      ; conversorHex7Seg    ; work         ;
 ;    |conversorHex7Seg:LED_HEX1|                 ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|conversorHex7Seg:LED_HEX1                      ; conversorHex7Seg    ; work         ;
 ;    |conversorHex7Seg:LED_HEX2|                 ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|conversorHex7Seg:LED_HEX2                      ; conversorHex7Seg    ; work         ;
 ;    |conversorHex7Seg:LED_HEX3|                 ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|conversorHex7Seg:LED_HEX3                      ; conversorHex7Seg    ; work         ;
 ;    |conversorHex7Seg:LED_HEX4|                 ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|conversorHex7Seg:LED_HEX4                      ; conversorHex7Seg    ; work         ;
 ;    |conversorHex7Seg:LED_HEX5|                 ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|conversorHex7Seg:LED_HEX5                      ; conversorHex7Seg    ; work         ;
-;    |edgeDetector:detectorSub0|                 ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|edgeDetector:detectorSub0                      ; edgeDetector        ; work         ;
+;    |divisorGenerico:baseTempo_Quick|           ; 18 (18)             ; 15 (15)                   ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|divisorGenerico:baseTempo_Quick                ; divisorGenerico     ; work         ;
+;    |divisorGenerico:baseTempo|                 ; 33 (33)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|divisorGenerico:baseTempo                      ; divisorGenerico     ; work         ;
 ;    |edgeDetector:detectorSub1|                 ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|edgeDetector:detectorSub1                      ; edgeDetector        ; work         ;
 ;    |memoriaDados:memoriaDados|                 ; 298 (298)           ; 512 (512)                 ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|memoriaDados:memoriaDados                      ; memoriaDados        ; work         ;
+;    |muxGenerico2x1_Bit:MUX_Base_Tempo|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|muxGenerico2x1_Bit:MUX_Base_Tempo              ; muxGenerico2x1_Bit  ; work         ;
 ;    |registradorBit:REGLEDR8|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|registradorBit:REGLEDR8                        ; registradorBit      ; work         ;
 ;    |registradorBit:REGLEDR9|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|registradorBit:REGLEDR9                        ; registradorBit      ; work         ;
 ;    |registradorGenerico:REGLEDR|               ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Projeto1_final|registradorGenerico:REGLEDR                    ; registradorGenerico ; work         ;
@@ -328,8 +335,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 601   ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 641   ;
+; Number of registers using Synchronous Clear  ; 39    ;
 ; Number of registers using Synchronous Load   ; 32    ;
 ; Number of registers using Asynchronous Clear ; 2     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -343,11 +350,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
-; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |Projeto1_final|CPU:CPU|registradorGenerico:PC|DOUT[0]           ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Projeto1_final|CPU:CPU|Decoder:Decoder|OUTPUT[4]                ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |Projeto1_final|CPU:CPU|registradorGenerico:PC|DOUT[8]           ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Projeto1_final|CPU:CPU|Decoder:Decoder|OUTPUT[3]                ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Projeto1_final|CPU:CPU|logicaDesvio:LOGICA_DESVIO|SelMUX_ROM[0] ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |Projeto1_final|CPU:CPU|muxGenerico2x1:MUX1|saida_MUX[5]         ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Projeto1_final|CPU:CPU|ULASomaSub:ULA1|saida[3]                 ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |Projeto1_final|CPU:CPU|muxGenerico2x1:MUX1|saida_MUX[1]         ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Projeto1_final|CPU:CPU|ULASomaSub:ULA1|saida[7]                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
 
 
@@ -667,6 +674,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divisorGenerico:baseTempo ;
++----------------+----------+--------------------------------------------+
+; Parameter Name ; Value    ; Type                                       ;
++----------------+----------+--------------------------------------------+
+; divisor        ; 25000000 ; Signed Integer                             ;
++----------------+----------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divisorGenerico:baseTempo_Quick ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; divisor        ; 10000 ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------+
 ; Port Connectivity Checks: "DebMemKey0:DEB_MEM_KEY1" ;
 +------+-------+----------+---------------------------+
@@ -888,35 +915,43 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------+-------+----------+----------------------------+
 
 
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "edgeDetector:detectorSub0"                                                           ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; saida ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 601                         ;
+; arriav_ff             ; 641                         ;
 ;     CLR               ; 2                           ;
 ;     ENA               ; 553                         ;
 ;     ENA SLD           ; 32                          ;
-;     plain             ; 14                          ;
-; arriav_lcell_comb     ; 522                         ;
-;     arith             ; 26                          ;
+;     SCLR              ; 39                          ;
+;     plain             ; 15                          ;
+; arriav_lcell_comb     ; 573                         ;
+;     arith             ; 65                          ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 9                           ;
+;         1 data inputs ; 48                          ;
 ;         2 data inputs ; 6                           ;
 ;         5 data inputs ; 10                          ;
-;     extend            ; 4                           ;
-;         7 data inputs ; 4                           ;
-;     normal            ; 492                         ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 75                          ;
+;     normal            ; 508                         ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 78                          ;
 ;         3 data inputs ; 14                          ;
-;         4 data inputs ; 57                          ;
-;         5 data inputs ; 33                          ;
-;         6 data inputs ; 311                         ;
+;         4 data inputs ; 60                          ;
+;         5 data inputs ; 35                          ;
+;         6 data inputs ; 320                         ;
 ; boundary_port         ; 77                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 10.30                       ;
-; Average LUT depth     ; 6.51                        ;
+; Average LUT depth     ; 6.20                        ;
 +-----------------------+-----------------------------+
 
 
@@ -935,7 +970,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Oct 11 19:59:41 2021
+    Info: Processing started: Fri Oct 15 20:22:18 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Projeto1_final -c Projeto1_final
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file somadorGenerico.vhd
@@ -1008,9 +1043,16 @@ Info (12021): Found 2 design units, including 1 entities, in source file bufferT
 Info (12021): Found 2 design units, including 1 entities, in source file bancoRegistradores.vhd
     Info (12022): Found design unit 1: bancoRegistradores-comportamento File: /home/antonio/Desktop/6_semestre/descomp/P1_final/bancoRegistradores.vhd Line: 23
     Info (12023): Found entity 1: bancoRegistradores File: /home/antonio/Desktop/6_semestre/descomp/P1_final/bancoRegistradores.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file divisorGenerico.vhd
+    Info (12022): Found design unit 1: divisorGenerico-divInteiro File: /home/antonio/Desktop/6_semestre/descomp/P1_final/divisorGenerico.vhd Line: 13
+    Info (12023): Found entity 1: divisorGenerico File: /home/antonio/Desktop/6_semestre/descomp/P1_final/divisorGenerico.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file muxGenerico2x1_Bit.vhd
+    Info (12022): Found design unit 1: muxGenerico2x1_Bit-comportamento File: /home/antonio/Desktop/6_semestre/descomp/P1_final/muxGenerico2x1_Bit.vhd Line: 12
+    Info (12023): Found entity 1: muxGenerico2x1_Bit File: /home/antonio/Desktop/6_semestre/descomp/P1_final/muxGenerico2x1_Bit.vhd Line: 4
 Info (12127): Elaborating entity "Projeto1_final" for the top level hierarchy
-Info (12129): Elaborating entity "edgeDetector" using architecture "A:bordasubida" for hierarchy "edgeDetector:detectorSub0" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 94
-Info (12128): Elaborating entity "CPU" for hierarchy "CPU:CPU" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 100
+Warning (10036): Verilog HDL or VHDL warning at Projeto1_final.vhd(79): object "CLK_KEY0" assigned a value but never read File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 79
+Info (12129): Elaborating entity "edgeDetector" using architecture "A:bordasubida" for hierarchy "edgeDetector:detectorSub0" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 98
+Info (12128): Elaborating entity "CPU" for hierarchy "CPU:CPU" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 104
 Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "CPU:CPU|bancoRegistradores:Banco_Registradores" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/CPU.vhd Line: 60
 Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "CPU:CPU|muxGenerico2x1:MUX1" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/CPU.vhd Line: 70
 Info (12128): Elaborating entity "muxGenerico4x2" for hierarchy "CPU:CPU|muxGenerico4x2:MUX4x2_PC" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/CPU.vhd Line: 78
@@ -1021,16 +1063,21 @@ Info (12128): Elaborating entity "ULASomaSub" for hierarchy "CPU:CPU|ULASomaSub:
 Info (12128): Elaborating entity "flagComparacao" for hierarchy "CPU:CPU|flagComparacao:FLAG_IGUAL" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/CPU.vhd Line: 106
 Info (12128): Elaborating entity "enderecoRetorno" for hierarchy "CPU:CPU|enderecoRetorno:END_RET" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/CPU.vhd Line: 109
 Info (12128): Elaborating entity "logicaDesvio" for hierarchy "CPU:CPU|logicaDesvio:LOGICA_DESVIO" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/CPU.vhd Line: 112
-Info (12128): Elaborating entity "ROM" for hierarchy "ROM:ROM1" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 115
-Info (12128): Elaborating entity "memoriaDados" for hierarchy "memoriaDados:memoriaDados" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 121
-Info (12128): Elaborating entity "Decoder3x8" for hierarchy "Decoder3x8:DECODER_BLOCOS" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 124
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:REGLEDR" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 130
-Info (12128): Elaborating entity "registradorBit" for hierarchy "registradorBit:REGLEDR8" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 133
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:REG_HEX0" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 141
-Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:LED_HEX0" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 144
-Info (12128): Elaborating entity "bufferTreeState" for hierarchy "bufferTreeState:BUFFER_THREE_STATE_8BITS" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 213
-Info (12128): Elaborating entity "bufferThreeStateBit" for hierarchy "bufferThreeStateBit:BUFFER_THREE_STATE_BIT0" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 216
-Info (12128): Elaborating entity "DebMemKey0" for hierarchy "DebMemKey0:DEB_MEM_KEY0" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 237
+Info (12128): Elaborating entity "ROM" for hierarchy "ROM:ROM1" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 119
+Info (12128): Elaborating entity "memoriaDados" for hierarchy "memoriaDados:memoriaDados" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 125
+Info (12128): Elaborating entity "Decoder3x8" for hierarchy "Decoder3x8:DECODER_BLOCOS" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 128
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:REGLEDR" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 134
+Info (12128): Elaborating entity "registradorBit" for hierarchy "registradorBit:REGLEDR8" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 137
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:REG_HEX0" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 145
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:LED_HEX0" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 148
+Info (12128): Elaborating entity "bufferTreeState" for hierarchy "bufferTreeState:BUFFER_THREE_STATE_8BITS" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 218
+Info (12128): Elaborating entity "bufferThreeStateBit" for hierarchy "bufferThreeStateBit:BUFFER_THREE_STATE_BIT0" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 221
+Info (12128): Elaborating entity "divisorGenerico" for hierarchy "divisorGenerico:baseTempo" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 242
+Info (12128): Elaborating entity "divisorGenerico" for hierarchy "divisorGenerico:baseTempo_Quick" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 246
+Info (12128): Elaborating entity "muxGenerico2x1_Bit" for hierarchy "muxGenerico2x1_Bit:MUX_Base_Tempo" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 250
+Info (12128): Elaborating entity "DebMemKey0" for hierarchy "DebMemKey0:DEB_MEM_KEY0" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 258
+Warning (19016): Clock multiplexers are found and protected
+    Warning (19017): Found clock multiplexer muxGenerico2x1_Bit:MUX_Base_Tempo|saida_MUX File: /home/antonio/Desktop/6_semestre/descomp/P1_final/muxGenerico2x1_Bit.vhd Line: 8
 Info (276014): Found 2 instances of uninferred RAM logic
     Info (276007): RAM logic "memoriaDados:memoriaDados|ram" is uninferred due to asynchronous read logic File: /home/antonio/Desktop/6_semestre/descomp/P1_final/memoriaDados.vhd Line: 27
     Info (276004): RAM logic "CPU:CPU|bancoRegistradores:Banco_Registradores|registrador" is uninferred due to inappropriate RAM size File: /home/antonio/Desktop/6_semestre/descomp/P1_final/bancoRegistradores.vhd Line: 29
@@ -1046,14 +1093,16 @@ Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1186 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[0]" File: /home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd Line: 16
+Info (21057): Implemented 1237 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 61 output pins
-    Info (21061): Implemented 1109 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 488 megabytes
-    Info: Processing ended: Mon Oct 11 19:59:52 2021
+    Info (21061): Implemented 1160 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
+    Info: Peak virtual memory: 487 megabytes
+    Info: Processing ended: Fri Oct 15 20:22:29 2021
     Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:24
+    Info: Total CPU time (on all processors): 00:00:25
 
 
