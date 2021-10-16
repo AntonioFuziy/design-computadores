@@ -1,0 +1,39 @@
+Quartus Prime Archive log --	/home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.qarlog
+
+Archive:	/home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.qar
+Date:		Sat Oct 16 13:41:55 2021
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+/home/antonio/Desktop/6_semestre/descomp/P1_final/CPU.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1_final/DebMemKey0.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1_final/Decoder.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1_final/Decoder3x8.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.qpf
+/home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.qsf
+/home/antonio/Desktop/6_semestre/descomp/P1_final/Projeto1_final.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1_final/ROM.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1_final/ULASomaSub.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1_final/bancoRegistradores.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1_final/bufferThreeStateBit.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1_final/bufferTreeState.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1_final/conversorHex7Seg.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1_final/divisorGenerico.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1_final/edgeDetector.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1_final/enderecoRetorno.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1_final/flagComparacao.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1_final/logicaDesvio.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1_final/memoriaDados.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1_final/muxGenerico2x1.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1_final/muxGenerico2x1_Bit.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1_final/muxGenerico4x2.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1_final/registradorBit.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1_final/registradorGenerico.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1_final/registradorHEX.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1_final/somaConstante.vhd
+/home/antonio/Desktop/6_semestre/descomp/P1_final/somadorGenerico.vhd
+/home/antonio/intelFPGA_lite/20.1/quartus/linux64/assignment_defaults.qdf
+	======= Total: 28 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
