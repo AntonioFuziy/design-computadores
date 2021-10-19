@@ -19,15 +19,17 @@ architecture assincrona OF ROM IS
   function initMemory
         return blocoMemoria is variable tmp : blocoMemoria := (others => (others => '0'));
   begin
+		  -- OPCODE Rs    Rt    Rd    shamt funct
+		  -- 000000 01001 01000 01010 00000 100000
         -- Inicializa os endereços:
-        tmp(0) := x"AA";
-        tmp(1) := x"42";
-        tmp(2) := x"43";
-        tmp(3) := x"44";
-        tmp(4) := x"45";
-        tmp(5) := x"46";
-        tmp(6) := x"47";
-        tmp(7) := x"55";
+        tmp(0) := "000000" & "01001" & "01000" & "01010" & "00000" & "100000";
+        tmp(1) := 32x"00";
+        tmp(2) := 32x"00";
+        tmp(3) := 32x"00";
+        tmp(4) := 32x"00";
+        tmp(5) := 32x"00";
+        tmp(6) := 32x"00";
+        tmp(7) := 32x"00";
         return tmp;
     end initMemory;
 
