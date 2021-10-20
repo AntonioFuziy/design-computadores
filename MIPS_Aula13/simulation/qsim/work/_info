@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 d/home/antonio/Desktop/6_semestre/descomp/MIPS_Aula13/simulation/qsim
 Emips_aula13
-Z1 w1634674604
+Z1 w1634758462
 Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ^K2eeK[IVbX]]MLcdOEI91
 Z3 DPx8 cyclonev 19 cyclonev_components 0 22 GFL[QAd@dAZF:`jjOGn9>2
 Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3dzZ?YU_4FC5UU0cTXRET1
@@ -20,7 +20,7 @@ Z7 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
 Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z9 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 Z10 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
-!i122 18
+!i122 36
 R0
 Z11 8MIPS_Aula13.vho
 Z12 FMIPS_Aula13.vho
@@ -30,9 +30,9 @@ VhFTEAWz=MIc6l?:Y6_RZ51
 !s100 l^_l8SeOK`hgYFoReOT`d0
 Z13 OV;C;2020.1;71
 32
-Z14 !s110 1634674605
+Z14 !s110 1634758463
 !i10b 1
-Z15 !s108 1634674605.000000
+Z15 !s108 1634758463.000000
 Z16 !s90 -work|work|MIPS_Aula13.vho|
 Z17 !s107 MIPS_Aula13.vho|
 !i113 1
@@ -49,11 +49,11 @@ R8
 R9
 R10
 DEx4 work 11 mips_aula13 0 22 hFTEAWz=MIc6l?:Y6_RZ51
-!i122 18
+!i122 36
 l245
-L50 2344
-V=]FiCmYhML[YSA?3IOKRE3
-!s100 2[HL]GXB1mzDO;mzGZ1m:3
+L50 2343
+VM_hk:4@8b5:[:ee9kc`dY0
+!s100 W8Nmad[lgiff<R6i6k0hg1
 R13
 32
 R14
@@ -65,10 +65,10 @@ R17
 R18
 R19
 Emips_aula13_vhd_vec_tst
-Z20 w1634674603
+Z20 w1634758461
 R8
 R9
-!i122 19
+!i122 37
 R0
 Z21 8Waveform.vwf.vht
 Z22 FWaveform.vwf.vht
@@ -90,7 +90,7 @@ Amips_aula13_arch
 R8
 R9
 Z25 DEx4 work 23 mips_aula13_vhd_vec_tst 0 22 @ink41UDa2aXZ3<96ElPM0
-!i122 19
+!i122 37
 l53
 Z26 L34 65
 Z27 VI[:?IKdEmYYEGFKYCSF=J0

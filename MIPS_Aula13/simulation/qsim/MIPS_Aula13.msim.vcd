@@ -3,7 +3,7 @@ $comment
 		vcd file MIPS_Aula13.msim.vcd -direction
 $end
 $date
-	Tue Oct 19 17:16:45 2021
+	Wed Oct 20 16:34:23 2021
 $end
 $version
 	ModelSim Version 2020.1
@@ -321,15 +321,15 @@ $var wire 1 5# \Valor_Operacao[30]~output_o\ $end
 $var wire 1 6# \Valor_Operacao[31]~output_o\ $end
 $var wire 1 7# \CLOCK_50~input_o\ $end
 $var wire 1 8# \PC|DOUT[2]~0_combout\ $end
-$var wire 1 9# \somador|Add0~17_sumout\ $end
-$var wire 1 :# \somador|Add0~18\ $end
-$var wire 1 ;# \somador|Add0~13_sumout\ $end
-$var wire 1 <# \somador|Add0~14\ $end
-$var wire 1 =# \somador|Add0~9_sumout\ $end
-$var wire 1 ># \somador|Add0~10\ $end
-$var wire 1 ?# \somador|Add0~5_sumout\ $end
-$var wire 1 @# \somador|Add0~6\ $end
-$var wire 1 A# \somador|Add0~1_sumout\ $end
+$var wire 1 9# \somadorConstante|Add0~17_sumout\ $end
+$var wire 1 :# \somadorConstante|Add0~18\ $end
+$var wire 1 ;# \somadorConstante|Add0~13_sumout\ $end
+$var wire 1 <# \somadorConstante|Add0~14\ $end
+$var wire 1 =# \somadorConstante|Add0~9_sumout\ $end
+$var wire 1 ># \somadorConstante|Add0~10\ $end
+$var wire 1 ?# \somadorConstante|Add0~5_sumout\ $end
+$var wire 1 @# \somadorConstante|Add0~6\ $end
+$var wire 1 A# \somadorConstante|Add0~1_sumout\ $end
 $var wire 1 B# \ROM1|memROM~0_combout\ $end
 $var wire 1 C# \Operacao_ULA~input_o\ $end
 $var wire 1 D# \ULA1|Add0~130_cout\ $end
@@ -429,13 +429,13 @@ $var wire 1 C$ \PC|DOUT\ [2] $end
 $var wire 1 D$ \PC|DOUT\ [1] $end
 $var wire 1 E$ \PC|DOUT\ [0] $end
 $var wire 1 F$ \ALT_INV_Operacao_ULA~input_o\ $end
-$var wire 1 G$ \ROM1|ALT_INV_memROM~0_combout\ $end
-$var wire 1 H$ \PC|ALT_INV_DOUT\ [7] $end
-$var wire 1 I$ \PC|ALT_INV_DOUT\ [6] $end
-$var wire 1 J$ \PC|ALT_INV_DOUT\ [5] $end
-$var wire 1 K$ \PC|ALT_INV_DOUT\ [4] $end
-$var wire 1 L$ \PC|ALT_INV_DOUT\ [3] $end
-$var wire 1 M$ \PC|ALT_INV_DOUT\ [2] $end
+$var wire 1 G$ \PC|ALT_INV_DOUT\ [7] $end
+$var wire 1 H$ \PC|ALT_INV_DOUT\ [6] $end
+$var wire 1 I$ \PC|ALT_INV_DOUT\ [5] $end
+$var wire 1 J$ \PC|ALT_INV_DOUT\ [4] $end
+$var wire 1 K$ \PC|ALT_INV_DOUT\ [3] $end
+$var wire 1 L$ \PC|ALT_INV_DOUT\ [2] $end
+$var wire 1 M$ \ROM1|ALT_INV_memROM~0_combout\ $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
@@ -631,7 +631,7 @@ x(!
 1$$
 0%$
 1F$
-0G$
+0M$
 02!
 03!
 04!
@@ -760,12 +760,12 @@ x=$
 0C$
 xD$
 xE$
+1G$
 1H$
 1I$
 1J$
 1K$
 1L$
-1M$
 0#
 0$
 0%
@@ -936,10 +936,9 @@ $end
 1#$
 0$$
 1%$
-0M$
+0L$
 08#
 19#
-0B#
 0%$
 0#$
 0!$
@@ -971,7 +970,6 @@ $end
 0L#
 1E#
 0F#
-1G$
 1G#
 0H#
 0M#
@@ -1007,9 +1005,6 @@ $end
 1w"
 0v"
 0u"
-0E#
-0G#
-0K#
 0I#
 1r!
 1s!
@@ -1072,9 +1067,6 @@ $end
 04#
 05#
 06#
-05"
-06"
-08"
 0$!
 0#!
 1"!
@@ -1136,9 +1128,6 @@ $end
 0t!
 0s!
 0r!
-0Q!
-0P!
-0N!
 0y"
 1v"
 1$!
@@ -1170,24 +1159,12 @@ $end
 0e
 0d
 0c
-0B
-0A
-0?
-0x"
-0v"
-0u"
 0/"
 12"
 0w"
-00"
-02"
-03"
 1#!
 0~
 01"
-0$!
-0#!
-0!!
 0"!
 #20000
 0!
@@ -1199,9 +1176,32 @@ $end
 17#
 0C$
 1B$
-0L$
-1M$
+0K$
+1L$
 18#
+0B#
+1M$
+0E#
+0G#
+0K#
+05"
+06"
+08"
+0Q!
+0P!
+0N!
+0B
+0A
+0?
+0x"
+0v"
+0u"
+00"
+02"
+03"
+0$!
+0#!
+0!!
 #40000
 0!
 0/!
@@ -1211,7 +1211,7 @@ $end
 1/!
 17#
 1C$
-0M$
+0L$
 08#
 09#
 1:#
@@ -1227,9 +1227,9 @@ $end
 0C$
 0B$
 1A$
-0K$
+0J$
+1K$
 1L$
-1M$
 18#
 0:#
 0;#
@@ -1250,7 +1250,7 @@ $end
 04"
 17#
 1C$
-0M$
+0L$
 08#
 19#
 #100000
@@ -1263,8 +1263,8 @@ $end
 17#
 0C$
 1B$
-0L$
-1M$
+0K$
+1L$
 18#
 #120000
 0!
@@ -1312,7 +1312,7 @@ $end
 1!$
 1#$
 1%$
-0M$
+0L$
 08#
 09#
 1:#
@@ -1586,10 +1586,10 @@ $end
 0B$
 0A$
 1@$
-0J$
+0I$
+1J$
 1K$
 1L$
-1M$
 18#
 0:#
 1;#
@@ -1610,7 +1610,7 @@ $end
 1/!
 17#
 1C$
-0M$
+0L$
 08#
 19#
 #180000
@@ -1623,8 +1623,8 @@ $end
 17#
 0C$
 1B$
-0L$
-1M$
+0K$
+1L$
 18#
 #200000
 0!
@@ -1635,7 +1635,7 @@ $end
 1/!
 17#
 1C$
-0M$
+0L$
 08#
 09#
 1:#
@@ -1651,9 +1651,9 @@ $end
 0C$
 0B$
 1A$
-0K$
+0J$
+1K$
 1L$
-1M$
 18#
 0:#
 0;#
@@ -1675,7 +1675,7 @@ $end
 1/!
 17#
 1C$
-0M$
+0L$
 08#
 19#
 #260000
@@ -1688,8 +1688,8 @@ $end
 17#
 0C$
 1B$
-0L$
-1M$
+0K$
+1L$
 18#
 #280000
 0!
@@ -1700,7 +1700,7 @@ $end
 1/!
 17#
 1C$
-0M$
+0L$
 08#
 09#
 1:#
@@ -1722,11 +1722,11 @@ $end
 0A$
 0@$
 1?$
-0I$
+0H$
+1I$
 1J$
 1K$
 1L$
-1M$
 18#
 0:#
 1;#
@@ -1750,7 +1750,7 @@ $end
 1/!
 17#
 1C$
-0M$
+0L$
 08#
 19#
 #340000
@@ -1763,8 +1763,8 @@ $end
 17#
 0C$
 1B$
-0L$
-1M$
+0K$
+1L$
 18#
 #360000
 0!
@@ -1775,7 +1775,7 @@ $end
 1/!
 17#
 1C$
-0M$
+0L$
 08#
 09#
 1:#
@@ -1791,9 +1791,9 @@ $end
 0C$
 0B$
 1A$
-0K$
+0J$
+1K$
 1L$
-1M$
 18#
 0:#
 0;#
@@ -1811,7 +1811,7 @@ $end
 1/!
 17#
 1C$
-0M$
+0L$
 08#
 19#
 #420000
@@ -1824,8 +1824,8 @@ $end
 17#
 0C$
 1B$
-0L$
-1M$
+0K$
+1L$
 18#
 #440000
 0!
@@ -1836,7 +1836,7 @@ $end
 1/!
 17#
 1C$
-0M$
+0L$
 08#
 09#
 1:#
@@ -1855,10 +1855,10 @@ $end
 0B$
 0A$
 1@$
-0J$
+0I$
+1J$
 1K$
 1L$
-1M$
 18#
 0:#
 1;#
@@ -1883,7 +1883,7 @@ $end
 1/!
 17#
 1C$
-0M$
+0L$
 08#
 19#
 #500000
@@ -1896,8 +1896,8 @@ $end
 17#
 0C$
 1B$
-0L$
-1M$
+0K$
+1L$
 18#
 #520000
 0!
@@ -1908,7 +1908,7 @@ $end
 1/!
 17#
 1C$
-0M$
+0L$
 08#
 09#
 1:#
@@ -1924,9 +1924,9 @@ $end
 0C$
 0B$
 1A$
-0K$
+0J$
+1K$
 1L$
-1M$
 18#
 0:#
 0;#
@@ -1952,7 +1952,7 @@ $end
 1/!
 17#
 1C$
-0M$
+0L$
 08#
 19#
 #580000
@@ -1965,8 +1965,8 @@ $end
 17#
 0C$
 1B$
-0L$
-1M$
+0K$
+1L$
 18#
 #600000
 0!
@@ -1977,7 +1977,7 @@ $end
 1/!
 17#
 1C$
-0M$
+0L$
 08#
 09#
 1:#
@@ -2002,12 +2002,12 @@ $end
 0@$
 0?$
 1>$
-0H$
+0G$
+1H$
 1I$
 1J$
 1K$
 1L$
-1M$
 18#
 0:#
 1;#
@@ -2030,7 +2030,7 @@ $end
 1/!
 17#
 1C$
-0M$
+0L$
 08#
 19#
 #660000
@@ -2043,8 +2043,8 @@ $end
 17#
 0C$
 1B$
-0L$
-1M$
+0K$
+1L$
 18#
 #680000
 0!
@@ -2055,7 +2055,7 @@ $end
 1/!
 17#
 1C$
-0M$
+0L$
 08#
 09#
 1:#
@@ -2071,9 +2071,9 @@ $end
 0C$
 0B$
 1A$
-0K$
+0J$
+1K$
 1L$
-1M$
 18#
 0:#
 0;#
@@ -2091,7 +2091,7 @@ $end
 1/!
 17#
 1C$
-0M$
+0L$
 08#
 19#
 #740000
@@ -2104,8 +2104,8 @@ $end
 17#
 0C$
 1B$
-0L$
-1M$
+0K$
+1L$
 18#
 #760000
 0!
@@ -2116,7 +2116,7 @@ $end
 1/!
 17#
 1C$
-0M$
+0L$
 08#
 09#
 1:#
@@ -2135,10 +2135,10 @@ $end
 0B$
 0A$
 1@$
-0J$
+0I$
+1J$
 1K$
 1L$
-1M$
 18#
 0:#
 1;#
@@ -2159,7 +2159,7 @@ $end
 1/!
 17#
 1C$
-0M$
+0L$
 08#
 19#
 #820000
@@ -2172,8 +2172,8 @@ $end
 17#
 0C$
 1B$
-0L$
-1M$
+0K$
+1L$
 18#
 #840000
 0!
@@ -2184,7 +2184,7 @@ $end
 1/!
 17#
 1C$
-0M$
+0L$
 08#
 09#
 1:#
@@ -2200,9 +2200,9 @@ $end
 0C$
 0B$
 1A$
-0K$
+0J$
+1K$
 1L$
-1M$
 18#
 0:#
 0;#
@@ -2224,7 +2224,7 @@ $end
 1/!
 17#
 1C$
-0M$
+0L$
 08#
 19#
 #900000
@@ -2237,8 +2237,8 @@ $end
 17#
 0C$
 1B$
-0L$
-1M$
+0K$
+1L$
 18#
 #920000
 0!
@@ -2249,7 +2249,7 @@ $end
 1/!
 17#
 1C$
-0M$
+0L$
 08#
 09#
 1:#
@@ -2271,11 +2271,11 @@ $end
 0A$
 0@$
 1?$
-0I$
+0H$
+1I$
 1J$
 1K$
 1L$
-1M$
 18#
 0:#
 1;#
@@ -2299,7 +2299,7 @@ $end
 1/!
 17#
 1C$
-0M$
+0L$
 08#
 19#
 #980000
@@ -2312,7 +2312,7 @@ $end
 17#
 0C$
 1B$
-0L$
-1M$
+0K$
+1L$
 18#
 #1000000

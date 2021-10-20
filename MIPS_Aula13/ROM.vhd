@@ -21,9 +21,9 @@ architecture assincrona OF ROM IS
   begin
 		  -- OPCODE Rs    Rt    Rd    shamt funct
 		  -- 000000 01001 01000 01010 00000 100000
-        -- Inicializa os endereços:
+        -- 0      9     8     10    0     32
         tmp(0) := "000000" & "01001" & "01000" & "01010" & "00000" & "100000";
-        tmp(1) := 32x"00";
+        tmp(1) := "000000" & "01001" & "01000" & "01010" & "00000" & "100000";
         tmp(2) := 32x"00";
         tmp(3) := 32x"00";
         tmp(4) := 32x"00";
@@ -35,7 +35,6 @@ architecture assincrona OF ROM IS
 
     signal memROM : blocoMemoria := initMemory;
 
--- Utiliza uma quantidade menor de endereços locais:
    signal EnderecoLocal : std_logic_vector(memoryAddrWidth-1 downto 0);
 
 begin

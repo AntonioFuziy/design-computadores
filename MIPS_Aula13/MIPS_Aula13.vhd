@@ -29,7 +29,6 @@ architecture arquitetura of MIPS_Aula13 is
 	signal saida_ULA: std_logic_vector(larguraDados-1 downto 0);
 	
 	signal instruction: std_logic_vector(larguraDados-1 downto 0);
-	constant instruction_REG_A : std_logic_vector(larguraDados-1 downto 0) := "00000000000000000000000000000100";
 begin
 
 CLK <= CLOCK_50;
@@ -37,8 +36,8 @@ CLK <= CLOCK_50;
 PC : entity work.registradorGenerico   generic map (larguraDados => larguraDados)
           port map (DIN => somador_PC, DOUT => PC_ROM, ENABLE => '1', CLK => CLK, RST => '0');
 			 
-somador :  entity work.somadorGenerico  generic map (larguraDados => larguraDados)
-        port map( entradaA => instruction_REG_A, entradaB => PC_ROM, saida => somador_PC);
+somadorConstante :  entity work.somaConstante  generic map (larguraDados => larguraDados, constante => 4)
+        port map( entrada => PC_ROM, saida => somador_PC);
 
 ULA1 : entity work.ULASomaSub  generic map(larguraDados => larguraDados)
           port map (entradaA => bancoReg_ULA_A, entradaB => bancoReg_ULA_B, saida => Saida_ULA, seletor => Operacao_ULA);		
