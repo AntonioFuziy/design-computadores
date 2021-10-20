@@ -77,7 +77,7 @@ architecture assincrona of ROM is
 -- ========================================================================
 -- Escrevendo 0 nos displays
 -- ========================================================================
-	tmp(0) := LDI & R2 & '0' & x"00"; -- Carregando 0 no R0
+	tmp(0) := LDI & R2 & '0' & x"00"; -- Carregando 0 no R2
 	tmp(1) := STA & R2 & '1' & x"20"; -- DISPLAY 0 MEM[288]
 	tmp(2) := STA & R2 & '1' & x"21"; -- DISPLAY 1 MEM[289]
 	tmp(3) := STA & R2 & '1' & x"22"; -- DISPLAY 2 MEM[290]
@@ -278,7 +278,7 @@ architecture assincrona of ROM is
 		tmp(109) := RET & R0 & '0' & x"00"; -- Volta para o loop principal
 	
 	-- ========================================================================
-	-- Ativacao dos LEDS
+	-- Zerando displays quando 24 horas
 	-- ========================================================================
 		tmp(110) := JMP & R0 & '0' & x"82"; -- Zerar horario quando bater 24 horas
 		tmp(111) := RET & R0 & '0' & x"00"; -- Retorna para loop principal
@@ -354,13 +354,13 @@ architecture assincrona of ROM is
 	-- ========================================================================
 		tmp(189) := STA & R0 & '1' & x"FE"; -- Zera a KEY1
 		tmp(190) := LDI & R3 & '0' & x"01"; -- Carrega 1 no imediato de R3
-		tmp(191) := STA & R3 & '1' & x"00"; -- Ativa o LED0 atualizando algarismo da unidade
+		tmp(191) := STA & R3 & '1' & x"00"; -- Ativa o LED0 atualizando algarismo da unidade de segundo
 		
 		tmp(192) := LDA & R0 & '1' & x"61"; -- Verifica a KEY1
 		tmp(193) := CEQ & R0 & '0' & x"0A"; -- Compara o valor da KEY1 com 0
 		tmp(194) := LDA & R1 & '1' & x"40"; -- Pega o valor das SW(7 downto 0)
-		tmp(195) := JEQ & R0 & '0' & x"BE"; -- Espera o click da KEY1 para pular para dezena
-		tmp(196) := STA & R1 & '0' & x"00"; -- Armazena novo limite para unidade
+		tmp(195) := JEQ & R0 & '0' & x"BE"; -- Espera o click da KEY1 para pular para unidade de segundo
+		tmp(196) := STA & R1 & '0' & x"00"; -- Armazena novo horario para unidade de segundo
 	
 	
 	-- ========================================================================	
@@ -368,13 +368,13 @@ architecture assincrona of ROM is
 	-- ========================================================================
 		tmp(197) := STA & R0 & '1' & x"FE"; -- Zera a KEY1
 		tmp(198) := LDI & R3 & '0' & x"03"; -- Carrega 3 no imediato de R3
-		tmp(199) := STA & R3 & '1' & x"00"; -- Ativa o LED 1 e 0 atualizando algarismo da dezena
+		tmp(199) := STA & R3 & '1' & x"00"; -- Ativa o LED 1 e 0 atualizando algarismo dezena de segundo
 		
 		tmp(200) := LDA & R0 & '1' & x"61"; -- Verifica a KEY1
 		tmp(201) := CEQ & R0 & '0' & x"0A"; -- Compara o valor da KEY1 com 0
 		tmp(202) := LDA & R1 & '1' & x"40"; -- Pega o valor das SW(7 downto 0)
-		tmp(203) := JEQ & R0 & '0' & x"C6"; -- Espera o click da KEY1 para pular para centena
-		tmp(204) := STA & R1 & '0' & x"01"; -- Armazena novo limite para dezena
+		tmp(203) := JEQ & R0 & '0' & x"C6"; -- Espera o click da KEY1 para pular para dezena de segundo
+		tmp(204) := STA & R1 & '0' & x"01"; -- Armazena novo horario para dezena de segundo
 
 	
 	-- ========================================================================	
@@ -382,13 +382,13 @@ architecture assincrona of ROM is
 	-- ========================================================================
 		tmp(205) := STA & R0 & '1' & x"FE"; -- Zera a KEY1
 		tmp(206) := LDI & R3 & '0' & x"07"; -- Carrega 7 no imediato de R3
-		tmp(207) := STA & R3 & '1' & x"00"; -- Ativa o LED 2, 1 e 0 atualizando algarismo da centena
+		tmp(207) := STA & R3 & '1' & x"00"; -- Ativa o LED 2, 1 e 0 atualizando unidade de minuto
 		
 		tmp(208) := LDA & R0 & '1' & x"61"; -- Verifica a KEY1
 		tmp(209) := CEQ & R0 & '0' & x"0A"; -- Compara o valor da KEY1 com 0
 		tmp(210) := LDA & R1 & '1' & x"40"; -- Pega o valor das SW(7 downto 0)
-		tmp(211) := JEQ & R0 & '0' & x"CE"; -- Espera o click da KEY1 para pular para a unidade de milhar
-		tmp(212) := STA & R1 & '0' & x"02"; -- Armazena novo limite para centena
+		tmp(211) := JEQ & R0 & '0' & x"CE"; -- Espera o click da KEY1 para pular para a unidade de minuto
+		tmp(212) := STA & R1 & '0' & x"02"; -- Armazena novo horario para centena
 	
 	
 	-- ========================================================================	
@@ -396,13 +396,13 @@ architecture assincrona of ROM is
 	-- ========================================================================
 		tmp(213) := STA & R0 & '1' & x"FE"; -- Zera a KEY1
 		tmp(214) := LDI & R3 & '0' & x"0F"; -- Carrega 15 no imediato de R3
-		tmp(215) := STA & R3 & '1' & x"00"; -- Ativa o LED 3, 2, 1 e 0 atualizando algarismo da unidade de milhar
+		tmp(215) := STA & R3 & '1' & x"00"; -- Ativa o LED 3, 2, 1 e 0 atualizando a dezena de minuto
 		
 		tmp(216) := LDA & R0 & '1' & x"61"; -- Verifica a KEY1
 		tmp(217) := CEQ & R0 & '0' & x"0A"; -- Compara o valor da KEY1 com 0
 		tmp(218) := LDA & R1 & '1' & x"40"; -- Pega o valor das SW(7 downto 0)
-		tmp(219) := JEQ & R0 & '0' & x"D6"; -- Espera o click da KEY1 para pular para a dezena de milhar
-		tmp(220) := STA & R1 & '0' & x"03"; -- Armazena novo limite para unidade de milhar
+		tmp(219) := JEQ & R0 & '0' & x"D6"; -- Espera o click da KEY1 para pular para a dezena de minuto
+		tmp(220) := STA & R1 & '0' & x"03"; -- Armazena novo horario para dezena de minuto
 	
 	
 	-- ========================================================================	
@@ -410,13 +410,13 @@ architecture assincrona of ROM is
 	-- ========================================================================
 		tmp(221) := STA & R0 & '1' & x"FE"; -- Zera a KEY1
 		tmp(222) := LDI & R3 & '0' & x"1F"; -- Carrega 31 no imediato de R3
-		tmp(223) := STA & R3 & '1' & x"00"; -- Ativa o LED 4, 3, 2, 1 e 0 atualizando algarismo da dezena de milhar
+		tmp(223) := STA & R3 & '1' & x"00"; -- Ativa o LED 4, 3, 2, 1 e 0 atualizando a unidade de hora
 	
 		tmp(224) := LDA & R0 & '1' & x"61"; -- Verifica a KEY1
 		tmp(225) := CEQ & R0 & '0' & x"0A"; -- Compara o valor da KEY1 com 0
 		tmp(226) := LDA & R1 & '1' & x"40"; -- Pega o valor das SW(7 downto 0)
-		tmp(227) := JEQ & R0 & '0' & x"DE"; -- Espera o click da KEY1 para pular para a centena de milhar
-		tmp(228) := STA & R1 & '0' & x"04"; -- Armazena novo limite para dezena de milhar
+		tmp(227) := JEQ & R0 & '0' & x"DE"; -- Espera o click da KEY1 para pular para a unidade de hora
+		tmp(228) := STA & R1 & '0' & x"04"; -- Armazena novo horario para unidade de hora
 	
 	
 	-- ========================================================================	
@@ -424,13 +424,13 @@ architecture assincrona of ROM is
 	-- ========================================================================
 		tmp(229) := STA & R0 & '1' & x"FE"; -- Zera a KEY1
 		tmp(230) := LDI & R3 & '0' & x"3F"; -- Carrega 63 no imediato de R3
-		tmp(231) := STA & R3 & '1' & x"00"; -- Ativa o LED 5, 4, 3, 2, 1 e 0 atualizando algarismo da centena de milhar
+		tmp(231) := STA & R3 & '1' & x"00"; -- Ativa o LED 5, 4, 3, 2, 1 e 0 atualizando a dezena de hora
 		
 		tmp(232) := LDA & R0 & '1' & x"61"; -- Verifica a KEY1
 		tmp(233) := CEQ & R0 & '0' & x"0A"; -- Compara o valor da KEY1 com 0
 		tmp(234) := LDA & R1 & '1' & x"40"; -- Pega o valor das SW(7 downto 0)
 		tmp(235) := JEQ & R0 & '0' & x"E6"; -- Pula para Zerar KEY1
-		tmp(236) := STA & R1 & '0' & x"05"; -- Armazena novo limite para centena de milhar
+		tmp(236) := STA & R1 & '0' & x"05"; -- Armazena novo horario para dezena de hora
 		
 		tmp(237) := STA & R0 & '1' & x"FE"; -- Zerando KEY1
 		tmp(238) := LDA & R0 & '0' & x"0A"; -- Carrega 0 no imediato de R0
