@@ -1,5 +1,5 @@
 Flow report for MIPS_Aula13
-Tue Oct 19 17:16:44 2021
+Wed Oct 20 16:34:22 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue Oct 19 17:16:44 2021       ;
+; Flow Status                     ; Successful - Wed Oct 20 16:34:22 2021       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; MIPS_Aula13                                 ;
 ; Top-level Entity Name           ; MIPS_Aula13                                 ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/19/2021 17:16:22 ;
+; Start date & time ; 10/20/2021 16:34:05 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; MIPS_Aula13         ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 44230874719727.163467458156440         ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 44230874719727.163475844524547         ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -106,10 +106,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 477 MB              ; 00:00:26                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 670 MB              ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 675 MB              ; 00:00:00                           ;
-; Total                ; 00:00:11     ; --                      ; --                  ; 00:00:26                           ;
+; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 477 MB              ; 00:00:33                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 670 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 674 MB              ; 00:00:01                           ;
+; Total                ; 00:00:14     ; --                      ; --                  ; 00:00:35                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

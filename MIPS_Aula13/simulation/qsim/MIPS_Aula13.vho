@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
 
--- DATE "10/19/2021 17:16:44"
+-- DATE "10/20/2021 16:34:22"
 
 -- 
 -- Device: Altera 5CGXFC7C7F23C8 Package FBGA484
@@ -162,15 +162,15 @@ SIGNAL \Valor_Operacao[30]~output_o\ : std_logic;
 SIGNAL \Valor_Operacao[31]~output_o\ : std_logic;
 SIGNAL \CLOCK_50~input_o\ : std_logic;
 SIGNAL \PC|DOUT[2]~0_combout\ : std_logic;
-SIGNAL \somador|Add0~17_sumout\ : std_logic;
-SIGNAL \somador|Add0~18\ : std_logic;
-SIGNAL \somador|Add0~13_sumout\ : std_logic;
-SIGNAL \somador|Add0~14\ : std_logic;
-SIGNAL \somador|Add0~9_sumout\ : std_logic;
-SIGNAL \somador|Add0~10\ : std_logic;
-SIGNAL \somador|Add0~5_sumout\ : std_logic;
-SIGNAL \somador|Add0~6\ : std_logic;
-SIGNAL \somador|Add0~1_sumout\ : std_logic;
+SIGNAL \somadorConstante|Add0~17_sumout\ : std_logic;
+SIGNAL \somadorConstante|Add0~18\ : std_logic;
+SIGNAL \somadorConstante|Add0~13_sumout\ : std_logic;
+SIGNAL \somadorConstante|Add0~14\ : std_logic;
+SIGNAL \somadorConstante|Add0~9_sumout\ : std_logic;
+SIGNAL \somadorConstante|Add0~10\ : std_logic;
+SIGNAL \somadorConstante|Add0~5_sumout\ : std_logic;
+SIGNAL \somadorConstante|Add0~6\ : std_logic;
+SIGNAL \somadorConstante|Add0~1_sumout\ : std_logic;
 SIGNAL \ROM1|memROM~0_combout\ : std_logic;
 SIGNAL \Operacao_ULA~input_o\ : std_logic;
 SIGNAL \ULA1|Add0~130_cout\ : std_logic;
@@ -239,8 +239,8 @@ SIGNAL \ULA1|Add0~122\ : std_logic;
 SIGNAL \ULA1|Add0~125_sumout\ : std_logic;
 SIGNAL \PC|DOUT\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \ALT_INV_Operacao_ULA~input_o\ : std_logic;
-SIGNAL \ROM1|ALT_INV_memROM~0_combout\ : std_logic;
 SIGNAL \PC|ALT_INV_DOUT\ : std_logic_vector(7 DOWNTO 2);
+SIGNAL \ROM1|ALT_INV_memROM~0_combout\ : std_logic;
 
 BEGIN
 
@@ -254,8 +254,8 @@ ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
 \ALT_INV_Operacao_ULA~input_o\ <= NOT \Operacao_ULA~input_o\;
-\ROM1|ALT_INV_memROM~0_combout\ <= NOT \ROM1|memROM~0_combout\;
 \PC|ALT_INV_DOUT\(2) <= NOT \PC|DOUT\(2);
+\ROM1|ALT_INV_memROM~0_combout\ <= NOT \ROM1|memROM~0_combout\;
 \PC|ALT_INV_DOUT\(3) <= NOT \PC|DOUT\(3);
 \PC|ALT_INV_DOUT\(4) <= NOT \PC|DOUT\(4);
 \PC|ALT_INV_DOUT\(5) <= NOT \PC|DOUT\(5);
@@ -1451,10 +1451,10 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \PC|DOUT\(2));
 
-\somador|Add0~17\ : cyclonev_lcell_comb
+\somadorConstante|Add0~17\ : cyclonev_lcell_comb
 -- Equation(s):
--- \somador|Add0~17_sumout\ = SUM(( \PC|DOUT\(2) ) + ( \PC|DOUT\(3) ) + ( !VCC ))
--- \somador|Add0~18\ = CARRY(( \PC|DOUT\(2) ) + ( \PC|DOUT\(3) ) + ( !VCC ))
+-- \somadorConstante|Add0~17_sumout\ = SUM(( \PC|DOUT\(2) ) + ( \PC|DOUT\(3) ) + ( !VCC ))
+-- \somadorConstante|Add0~18\ = CARRY(( \PC|DOUT\(2) ) + ( \PC|DOUT\(3) ) + ( !VCC ))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1466,8 +1466,8 @@ PORT MAP (
 	datad => \PC|ALT_INV_DOUT\(2),
 	dataf => \PC|ALT_INV_DOUT\(3),
 	cin => GND,
-	sumout => \somador|Add0~17_sumout\,
-	cout => \somador|Add0~18\);
+	sumout => \somadorConstante|Add0~17_sumout\,
+	cout => \somadorConstante|Add0~18\);
 
 \PC|DOUT[3]\ : dffeas
 -- pragma translate_off
@@ -1477,15 +1477,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \CLOCK_50~input_o\,
-	d => \somador|Add0~17_sumout\,
+	d => \somadorConstante|Add0~17_sumout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \PC|DOUT\(3));
 
-\somador|Add0~13\ : cyclonev_lcell_comb
+\somadorConstante|Add0~13\ : cyclonev_lcell_comb
 -- Equation(s):
--- \somador|Add0~13_sumout\ = SUM(( \PC|DOUT\(4) ) + ( GND ) + ( \somador|Add0~18\ ))
--- \somador|Add0~14\ = CARRY(( \PC|DOUT\(4) ) + ( GND ) + ( \somador|Add0~18\ ))
+-- \somadorConstante|Add0~13_sumout\ = SUM(( \PC|DOUT\(4) ) + ( GND ) + ( \somadorConstante|Add0~18\ ))
+-- \somadorConstante|Add0~14\ = CARRY(( \PC|DOUT\(4) ) + ( GND ) + ( \somadorConstante|Add0~18\ ))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1495,9 +1495,9 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datad => \PC|ALT_INV_DOUT\(4),
-	cin => \somador|Add0~18\,
-	sumout => \somador|Add0~13_sumout\,
-	cout => \somador|Add0~14\);
+	cin => \somadorConstante|Add0~18\,
+	sumout => \somadorConstante|Add0~13_sumout\,
+	cout => \somadorConstante|Add0~14\);
 
 \PC|DOUT[4]\ : dffeas
 -- pragma translate_off
@@ -1507,15 +1507,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \CLOCK_50~input_o\,
-	d => \somador|Add0~13_sumout\,
+	d => \somadorConstante|Add0~13_sumout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \PC|DOUT\(4));
 
-\somador|Add0~9\ : cyclonev_lcell_comb
+\somadorConstante|Add0~9\ : cyclonev_lcell_comb
 -- Equation(s):
--- \somador|Add0~9_sumout\ = SUM(( \PC|DOUT\(5) ) + ( GND ) + ( \somador|Add0~14\ ))
--- \somador|Add0~10\ = CARRY(( \PC|DOUT\(5) ) + ( GND ) + ( \somador|Add0~14\ ))
+-- \somadorConstante|Add0~9_sumout\ = SUM(( \PC|DOUT\(5) ) + ( GND ) + ( \somadorConstante|Add0~14\ ))
+-- \somadorConstante|Add0~10\ = CARRY(( \PC|DOUT\(5) ) + ( GND ) + ( \somadorConstante|Add0~14\ ))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1525,9 +1525,9 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datad => \PC|ALT_INV_DOUT\(5),
-	cin => \somador|Add0~14\,
-	sumout => \somador|Add0~9_sumout\,
-	cout => \somador|Add0~10\);
+	cin => \somadorConstante|Add0~14\,
+	sumout => \somadorConstante|Add0~9_sumout\,
+	cout => \somadorConstante|Add0~10\);
 
 \PC|DOUT[5]\ : dffeas
 -- pragma translate_off
@@ -1537,15 +1537,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \CLOCK_50~input_o\,
-	d => \somador|Add0~9_sumout\,
+	d => \somadorConstante|Add0~9_sumout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \PC|DOUT\(5));
 
-\somador|Add0~5\ : cyclonev_lcell_comb
+\somadorConstante|Add0~5\ : cyclonev_lcell_comb
 -- Equation(s):
--- \somador|Add0~5_sumout\ = SUM(( \PC|DOUT\(6) ) + ( GND ) + ( \somador|Add0~10\ ))
--- \somador|Add0~6\ = CARRY(( \PC|DOUT\(6) ) + ( GND ) + ( \somador|Add0~10\ ))
+-- \somadorConstante|Add0~5_sumout\ = SUM(( \PC|DOUT\(6) ) + ( GND ) + ( \somadorConstante|Add0~10\ ))
+-- \somadorConstante|Add0~6\ = CARRY(( \PC|DOUT\(6) ) + ( GND ) + ( \somadorConstante|Add0~10\ ))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1555,9 +1555,9 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datad => \PC|ALT_INV_DOUT\(6),
-	cin => \somador|Add0~10\,
-	sumout => \somador|Add0~5_sumout\,
-	cout => \somador|Add0~6\);
+	cin => \somadorConstante|Add0~10\,
+	sumout => \somadorConstante|Add0~5_sumout\,
+	cout => \somadorConstante|Add0~6\);
 
 \PC|DOUT[6]\ : dffeas
 -- pragma translate_off
@@ -1567,14 +1567,14 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \CLOCK_50~input_o\,
-	d => \somador|Add0~5_sumout\,
+	d => \somadorConstante|Add0~5_sumout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \PC|DOUT\(6));
 
-\somador|Add0~1\ : cyclonev_lcell_comb
+\somadorConstante|Add0~1\ : cyclonev_lcell_comb
 -- Equation(s):
--- \somador|Add0~1_sumout\ = SUM(( \PC|DOUT\(7) ) + ( GND ) + ( \somador|Add0~6\ ))
+-- \somadorConstante|Add0~1_sumout\ = SUM(( \PC|DOUT\(7) ) + ( GND ) + ( \somadorConstante|Add0~6\ ))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1584,8 +1584,8 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datad => \PC|ALT_INV_DOUT\(7),
-	cin => \somador|Add0~6\,
-	sumout => \somador|Add0~1_sumout\);
+	cin => \somadorConstante|Add0~6\,
+	sumout => \somadorConstante|Add0~1_sumout\);
 
 \PC|DOUT[7]\ : dffeas
 -- pragma translate_off
@@ -1595,19 +1595,19 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \CLOCK_50~input_o\,
-	d => \somador|Add0~1_sumout\,
+	d => \somadorConstante|Add0~1_sumout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \PC|DOUT\(7));
 
 \ROM1|memROM~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ROM1|memROM~0_combout\ = ( !\PC|DOUT\(3) & ( !\PC|DOUT\(2) & ( (!\PC|DOUT\(7) & (!\PC|DOUT\(6) & (!\PC|DOUT\(5) & !\PC|DOUT\(4)))) ) ) )
+-- \ROM1|memROM~0_combout\ = ( !\PC|DOUT\(3) & ( (!\PC|DOUT\(7) & (!\PC|DOUT\(6) & (!\PC|DOUT\(5) & !\PC|DOUT\(4)))) ) )
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "1000000000000000000000000000000000000000000000000000000000000000",
+	lut_mask => "1000000000000000000000000000000010000000000000000000000000000000",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
@@ -1616,7 +1616,6 @@ PORT MAP (
 	datac => \PC|ALT_INV_DOUT\(5),
 	datad => \PC|ALT_INV_DOUT\(4),
 	datae => \PC|ALT_INV_DOUT\(3),
-	dataf => \PC|ALT_INV_DOUT\(2),
 	combout => \ROM1|memROM~0_combout\);
 
 \Operacao_ULA~input\ : cyclonev_io_ibuf
