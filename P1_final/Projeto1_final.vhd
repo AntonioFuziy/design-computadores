@@ -276,10 +276,6 @@ DEB_MEM_KEY1: work.DebMemKey0
 NOT_A5 <= not(Data_Address(5));
 A5 <= Data_Address(5);
 
---HAB_LEITURA_TEMPO <= '1' when (rd and A5 and Saida_Decoder_Addr(5) and Saida_Decoder_Blocos(5)) else '0';
---RST_LEITURA_TEMPO <= '1' when (Data_Address(0) and (not Data_Address(1)) and Data_Address(2) and Data_Address(3) and Data_Address(4) and Data_Address(5) and Data_Address(6) and Data_Address(7) and Data_Address(8)) else '0';
-
-
 ANDLEDR <= '1' when (Saida_Decoder_Addr(0) and Saida_Decoder_Blocos(4) and wr and NOT_A5) else '0';
 ANDLEDR8 <= '1' when (Saida_Decoder_Addr(1) and Saida_Decoder_Blocos(4) and wr and NOT_A5) else '0';
 ANDLEDR9 <= '1' when (Saida_Decoder_Addr(2) and Saida_Decoder_Blocos(4) and wr and NOT_A5) else '0';
