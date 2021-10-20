@@ -244,7 +244,7 @@ baseTempo: entity work.divisorGenerico
 	  port map (clk => CLK, saida_clk => saidaclk_1seg);
 	  
 baseTempo_Quick: entity work.divisorGenerico
-	  generic map (divisor => 10000)   -- passando contador ate 10k
+	  generic map (divisor => 4000)   -- passando contador ate 4k
 	  port map (clk => CLK, saida_clk => saidaclk_rap);
 
 MUX_Base_Tempo: entity work.muxGenerico2x1_Bit

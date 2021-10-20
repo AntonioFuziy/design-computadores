@@ -280,10 +280,8 @@ architecture assincrona of ROM is
 	-- ========================================================================
 	-- Ativacao dos LEDS
 	-- ========================================================================
-		tmp(110) := LDA & R0 & '0' & x"0B"; -- Carrega MEM[11] = 1
-		tmp(111) := STA & R0 & '0' & x"06"; -- Ativa Flag de inibir contagem
-		tmp(112) := STA & R0 & '1' & x"02"; -- Ativa LED9 de limite da contagem
-		tmp(113) := RET & R0 & '0' & x"00"; -- Retorna para loop principal
+		tmp(110) := JMP & R0 & '0' & x"82"; -- Zerar horario quando bater 24 horas
+		tmp(111) := RET & R0 & '0' & x"00"; -- Retorna para loop principal
 
 
 -- ========================================================================
