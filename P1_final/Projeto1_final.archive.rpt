@@ -1,5 +1,5 @@
 Archive Project report for Projeto1_final
-Sat Oct 16 13:41:55 2021
+Thu Oct 21 13:46:58 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Sat Oct 16 13:41:55 2021 ;
+; Archive Project Status ; Successful - Thu Oct 21 13:46:58 2021 ;
 ; Revision Name          ; Projeto1_final                        ;
 ; Top-level Entity Name  ; Projeto1_final                        ;
 ; Family                 ; Cyclone V                             ;
@@ -61,7 +61,7 @@ Info: Generated report 'Projeto1_final.archive.rpt'
 Info (23030): Evaluation of Tcl script /home/antonio/intelFPGA_lite/20.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 580 megabytes
-    Info: Processing ended: Sat Oct 16 13:41:55 2021
+    Info: Processing ended: Thu Oct 21 13:46:58 2021
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
