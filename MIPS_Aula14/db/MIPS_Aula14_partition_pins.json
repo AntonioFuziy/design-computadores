@@ -1,0 +1,145 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Valor_Operacao[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Valor_Operacao[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Valor_Operacao[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Valor_Operacao[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Valor_Operacao[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Valor_Operacao[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Valor_Operacao[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Valor_Operacao[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Valor_Operacao[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Valor_Operacao[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Valor_Operacao[10]",
+					"strict" : false
+				},
+				{
+					"name" : "Valor_Operacao[11]",
+					"strict" : false
+				},
+				{
+					"name" : "Valor_Operacao[12]",
+					"strict" : false
+				},
+				{
+					"name" : "Valor_Operacao[13]",
+					"strict" : false
+				},
+				{
+					"name" : "Valor_Operacao[14]",
+					"strict" : false
+				},
+				{
+					"name" : "Valor_Operacao[15]",
+					"strict" : false
+				},
+				{
+					"name" : "Valor_Operacao[16]",
+					"strict" : false
+				},
+				{
+					"name" : "Valor_Operacao[17]",
+					"strict" : false
+				},
+				{
+					"name" : "Valor_Operacao[18]",
+					"strict" : false
+				},
+				{
+					"name" : "Valor_Operacao[19]",
+					"strict" : false
+				},
+				{
+					"name" : "Valor_Operacao[20]",
+					"strict" : false
+				},
+				{
+					"name" : "Valor_Operacao[21]",
+					"strict" : false
+				},
+				{
+					"name" : "Valor_Operacao[22]",
+					"strict" : false
+				},
+				{
+					"name" : "Valor_Operacao[23]",
+					"strict" : false
+				},
+				{
+					"name" : "Valor_Operacao[24]",
+					"strict" : false
+				},
+				{
+					"name" : "Valor_Operacao[25]",
+					"strict" : false
+				},
+				{
+					"name" : "Valor_Operacao[26]",
+					"strict" : false
+				},
+				{
+					"name" : "Valor_Operacao[27]",
+					"strict" : false
+				},
+				{
+					"name" : "Valor_Operacao[28]",
+					"strict" : false
+				},
+				{
+					"name" : "Valor_Operacao[29]",
+					"strict" : false
+				},
+				{
+					"name" : "Valor_Operacao[30]",
+					"strict" : false
+				},
+				{
+					"name" : "Valor_Operacao[31]",
+					"strict" : false
+				},
+				{
+					"name" : "Operacao_ULA",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK_50",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
