@@ -1,0 +1,27 @@
+Quartus Prime Archive log --	/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula14/MIPS_Aula14.qarlog
+
+Archive:	/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula14/MIPS_Aula14.qar
+Date:		Wed Oct 27 17:16:48 2021
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula14/Decoder.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula14/MIPS_Aula14.qpf
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula14/MIPS_Aula14.qsf
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula14/MIPS_Aula14.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula14/RAM_MIPS.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula14/ROM.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula14/ULA.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula14/ULASomaSub.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula14/bancoRegistradores.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula14/deslocadorSinal.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula14/estensorSinalGenerico.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula14/muxGenerico2x1.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula14/registradorGenerico.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula14/somaConstante.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula14/somadorGenerico.vhd
+/home/antonio/intelFPGA_lite/20.1/quartus/linux64/assignment_defaults.qdf
+	======= Total: 16 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
