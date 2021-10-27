@@ -19,29 +19,10 @@ end entity;
 architecture assincrona OF ROM IS
   type blocoMemoria IS ARRAY(0 TO 2**memoryAddrWidth - 1) OF std_logic_vector(dataWidth-1 DOWNTO 0);
   
-  function initMemory
-        return blocoMemoria is variable tmp : blocoMemoria := (others => (others => '0'));
-  begin
-		  -- OPCODE Rs    Rt    Rd    shamt funct
-		  -- 000000 01001 01000 01010 00000 100000
-        -- 0      9     8     10    0     32
-		  -- 
-			--101011 00000 01001 00000 00000 000001;
-			--100011 01101 01101 00000 00000 000000;
-			--000100 01010 01001 11111 11111 111101;
-			--000010 00000 00000 00000 00000 000000;
-        tmp(0) := "101011" & "00000" & "01001" & "00000" & "00000" & "000001";--"000000" & "01001" & "01000" & "01010" & "00000" & "100000";
-        tmp(1) := "100011" & "01101" & "01101" & "00000" & "00000" & "000000";--"000000" & "01001" & "01000" & "01010" & "00000" & "100000";
-        tmp(2) := "000100" & "01010" & "01001" & "11111" & "11111" & "111101"; --32x"00";
-        tmp(3) := "000010" & "00000" & "00000" & "00000" & "00000" & "000000"; --32x"00";
-        tmp(4) := 32x"00";
-        tmp(5) := 32x"00";
-        tmp(6) := 32x"00";
-        tmp(7) := 32x"00";
-        return tmp;
-    end initMemory;
-
-    signal memROM : blocoMemoria := initMemory;
+  signal memROM: blocoMemoria;
+  attribute ram_init_file : string;
+  attribute ram_init_file of memROM:
+  signal is "Aula14.mif";
 
    signal EnderecoLocal : std_logic_vector(memoryAddrWidth-1 downto 0);
 

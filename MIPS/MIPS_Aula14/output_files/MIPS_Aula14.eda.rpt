@@ -1,5 +1,5 @@
 EDA Netlist Writer report for MIPS_Aula14
-Wed Oct 27 17:36:11 2021
+Wed Oct 27 18:44:30 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Oct 27 17:36:11 2021 ;
+; EDA Netlist Writer Status ; Successful - Wed Oct 27 18:44:30 2021 ;
 ; Revision Name             ; MIPS_Aula14                           ;
 ; Top-level Entity Name     ; MIPS_Aula14                           ;
 ; Family                    ; Cyclone V                             ;
@@ -95,13 +95,13 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Wed Oct 27 17:36:10 2021
+    Info: Processing started: Wed Oct 27 18:44:29 2021
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula14/simulation/qsim/ MIPS_Aula14 -c MIPS_Aula14
 Info (119006): Selected device 5CEBA4F23C7 for design "MIPS_Aula14"
 Info (204019): Generated file MIPS_Aula14.vho in folder "/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula14/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 668 megabytes
-    Info: Processing ended: Wed Oct 27 17:36:11 2021
+    Info: Peak virtual memory: 666 megabytes
+    Info: Processing ended: Wed Oct 27 18:44:30 2021
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
