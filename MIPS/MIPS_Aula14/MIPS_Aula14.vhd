@@ -12,6 +12,7 @@ entity MIPS_Aula14 is
     CLOCK_50 : in std_logic;
 	 ULA_A: out std_logic_vector(larguraDados-1 downto 0);
 	 ULA_B: out std_logic_vector(larguraDados-1 downto 0);
+	 Operacao_ULA_OUT: out std_logic_vector(2 downto 0);
 	 Valor_Operacao: out std_logic_vector(larguraDados-1 downto 0)
   );
 end entity;
@@ -127,6 +128,7 @@ beq_flag <= Sinais_Controle(4);
 wr_flag <= Sinais_Controle(5);
 rd_flag <= Sinais_Controle(6);
 
+Operacao_ULA_OUT <= Operacao_ULA;
 ULA_A <= bancoReg_ULA_A;
 ULA_B <= bancoReg_ULA_B;
 Valor_Operacao <= saida_ULA;

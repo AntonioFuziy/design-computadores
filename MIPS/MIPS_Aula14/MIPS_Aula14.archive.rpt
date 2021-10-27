@@ -1,5 +1,5 @@
 Archive Project report for MIPS_Aula14
-Wed Oct 27 17:16:48 2021
+Wed Oct 27 17:38:11 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Wed Oct 27 17:16:48 2021 ;
+; Archive Project Status ; Successful - Wed Oct 27 17:38:11 2021 ;
 ; Revision Name          ; MIPS_Aula14                           ;
 ; Top-level Entity Name  ; MIPS_Aula14                           ;
 ; Family                 ; Cyclone V                             ;
@@ -60,8 +60,8 @@ Info: ----------------------------------------------------------
 Info: Generated report 'MIPS_Aula14.archive.rpt'
 Info (23030): Evaluation of Tcl script /home/antonio/intelFPGA_lite/20.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 577 megabytes
-    Info: Processing ended: Wed Oct 27 17:16:48 2021
+    Info: Peak virtual memory: 575 megabytes
+    Info: Processing ended: Wed Oct 27 17:38:11 2021
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
@@ -87,6 +87,7 @@ Info: Quartus Prime Shell was successful. 0 errors, 1 warning
 ; somadorGenerico.vhd                                                       ;
 ; ULA.vhd                                                                   ;
 ; ULASomaSub.vhd                                                            ;
+; Waveform.vwf                                                              ;
 +---------------------------------------------------------------------------+
 
 
