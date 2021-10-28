@@ -175,6 +175,10 @@ Decoder : entity work.Decoder
 
 AND_FLAG_ZERO <= flag_zero and beq_flag;
 
+-- ======================================
+--Arrumar decoder
+-- ======================================
+
 sel_MUX_RtRd <= Sinais_Controle(0);
 habEscritaReg <= Sinais_Controle(1);
 sel_MUX_RtIm <= Sinais_Controle(2);
