@@ -5,8 +5,7 @@ use ieee.numeric_std.all;
 entity deslocadorSinalJMP is
     generic(
         larguraDadosIn : natural := 26;
-        larguraDadosOut : natural := 28;
-		  deslocamento: natural := 2  
+        larguraDadosOut : natural := 28
 	 );
     port(
         DATA_IN : in  std_logic_vector(larguraDadosIn-1 downto 0);

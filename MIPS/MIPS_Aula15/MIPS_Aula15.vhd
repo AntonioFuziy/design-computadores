@@ -21,7 +21,7 @@ end entity;
 architecture arquitetura of MIPS_Aula15 is
 	signal CLK : std_logic;
 	signal PC_ROM : std_logic_vector(larguraDados-1 downto 0);
-	signal Sinais_Controle: std_logic_vector(6 downto 0);
+	signal Sinais_Controle: std_logic_vector(10 downto 0);
 	
 	signal somador_PC: std_logic_vector(larguraDados-1 downto 0);
 	
@@ -35,15 +35,15 @@ architecture arquitetura of MIPS_Aula15 is
 	
 	signal Saida_RAM: std_logic_vector(larguraDados-1 downto 0);
 	
-	signal sel_MUX_JMP_BEQ: std_logic;
-	signal sel_MUX_RtRd: std_logic;
-	signal habEscritaReg: std_logic;
-	signal sel_MUX_RtIm: std_logic;
-	signal Operacao_ULA: std_logic_vector(2 downto 0);
-	signal sel_MUX_ULAMem: std_logic;
-	signal beq_flag: std_logic;
-	signal wr_flag: std_logic;
-	signal rd_flag: std_logic;
+	signal sel_MUX_JMP_BEQ: std_logic;                 --0
+	signal sel_MUX_RtRd: std_logic;                    --1
+	signal habEscritaReg: std_logic;                   --2
+	signal sel_MUX_RtIm: std_logic;                    --3
+	signal Operacao_ULA: std_logic_vector(2 downto 0); --4 a 6
+	signal sel_MUX_ULAMem: std_logic;                  -- 7
+	signal wr_flag: std_logic;                         --8
+	signal rd_flag: std_logic;                         --9
+	signal beq_flag: std_logic;                        --10
 	
 	signal flag_zero: std_logic;
 	signal AND_FLAG_ZERO: std_logic;
@@ -78,7 +78,7 @@ MUX_JMP_BEQ: entity work.muxGenerico2x1
 		
 DESLOCADOR_JMP: entity work.deslocadorSinalJMP 
 		 generic map(
-			larguraDadosIn => 26, larguraDadosOut => 28, deslocamento => 2
+			larguraDadosIn => 26, larguraDadosOut => 28
 		 )
 		 port map (
 			DATA_IN => instruction(25 downto 0), DATA_OUT => Im_deslocado
@@ -129,7 +129,7 @@ MUX_RtIm: entity work.muxGenerico2x1  generic map (larguraDados => larguraDados)
 		 
 DESLOCADOR: entity work.deslocadorSinal 
 		 generic map(
-			larguraDados => larguraDados, deslocamento => 2
+			larguraDados => larguraDados
 		 )
 		 port map (
 			DATA_IN => Saida_Estensor, DATA_OUT => sinalDeslocado
@@ -175,18 +175,15 @@ Decoder : entity work.Decoder
 
 AND_FLAG_ZERO <= flag_zero and beq_flag;
 
--- ======================================
---Arrumar decoder
--- ======================================
-
-sel_MUX_RtRd <= Sinais_Controle(0);
-habEscritaReg <= Sinais_Controle(1);
-sel_MUX_RtIm <= Sinais_Controle(2);
-Operacao_ULA <= Sinais_Controle(5 downto 3);
-sel_MUX_ULAMem <= Sinais_Controle(6);
-beq_flag <= Sinais_Controle(7);
-wr_flag <= Sinais_Controle(8);
-rd_flag <= Sinais_Controle(9);
+sel_MUX_JMP_BEQ <= Sinais_Controle(0);
+sel_MUX_RtRd <= Sinais_Controle(1);
+habEscritaReg <= Sinais_Controle(2);
+sel_MUX_RtIm <= Sinais_Controle(3);
+Operacao_ULA <= Sinais_Controle(6 downto 4);
+sel_MUX_ULAMem <= Sinais_Controle(7);
+rd_flag <= Sinais_Controle(8);
+wr_flag <= Sinais_Controle(9);
+beq_flag <= Sinais_Controle(10);
 
 Operacao_ULA_OUT <= Operacao_ULA;
 ULA_A <= bancoReg_ULA_A;

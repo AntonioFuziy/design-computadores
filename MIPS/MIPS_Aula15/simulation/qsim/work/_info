@@ -1,0 +1,107 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/simulation/qsim
+Emips_aula15
+Z1 w1635519208
+Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ^K2eeK[IVbX]]MLcdOEI91
+Z3 DPx8 cyclonev 19 cyclonev_components 0 22 GFL[QAd@dAZF:`jjOGn9>2
+Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3dzZ?YU_4FC5UU0cTXRET1
+Z5 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z6 DPx6 altera 11 dffeas_pack 0 22 H5F:RRfLz82T3`4>@b7mS3
+Z7 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z9 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z10 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
+!i122 0
+R0
+Z11 8MIPS_Aula15.vho
+Z12 FMIPS_Aula15.vho
+l0
+L39 1
+Vf?hKF]5?El@6lJ]F>UCK^0
+!s100 4aWRE]>Z?WKJ_M^7hDC362
+Z13 OV;C;2020.1;71
+32
+!s110 1635519212
+!i10b 1
+Z14 !s108 1635519212.000000
+Z15 !s90 -work|work|MIPS_Aula15.vho|
+Z16 !s107 MIPS_Aula15.vho|
+!i113 1
+Z17 o-work work
+Z18 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+DEx4 work 11 mips_aula15 0 22 f?hKF]5?El@6lJ]F>UCK^0
+!i122 0
+l6436
+L49 61621
+VGHA7n3S<Cn?FnUN0WDE^@3
+!s100 l22NER=@TIWgP@bGHD47]0
+R13
+32
+!s110 1635519213
+!i10b 1
+R14
+R15
+R16
+!i113 1
+R17
+R18
+Emips_aula15_vhd_vec_tst
+Z19 w1635519206
+R8
+R9
+!i122 1
+R0
+Z20 8Waveform.vwf.vht
+Z21 FWaveform.vwf.vht
+l0
+L32 1
+VDHUl<729``kSL:nDW39Da2
+!s100 o>FBaikHG2R9nmTlU@TUO0
+R13
+32
+Z22 !s110 1635519214
+!i10b 1
+Z23 !s108 1635519214.000000
+Z24 !s90 -work|work|Waveform.vwf.vht|
+!s107 Waveform.vwf.vht|
+!i113 1
+R17
+R18
+Amips_aula15_arch
+R8
+R9
+DEx4 work 23 mips_aula15_vhd_vec_tst 0 22 DHUl<729``kSL:nDW39Da2
+!i122 1
+l51
+L34 40
+VL4STNg0lH4ZBXoS:M[elj1
+!s100 lQmKi8gNYF_R[Ce2UW2i70
+R13
+32
+R22
+!i10b 1
+R23
+R24
+Z25 !s107 Waveform.vwf.vht|
+!i113 1
+R17
+R18
