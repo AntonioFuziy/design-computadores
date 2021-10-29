@@ -5,8 +5,7 @@ use ieee.numeric_std.all;
 
 entity deslocadorSinal is
     generic(
-		  larguraDados: natural := 32;
-		  deslocamento: natural := 2  
+		  larguraDados: natural := 32
 	  );
     port(
         DATA_IN : in  std_logic_vector(larguraDados-1 downto 0);
