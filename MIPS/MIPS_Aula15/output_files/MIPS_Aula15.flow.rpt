@@ -1,5 +1,5 @@
 Flow report for MIPS_Aula15
-Fri Oct 29 11:53:28 2021
+Fri Oct 29 12:02:01 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Fri Oct 29 11:53:28 2021       ;
+; Flow Status                     ; Successful - Fri Oct 29 12:02:01 2021       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; MIPS_Aula15                                 ;
 ; Top-level Entity Name           ; MIPS_Aula15                                 ;
@@ -109,7 +109,9 @@ https://fpgasoftware.intel.com/eula.
 ; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 480 MB              ; 00:00:28                           ;
 ; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 664 MB              ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 674 MB              ; 00:00:01                           ;
-; Total                ; 00:00:12     ; --                      ; --                  ; 00:00:30                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 664 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 673 MB              ; 00:00:01                           ;
+; Total                ; 00:00:14     ; --                      ; --                  ; 00:00:32                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -121,6 +123,8 @@ https://fpgasoftware.intel.com/eula.
 ; Analysis & Synthesis ; antonio          ; Ubuntu 20.04.3 ; 20         ; x86_64         ;
 ; EDA Netlist Writer   ; antonio          ; Ubuntu 20.04.3 ; 20         ; x86_64         ;
 ; EDA Netlist Writer   ; antonio          ; Ubuntu 20.04.3 ; 20         ; x86_64         ;
+; EDA Netlist Writer   ; antonio          ; Ubuntu 20.04.3 ; 20         ; x86_64         ;
+; EDA Netlist Writer   ; antonio          ; Ubuntu 20.04.3 ; 20         ; x86_64         ;
 +----------------------+------------------+----------------+------------+----------------+
 
 
@@ -128,6 +132,8 @@ https://fpgasoftware.intel.com/eula.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off MIPS_Aula15 -c MIPS_Aula15
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS_Aula15 -c MIPS_Aula15 --vector_source=/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/Waveform.vwf --testbench_file=/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/simulation/qsim/Waveform.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/simulation/qsim/ MIPS_Aula15 -c MIPS_Aula15
 quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS_Aula15 -c MIPS_Aula15 --vector_source=/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/Waveform.vwf --testbench_file=/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/simulation/qsim/Waveform.vwf.vht
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/simulation/qsim/ MIPS_Aula15 -c MIPS_Aula15
 
