@@ -34,7 +34,7 @@ begin
 	Habilita_Escrita_Reg <= '1' when (OPCODE = LW) else '0';
 	Sel_MUX_RtIm <= '1' when (OPCODE = LW) else '0';
 	Operacao  <= "000" when (OPCODE = LW or OPCODE = SW or OPCODE = ADD) else
-					 "001" when (OPCODE = BEQ or OPCODE = SUB) else
+					 "001" when (OPCODE = BEQ or OPCODE = SUB or OPCODE = JMP) else
 					 "000";
 	Sel_MUX_ULAMem <= '1' when (OPCODE = LW or OPCODE = SW) else '0';
 	rd <= '1' when (OPCODE = LW) else '0';

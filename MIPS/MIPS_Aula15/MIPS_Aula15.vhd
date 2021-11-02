@@ -110,9 +110,9 @@ Banco_Registradores : entity work.bancoRegistradores
 		generic map (larguraDados => larguraDados, larguraEndBancoRegs => larguraAddrRegistradores)
 		port map ( 
 			  clk => CLK,
-			  enderecoA => saidaMuxBancoReg,
+			  enderecoA => instruction(25 downto 21),
 			  enderecoB => instruction(20 downto 16),
-			  enderecoC => instruction(25 downto 21),
+			  enderecoC => saidaMuxBancoReg,
 			  dadoEscritaC => saida_MuxULABanco,
 			  escreveC => habEscritaReg,
 			  saidaA => bancoReg_ULA_A,
