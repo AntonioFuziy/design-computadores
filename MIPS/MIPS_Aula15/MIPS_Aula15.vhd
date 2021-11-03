@@ -40,7 +40,7 @@ architecture arquitetura of MIPS_Aula15 is
 	signal habEscritaReg: std_logic;                   --2
 	signal sel_MUX_RtIm: std_logic;                    --3
 	signal Operacao_ULA: std_logic_vector(2 downto 0); --4 a 6
-	signal sel_MUX_ULAMem: std_logic;                  -- 7
+	signal sel_MUX_ULAMem: std_logic;                  --7
 	signal wr_flag: std_logic;                         --8
 	signal rd_flag: std_logic;                         --9
 	signal beq_flag: std_logic;                        --10
