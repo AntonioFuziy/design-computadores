@@ -1,0 +1,31 @@
+Quartus Prime Archive log --	/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.qarlog
+
+Archive:	/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.qar
+Date:		Wed Nov  3 17:46:57 2021
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/Aula15.mif
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/Decoder.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.qpf
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.qsf
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/RAM_MIPS.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/RAMcontent.mif
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/ROM.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/ULA.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/ULASomaSub.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/Waveform.vwf
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/bancoRegistradores.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/deslocadorSinal.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/deslocadorSinalJMP.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/estensorSinalGenerico.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/muxGenerico2x1.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/registradorGenerico.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/somaConstante.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/somadorGenerico.vhd
+/home/antonio/intelFPGA_lite/20.1/quartus/linux64/assignment_defaults.qdf
+	======= Total: 20 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
