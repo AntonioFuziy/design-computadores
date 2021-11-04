@@ -256,7 +256,7 @@ ULA_18: entity work.ULA_31bits
       entradaA =>  entradaA(18),
       entradaB =>  entradaB(18),
       inverteB =>  inverteB,
-      less =>  set,
+      less =>  '0',
       operacao =>  operacao,
       carryIn =>  carry17,
       carryOut => carry18,

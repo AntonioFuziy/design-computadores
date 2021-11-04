@@ -244,14 +244,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "entradaA[18]",
-					"strict" : false
-				},
-				{
-					"name" : "entradaB[18]",
-					"strict" : false
-				},
-				{
 					"name" : "entradaA[10]",
 					"strict" : false
 				},
@@ -313,6 +305,14 @@
 				},
 				{
 					"name" : "entradaB[17]",
+					"strict" : false
+				},
+				{
+					"name" : "entradaA[18]",
+					"strict" : false
+				},
+				{
+					"name" : "entradaB[18]",
 					"strict" : false
 				},
 				{

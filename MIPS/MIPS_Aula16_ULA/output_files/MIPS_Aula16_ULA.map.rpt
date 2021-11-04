@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIPS_Aula16_ULA
-Thu Nov  4 15:55:40 2021
+Thu Nov  4 16:02:21 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -28,25 +28,26 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
  20. Port Connectivity Checks: "ULA_31bits:ULA_21"
  21. Port Connectivity Checks: "ULA_31bits:ULA_20"
  22. Port Connectivity Checks: "ULA_31bits:ULA_19"
- 23. Port Connectivity Checks: "ULA_31bits:ULA_17"
- 24. Port Connectivity Checks: "ULA_31bits:ULA_16"
- 25. Port Connectivity Checks: "ULA_31bits:ULA_15"
- 26. Port Connectivity Checks: "ULA_31bits:ULA_14"
- 27. Port Connectivity Checks: "ULA_31bits:ULA_13"
- 28. Port Connectivity Checks: "ULA_31bits:ULA_12"
- 29. Port Connectivity Checks: "ULA_31bits:ULA_11"
- 30. Port Connectivity Checks: "ULA_31bits:ULA_10"
- 31. Port Connectivity Checks: "ULA_31bits:ULA_8"
- 32. Port Connectivity Checks: "ULA_31bits:ULA_7"
- 33. Port Connectivity Checks: "ULA_31bits:ULA_6"
- 34. Port Connectivity Checks: "ULA_31bits:ULA_5"
- 35. Port Connectivity Checks: "ULA_31bits:ULA_4"
- 36. Port Connectivity Checks: "ULA_31bits:ULA_3"
- 37. Port Connectivity Checks: "ULA_31bits:ULA_2"
- 38. Port Connectivity Checks: "ULA_31bits:ULA_1"
- 39. Post-Synthesis Netlist Statistics for Top Partition
- 40. Elapsed Time Per Partition
- 41. Analysis & Synthesis Messages
+ 23. Port Connectivity Checks: "ULA_31bits:ULA_18"
+ 24. Port Connectivity Checks: "ULA_31bits:ULA_17"
+ 25. Port Connectivity Checks: "ULA_31bits:ULA_16"
+ 26. Port Connectivity Checks: "ULA_31bits:ULA_15"
+ 27. Port Connectivity Checks: "ULA_31bits:ULA_14"
+ 28. Port Connectivity Checks: "ULA_31bits:ULA_13"
+ 29. Port Connectivity Checks: "ULA_31bits:ULA_12"
+ 30. Port Connectivity Checks: "ULA_31bits:ULA_11"
+ 31. Port Connectivity Checks: "ULA_31bits:ULA_10"
+ 32. Port Connectivity Checks: "ULA_31bits:ULA_8"
+ 33. Port Connectivity Checks: "ULA_31bits:ULA_7"
+ 34. Port Connectivity Checks: "ULA_31bits:ULA_6"
+ 35. Port Connectivity Checks: "ULA_31bits:ULA_5"
+ 36. Port Connectivity Checks: "ULA_31bits:ULA_4"
+ 37. Port Connectivity Checks: "ULA_31bits:ULA_3"
+ 38. Port Connectivity Checks: "ULA_31bits:ULA_2"
+ 39. Port Connectivity Checks: "ULA_31bits:ULA_1"
+ 40. Post-Synthesis Netlist Statistics for Top Partition
+ 41. Elapsed Time Per Partition
+ 42. Analysis & Synthesis Messages
 
 
 
@@ -73,7 +74,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Nov  4 15:55:40 2021       ;
+; Analysis & Synthesis Status     ; Successful - Thu Nov  4 16:02:21 2021       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; MIPS_Aula16_ULA                             ;
 ; Top-level Entity Name           ; MIPS_Aula16_ULA                             ;
@@ -219,10 +220,10 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Estimate of Logic utilization (ALMs needed) ; 72             ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 116            ;
+; Combinational ALUT usage for logic          ; 118            ;
 ;     -- 7 input functions                    ; 1              ;
-;     -- 6 input functions                    ; 26             ;
-;     -- 5 input functions                    ; 27             ;
+;     -- 6 input functions                    ; 25             ;
+;     -- 5 input functions                    ; 30             ;
 ;     -- 4 input functions                    ; 10             ;
 ;     -- <=3 input functions                  ; 52             ;
 ;                                             ;                ;
@@ -234,8 +235,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; inverteB~input ;
 ; Maximum fan-out                             ; 38             ;
-; Total fan-out                               ; 587            ;
-; Average fan-out                             ; 1.86           ;
+; Total fan-out                               ; 594            ;
+; Average fan-out                             ; 1.87           ;
 +---------------------------------------------+----------------+
 
 
@@ -244,7 +245,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node           ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                               ; Entity Name     ; Library Name ;
 +--------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------+-----------------+--------------+
-; |MIPS_Aula16_ULA                     ; 116 (8)             ; 0 (0)                     ; 0                 ; 0          ; 100  ; 0            ; |MIPS_Aula16_ULA                                                  ; MIPS_Aula16_ULA ; work         ;
+; |MIPS_Aula16_ULA                     ; 118 (8)             ; 0 (0)                     ; 0                 ; 0          ; 100  ; 0            ; |MIPS_Aula16_ULA                                                  ; MIPS_Aula16_ULA ; work         ;
 ;    |ULA_31bits:ULA_0|                ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_0                                 ; ULA_31bits      ; work         ;
 ;       |muxGenerico4x1:MUX_Resultado| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_0|muxGenerico4x1:MUX_Resultado    ; muxGenerico4x1  ; work         ;
 ;       |somadorGenerico:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_0|somadorGenerico:somadorMux      ; somadorGenerico ; work         ;
@@ -256,34 +257,32 @@ https://fpgasoftware.intel.com/eula.
 ;       |muxGenerico2x1:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_11|muxGenerico2x1:MUX_entradaB    ; muxGenerico2x1  ; work         ;
 ;       |muxGenerico4x1:MUX_Resultado| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_11|muxGenerico4x1:MUX_Resultado   ; muxGenerico4x1  ; work         ;
 ;       |somadorGenerico:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_11|somadorGenerico:somadorMux     ; somadorGenerico ; work         ;
-;    |ULA_31bits:ULA_12|               ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_12                                ; ULA_31bits      ; work         ;
+;    |ULA_31bits:ULA_12|               ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_12                                ; ULA_31bits      ; work         ;
 ;       |muxGenerico2x1:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_12|muxGenerico2x1:MUX_entradaB    ; muxGenerico2x1  ; work         ;
 ;       |muxGenerico4x1:MUX_Resultado| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_12|muxGenerico4x1:MUX_Resultado   ; muxGenerico4x1  ; work         ;
-;       |somadorGenerico:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_12|somadorGenerico:somadorMux     ; somadorGenerico ; work         ;
-;    |ULA_31bits:ULA_13|               ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_13                                ; ULA_31bits      ; work         ;
+;    |ULA_31bits:ULA_13|               ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_13                                ; ULA_31bits      ; work         ;
 ;       |muxGenerico2x1:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_13|muxGenerico2x1:MUX_entradaB    ; muxGenerico2x1  ; work         ;
-;       |muxGenerico4x1:MUX_Resultado| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_13|muxGenerico4x1:MUX_Resultado   ; muxGenerico4x1  ; work         ;
-;       |somadorGenerico:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_13|somadorGenerico:somadorMux     ; somadorGenerico ; work         ;
+;       |muxGenerico4x1:MUX_Resultado| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_13|muxGenerico4x1:MUX_Resultado   ; muxGenerico4x1  ; work         ;
+;       |somadorGenerico:somadorMux|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_13|somadorGenerico:somadorMux     ; somadorGenerico ; work         ;
 ;    |ULA_31bits:ULA_14|               ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_14                                ; ULA_31bits      ; work         ;
 ;       |muxGenerico2x1:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_14|muxGenerico2x1:MUX_entradaB    ; muxGenerico2x1  ; work         ;
 ;       |muxGenerico4x1:MUX_Resultado| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_14|muxGenerico4x1:MUX_Resultado   ; muxGenerico4x1  ; work         ;
 ;       |somadorGenerico:somadorMux|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_14|somadorGenerico:somadorMux     ; somadorGenerico ; work         ;
-;    |ULA_31bits:ULA_15|               ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_15                                ; ULA_31bits      ; work         ;
+;    |ULA_31bits:ULA_15|               ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_15                                ; ULA_31bits      ; work         ;
 ;       |muxGenerico2x1:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_15|muxGenerico2x1:MUX_entradaB    ; muxGenerico2x1  ; work         ;
-;       |muxGenerico4x1:MUX_Resultado| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_15|muxGenerico4x1:MUX_Resultado   ; muxGenerico4x1  ; work         ;
+;       |muxGenerico4x1:MUX_Resultado| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_15|muxGenerico4x1:MUX_Resultado   ; muxGenerico4x1  ; work         ;
 ;       |somadorGenerico:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_15|somadorGenerico:somadorMux     ; somadorGenerico ; work         ;
-;    |ULA_31bits:ULA_16|               ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_16                                ; ULA_31bits      ; work         ;
+;    |ULA_31bits:ULA_16|               ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_16                                ; ULA_31bits      ; work         ;
 ;       |muxGenerico2x1:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_16|muxGenerico2x1:MUX_entradaB    ; muxGenerico2x1  ; work         ;
-;       |muxGenerico4x1:MUX_Resultado| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_16|muxGenerico4x1:MUX_Resultado   ; muxGenerico4x1  ; work         ;
+;       |muxGenerico4x1:MUX_Resultado| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_16|muxGenerico4x1:MUX_Resultado   ; muxGenerico4x1  ; work         ;
 ;       |somadorGenerico:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_16|somadorGenerico:somadorMux     ; somadorGenerico ; work         ;
-;    |ULA_31bits:ULA_17|               ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_17                                ; ULA_31bits      ; work         ;
+;    |ULA_31bits:ULA_17|               ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_17                                ; ULA_31bits      ; work         ;
 ;       |muxGenerico2x1:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_17|muxGenerico2x1:MUX_entradaB    ; muxGenerico2x1  ; work         ;
 ;       |muxGenerico4x1:MUX_Resultado| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_17|muxGenerico4x1:MUX_Resultado   ; muxGenerico4x1  ; work         ;
-;       |somadorGenerico:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_17|somadorGenerico:somadorMux     ; somadorGenerico ; work         ;
-;    |ULA_31bits:ULA_18|               ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_18                                ; ULA_31bits      ; work         ;
+;    |ULA_31bits:ULA_18|               ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_18                                ; ULA_31bits      ; work         ;
 ;       |muxGenerico2x1:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_18|muxGenerico2x1:MUX_entradaB    ; muxGenerico2x1  ; work         ;
-;       |muxGenerico4x1:MUX_Resultado| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_18|muxGenerico4x1:MUX_Resultado   ; muxGenerico4x1  ; work         ;
-;       |somadorGenerico:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_18|somadorGenerico:somadorMux     ; somadorGenerico ; work         ;
+;       |muxGenerico4x1:MUX_Resultado| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_18|muxGenerico4x1:MUX_Resultado   ; muxGenerico4x1  ; work         ;
+;       |somadorGenerico:somadorMux|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_18|somadorGenerico:somadorMux     ; somadorGenerico ; work         ;
 ;    |ULA_31bits:ULA_19|               ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_19                                ; ULA_31bits      ; work         ;
 ;       |muxGenerico2x1:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_19|muxGenerico2x1:MUX_entradaB    ; muxGenerico2x1  ; work         ;
 ;       |muxGenerico4x1:MUX_Resultado| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula16_ULA|ULA_31bits:ULA_19|muxGenerico4x1:MUX_Resultado   ; muxGenerico4x1  ; work         ;
@@ -390,8 +389,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
-; 4:1                ; 28 bits   ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |MIPS_Aula16_ULA|ULA_31bits:ULA_15|muxGenerico4x1:MUX_Resultado|saida_MUX ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |MIPS_Aula16_ULA|ULA_31bits:ULA_9|muxGenerico4x1:MUX_Resultado|saida_MUX  ;
+; 4:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; No         ; |MIPS_Aula16_ULA|ULA_31bits:ULA_16|muxGenerico4x1:MUX_Resultado|saida_MUX ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |MIPS_Aula16_ULA|ULA_31bits:ULA_9|muxGenerico4x1:MUX_Resultado|saida_MUX  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
 
 
@@ -508,6 +507,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +-----------------------------------------------+
 ; Port Connectivity Checks: "ULA_31bits:ULA_19" ;
++------+-------+----------+---------------------+
+; Port ; Type  ; Severity ; Details             ;
++------+-------+----------+---------------------+
+; less ; Input ; Info     ; Stuck at GND        ;
++------+-------+----------+---------------------+
+
+
++-----------------------------------------------+
+; Port Connectivity Checks: "ULA_31bits:ULA_18" ;
 +------+-------+----------+---------------------+
 ; Port ; Type  ; Severity ; Details             ;
 +------+-------+----------+---------------------+
@@ -664,19 +672,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 116                         ;
+; arriav_lcell_comb     ; 118                         ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 115                         ;
-;         2 data inputs ; 40                          ;
-;         3 data inputs ; 12                          ;
+;     normal            ; 117                         ;
+;         2 data inputs ; 42                          ;
+;         3 data inputs ; 10                          ;
 ;         4 data inputs ; 10                          ;
-;         5 data inputs ; 27                          ;
-;         6 data inputs ; 26                          ;
+;         5 data inputs ; 30                          ;
+;         6 data inputs ; 25                          ;
 ; boundary_port         ; 100                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 15.00                       ;
-; Average LUT depth     ; 10.89                       ;
+; Average LUT depth     ; 10.90                       ;
 +-----------------------+-----------------------------+
 
 
@@ -685,7 +693,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -695,7 +703,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Nov  4 15:55:27 2021
+    Info: Processing started: Thu Nov  4 16:02:09 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS_Aula16_ULA -c MIPS_Aula16_ULA
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file muxGenerico4x1.vhd
@@ -725,14 +733,14 @@ Info (12128): Elaborating entity "ULA_Overflow" for hierarchy "ULA_Overflow:ULA_
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 216 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 218 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 67 input pins
     Info (21059): Implemented 33 output pins
-    Info (21061): Implemented 116 logic cells
+    Info (21061): Implemented 118 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 477 megabytes
-    Info: Processing ended: Thu Nov  4 15:55:40 2021
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:31
+    Info: Peak virtual memory: 475 megabytes
+    Info: Processing ended: Thu Nov  4 16:02:21 2021
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:32
 
 
