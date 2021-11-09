@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/02/2021 18:02:56"
+-- Generated on "11/09/2021 19:16:04"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          MIPS_Aula15
 -- 
@@ -42,10 +42,10 @@ SIGNAL Valor_Operacao : STD_LOGIC_VECTOR(31 DOWNTO 0);
 COMPONENT MIPS_Aula15
 	PORT (
 	CLOCK_50 : IN STD_LOGIC;
-	Operacao_ULA_OUT : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
-	ULA_A : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-	ULA_B : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-	Valor_Operacao : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+	Operacao_ULA_OUT : BUFFER STD_LOGIC_VECTOR(2 DOWNTO 0);
+	ULA_A : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
+	ULA_B : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
+	Valor_Operacao : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
