@@ -11,7 +11,7 @@ entity MIPS_Aula16_ULA is
 		entradaB: in std_logic_vector(larguraDados-1 downto 0);
       inverteB: in std_logic;
 		operacao: in std_logic_vector(1 downto 0);
-      flag_zero: out std_logic;
+      flagZero: out std_logic;
       saida: out std_logic_vector(larguraDados-1 downto 0)
    );
 end entity;
@@ -33,7 +33,7 @@ architecture componente of MIPS_Aula16_ULA is
 begin
 
 bit_carryIN <= inverteB;
-flag_zero <= '1' when unsigned(saida) = unsigned(zero) else '0';
+flagZero <= '1' when unsigned(saida) = unsigned(zero) else '0';
 
 ULA_0: entity work.ULA_31bits
    port map(

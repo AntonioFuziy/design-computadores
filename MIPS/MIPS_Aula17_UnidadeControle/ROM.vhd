@@ -22,7 +22,7 @@ architecture assincrona OF ROM IS
   signal memROM: blocoMemoria;
   attribute ram_init_file : string;
   attribute ram_init_file of memROM:
-  signal is "Aula15.mif";
+  signal is "Aula17.mif";
 
    signal EnderecoLocal : std_logic_vector(memoryAddrWidth-1 downto 0);
 

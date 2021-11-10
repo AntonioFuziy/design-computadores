@@ -24,7 +24,7 @@ end entity;
 architecture arquitetura of MIPS_Aula17_UnidadeControle is
 	signal CLK : std_logic;
 	signal PC_ROM : std_logic_vector(larguraDados-1 downto 0);
-	signal Sinais_Controle: std_logic_vector(10 downto 0);
+	signal Sinais_Controle: std_logic_vector(8 downto 0);
 	
 	signal somador_PC: std_logic_vector(larguraDados-1 downto 0);
 	
@@ -42,11 +42,11 @@ architecture arquitetura of MIPS_Aula17_UnidadeControle is
 	signal sel_MUX_RtRd: std_logic;                    --1
 	signal habEscritaReg: std_logic;                   --2
 	signal sel_MUX_RtIm: std_logic;                    --3
-	signal Operacao_ULA: std_logic_vector(2 downto 0); --4 a 6
-	signal sel_MUX_ULAMem: std_logic;                  --7
-	signal wr_flag: std_logic;                         --8
-	signal rd_flag: std_logic;                         --9
-	signal beq_flag: std_logic;                        --10
+	signal Tipo_Operacao_ULA: std_logic; 							 --4
+	signal sel_MUX_ULAMem: std_logic;                  --5
+	signal wr_flag: std_logic;                         --6
+	signal rd_flag: std_logic;                         --7
+	signal beq_flag: std_logic;                        --8
 	
 	signal flag_zero: std_logic;
 	signal AND_FLAG_ZERO: std_logic;
@@ -61,6 +61,10 @@ architecture arquitetura of MIPS_Aula17_UnidadeControle is
 	signal Im_deslocado: std_logic_vector(27 downto 0);
 	
 	signal sinalDeslocado: std_logic_vector(larguraDados-1 downto 0);
+
+	signal saidaDecoderOPCODE: std_logic_vector(2 downto 0);
+	signal saidaDecoderFUNCT: std_logic_vector(2 downto 0);
+	signal Saida_MUX_CTRL: std_logic_vector(2 downto 0);
 	
 begin
 
@@ -147,28 +151,36 @@ ROM1 : entity work.ROM   generic map (dataWidth => larguraDados, addrWidth => la
 			 
 RAM_MIPS: entity work.RAM_MIPS  
 			generic map(
-			 dataWidth => larguraDados,
-			 addrWidth => larguraDados,
-			 memoryAddrWidth => 6
+				dataWidth => larguraDados,
+				addrWidth => larguraDados,
+				memoryAddrWidth => 6
 			)
-			port map( clk => CLK,
-          Endereco => Saida_ULA,
-          Dado_in => bancoReg_ULA_B,
-          Dado_out => Saida_RAM,
-          we => wr_flag,
-			 		re => rd_flag
-         );
+			port map( 
+				clk => CLK,
+				Endereco => Saida_ULA,
+				Dado_in => bancoReg_ULA_B,
+				Dado_out => Saida_RAM,
+				we => wr_flag,
+				re => rd_flag
+			);
 
 ULA1 : entity work.MIPS_Aula16_ULA  generic map(larguraDados => larguraDados)
-          port map (entradaA => bancoReg_ULA_A, entradaB => saidaMuxULA, saida => Saida_ULA, seletor => Operacao_ULA, flagZero => flag_zero);
+			port map (
+				entradaA => bancoReg_ULA_A,
+				entradaB => saidaMuxULA,
+				inverteB => Saida_MUX_CTRL(2),
+				saida => Saida_ULA,
+				operacao => Saida_MUX_CTRL(1 downto 0),
+				flagZero => flag_zero
+			);
 			 
 MUX_ULA_Banco: entity work.muxGenerico2x1  generic map (larguraDados => larguraDados)
-		port map( 
-			entradaA_MUX => Saida_ULA,
-			entradaB_MUX => Saida_RAM,
-			seletor_MUX => sel_MUX_ULAMem,
-			saida_MUX => saida_MuxULABanco
-		);
+			port map( 
+				entradaA_MUX => Saida_ULA,
+				entradaB_MUX => Saida_RAM,
+				seletor_MUX => sel_MUX_ULAMem,
+				saida_MUX => saida_MuxULABanco
+			);
 			 
 estensorSinal : entity work.estensorSinalGenerico   generic map (larguraDadoEntrada => larguraDadosComprimida, larguraDadoSaida => larguraDados)
           port map (estendeSinal_IN => instruction(15 downto 0), estendeSinal_OUT => Saida_Estensor);
@@ -176,19 +188,33 @@ estensorSinal : entity work.estensorSinalGenerico   generic map (larguraDadoEntr
 Decoder : entity work.Decoder
           port map (OPCODE => instruction(31 downto 26), OUTPUT => Sinais_Controle);
 
+Decoder_OPCODE : entity work.DecoderOPCODE
+					port map (OPCODE => instruction(31 downto 26), OUTPUT => saidaDecoderOPCODE);
+
+Decoder_FUNCT : entity work.DecoderFUNCT
+					port map (FUNCT => instruction(5 downto 0), OUTPUT => saidaDecoderFUNCT);
+
+MUX_ULA_CTRL: entity work.muxGenerico2x1 generic map (larguraDados => 3)
+		port map( 
+			entradaA_MUX => saidaDecoderOPCODE,
+			entradaB_MUX => saidaDecoderFUNCT,
+			seletor_MUX => Tipo_Operacao_ULA,
+			saida_MUX => Saida_MUX_CTRL
+		);
+
 AND_FLAG_ZERO <= flag_zero and beq_flag;
 
 sel_MUX_JMP_BEQ <= Sinais_Controle(0);
 sel_MUX_RtRd <= Sinais_Controle(1);
 habEscritaReg <= Sinais_Controle(2);
 sel_MUX_RtIm <= Sinais_Controle(3);
-Operacao_ULA <= Sinais_Controle(6 downto 4);
-sel_MUX_ULAMem <= Sinais_Controle(7);
-rd_flag <= Sinais_Controle(8);
-wr_flag <= Sinais_Controle(9);
-beq_flag <= Sinais_Controle(10);
+Tipo_Operacao_ULA <= Sinais_Controle(4);
+sel_MUX_ULAMem <= Sinais_Controle(5);
+rd_flag <= Sinais_Controle(6);
+wr_flag <= Sinais_Controle(7);
+beq_flag <= Sinais_Controle(8);
 
-Operacao_ULA_OUT <= Operacao_ULA;
+Operacao_ULA_OUT <= Saida_MUX_CTRL;
 ULA_A <= bancoReg_ULA_A;
 ULA_B <= bancoReg_ULA_B;
 Valor_Operacao <= saida_ULA;
