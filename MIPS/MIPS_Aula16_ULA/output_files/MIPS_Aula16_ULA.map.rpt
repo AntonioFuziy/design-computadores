@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIPS_Aula16_ULA
-Thu Nov  4 16:02:21 2021
+Wed Nov 10 14:40:43 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -74,7 +74,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Nov  4 16:02:21 2021       ;
+; Analysis & Synthesis Status     ; Successful - Wed Nov 10 14:40:43 2021       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; MIPS_Aula16_ULA                             ;
 ; Top-level Entity Name           ; MIPS_Aula16_ULA                             ;
@@ -404,15 +404,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ULA_Overflow:ULA_31"                                                                    ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; less     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; carryout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
++-------------------------------------------------+
+; Port Connectivity Checks: "ULA_Overflow:ULA_31" ;
++------+-------+----------+-----------------------+
+; Port ; Type  ; Severity ; Details               ;
++------+-------+----------+-----------------------+
+; less ; Input ; Info     ; Stuck at GND          ;
++------+-------+----------+-----------------------+
 
 
 +-----------------------------------------------+
@@ -693,7 +691,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -703,7 +701,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Nov  4 16:02:09 2021
+    Info: Processing started: Wed Nov 10 14:40:30 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS_Aula16_ULA -c MIPS_Aula16_ULA
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file muxGenerico4x1.vhd
@@ -722,14 +720,14 @@ Info (12021): Found 2 design units, including 1 entities, in source file ULA_31b
     Info (12022): Found design unit 1: ULA_31bits-componente File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula16_ULA/ULA_31bits.vhd Line: 18
     Info (12023): Found entity 1: ULA_31bits File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula16_ULA/ULA_31bits.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file ULA_Overflow.vhd
-    Info (12022): Found design unit 1: ULA_Overflow-componente File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula16_ULA/ULA_Overflow.vhd Line: 20
+    Info (12022): Found design unit 1: ULA_Overflow-componente File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula16_ULA/ULA_Overflow.vhd Line: 18
     Info (12023): Found entity 1: ULA_Overflow File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula16_ULA/ULA_Overflow.vhd Line: 5
 Info (12127): Elaborating entity "MIPS_Aula16_ULA" for the top level hierarchy
-Info (12128): Elaborating entity "ULA_31bits" for hierarchy "ULA_31bits:ULA_0" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula16_ULA/MIPS_Aula16_ULA.vhd Line: 38
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "ULA_31bits:ULA_0|muxGenerico2x1:MUX_entradaB" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula16_ULA/ULA_31bits.vhd Line: 29
-Info (12128): Elaborating entity "somadorGenerico" for hierarchy "ULA_31bits:ULA_0|somadorGenerico:somadorMux" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula16_ULA/ULA_31bits.vhd Line: 37
-Info (12128): Elaborating entity "muxGenerico4x1" for hierarchy "ULA_31bits:ULA_0|muxGenerico4x1:MUX_Resultado" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula16_ULA/ULA_31bits.vhd Line: 46
-Info (12128): Elaborating entity "ULA_Overflow" for hierarchy "ULA_Overflow:ULA_31" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula16_ULA/MIPS_Aula16_ULA.vhd Line: 410
+Info (12128): Elaborating entity "ULA_31bits" for hierarchy "ULA_31bits:ULA_0" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula16_ULA/MIPS_Aula16_ULA.vhd Line: 37
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "ULA_31bits:ULA_0|muxGenerico2x1:MUX_entradaB" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula16_ULA/ULA_31bits.vhd Line: 27
+Info (12128): Elaborating entity "somadorGenerico" for hierarchy "ULA_31bits:ULA_0|somadorGenerico:somadorMux" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula16_ULA/ULA_31bits.vhd Line: 35
+Info (12128): Elaborating entity "muxGenerico4x1" for hierarchy "ULA_31bits:ULA_0|muxGenerico4x1:MUX_Resultado" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula16_ULA/ULA_31bits.vhd Line: 44
+Info (12128): Elaborating entity "ULA_Overflow" for hierarchy "ULA_Overflow:ULA_31" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula16_ULA/MIPS_Aula16_ULA.vhd Line: 409
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -739,8 +737,8 @@ Info (21057): Implemented 218 device resources after synthesis - the final resou
     Info (21061): Implemented 118 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 475 megabytes
-    Info: Processing ended: Thu Nov  4 16:02:21 2021
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:32
+    Info: Processing ended: Wed Nov 10 14:40:43 2021
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:25
 
 

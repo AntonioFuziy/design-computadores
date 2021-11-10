@@ -10,9 +10,7 @@ entity ULA_Overflow is
 		less:  in std_logic;
 		carryIn: in std_logic;
 		operacao: in std_logic_vector(1 downto 0);
-		carryOut: out std_logic;
       set: out std_logic;
-      overflow: out std_logic;
       saida: out std_logic
    );
 end entity;
@@ -23,14 +21,10 @@ architecture componente of ULA_Overflow is
    signal AND_Entrada0: std_logic;
    signal OR_Entrada1: std_logic;
    signal Saida_Somador: std_logic;
+   signal overflow: std_logic;
+   signal carryOut: std_logic;
 
 begin
-
-AND_Entrada0 <= entradaA and saida_MUX_entradaB;
-OR_Entrada1 <= entradaA or saida_MUX_entradaB;
-
-overflow <= carryIn xor carryOut;
-set <= Saida_Somador xor overflow;
 	
 MUX_entradaB: entity work.muxGenerico2x1
    port map( 
@@ -58,5 +52,11 @@ MUX_Resultado: entity work.muxGenerico4x1
       seletor_MUX => operacao,
       saida_MUX => saida
    );
+
+AND_Entrada0 <= entradaA and saida_MUX_entradaB;
+OR_Entrada1 <= entradaA or saida_MUX_entradaB;
+
+overflow <= carryIn xor carryOut;
+set <= Saida_Somador xor overflow;
 
 end architecture;

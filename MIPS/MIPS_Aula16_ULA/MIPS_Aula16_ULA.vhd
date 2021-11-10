@@ -33,7 +33,6 @@ architecture componente of MIPS_Aula16_ULA is
 begin
 
 bit_carryIN <= inverteB;
-flag_zero <= '1' when unsigned(saida) = unsigned(zero) else '0';
 
 ULA_0: entity work.ULA_31bits
    port map(
@@ -418,5 +417,7 @@ ULA_31: entity work.ULA_Overflow
       set => set,
       saida => saida(31) 
    );
+   
+flag_zero <= '1' when unsigned(saida) = unsigned(zero) else '0';
 
 end architecture;

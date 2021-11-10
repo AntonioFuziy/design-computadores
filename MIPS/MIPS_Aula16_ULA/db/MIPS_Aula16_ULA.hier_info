@@ -1664,9 +1664,7 @@ carryIn => overflow.IN1
 carryIn => somadorgenerico:somadorMux.carryIn
 operacao[0] => muxgenerico4x1:MUX_Resultado.seletor_MUX[0]
 operacao[1] => muxgenerico4x1:MUX_Resultado.seletor_MUX[1]
-carryOut <= somadorgenerico:somadorMux.carryOut
 set <= set.DB_MAX_OUTPUT_PORT_TYPE
-overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
 saida <= muxgenerico4x1:MUX_Resultado.saida_MUX
 
 
