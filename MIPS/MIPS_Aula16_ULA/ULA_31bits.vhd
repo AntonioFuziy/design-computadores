@@ -23,8 +23,6 @@ architecture componente of ULA_31bits is
 
 begin
 
-AND_Entrada0 <= (entradaA and saida_MUX_entradaB);
-OR_Entrada1 <= (entradaA or saida_MUX_entradaB);
 	
 MUX_entradaB: entity work.muxGenerico2x1
    port map( 
@@ -52,5 +50,8 @@ MUX_Resultado: entity work.muxGenerico4x1
       seletor_MUX => operacao,
       saida_MUX => saida
    );
+
+AND_Entrada0 <= (entradaA and saida_MUX_entradaB);
+OR_Entrada1 <= (entradaA or saida_MUX_entradaB);
 
 end architecture;
