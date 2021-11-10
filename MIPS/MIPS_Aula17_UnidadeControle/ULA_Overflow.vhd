@@ -32,7 +32,7 @@ OR_Entrada1 <= entradaA or saida_MUX_entradaB;
 overflow <= carryIn xor carryOut;
 set <= Saida_Somador xor overflow;
 	
-MUX_entradaB: entity work.muxGenerico2x1
+MUX_entradaB: entity work.muxGenerico2x1_Bit
    port map( 
       entradaA_MUX => entradaB,
       entradaB_MUX => not(entradaB),
@@ -40,7 +40,7 @@ MUX_entradaB: entity work.muxGenerico2x1
       saida_MUX => saida_MUX_entradaB
    );
 
-somadorMux :  entity work.somadorGenerico
+somadorMux :  entity work.somadorGenerico_Bit
    port map( 
       entradaA => entradaA, 
       entradaB => saida_MUX_entradaB, 
