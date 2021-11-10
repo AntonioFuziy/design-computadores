@@ -9,7 +9,7 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS_Aula15 -c MIPS_Aula15 --vector_source="/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/Waveform.vwf" --testbench_file="/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/simulation/qsim/Waveform.vwf.vht"
 
-Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition    Info: Copyright (C) 2020  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and any partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel FPGA IP License Agreement, or other applicable license    Info: agreement, including, without limitation, that your use is for    Info: the sole purpose of programming logic devices manufactured by    Info: Intel and sold by Intel or its authorized distributors.  Please    Info: refer to the applicable agreement for further details, at    Info: https://fpgasoftware.intel.com/eula.    Info: Processing started: Tue Nov  2 18:02:54 2021Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS_Aula15 -c MIPS_Aula15 --vector_source=/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/Waveform.vwf --testbench_file=/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/simulation/qsim/Waveform.vwf.vhtInfo (119006): Selected device 5CEBA4F23C7 for design "MIPS_Aula15"
+Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition    Info: Copyright (C) 2020  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and any partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel FPGA IP License Agreement, or other applicable license    Info: agreement, including, without limitation, that your use is for    Info: the sole purpose of programming logic devices manufactured by    Info: Intel and sold by Intel or its authorized distributors.  Please    Info: refer to the applicable agreement for further details, at    Info: https://fpgasoftware.intel.com/eula.    Info: Processing started: Tue Nov  9 21:01:48 2021Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS_Aula15 -c MIPS_Aula15 --vector_source=/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/Waveform.vwf --testbench_file=/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/simulation/qsim/Waveform.vwf.vhtInfo (119006): Selected device 5CEBA4F23C7 for design "MIPS_Aula15"
 01005): Ignoring output pin "ULA_A[12]" in vector source file when writing test bench files
 iles
 Completed successfully. 
@@ -18,7 +18,7 @@ Completed successfully.
 
 quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/simulation/qsim/" MIPS_Aula15 -c MIPS_Aula15
 
-Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition    Info: Copyright (C) 2020  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and any partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel FPGA IP License Agreement, or other applicable license    Info: agreement, including, without limitation, that your use is for    Info: the sole purpose of programming logic devices manufactured by    Info: Intel and sold by Intel or its authorized distributors.  Please    Info: refer to the applicable agreement for further details, at    Info: https://fpgasoftware.intel.com/eula.    Info: Processing started: Tue Nov  2 18:02:57 2021Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/simulation/qsim/ MIPS_Aula15 -c MIPS_Aula15Info (119006): Selected device 5CEBA4F23C7 for design "MIPS_Aula15"Info (204019): Generated file MIPS_Aula15.vho in folder "/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/simulation/qsim//" for EDA simulation toolInfo: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings    Info: Peak virtual memory: 674 megabytes    Info: Processing ended: Tue Nov  2 18:02:58 2021    Info: Elapsed time: 00:00:01    Info: Total CPU time (on all processors): 00:00:01
+Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition    Info: Copyright (C) 2020  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and any partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel FPGA IP License Agreement, or other applicable license    Info: agreement, including, without limitation, that your use is for    Info: the sole purpose of programming logic devices manufactured by    Info: Intel and sold by Intel or its authorized distributors.  Please    Info: refer to the applicable agreement for further details, at    Info: https://fpgasoftware.intel.com/eula.    Info: Processing started: Tue Nov  9 21:01:49 2021Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/simulation/qsim/ MIPS_Aula15 -c MIPS_Aula15Info (119006): Selected device 5CEBA4F23C7 for design "MIPS_Aula15"Info (204019): Generated file MIPS_Aula15.vho in folder "/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/simulation/qsim//" for EDA simulation toolInfo: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings    Info: Peak virtual memory: 676 megabytes    Info: Processing ended: Tue Nov  9 21:01:50 2021    Info: Elapsed time: 00:00:01    Info: Total CPU time (on all processors): 00:00:01
 Completed successfully. 
 
 **** Generating the ModelSim .do script ****
@@ -36,34 +36,30 @@ Reading pref.tcl
 # do MIPS_Aula15.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:03:01 on Nov 02,2021
-# vcom -work work MIPS_Aula15.vho 
+# Start time: 21:01:51 on Nov 09,2021# vcom -work work MIPS_Aula15.vho 
 # -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package VITAL_Timing
-# -- Loading package VITAL_Primitives
-# -- Loading package dffeas_pack# -- Loading package altera_primitives_components
+# -- Loading package TEXTIO# -- Loading package std_logic_1164# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives# -- Loading package dffeas_pack# -- Loading package altera_primitives_components
 # -- Loading package altera_lnsim_components
 # -- Loading package cyclonev_atom_pack
 # -- Loading package cyclonev_components
 # -- Compiling entity MIPS_Aula15
 # -- Compiling architecture structure of MIPS_Aula15
-# End time: 18:03:04 on Nov 02,2021, Elapsed time: 0:00:03
+# End time: 21:01:52 on Nov 09,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:03:04 on Nov 02,2021# vcom -work work Waveform.vwf.vht 
+# Start time: 21:01:52 on Nov 09,2021# vcom -work work Waveform.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO# -- Loading package std_logic_1164
 # -- Compiling entity MIPS_Aula15_vhd_vec_tst# -- Compiling architecture MIPS_Aula15_arch of MIPS_Aula15_vhd_vec_tst
-# End time: 18:03:04 on Nov 02,2021, Elapsed time: 0:00:00
+# End time: 21:01:52 on Nov 09,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.MIPS_Aula15_vhd_vec_tst # Start time: 18:03:04 on Nov 02,2021# Loading std.standard# Loading std.textio(body)# Loading ieee.std_logic_1164(body)# Loading work.mips_aula15_vhd_vec_tst(mips_aula15_arch)# Loading ieee.vital_timing(body)# Loading ieee.vital_primitives(body)# Loading altera.dffeas_pack# Loading altera.altera_primitives_components# Loading altera_lnsim.altera_lnsim_components# Loading cyclonev.cyclonev_atom_pack(body)# Loading cyclonev.cyclonev_components# Loading work.mips_aula15(structure)# Loading ieee.std_logic_arith(body)# Loading cyclonev.cyclonev_io_obuf(arch)# Loading cyclonev.cyclonev_io_ibuf(arch)# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)# Loading altera.dffeas(vital_dffeas)# ** Warning: Design size of 561611 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.# Expect performance to be adversely affected.
+# vsim -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.MIPS_Aula15_vhd_vec_tst # Start time: 21:01:52 on Nov 09,2021# Loading std.standard# Loading std.textio(body)# Loading ieee.std_logic_1164(body)# Loading work.mips_aula15_vhd_vec_tst(mips_aula15_arch)# Loading ieee.vital_timing(body)# Loading ieee.vital_primitives(body)# Loading altera.dffeas_pack# Loading altera.altera_primitives_components# Loading altera_lnsim.altera_lnsim_components# Loading cyclonev.cyclonev_atom_pack(body)# Loading cyclonev.cyclonev_components# Loading work.mips_aula15(structure)# Loading ieee.std_logic_arith(body)# Loading cyclonev.cyclonev_io_obuf(arch)# Loading cyclonev.cyclonev_io_ibuf(arch)# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)# Loading altera.dffeas(vital_dffeas)# ** Warning: Design size of 590424 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.# Expect performance to be adversely affected.
 # after#34
-# Simulation time: 0 ps
-# Simulation time: 0 ps
-# Simulation time: 0 ps
-# End time: 18:03:14 on Nov 02,2021, Elapsed time: 0:00:10# Errors: 0, Warnings: 1
+# Simulation time: 10000 ps
+# Simulation time: 10000 ps
+# Simulation time: 10000 ps
+# End time: 21:02:03 on Nov 09,2021, Elapsed time: 0:00:11# Errors: 0, Warnings: 1
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
@@ -74,7 +70,7 @@ Reading /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/simulation/qsi
 
 Processing channel transitions... 
 
-Writing the resulting VWF to /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/simulation/qsim/MIPS_Aula15_20211102180314.sim.vwf
+Writing the resulting VWF to /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/simulation/qsim/MIPS_Aula15_20211109210203.sim.vwf
 
 Finished VCD to VWF conversion.
 

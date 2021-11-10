@@ -9,11 +9,12 @@ entity MIPS_Aula15 is
 	simulacao : boolean := FALSE -- para gravar na placa, altere de TRUE para FALSE
   );
   port   (
-    CLOCK_50 : in std_logic;
+   CLOCK_50 : in std_logic;
 	 ULA_A: out std_logic_vector(larguraDados-1 downto 0);
 	 ULA_B: out std_logic_vector(larguraDados-1 downto 0);
 	 Operacao_ULA_OUT: out std_logic_vector(2 downto 0);
-	 Valor_Operacao: out std_logic_vector(larguraDados-1 downto 0)
+	 Valor_Operacao: out std_logic_vector(larguraDados-1 downto 0);
+	 Saida_PC: out std_logic_vector(larguraDados-1 downto 0)
   );
 end entity;
 
@@ -153,11 +154,11 @@ RAM_MIPS: entity work.RAM_MIPS
           Dado_in => bancoReg_ULA_B,
           Dado_out => Saida_RAM,
           we => wr_flag,
-			 re => rd_flag
+			 		re => rd_flag
          );
 
 ULA1 : entity work.ULA  generic map(larguraDados => larguraDados)
-          port map (entradaA => bancoReg_ULA_A, entradaB =>  Saida_Estensor, saida => Saida_ULA, seletor => Operacao_ULA, flagZero => flag_zero);
+          port map (entradaA => bancoReg_ULA_A, entradaB => saidaMuxULA, saida => Saida_ULA, seletor => Operacao_ULA, flagZero => flag_zero);
 			 
 MUX_ULA_Banco: entity work.muxGenerico2x1  generic map (larguraDados => larguraDados)
 		port map( 
@@ -189,5 +190,6 @@ Operacao_ULA_OUT <= Operacao_ULA;
 ULA_A <= bancoReg_ULA_A;
 ULA_B <= bancoReg_ULA_B;
 Valor_Operacao <= saida_ULA;
+Saida_PC <= PC_ROM;
 
 end architecture;

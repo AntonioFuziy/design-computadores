@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Tue Nov  2 18:02:34 2021
+Analysis & Synthesis Status : Successful - Tue Nov  9 21:01:10 2021
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : MIPS_Aula15
 Top-level Entity Name : MIPS_Aula15
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 2150
-Total pins : 100
+Total registers : 2110
+Total pins : 132
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

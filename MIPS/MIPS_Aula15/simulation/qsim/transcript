@@ -1,7 +1,7 @@
 # do MIPS_Aula15.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:03:01 on Nov 02,2021
+# Start time: 21:01:51 on Nov 09,2021
 # vcom -work work MIPS_Aula15.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -15,20 +15,20 @@
 # -- Loading package cyclonev_components
 # -- Compiling entity MIPS_Aula15
 # -- Compiling architecture structure of MIPS_Aula15
-# End time: 18:03:04 on Nov 02,2021, Elapsed time: 0:00:03
+# End time: 21:01:52 on Nov 09,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:03:04 on Nov 02,2021
+# Start time: 21:01:52 on Nov 09,2021
 # vcom -work work Waveform.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity MIPS_Aula15_vhd_vec_tst
 # -- Compiling architecture MIPS_Aula15_arch of MIPS_Aula15_vhd_vec_tst
-# End time: 18:03:04 on Nov 02,2021, Elapsed time: 0:00:00
+# End time: 21:01:52 on Nov 09,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.MIPS_Aula15_vhd_vec_tst 
-# Start time: 18:03:04 on Nov 02,2021
+# Start time: 21:01:52 on Nov 09,2021
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -46,11 +46,11 @@
 # Loading cyclonev.cyclonev_io_ibuf(arch)
 # Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
 # Loading altera.dffeas(vital_dffeas)
-# ** Warning: Design size of 561611 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 590424 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # after#34
-# Simulation time: 0 ps
-# Simulation time: 0 ps
-# Simulation time: 0 ps
-# End time: 18:03:14 on Nov 02,2021, Elapsed time: 0:00:10
+# Simulation time: 10000 ps
+# Simulation time: 10000 ps
+# Simulation time: 10000 ps
+# End time: 21:02:03 on Nov 09,2021, Elapsed time: 0:00:11
 # Errors: 0, Warnings: 1
