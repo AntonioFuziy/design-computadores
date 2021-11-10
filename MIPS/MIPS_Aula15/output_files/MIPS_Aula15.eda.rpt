@@ -1,5 +1,5 @@
 EDA Netlist Writer report for MIPS_Aula15
-Tue Nov  9 19:16:05 2021
+Tue Nov  9 21:01:50 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Nov  9 19:16:05 2021 ;
+; EDA Netlist Writer Status ; Successful - Tue Nov  9 21:01:50 2021 ;
 ; Revision Name             ; MIPS_Aula15                           ;
 ; Top-level Entity Name     ; MIPS_Aula15                           ;
 ; Family                    ; Cyclone V                             ;
@@ -95,14 +95,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Tue Nov  9 19:16:05 2021
+    Info: Processing started: Tue Nov  9 21:01:49 2021
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/simulation/qsim/ MIPS_Aula15 -c MIPS_Aula15
 Info (119006): Selected device 5CEBA4F23C7 for design "MIPS_Aula15"
 Info (204019): Generated file MIPS_Aula15.vho in folder "/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 673 megabytes
-    Info: Processing ended: Tue Nov  9 19:16:05 2021
-    Info: Elapsed time: 00:00:00
+    Info: Peak virtual memory: 676 megabytes
+    Info: Processing ended: Tue Nov  9 21:01:50 2021
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

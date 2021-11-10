@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIPS_Aula15
-Tue Nov  9 18:59:50 2021
+Tue Nov  9 21:01:10 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -14,29 +14,28 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: Top-level Entity: |MIPS_Aula15
- 13. Parameter Settings for User Entity Instance: registradorGenerico:PC
- 14. Parameter Settings for User Entity Instance: muxGenerico2x1:MUX_JMP_BEQ
- 15. Parameter Settings for User Entity Instance: deslocadorSinalJMP:DESLOCADOR_JMP
- 16. Parameter Settings for User Entity Instance: somaConstante:somadorConstante
- 17. Parameter Settings for User Entity Instance: somadorGenerico:somadorMux
- 18. Parameter Settings for User Entity Instance: muxGenerico2x1:MUX_PC
- 19. Parameter Settings for User Entity Instance: muxGenerico2x1:MUX_RtRd
- 20. Parameter Settings for User Entity Instance: bancoRegistradores:Banco_Registradores
- 21. Parameter Settings for User Entity Instance: muxGenerico2x1:MUX_RtIm
- 22. Parameter Settings for User Entity Instance: deslocadorSinal:DESLOCADOR
- 23. Parameter Settings for User Entity Instance: ROM:ROM1
- 24. Parameter Settings for User Entity Instance: RAM_MIPS:RAM_MIPS
- 25. Parameter Settings for User Entity Instance: ULA:ULA1
- 26. Parameter Settings for User Entity Instance: muxGenerico2x1:MUX_ULA_Banco
- 27. Parameter Settings for User Entity Instance: estensorSinalGenerico:estensorSinal
- 28. Port Connectivity Checks: "registradorGenerico:PC"
- 29. Post-Synthesis Netlist Statistics for Top Partition
- 30. Elapsed Time Per Partition
- 31. Analysis & Synthesis Messages
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |MIPS_Aula15
+ 12. Parameter Settings for User Entity Instance: registradorGenerico:PC
+ 13. Parameter Settings for User Entity Instance: muxGenerico2x1:MUX_JMP_BEQ
+ 14. Parameter Settings for User Entity Instance: deslocadorSinalJMP:DESLOCADOR_JMP
+ 15. Parameter Settings for User Entity Instance: somaConstante:somadorConstante
+ 16. Parameter Settings for User Entity Instance: somadorGenerico:somadorMux
+ 17. Parameter Settings for User Entity Instance: muxGenerico2x1:MUX_PC
+ 18. Parameter Settings for User Entity Instance: muxGenerico2x1:MUX_RtRd
+ 19. Parameter Settings for User Entity Instance: bancoRegistradores:Banco_Registradores
+ 20. Parameter Settings for User Entity Instance: muxGenerico2x1:MUX_RtIm
+ 21. Parameter Settings for User Entity Instance: deslocadorSinal:DESLOCADOR
+ 22. Parameter Settings for User Entity Instance: ROM:ROM1
+ 23. Parameter Settings for User Entity Instance: RAM_MIPS:RAM_MIPS
+ 24. Parameter Settings for User Entity Instance: ULA:ULA1
+ 25. Parameter Settings for User Entity Instance: muxGenerico2x1:MUX_ULA_Banco
+ 26. Parameter Settings for User Entity Instance: estensorSinalGenerico:estensorSinal
+ 27. Port Connectivity Checks: "registradorGenerico:PC"
+ 28. Post-Synthesis Netlist Statistics for Top Partition
+ 29. Elapsed Time Per Partition
+ 30. Analysis & Synthesis Messages
 
 
 
@@ -63,14 +62,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Nov  9 18:59:49 2021       ;
+; Analysis & Synthesis Status     ; Successful - Tue Nov  9 21:01:10 2021       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; MIPS_Aula15                                 ;
 ; Top-level Entity Name           ; MIPS_Aula15                                 ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 2086                                        ;
-; Total pins                      ; 100                                         ;
+; Total registers                 ; 2110                                        ;
+; Total pins                      ; 132                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -185,7 +184,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
@@ -217,25 +216,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 1467           ;
+; Estimate of Logic utilization (ALMs needed) ; 1487           ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 1085           ;
+; Combinational ALUT usage for logic          ; 1157           ;
 ;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 761            ;
+;     -- 6 input functions                    ; 785            ;
 ;     -- 5 input functions                    ; 38             ;
-;     -- 4 input functions                    ; 106            ;
-;     -- <=3 input functions                  ; 180            ;
+;     -- 4 input functions                    ; 107            ;
+;     -- <=3 input functions                  ; 227            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 2086           ;
+; Dedicated logic registers                   ; 2110           ;
 ;                                             ;                ;
-; I/O pins                                    ; 100            ;
+; I/O pins                                    ; 132            ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 2086           ;
-; Total fan-out                               ; 12126          ;
-; Average fan-out                             ; 3.60           ;
+; Maximum fan-out                             ; 2110           ;
+; Total fan-out                               ; 12502          ;
+; Average fan-out                             ; 3.54           ;
 +---------------------------------------------+----------------+
 
 
@@ -244,17 +243,17 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                  ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                 ; Entity Name         ; Library Name ;
 +---------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------+---------------------+--------------+
-; |MIPS_Aula15                                ; 1085 (15)           ; 2086 (0)                  ; 0                 ; 0          ; 100  ; 0            ; |MIPS_Aula15                                        ; MIPS_Aula15         ; work         ;
+; |MIPS_Aula15                                ; 1157 (15)           ; 2110 (0)                  ; 0                 ; 0          ; 132  ; 0            ; |MIPS_Aula15                                        ; MIPS_Aula15         ; work         ;
 ;    |Decoder:Decoder|                        ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula15|Decoder:Decoder                        ; Decoder             ; work         ;
 ;    |RAM_MIPS:RAM_MIPS|                      ; 800 (800)           ; 2048 (2048)               ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula15|RAM_MIPS:RAM_MIPS                      ; RAM_MIPS            ; work         ;
 ;    |ROM:ROM1|                               ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula15|ROM:ROM1                               ; ROM                 ; work         ;
 ;    |ULA:ULA1|                               ; 36 (36)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula15|ULA:ULA1                               ; ULA                 ; work         ;
 ;    |bancoRegistradores:Banco_Registradores| ; 194 (194)           ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula15|bancoRegistradores:Banco_Registradores ; bancoRegistradores  ; work         ;
-;    |muxGenerico2x1:MUX_JMP_BEQ|             ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula15|muxGenerico2x1:MUX_JMP_BEQ             ; muxGenerico2x1      ; work         ;
+;    |muxGenerico2x1:MUX_JMP_BEQ|             ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula15|muxGenerico2x1:MUX_JMP_BEQ             ; muxGenerico2x1      ; work         ;
 ;    |muxGenerico2x1:MUX_RtRd|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula15|muxGenerico2x1:MUX_RtRd                ; muxGenerico2x1      ; work         ;
-;    |registradorGenerico:PC|                 ; 0 (0)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula15|registradorGenerico:PC                 ; registradorGenerico ; work         ;
-;    |somaConstante:somadorConstante|         ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula15|somaConstante:somadorConstante         ; somaConstante       ; work         ;
-;    |somadorGenerico:somadorMux|             ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula15|somadorGenerico:somadorMux             ; somadorGenerico     ; work         ;
+;    |registradorGenerico:PC|                 ; 0 (0)               ; 30 (30)                   ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula15|registradorGenerico:PC                 ; registradorGenerico ; work         ;
+;    |somaConstante:somadorConstante|         ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula15|somaConstante:somadorConstante         ; somaConstante       ; work         ;
+;    |somadorGenerico:somadorMux|             ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Aula15|somadorGenerico:somadorMux             ; somadorGenerico     ; work         ;
 +---------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1034,7 +1033,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; bancoRegistradores:Banco_Registradores|registrador~1059 ; Lost fanout                                ;
 ; bancoRegistradores:Banco_Registradores|registrador~1060 ; Lost fanout                                ;
 ; bancoRegistradores:Banco_Registradores|registrador~1061 ; Lost fanout                                ;
-; registradorGenerico:PC|DOUT[8..31]                      ; Lost fanout                                ;
 ; bancoRegistradores:Banco_Registradores|registrador~326  ; Stuck at GND due to stuck port clock       ;
 ; bancoRegistradores:Banco_Registradores|registrador~390  ; Stuck at GND due to stuck port clock       ;
 ; bancoRegistradores:Banco_Registradores|registrador~358  ; Stuck at GND due to stuck port clock       ;
@@ -1259,28 +1257,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; bancoRegistradores:Banco_Registradores|registrador~165  ; Stuck at GND due to stuck port clock       ;
 ; bancoRegistradores:Banco_Registradores|registrador~69   ; Stuck at GND due to stuck port clock       ;
 ; bancoRegistradores:Banco_Registradores|registrador~133  ; Stuck at GND due to stuck port clock       ;
-; Total Number of Removed Registers = 1018                ;                                            ;
+; Total Number of Removed Registers = 994                 ;                                            ;
 +---------------------------------------------------------+--------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                              ;
-+---------------------------------+--------------------+-------------------------------------------------------------------+
-; Register name                   ; Reason for Removal ; Registers Removed due to This Register                            ;
-+---------------------------------+--------------------+-------------------------------------------------------------------+
-; registradorGenerico:PC|DOUT[31] ; Lost Fanouts       ; registradorGenerico:PC|DOUT[30], registradorGenerico:PC|DOUT[29], ;
-;                                 ;                    ; registradorGenerico:PC|DOUT[28], registradorGenerico:PC|DOUT[27], ;
-;                                 ;                    ; registradorGenerico:PC|DOUT[26], registradorGenerico:PC|DOUT[25], ;
-;                                 ;                    ; registradorGenerico:PC|DOUT[24], registradorGenerico:PC|DOUT[23], ;
-;                                 ;                    ; registradorGenerico:PC|DOUT[22], registradorGenerico:PC|DOUT[21], ;
-;                                 ;                    ; registradorGenerico:PC|DOUT[20], registradorGenerico:PC|DOUT[19], ;
-;                                 ;                    ; registradorGenerico:PC|DOUT[18], registradorGenerico:PC|DOUT[17], ;
-;                                 ;                    ; registradorGenerico:PC|DOUT[16], registradorGenerico:PC|DOUT[15], ;
-;                                 ;                    ; registradorGenerico:PC|DOUT[14], registradorGenerico:PC|DOUT[13], ;
-;                                 ;                    ; registradorGenerico:PC|DOUT[12], registradorGenerico:PC|DOUT[11], ;
-;                                 ;                    ; registradorGenerico:PC|DOUT[10], registradorGenerico:PC|DOUT[9],  ;
-;                                 ;                    ; registradorGenerico:PC|DOUT[8]                                    ;
-+---------------------------------+--------------------+-------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -1288,7 +1266,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 2086  ;
+; Total registers                              ; 2110  ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 32    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -1304,7 +1282,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |MIPS_Aula15|registradorGenerico:PC|DOUT[27] ;
-; 3:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; Yes        ; |MIPS_Aula15|registradorGenerico:PC|DOUT[2]  ;
+; 3:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; Yes        ; |MIPS_Aula15|registradorGenerico:PC|DOUT[12] ;
 ; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |MIPS_Aula15|ULA:ULA1|Add0                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
 
@@ -1495,28 +1473,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 2086                        ;
+; arriav_ff             ; 2110                        ;
 ;     ENA               ; 2048                        ;
 ;     ENA SLD           ; 32                          ;
-;     plain             ; 6                           ;
-; arriav_lcell_comb     ; 1086                        ;
-;     arith             ; 45                          ;
-;         1 data inputs ; 6                           ;
-;         2 data inputs ; 4                           ;
+;     plain             ; 30                          ;
+; arriav_lcell_comb     ; 1158                        ;
+;     arith             ; 93                          ;
+;         1 data inputs ; 30                          ;
+;         2 data inputs ; 27                          ;
 ;         3 data inputs ; 1                           ;
-;         4 data inputs ; 3                           ;
+;         4 data inputs ; 4                           ;
 ;         5 data inputs ; 31                          ;
-;     normal            ; 1041                        ;
+;     normal            ; 1065                        ;
 ;         0 data inputs ; 1                           ;
 ;         2 data inputs ; 133                         ;
 ;         3 data inputs ; 36                          ;
 ;         4 data inputs ; 103                         ;
 ;         5 data inputs ; 7                           ;
-;         6 data inputs ; 761                         ;
-; boundary_port         ; 100                         ;
+;         6 data inputs ; 785                         ;
+; boundary_port         ; 132                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 11.10                       ;
-; Average LUT depth     ; 4.95                        ;
+; Average LUT depth     ; 5.02                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1525,7 +1503,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -1535,7 +1513,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Nov  9 18:59:39 2021
+    Info: Processing started: Tue Nov  9 21:00:55 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS_Aula15 -c MIPS_Aula15
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file somaConstante.vhd
@@ -1566,7 +1544,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file estenso
     Info (12022): Found design unit 1: estensorSinalGenerico-comportamento File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/estensorSinalGenerico.vhd Line: 18
     Info (12023): Found entity 1: estensorSinalGenerico File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/estensorSinalGenerico.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file MIPS_Aula15.vhd
-    Info (12022): Found design unit 1: MIPS_Aula15-arquitetura File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.vhd Line: 21
+    Info (12022): Found design unit 1: MIPS_Aula15-arquitetura File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.vhd Line: 22
     Info (12023): Found entity 1: MIPS_Aula15 File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file deslocadorSinal.vhd
     Info (12022): Found design unit 1: deslocadorSinal-componente File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/deslocadorSinal.vhd Line: 16
@@ -1581,20 +1559,20 @@ Info (12021): Found 2 design units, including 1 entities, in source file desloca
     Info (12022): Found design unit 1: deslocadorSinalJMP-componente File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/deslocadorSinalJMP.vhd Line: 16
     Info (12023): Found entity 1: deslocadorSinalJMP File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/deslocadorSinalJMP.vhd Line: 5
 Info (12127): Elaborating entity "MIPS_Aula15" for the top level hierarchy
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:PC" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.vhd Line: 66
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MUX_JMP_BEQ" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.vhd Line: 70
-Info (12128): Elaborating entity "deslocadorSinalJMP" for hierarchy "deslocadorSinalJMP:DESLOCADOR_JMP" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.vhd Line: 79
-Info (12128): Elaborating entity "somaConstante" for hierarchy "somaConstante:somadorConstante" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.vhd Line: 87
-Info (12128): Elaborating entity "somadorGenerico" for hierarchy "somadorGenerico:somadorMux" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.vhd Line: 90
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MUX_RtRd" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.vhd Line: 101
-Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "bancoRegistradores:Banco_Registradores" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.vhd Line: 109
-Info (12128): Elaborating entity "deslocadorSinal" for hierarchy "deslocadorSinal:DESLOCADOR" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.vhd Line: 130
-Info (12128): Elaborating entity "ROM" for hierarchy "ROM:ROM1" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.vhd Line: 138
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:PC" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.vhd Line: 67
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MUX_JMP_BEQ" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.vhd Line: 71
+Info (12128): Elaborating entity "deslocadorSinalJMP" for hierarchy "deslocadorSinalJMP:DESLOCADOR_JMP" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.vhd Line: 80
+Info (12128): Elaborating entity "somaConstante" for hierarchy "somaConstante:somadorConstante" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.vhd Line: 88
+Info (12128): Elaborating entity "somadorGenerico" for hierarchy "somadorGenerico:somadorMux" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.vhd Line: 91
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MUX_RtRd" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.vhd Line: 102
+Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "bancoRegistradores:Banco_Registradores" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.vhd Line: 110
+Info (12128): Elaborating entity "deslocadorSinal" for hierarchy "deslocadorSinal:DESLOCADOR" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.vhd Line: 131
+Info (12128): Elaborating entity "ROM" for hierarchy "ROM:ROM1" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.vhd Line: 139
 Warning (10541): VHDL Signal Declaration warning at ROM.vhd(22): used implicit default value for signal "memROM" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/ROM.vhd Line: 22
-Info (12128): Elaborating entity "RAM_MIPS" for hierarchy "RAM_MIPS:RAM_MIPS" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.vhd Line: 145
-Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ULA1" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.vhd Line: 159
-Info (12128): Elaborating entity "estensorSinalGenerico" for hierarchy "estensorSinalGenerico:estensorSinal" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.vhd Line: 170
-Info (12128): Elaborating entity "Decoder" for hierarchy "Decoder:Decoder" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.vhd Line: 173
+Info (12128): Elaborating entity "RAM_MIPS" for hierarchy "RAM_MIPS:RAM_MIPS" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.vhd Line: 146
+Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ULA1" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.vhd Line: 160
+Info (12128): Elaborating entity "estensorSinalGenerico" for hierarchy "estensorSinalGenerico:estensorSinal" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.vhd Line: 171
+Info (12128): Elaborating entity "Decoder" for hierarchy "Decoder:Decoder" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.vhd Line: 174
 Info (276014): Found 3 instances of uninferred RAM logic
     Info (276007): RAM logic "RAM_MIPS:RAM_MIPS|memRAM" is uninferred due to asynchronous read logic File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/RAM_MIPS.vhd Line: 22
     Info (276004): RAM logic "ROM:ROM1|memROM" is uninferred due to inappropriate RAM size File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/ROM.vhd Line: 22
@@ -1636,18 +1614,20 @@ Critical Warning (127004): Memory depth (64) in the design file differs from mem
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "Operacao_ULA_OUT[1]" is stuck at GND File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.vhd Line: 15
     Warning (13410): Pin "Operacao_ULA_OUT[2]" is stuck at GND File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.vhd Line: 15
+    Warning (13410): Pin "Saida_PC[0]" is stuck at GND File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.vhd Line: 17
+    Warning (13410): Pin "Saida_PC[1]" is stuck at GND File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/MIPS_Aula15.vhd Line: 17
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 792 registers lost all their fanouts during netlist optimizations.
+Info (17049): 768 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 3265 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3369 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 99 output pins
-    Info (21061): Implemented 3165 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 38 warnings
-    Info: Peak virtual memory: 484 megabytes
-    Info: Processing ended: Tue Nov  9 18:59:50 2021
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:24
+    Info (21059): Implemented 131 output pins
+    Info (21061): Implemented 3237 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 40 warnings
+    Info: Peak virtual memory: 488 megabytes
+    Info: Processing ended: Tue Nov  9 21:01:10 2021
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:34
 
 

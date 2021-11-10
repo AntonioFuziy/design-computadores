@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 d/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Aula15/simulation/qsim
 Emips_aula15
-Z1 w1636496165
+Z1 w1636502510
 Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ^K2eeK[IVbX]]MLcdOEI91
 Z3 DPx8 cyclonev 19 cyclonev_components 0 22 GFL[QAd@dAZF:`jjOGn9>2
 Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3dzZ?YU_4FC5UU0cTXRET1
@@ -20,19 +20,19 @@ Z7 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
 Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z9 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 Z10 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
-!i122 16
+!i122 18
 R0
 Z11 8MIPS_Aula15.vho
 Z12 FMIPS_Aula15.vho
 l0
 L39 1
-VJnghmBjaXgFlAFLX>P@GY2
-!s100 Ad[iC3:nOH>Q`O`0Y7YX=0
+VOf^X9NQlJ84^[nIA6g2TV0
+!s100 VN:=jkeAR^`;NdSz8fjne0
 Z13 OV;C;2020.1;71
 32
-Z14 !s110 1636496166
+Z14 !s110 1636502511
 !i10b 1
-Z15 !s108 1636496166.000000
+Z15 !s108 1636502511.000000
 Z16 !s90 -work|work|MIPS_Aula15.vho|
 Z17 !s107 MIPS_Aula15.vho|
 !i113 1
@@ -48,12 +48,12 @@ R7
 R8
 R9
 R10
-DEx4 work 11 mips_aula15 0 22 JnghmBjaXgFlAFLX>P@GY2
-!i122 16
-l6389
-L49 60678
-Vz^[faSah4404M`k@DG@hn0
-!s100 ^J_NG2[FY=^[VKGkG[UEa1
+DEx4 work 11 mips_aula15 0 22 Of^X9NQlJ84^[nIA6g2TV0
+!i122 18
+l6591
+L50 63064
+VITkldEaM=HZ>TG7Y3a6G70
+!s100 D1U:`aWmKn@SDYK]FTie32
 R13
 32
 R14
@@ -65,10 +65,10 @@ R17
 R18
 R19
 Emips_aula15_vhd_vec_tst
-Z20 w1636496164
+Z20 w1636502508
 R8
 R9
-!i122 17
+!i122 19
 R0
 Z21 8Waveform.vwf.vht
 Z22 FWaveform.vwf.vht
@@ -78,9 +78,9 @@ VDHUl<729``kSL:nDW39Da2
 !s100 o>FBaikHG2R9nmTlU@TUO0
 R13
 32
-Z23 !s110 1636496167
+Z23 !s110 1636502512
 !i10b 1
-Z24 !s108 1636496167.000000
+Z24 !s108 1636502512.000000
 Z25 !s90 -work|work|Waveform.vwf.vht|
 Z26 !s107 Waveform.vwf.vht|
 !i113 1
@@ -90,11 +90,11 @@ Amips_aula15_arch
 R8
 R9
 Z27 DEx4 work 23 mips_aula15_vhd_vec_tst 0 22 DHUl<729``kSL:nDW39Da2
-!i122 17
-l51
-Z28 L34 40
-Z29 VZNA6L9YiFK^Gn;zJW1R?D3
-Z30 !s100 BP5ak@bnaN?nYVXBmD^Q^1
+!i122 19
+l53
+L34 43
+V5mfRAL76c^1k;jmGo]mY01
+!s100 NXzCji7E4za4[Q6HQOb3=3
 R13
 32
 R23

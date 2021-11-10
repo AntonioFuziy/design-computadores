@@ -13,7 +13,8 @@ entity MIPS_Aula15 is
 	 ULA_A: out std_logic_vector(larguraDados-1 downto 0);
 	 ULA_B: out std_logic_vector(larguraDados-1 downto 0);
 	 Operacao_ULA_OUT: out std_logic_vector(2 downto 0);
-	 Valor_Operacao: out std_logic_vector(larguraDados-1 downto 0)
+	 Valor_Operacao: out std_logic_vector(larguraDados-1 downto 0);
+	 Saida_PC: out std_logic_vector(larguraDados-1 downto 0)
   );
 end entity;
 
@@ -189,5 +190,6 @@ Operacao_ULA_OUT <= Operacao_ULA;
 ULA_A <= bancoReg_ULA_A;
 ULA_B <= bancoReg_ULA_B;
 Valor_Operacao <= saida_ULA;
+Saida_PC <= PC_ROM;
 
 end architecture;
