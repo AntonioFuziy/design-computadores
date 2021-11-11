@@ -12,8 +12,12 @@ entity MIPS_Aula17_UnidadeControle is
    CLOCK_50 : in std_logic;
 	 ULA_A: out std_logic_vector(larguraDados-1 downto 0);
 	 ULA_B: out std_logic_vector(larguraDados-1 downto 0);
+	 Resulado_Operacao: out std_logic_vector(larguraDados-1 downto 0);
 	 Operacao_ULA_OUT: out std_logic_vector(2 downto 0);
-	 Valor_Operacao: out std_logic_vector(larguraDados-1 downto 0)
+	 Funct: out std_logic_vector(5 downto 0);
+	 Opcode: out std_logic_vector(5 downto 0);
+	 Tipo_Instrucao: out std_logic;
+	 Saida_PC: out std_logic_vector(larguraDados-1 downto 0)
   );
 end entity;
 
@@ -83,12 +87,12 @@ MUX_JMP_BEQ: entity work.muxGenerico2x1
 			saida_MUX => saida_MUX_JMP_PC
 		);
 		
-DESLOCADOR_JMP: entity work.deslocadorSinalJMP 
+DESLOCADOR_JMP: entity work.deslocadorSinal
 		 generic map(
-			larguraDadosIn => 26, larguraDadosOut => 28
+			larguraDados => 28
 		 )
 		 port map (
-			DATA_IN => instruction(25 downto 0), DATA_OUT => Im_deslocado
+			DATA_IN => instruction(25 downto 0) & "00", DATA_OUT => Im_deslocado
 		 );
 			 
 somadorConstante :  entity work.somaConstante  generic map (larguraDados => larguraDados, constante => 4)
@@ -216,7 +220,12 @@ beq_flag <= Sinais_Controle(8);
 
 Operacao_ULA_OUT <= Saida_MUX_CTRL;
 ULA_A <= bancoReg_ULA_A;
-ULA_B <= bancoReg_ULA_B;
-Valor_Operacao <= saida_ULA;
+ULA_B <= saidaMuxULA;
+Resulado_Operacao <= Saida_ULA;
+Opcode <= instruction(31 downto 26);
+Funct <= instruction(5 downto 0);
+Saida_PC <= PC_ROM;
+Tipo_Instrucao <= Tipo_Operacao_ULA;
+
 
 end architecture;

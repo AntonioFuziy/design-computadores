@@ -15,5 +15,5 @@ end entity;
 
 architecture componente of deslocadorSinal is
     begin
-        DATA_OUT <= DATA_IN(29 downto 0) & "00";
+        DATA_OUT <= DATA_IN(larguraDados-3 downto 0) & "00";
 end architecture;
