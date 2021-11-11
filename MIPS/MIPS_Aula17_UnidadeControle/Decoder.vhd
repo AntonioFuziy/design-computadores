@@ -27,15 +27,31 @@ architecture arch_name of Decoder is
   alias beq_bit : std_logic is OUTPUT(8);
   
 begin
-	
+	--certo
 	Sel_MUX_JMP <= '1' when (OPCODE = JMP) else '0';
+
+  --certo
 	Sel_MUX_RtRd <= '1' when (OPCODE = TIPO_R) else '0';
-	Habilita_Escrita_Reg <= '1' when (OPCODE = LW) else '0';
-	Sel_MUX_RtIm <= '1' when (OPCODE = LW) else '0';
-	Tipo_Operacao  <= '1' when (OPCODE = TIPO_R) else '0';
-	Sel_MUX_ULAMem <= '1' when (OPCODE = LW or OPCODE = SW) else '0';
+
+  --talvez correcao Habilita_Escrita_Reg <= '0' when (OPCODE=SW or OPCODE=BEQ) else '1';
+	Habilita_Escrita_Reg <= '0' when (OPCODE = SW or OPCODE = BEQ) else '1';
+
+  --talvez corrigir pra OPCODE=LW or OPCODE=SW
+	Sel_MUX_RtIm <= '1' when (OPCODE = LW or OPCODE = SW) else '0';
+
+	--certo
+  Tipo_Operacao  <= '1' when (OPCODE = TIPO_R) else '0';
+
+  --talvez correcao Sel_MUX_ULAMem <= '0' when (OPCODE = TIPO_R) else '1';
+	Sel_MUX_ULAMem <= '0' when (OPCODE = TIPO_R) else '1';
+
+  --certo
 	rd <= '1' when (OPCODE = LW) else '0';
-	wr <= '1' when (OPCODE = SW) else '0';
-	beq_bit <= '1' when (OPCODE = BEQ) else '0';
+
+	--certo
+  wr <= '1' when (OPCODE = SW) else '0';
+
+	--certo
+  beq_bit <= '1' when (OPCODE = BEQ) else '0';
 	
 end architecture;

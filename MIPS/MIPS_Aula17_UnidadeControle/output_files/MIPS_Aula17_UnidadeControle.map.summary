@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Wed Nov 10 17:53:43 2021
+Analysis & Synthesis Status : Successful - Thu Nov 11 16:14:06 2021
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : MIPS_Aula17_UnidadeControle
 Top-level Entity Name : MIPS_Aula17_UnidadeControle
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 2086
-Total pins : 100
+Total registers : 2334
+Total pins : 145
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/10/2021 17:54:55"
+-- Generated on "11/11/2021 16:14:14"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          MIPS_Aula17_UnidadeControle
 -- 
@@ -35,17 +35,25 @@ ARCHITECTURE MIPS_Aula17_UnidadeControle_arch OF MIPS_Aula17_UnidadeControle_vhd
 -- constants                                                 
 -- signals                                                   
 SIGNAL CLOCK_50 : STD_LOGIC;
+SIGNAL Funct : STD_LOGIC_VECTOR(5 DOWNTO 0);
+SIGNAL Opcode : STD_LOGIC_VECTOR(5 DOWNTO 0);
 SIGNAL Operacao_ULA_OUT : STD_LOGIC_VECTOR(2 DOWNTO 0);
+SIGNAL Resulado_Operacao : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL Saida_PC : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL Tipo_Instrucao : STD_LOGIC;
 SIGNAL ULA_A : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL ULA_B : STD_LOGIC_VECTOR(31 DOWNTO 0);
-SIGNAL Valor_Operacao : STD_LOGIC_VECTOR(31 DOWNTO 0);
 COMPONENT MIPS_Aula17_UnidadeControle
 	PORT (
 	CLOCK_50 : IN STD_LOGIC;
+	Funct : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
+	Opcode : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
 	Operacao_ULA_OUT : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
+	Resulado_Operacao : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	Saida_PC : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	Tipo_Instrucao : OUT STD_LOGIC;
 	ULA_A : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-	ULA_B : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-	Valor_Operacao : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+	ULA_B : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
@@ -53,10 +61,14 @@ BEGIN
 	PORT MAP (
 -- list connections between master ports and signals
 	CLOCK_50 => CLOCK_50,
+	Funct => Funct,
+	Opcode => Opcode,
 	Operacao_ULA_OUT => Operacao_ULA_OUT,
+	Resulado_Operacao => Resulado_Operacao,
+	Saida_PC => Saida_PC,
+	Tipo_Instrucao => Tipo_Instrucao,
 	ULA_A => ULA_A,
-	ULA_B => ULA_B,
-	Valor_Operacao => Valor_Operacao
+	ULA_B => ULA_B
 	);
 
 -- CLOCK_50

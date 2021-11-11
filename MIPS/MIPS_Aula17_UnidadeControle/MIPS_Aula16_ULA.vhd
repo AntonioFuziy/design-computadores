@@ -364,7 +364,7 @@ ULA_27: entity work.ULA_31bits
       entradaA =>  entradaA(27),
       entradaB =>  entradaB(27),
       inverteB =>  inverteB,
-      less =>  set,
+      less =>  '0',
       operacao =>  operacao,
       carryIn =>  carry26,
       carryOut => carry27,

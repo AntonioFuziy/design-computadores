@@ -20,7 +20,6 @@ begin
 	
 	OUTPUT <= "010" when (OPCODE = LW or OPCODE = SW) else 
             "110" when (OPCODE = BEQ) else
-            "111" when (OPCODE = TIPO_R) else
             "000";
 	
 end architecture;
