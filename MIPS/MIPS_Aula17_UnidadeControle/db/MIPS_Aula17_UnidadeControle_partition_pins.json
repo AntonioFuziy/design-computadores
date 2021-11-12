@@ -388,6 +388,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "Operacao_ULA_OUT[0]",
+					"strict" : false
+				},
+				{
 					"name" : "Operacao_ULA_OUT[1]",
 					"strict" : false
 				},
@@ -401,6 +405,10 @@
 				},
 				{
 					"name" : "Funct[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Funct[2]",
 					"strict" : false
 				},
 				{
