@@ -102,7 +102,7 @@ R23
 R16
 R17
 Emips_aula17_unidadecontrole
-Z24 w1636658056
+Z24 w1636728274
 R3
 R5
 R8
@@ -112,7 +112,7 @@ R4
 R6
 R7
 Z26 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
-!i122 48
+!i122 56
 R0
 R9
 R10
@@ -122,9 +122,9 @@ ViR3Y`8X=OfDE946Y5:efF0
 !s100 P]GlfbfDN4kHnS<4a2EdY1
 R11
 32
-Z27 !s110 1636658057
+!s110 1636728275
 !i10b 1
-Z28 !s108 1636658057.000000
+Z27 !s108 1636728275.000000
 R14
 R15
 !i113 1
@@ -141,59 +141,59 @@ R6
 R7
 R26
 DEx4 work 27 mips_aula17_unidadecontrole 0 22 iR3Y`8X=OfDE946Y5:efF0
-!i122 48
-l7344
-L53 71257
-V>JCNzzLZ8aNoBWT6maBV_3
-!s100 k>7J;KZGT2gbOWA>E@lGm2
+!i122 56
+l8023
+L53 78063
+V6Je9n6_ZNe^>IzkCmV]Um0
+!s100 V4Kc3bgj0h0@Y<7eAn0mb1
 R11
 32
-R27
+!s110 1636728276
 !i10b 1
-R28
+R27
 R14
 R15
 !i113 1
 R16
 R17
 Emips_aula17_unidadecontrole_vhd_vec_tst
-Z29 w1636658054
+Z28 w1636728271
 R6
 R7
-!i122 49
+!i122 57
 R0
-Z30 8Waveform.vwf.vht
-Z31 FWaveform.vwf.vht
+Z29 8Waveform.vwf.vht
+Z30 FWaveform.vwf.vht
 l0
 R21
 V=@^G15O`DehU4jb<d4M>:0
 !s100 Oi2nkBmL<FWbgX057>lTK1
 R11
 32
-Z32 !s110 1636658058
+Z31 !s110 1636728278
 !i10b 1
-Z33 !s108 1636658058.000000
-Z34 !s90 -work|work|Waveform.vwf.vht|
-Z35 !s107 Waveform.vwf.vht|
+Z32 !s108 1636728277.000000
+Z33 !s90 -work|work|Waveform.vwf.vht|
+Z34 !s107 Waveform.vwf.vht|
 !i113 1
 R16
 R17
 Amips_aula17_unidadecontrole_arch
 R6
 R7
-Z36 DEx4 work 39 mips_aula17_unidadecontrole_vhd_vec_tst 0 22 =@^G15O`DehU4jb<d4M>:0
-!i122 49
+Z35 DEx4 work 39 mips_aula17_unidadecontrole_vhd_vec_tst 0 22 =@^G15O`DehU4jb<d4M>:0
+!i122 57
 l59
-Z37 L34 52
+Z36 L34 52
 V94[TbE[]HQG:am4Ee;oV[0
 !s100 OT7h5<0@`eUhhNL>cWVeM3
 R11
 32
-R32
+R31
 !i10b 1
+R32
 R33
 R34
-R35
 !i113 1
 R16
 R17

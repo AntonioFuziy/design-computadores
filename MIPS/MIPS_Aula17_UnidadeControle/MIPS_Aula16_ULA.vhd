@@ -148,7 +148,7 @@ ULA_9: entity work.ULA_31bits
       entradaA =>  entradaA(9),
       entradaB =>  entradaB(9),
       inverteB =>  inverteB,
-      less =>  set,
+      less =>  '0',
       operacao =>  operacao,
       carryIn =>  carry8,
       carryOut => carry9,
