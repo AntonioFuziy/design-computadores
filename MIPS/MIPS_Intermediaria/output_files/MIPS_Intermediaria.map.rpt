@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIPS_Intermediaria
-Sat Nov 13 18:02:14 2021
+Sun Nov 14 18:40:42 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -114,13 +114,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Nov 13 18:02:14 2021       ;
+; Analysis & Synthesis Status     ; Successful - Sun Nov 14 18:40:42 2021       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; MIPS_Intermediaria                          ;
 ; Top-level Entity Name           ; MIPS_Intermediaria                          ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 2614                                        ;
+; Total registers                 ; 2358                                        ;
 ; Total pins                      ; 129                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -236,7 +236,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
@@ -275,25 +275,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------+
 ; Resource                                    ; Usage        ;
 +---------------------------------------------+--------------+
-; Estimate of Logic utilization (ALMs needed) ; 1936         ;
+; Estimate of Logic utilization (ALMs needed) ; 1722         ;
 ;                                             ;              ;
-; Combinational ALUT usage for logic          ; 1564         ;
-;     -- 7 input functions                    ; 26           ;
-;     -- 6 input functions                    ; 1099         ;
-;     -- 5 input functions                    ; 59           ;
-;     -- 4 input functions                    ; 137          ;
-;     -- <=3 input functions                  ; 243          ;
+; Combinational ALUT usage for logic          ; 1280         ;
+;     -- 7 input functions                    ; 98           ;
+;     -- 6 input functions                    ; 801          ;
+;     -- 5 input functions                    ; 62           ;
+;     -- 4 input functions                    ; 96           ;
+;     -- <=3 input functions                  ; 223          ;
 ;                                             ;              ;
-; Dedicated logic registers                   ; 2614         ;
+; Dedicated logic registers                   ; 2358         ;
 ;                                             ;              ;
 ; I/O pins                                    ; 129          ;
 ;                                             ;              ;
 ; Total DSP Blocks                            ; 0            ;
 ;                                             ;              ;
 ; Maximum fan-out node                        ; KEY[0]~input ;
-; Maximum fan-out                             ; 2614         ;
-; Total fan-out                               ; 16165        ;
-; Average fan-out                             ; 3.64         ;
+; Maximum fan-out                             ; 2358         ;
+; Total fan-out                               ; 13913        ;
+; Average fan-out                             ; 3.57         ;
 +---------------------------------------------+--------------+
 
 
@@ -302,52 +302,52 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                  ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                          ; Entity Name         ; Library Name ;
 +---------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------+---------------------+--------------+
-; |MIPS_Intermediaria                         ; 1564 (11)           ; 2614 (0)                  ; 0                 ; 0          ; 129  ; 0            ; |MIPS_Intermediaria                                                                          ; MIPS_Intermediaria  ; work         ;
+; |MIPS_Intermediaria                         ; 1280 (10)           ; 2358 (0)                  ; 0                 ; 0          ; 129  ; 0            ; |MIPS_Intermediaria                                                                          ; MIPS_Intermediaria  ; work         ;
 ;    |Decoder:Decoder|                        ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|Decoder:Decoder                                                          ; Decoder             ; work         ;
 ;    |DecoderFUNCT:Decoder_FUNCT|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|DecoderFUNCT:Decoder_FUNCT                                               ; DecoderFUNCT        ; work         ;
-;    |MIPS_Aula16_ULA:ULA1|                   ; 129 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1                                                     ; MIPS_Aula16_ULA     ; work         ;
-;       |ULA_31bits:ULA_0|                    ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_0                                    ; ULA_31bits          ; work         ;
+;    |MIPS_Aula16_ULA:ULA1|                   ; 132 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1                                                     ; MIPS_Aula16_ULA     ; work         ;
+;       |ULA_31bits:ULA_0|                    ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_0                                    ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_0|muxGenerico2x1_Bit:MUX_entradaB    ; muxGenerico2x1_Bit  ; work         ;
-;          |muxGenerico4x1:MUX_Resultado|     ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_0|muxGenerico4x1:MUX_Resultado       ; muxGenerico4x1      ; work         ;
+;          |muxGenerico4x1:MUX_Resultado|     ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_0|muxGenerico4x1:MUX_Resultado       ; muxGenerico4x1      ; work         ;
 ;          |somadorGenerico_Bit:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_0|somadorGenerico_Bit:somadorMux     ; somadorGenerico_Bit ; work         ;
-;       |ULA_31bits:ULA_10|                   ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_10                                   ; ULA_31bits          ; work         ;
+;       |ULA_31bits:ULA_10|                   ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_10                                   ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_10|muxGenerico2x1_Bit:MUX_entradaB   ; muxGenerico2x1_Bit  ; work         ;
-;          |muxGenerico4x1:MUX_Resultado|     ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_10|muxGenerico4x1:MUX_Resultado      ; muxGenerico4x1      ; work         ;
+;          |muxGenerico4x1:MUX_Resultado|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_10|muxGenerico4x1:MUX_Resultado      ; muxGenerico4x1      ; work         ;
 ;          |somadorGenerico_Bit:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_10|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
-;       |ULA_31bits:ULA_11|                   ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_11                                   ; ULA_31bits          ; work         ;
+;       |ULA_31bits:ULA_11|                   ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_11                                   ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_11|muxGenerico2x1_Bit:MUX_entradaB   ; muxGenerico2x1_Bit  ; work         ;
 ;          |muxGenerico4x1:MUX_Resultado|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_11|muxGenerico4x1:MUX_Resultado      ; muxGenerico4x1      ; work         ;
-;          |somadorGenerico_Bit:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_11|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
-;       |ULA_31bits:ULA_12|                   ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_12                                   ; ULA_31bits          ; work         ;
+;       |ULA_31bits:ULA_12|                   ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_12                                   ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_12|muxGenerico2x1_Bit:MUX_entradaB   ; muxGenerico2x1_Bit  ; work         ;
-;          |muxGenerico4x1:MUX_Resultado|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_12|muxGenerico4x1:MUX_Resultado      ; muxGenerico4x1      ; work         ;
+;          |muxGenerico4x1:MUX_Resultado|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_12|muxGenerico4x1:MUX_Resultado      ; muxGenerico4x1      ; work         ;
+;          |somadorGenerico_Bit:somadorMux|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_12|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
 ;       |ULA_31bits:ULA_13|                   ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_13                                   ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_13|muxGenerico2x1_Bit:MUX_entradaB   ; muxGenerico2x1_Bit  ; work         ;
-;          |muxGenerico4x1:MUX_Resultado|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_13|muxGenerico4x1:MUX_Resultado      ; muxGenerico4x1      ; work         ;
-;          |somadorGenerico_Bit:somadorMux|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_13|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
-;       |ULA_31bits:ULA_14|                   ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_14                                   ; ULA_31bits          ; work         ;
+;          |muxGenerico4x1:MUX_Resultado|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_13|muxGenerico4x1:MUX_Resultado      ; muxGenerico4x1      ; work         ;
+;          |somadorGenerico_Bit:somadorMux|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_13|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
+;       |ULA_31bits:ULA_14|                   ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_14                                   ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_14|muxGenerico2x1_Bit:MUX_entradaB   ; muxGenerico2x1_Bit  ; work         ;
 ;          |muxGenerico4x1:MUX_Resultado|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_14|muxGenerico4x1:MUX_Resultado      ; muxGenerico4x1      ; work         ;
-;          |somadorGenerico_Bit:somadorMux|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_14|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
+;          |somadorGenerico_Bit:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_14|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
 ;       |ULA_31bits:ULA_15|                   ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_15                                   ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_15|muxGenerico2x1_Bit:MUX_entradaB   ; muxGenerico2x1_Bit  ; work         ;
 ;          |muxGenerico4x1:MUX_Resultado|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_15|muxGenerico4x1:MUX_Resultado      ; muxGenerico4x1      ; work         ;
 ;          |somadorGenerico_Bit:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_15|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
-;       |ULA_31bits:ULA_16|                   ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_16                                   ; ULA_31bits          ; work         ;
+;       |ULA_31bits:ULA_16|                   ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_16                                   ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_16|muxGenerico2x1_Bit:MUX_entradaB   ; muxGenerico2x1_Bit  ; work         ;
 ;          |muxGenerico4x1:MUX_Resultado|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_16|muxGenerico4x1:MUX_Resultado      ; muxGenerico4x1      ; work         ;
-;          |somadorGenerico_Bit:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_16|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
-;       |ULA_31bits:ULA_17|                   ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_17                                   ; ULA_31bits          ; work         ;
+;       |ULA_31bits:ULA_17|                   ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_17                                   ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_17|muxGenerico2x1_Bit:MUX_entradaB   ; muxGenerico2x1_Bit  ; work         ;
-;          |muxGenerico4x1:MUX_Resultado|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_17|muxGenerico4x1:MUX_Resultado      ; muxGenerico4x1      ; work         ;
+;          |muxGenerico4x1:MUX_Resultado|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_17|muxGenerico4x1:MUX_Resultado      ; muxGenerico4x1      ; work         ;
+;          |somadorGenerico_Bit:somadorMux|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_17|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
 ;       |ULA_31bits:ULA_18|                   ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_18                                   ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_18|muxGenerico2x1_Bit:MUX_entradaB   ; muxGenerico2x1_Bit  ; work         ;
-;          |muxGenerico4x1:MUX_Resultado|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_18|muxGenerico4x1:MUX_Resultado      ; muxGenerico4x1      ; work         ;
-;          |somadorGenerico_Bit:somadorMux|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_18|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
-;       |ULA_31bits:ULA_19|                   ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_19                                   ; ULA_31bits          ; work         ;
+;          |muxGenerico4x1:MUX_Resultado|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_18|muxGenerico4x1:MUX_Resultado      ; muxGenerico4x1      ; work         ;
+;          |somadorGenerico_Bit:somadorMux|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_18|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
+;       |ULA_31bits:ULA_19|                   ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_19                                   ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_19|muxGenerico2x1_Bit:MUX_entradaB   ; muxGenerico2x1_Bit  ; work         ;
 ;          |muxGenerico4x1:MUX_Resultado|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_19|muxGenerico4x1:MUX_Resultado      ; muxGenerico4x1      ; work         ;
-;          |somadorGenerico_Bit:somadorMux|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_19|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
+;          |somadorGenerico_Bit:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_19|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
 ;       |ULA_31bits:ULA_1|                    ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_1                                    ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_1|muxGenerico2x1_Bit:MUX_entradaB    ; muxGenerico2x1_Bit  ; work         ;
 ;          |muxGenerico4x1:MUX_Resultado|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_1|muxGenerico4x1:MUX_Resultado       ; muxGenerico4x1      ; work         ;
@@ -356,92 +356,92 @@ https://fpgasoftware.intel.com/eula.
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_20|muxGenerico2x1_Bit:MUX_entradaB   ; muxGenerico2x1_Bit  ; work         ;
 ;          |muxGenerico4x1:MUX_Resultado|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_20|muxGenerico4x1:MUX_Resultado      ; muxGenerico4x1      ; work         ;
 ;          |somadorGenerico_Bit:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_20|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
-;       |ULA_31bits:ULA_21|                   ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_21                                   ; ULA_31bits          ; work         ;
+;       |ULA_31bits:ULA_21|                   ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_21                                   ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_21|muxGenerico2x1_Bit:MUX_entradaB   ; muxGenerico2x1_Bit  ; work         ;
 ;          |muxGenerico4x1:MUX_Resultado|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_21|muxGenerico4x1:MUX_Resultado      ; muxGenerico4x1      ; work         ;
-;          |somadorGenerico_Bit:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_21|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
-;       |ULA_31bits:ULA_22|                   ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_22                                   ; ULA_31bits          ; work         ;
+;       |ULA_31bits:ULA_22|                   ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_22                                   ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_22|muxGenerico2x1_Bit:MUX_entradaB   ; muxGenerico2x1_Bit  ; work         ;
-;          |muxGenerico4x1:MUX_Resultado|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_22|muxGenerico4x1:MUX_Resultado      ; muxGenerico4x1      ; work         ;
-;       |ULA_31bits:ULA_23|                   ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_23                                   ; ULA_31bits          ; work         ;
+;          |muxGenerico4x1:MUX_Resultado|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_22|muxGenerico4x1:MUX_Resultado      ; muxGenerico4x1      ; work         ;
+;          |somadorGenerico_Bit:somadorMux|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_22|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
+;       |ULA_31bits:ULA_23|                   ; 8 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_23                                   ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_23|muxGenerico2x1_Bit:MUX_entradaB   ; muxGenerico2x1_Bit  ; work         ;
-;          |muxGenerico4x1:MUX_Resultado|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_23|muxGenerico4x1:MUX_Resultado      ; muxGenerico4x1      ; work         ;
-;          |somadorGenerico_Bit:somadorMux|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_23|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
-;       |ULA_31bits:ULA_24|                   ; 7 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_24                                   ; ULA_31bits          ; work         ;
-;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_24|muxGenerico2x1_Bit:MUX_entradaB   ; muxGenerico2x1_Bit  ; work         ;
+;          |muxGenerico4x1:MUX_Resultado|     ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_23|muxGenerico4x1:MUX_Resultado      ; muxGenerico4x1      ; work         ;
+;          |somadorGenerico_Bit:somadorMux|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_23|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
+;       |ULA_31bits:ULA_24|                   ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_24                                   ; ULA_31bits          ; work         ;
+;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_24|muxGenerico2x1_Bit:MUX_entradaB   ; muxGenerico2x1_Bit  ; work         ;
 ;          |muxGenerico4x1:MUX_Resultado|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_24|muxGenerico4x1:MUX_Resultado      ; muxGenerico4x1      ; work         ;
-;          |somadorGenerico_Bit:somadorMux|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_24|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
-;       |ULA_31bits:ULA_25|                   ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_25                                   ; ULA_31bits          ; work         ;
+;          |somadorGenerico_Bit:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_24|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
+;       |ULA_31bits:ULA_25|                   ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_25                                   ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_25|muxGenerico2x1_Bit:MUX_entradaB   ; muxGenerico2x1_Bit  ; work         ;
-;          |muxGenerico4x1:MUX_Resultado|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_25|muxGenerico4x1:MUX_Resultado      ; muxGenerico4x1      ; work         ;
-;       |ULA_31bits:ULA_26|                   ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_26                                   ; ULA_31bits          ; work         ;
+;          |muxGenerico4x1:MUX_Resultado|     ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_25|muxGenerico4x1:MUX_Resultado      ; muxGenerico4x1      ; work         ;
+;          |somadorGenerico_Bit:somadorMux|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_25|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
+;       |ULA_31bits:ULA_26|                   ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_26                                   ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_26|muxGenerico2x1_Bit:MUX_entradaB   ; muxGenerico2x1_Bit  ; work         ;
-;          |muxGenerico4x1:MUX_Resultado|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_26|muxGenerico4x1:MUX_Resultado      ; muxGenerico4x1      ; work         ;
-;          |somadorGenerico_Bit:somadorMux|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_26|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
-;       |ULA_31bits:ULA_27|                   ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_27                                   ; ULA_31bits          ; work         ;
+;          |muxGenerico4x1:MUX_Resultado|     ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_26|muxGenerico4x1:MUX_Resultado      ; muxGenerico4x1      ; work         ;
+;          |somadorGenerico_Bit:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_26|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
+;       |ULA_31bits:ULA_27|                   ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_27                                   ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_27|muxGenerico2x1_Bit:MUX_entradaB   ; muxGenerico2x1_Bit  ; work         ;
 ;          |muxGenerico4x1:MUX_Resultado|     ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_27|muxGenerico4x1:MUX_Resultado      ; muxGenerico4x1      ; work         ;
-;          |somadorGenerico_Bit:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_27|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
-;       |ULA_31bits:ULA_28|                   ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_28                                   ; ULA_31bits          ; work         ;
+;          |somadorGenerico_Bit:somadorMux|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_27|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
+;       |ULA_31bits:ULA_28|                   ; 8 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_28                                   ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_28|muxGenerico2x1_Bit:MUX_entradaB   ; muxGenerico2x1_Bit  ; work         ;
-;          |muxGenerico4x1:MUX_Resultado|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_28|muxGenerico4x1:MUX_Resultado      ; muxGenerico4x1      ; work         ;
-;          |somadorGenerico_Bit:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_28|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
-;       |ULA_31bits:ULA_29|                   ; 6 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_29                                   ; ULA_31bits          ; work         ;
+;          |muxGenerico4x1:MUX_Resultado|     ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_28|muxGenerico4x1:MUX_Resultado      ; muxGenerico4x1      ; work         ;
+;          |somadorGenerico_Bit:somadorMux|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_28|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
+;       |ULA_31bits:ULA_29|                   ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_29                                   ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_29|muxGenerico2x1_Bit:MUX_entradaB   ; muxGenerico2x1_Bit  ; work         ;
 ;          |muxGenerico4x1:MUX_Resultado|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_29|muxGenerico4x1:MUX_Resultado      ; muxGenerico4x1      ; work         ;
-;          |somadorGenerico_Bit:somadorMux|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_29|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
-;       |ULA_31bits:ULA_2|                    ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_2                                    ; ULA_31bits          ; work         ;
+;       |ULA_31bits:ULA_2|                    ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_2                                    ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_2|muxGenerico2x1_Bit:MUX_entradaB    ; muxGenerico2x1_Bit  ; work         ;
 ;          |muxGenerico4x1:MUX_Resultado|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_2|muxGenerico4x1:MUX_Resultado       ; muxGenerico4x1      ; work         ;
-;       |ULA_31bits:ULA_30|                   ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_30                                   ; ULA_31bits          ; work         ;
+;          |somadorGenerico_Bit:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_2|somadorGenerico_Bit:somadorMux     ; somadorGenerico_Bit ; work         ;
+;       |ULA_31bits:ULA_30|                   ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_30                                   ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_30|muxGenerico2x1_Bit:MUX_entradaB   ; muxGenerico2x1_Bit  ; work         ;
 ;          |muxGenerico4x1:MUX_Resultado|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_30|muxGenerico4x1:MUX_Resultado      ; muxGenerico4x1      ; work         ;
-;       |ULA_31bits:ULA_3|                    ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_3                                    ; ULA_31bits          ; work         ;
+;          |somadorGenerico_Bit:somadorMux|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_30|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
+;       |ULA_31bits:ULA_3|                    ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_3                                    ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_3|muxGenerico2x1_Bit:MUX_entradaB    ; muxGenerico2x1_Bit  ; work         ;
-;          |muxGenerico4x1:MUX_Resultado|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_3|muxGenerico4x1:MUX_Resultado       ; muxGenerico4x1      ; work         ;
-;          |somadorGenerico_Bit:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_3|somadorGenerico_Bit:somadorMux     ; somadorGenerico_Bit ; work         ;
-;       |ULA_31bits:ULA_4|                    ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_4                                    ; ULA_31bits          ; work         ;
+;          |muxGenerico4x1:MUX_Resultado|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_3|muxGenerico4x1:MUX_Resultado       ; muxGenerico4x1      ; work         ;
+;          |somadorGenerico_Bit:somadorMux|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_3|somadorGenerico_Bit:somadorMux     ; somadorGenerico_Bit ; work         ;
+;       |ULA_31bits:ULA_4|                    ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_4                                    ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_4|muxGenerico2x1_Bit:MUX_entradaB    ; muxGenerico2x1_Bit  ; work         ;
-;          |muxGenerico4x1:MUX_Resultado|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_4|muxGenerico4x1:MUX_Resultado       ; muxGenerico4x1      ; work         ;
-;          |somadorGenerico_Bit:somadorMux|   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_4|somadorGenerico_Bit:somadorMux     ; somadorGenerico_Bit ; work         ;
+;          |muxGenerico4x1:MUX_Resultado|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_4|muxGenerico4x1:MUX_Resultado       ; muxGenerico4x1      ; work         ;
+;          |somadorGenerico_Bit:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_4|somadorGenerico_Bit:somadorMux     ; somadorGenerico_Bit ; work         ;
 ;       |ULA_31bits:ULA_5|                    ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_5                                    ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_5|muxGenerico2x1_Bit:MUX_entradaB    ; muxGenerico2x1_Bit  ; work         ;
 ;          |muxGenerico4x1:MUX_Resultado|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_5|muxGenerico4x1:MUX_Resultado       ; muxGenerico4x1      ; work         ;
 ;          |somadorGenerico_Bit:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_5|somadorGenerico_Bit:somadorMux     ; somadorGenerico_Bit ; work         ;
-;       |ULA_31bits:ULA_6|                    ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_6                                    ; ULA_31bits          ; work         ;
+;       |ULA_31bits:ULA_6|                    ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_6                                    ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_6|muxGenerico2x1_Bit:MUX_entradaB    ; muxGenerico2x1_Bit  ; work         ;
 ;          |muxGenerico4x1:MUX_Resultado|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_6|muxGenerico4x1:MUX_Resultado       ; muxGenerico4x1      ; work         ;
-;          |somadorGenerico_Bit:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_6|somadorGenerico_Bit:somadorMux     ; somadorGenerico_Bit ; work         ;
-;       |ULA_31bits:ULA_7|                    ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_7                                    ; ULA_31bits          ; work         ;
+;       |ULA_31bits:ULA_7|                    ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_7                                    ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_7|muxGenerico2x1_Bit:MUX_entradaB    ; muxGenerico2x1_Bit  ; work         ;
 ;          |muxGenerico4x1:MUX_Resultado|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_7|muxGenerico4x1:MUX_Resultado       ; muxGenerico4x1      ; work         ;
-;          |somadorGenerico_Bit:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_7|somadorGenerico_Bit:somadorMux     ; somadorGenerico_Bit ; work         ;
+;          |somadorGenerico_Bit:somadorMux|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_7|somadorGenerico_Bit:somadorMux     ; somadorGenerico_Bit ; work         ;
 ;       |ULA_31bits:ULA_8|                    ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_8                                    ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_8|muxGenerico2x1_Bit:MUX_entradaB    ; muxGenerico2x1_Bit  ; work         ;
-;          |muxGenerico4x1:MUX_Resultado|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_8|muxGenerico4x1:MUX_Resultado       ; muxGenerico4x1      ; work         ;
-;          |somadorGenerico_Bit:somadorMux|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_8|somadorGenerico_Bit:somadorMux     ; somadorGenerico_Bit ; work         ;
-;       |ULA_31bits:ULA_9|                    ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_9                                    ; ULA_31bits          ; work         ;
+;          |muxGenerico4x1:MUX_Resultado|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_8|muxGenerico4x1:MUX_Resultado       ; muxGenerico4x1      ; work         ;
+;          |somadorGenerico_Bit:somadorMux|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_8|somadorGenerico_Bit:somadorMux     ; somadorGenerico_Bit ; work         ;
+;       |ULA_31bits:ULA_9|                    ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_9                                    ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_9|muxGenerico2x1_Bit:MUX_entradaB    ; muxGenerico2x1_Bit  ; work         ;
 ;          |muxGenerico4x1:MUX_Resultado|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_9|muxGenerico4x1:MUX_Resultado       ; muxGenerico4x1      ; work         ;
-;          |somadorGenerico_Bit:somadorMux|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_9|somadorGenerico_Bit:somadorMux     ; somadorGenerico_Bit ; work         ;
-;       |ULA_Overflow:ULA_31|                 ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_Overflow:ULA_31                                 ; ULA_Overflow        ; work         ;
+;          |somadorGenerico_Bit:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_9|somadorGenerico_Bit:somadorMux     ; somadorGenerico_Bit ; work         ;
+;       |ULA_Overflow:ULA_31|                 ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_Overflow:ULA_31                                 ; ULA_Overflow        ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_Overflow:ULA_31|muxGenerico2x1_Bit:MUX_entradaB ; muxGenerico2x1_Bit  ; work         ;
-;          |muxGenerico4x1:MUX_Resultado|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_Overflow:ULA_31|muxGenerico4x1:MUX_Resultado    ; muxGenerico4x1      ; work         ;
+;          |muxGenerico4x1:MUX_Resultado|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_Overflow:ULA_31|muxGenerico4x1:MUX_Resultado    ; muxGenerico4x1      ; work         ;
 ;          |somadorGenerico_Bit:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_Overflow:ULA_31|somadorGenerico_Bit:somadorMux  ; somadorGenerico_Bit ; work         ;
 ;    |RAM_MIPS:RAM_MIPS|                      ; 797 (797)           ; 2048 (2048)               ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|RAM_MIPS:RAM_MIPS                                                        ; RAM_MIPS            ; work         ;
-;    |ROM:ROM1|                               ; 21 (21)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|ROM:ROM1                                                                 ; ROM                 ; work         ;
-;    |bancoRegistradores:Banco_Registradores| ; 410 (410)           ; 512 (512)                 ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|bancoRegistradores:Banco_Registradores                                   ; bancoRegistradores  ; work         ;
+;    |ROM:ROM1|                               ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|ROM:ROM1                                                                 ; ROM                 ; work         ;
+;    |bancoRegistradores:Banco_Registradores| ; 146 (146)           ; 256 (256)                 ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|bancoRegistradores:Banco_Registradores                                   ; bancoRegistradores  ; work         ;
 ;    |conversorHex7Seg:LED_HEX0|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|conversorHex7Seg:LED_HEX0                                                ; conversorHex7Seg    ; work         ;
 ;    |conversorHex7Seg:LED_HEX1|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|conversorHex7Seg:LED_HEX1                                                ; conversorHex7Seg    ; work         ;
 ;    |conversorHex7Seg:LED_HEX2|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|conversorHex7Seg:LED_HEX2                                                ; conversorHex7Seg    ; work         ;
 ;    |conversorHex7Seg:LED_HEX3|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|conversorHex7Seg:LED_HEX3                                                ; conversorHex7Seg    ; work         ;
 ;    |conversorHex7Seg:LED_HEX4|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|conversorHex7Seg:LED_HEX4                                                ; conversorHex7Seg    ; work         ;
 ;    |conversorHex7Seg:LED_HEX5|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|conversorHex7Seg:LED_HEX5                                                ; conversorHex7Seg    ; work         ;
-;    |muxGenerico2x1:MUX_JMP_BEQ|             ; 41 (41)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|muxGenerico2x1:MUX_JMP_BEQ                                               ; muxGenerico2x1      ; work         ;
+;    |muxGenerico2x1:MUX_JMP_BEQ|             ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|muxGenerico2x1:MUX_JMP_BEQ                                               ; muxGenerico2x1      ; work         ;
 ;    |muxGenerico2x1:MUX_PC_ULA_PLACA|        ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|muxGenerico2x1:MUX_PC_ULA_PLACA                                          ; muxGenerico2x1      ; work         ;
-;    |muxGenerico2x1:MUX_RtRd|                ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|muxGenerico2x1:MUX_RtRd                                                  ; muxGenerico2x1      ; work         ;
 ;    |muxGenerico2x1:MUX_ULA_Banco|           ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|muxGenerico2x1:MUX_ULA_Banco                                             ; muxGenerico2x1      ; work         ;
-;    |muxGenerico2x1:MUX_ULA_CTRL|            ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|muxGenerico2x1:MUX_ULA_CTRL                                              ; muxGenerico2x1      ; work         ;
+;    |muxGenerico2x1:MUX_ULA_CTRL|            ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|muxGenerico2x1:MUX_ULA_CTRL                                              ; muxGenerico2x1      ; work         ;
 ;    |registradorGenerico:PC|                 ; 0 (0)               ; 30 (30)                   ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|registradorGenerico:PC                                                   ; registradorGenerico ; work         ;
 ;    |registradorGenerico:REG_HEX0|           ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|registradorGenerico:REG_HEX0                                             ; registradorGenerico ; work         ;
 ;    |registradorGenerico:REG_HEX1|           ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Intermediaria|registradorGenerico:REG_HEX1                                             ; registradorGenerico ; work         ;
@@ -462,6 +462,262 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------+--------------------------------------------+
 ; registradorGenerico:PC|DOUT[0]                          ; Merged with registradorGenerico:PC|DOUT[1] ;
 ; registradorGenerico:PC|DOUT[1]                          ; Stuck at GND due to stuck port data_in     ;
+; bancoRegistradores:Banco_Registradores|registrador~166  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~167  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~168  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~169  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~170  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~171  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~172  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~173  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~174  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~175  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~176  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~177  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~178  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~179  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~180  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~181  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~182  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~183  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~184  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~185  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~186  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~187  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~188  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~189  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~190  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~191  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~192  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~193  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~194  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~195  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~196  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~197  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~198  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~199  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~200  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~201  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~202  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~203  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~204  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~205  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~206  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~207  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~208  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~209  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~210  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~211  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~212  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~213  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~214  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~215  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~216  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~217  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~218  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~219  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~220  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~221  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~222  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~223  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~224  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~225  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~226  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~227  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~228  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~229  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~230  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~231  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~232  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~233  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~234  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~235  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~236  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~237  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~238  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~239  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~240  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~241  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~242  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~243  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~244  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~245  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~246  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~247  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~248  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~249  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~250  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~251  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~252  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~253  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~254  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~255  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~256  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~257  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~258  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~259  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~260  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~261  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~262  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~263  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~264  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~265  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~266  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~267  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~268  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~269  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~270  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~271  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~272  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~273  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~274  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~275  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~276  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~277  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~278  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~279  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~280  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~281  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~282  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~283  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~284  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~285  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~286  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~287  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~288  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~289  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~290  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~291  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~292  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~293  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~422  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~423  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~424  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~425  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~426  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~427  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~428  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~429  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~430  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~431  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~432  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~433  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~434  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~435  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~436  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~437  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~438  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~439  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~440  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~441  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~442  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~443  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~444  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~445  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~446  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~447  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~448  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~449  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~450  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~451  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~452  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~453  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~454  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~455  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~456  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~457  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~458  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~459  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~460  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~461  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~462  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~463  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~464  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~465  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~466  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~467  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~468  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~469  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~470  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~471  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~472  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~473  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~474  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~475  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~476  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~477  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~478  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~479  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~480  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~481  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~482  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~483  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~484  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~485  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~486  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~487  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~488  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~489  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~490  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~491  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~492  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~493  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~494  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~495  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~496  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~497  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~498  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~499  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~500  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~501  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~502  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~503  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~504  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~505  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~506  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~507  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~508  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~509  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~510  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~511  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~512  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~513  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~514  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~515  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~516  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~517  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~518  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~519  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~520  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~521  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~522  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~523  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~524  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~525  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~526  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~527  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~528  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~529  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~530  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~531  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~532  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~533  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~534  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~535  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~536  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~537  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~538  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~539  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~540  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~541  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~542  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~543  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~544  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~545  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~546  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~547  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~548  ; Lost fanout                                ;
+; bancoRegistradores:Banco_Registradores|registrador~549  ; Lost fanout                                ;
 ; bancoRegistradores:Banco_Registradores|registrador~550  ; Lost fanout                                ;
 ; bancoRegistradores:Banco_Registradores|registrador~551  ; Lost fanout                                ;
 ; bancoRegistradores:Banco_Registradores|registrador~552  ; Lost fanout                                ;
@@ -974,7 +1230,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; bancoRegistradores:Banco_Registradores|registrador~1059 ; Lost fanout                                ;
 ; bancoRegistradores:Banco_Registradores|registrador~1060 ; Lost fanout                                ;
 ; bancoRegistradores:Banco_Registradores|registrador~1061 ; Lost fanout                                ;
-; Total Number of Removed Registers = 514                 ;                                            ;
+; Total Number of Removed Registers = 770                 ;                                            ;
 +---------------------------------------------------------+--------------------------------------------+
 
 
@@ -983,12 +1239,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 2614  ;
+; Total registers                              ; 2358  ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 22    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 2560  ;
+; Number of registers using Clock Enable       ; 2304  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -998,10 +1254,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------+
-; 3:1                ; 23 bits   ; 46 LEs        ; 46 LEs               ; 0 LEs                  ; Yes        ; |MIPS_Intermediaria|registradorGenerico:PC|DOUT[22]                                                  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |MIPS_Intermediaria|registradorGenerico:PC|DOUT[22]                                                  ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |MIPS_Intermediaria|registradorGenerico:PC|DOUT[19]                                                  ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |MIPS_Intermediaria|registradorGenerico:PC|DOUT[3]                                                   ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_10|muxGenerico2x1_Bit:MUX_entradaB|saida_MUX ;
-; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_10|muxGenerico4x1:MUX_Resultado|saida_MUX    ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_16|muxGenerico2x1_Bit:MUX_entradaB|saida_MUX ;
+; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |MIPS_Intermediaria|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_27|muxGenerico4x1:MUX_Resultado|saida_MUX    ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |MIPS_Intermediaria|muxGenerico2x1:MUX_ULA_CTRL|saida_MUX[2]                                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------+
 
@@ -1687,29 +1944,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 2614                        ;
-;     ENA               ; 2560                        ;
+; arriav_ff             ; 2358                        ;
+;     ENA               ; 2304                        ;
 ;     SLD               ; 22                          ;
 ;     plain             ; 32                          ;
-; arriav_lcell_comb     ; 1565                        ;
+; arriav_lcell_comb     ; 1281                        ;
 ;     arith             ; 60                          ;
 ;         1 data inputs ; 30                          ;
-;         2 data inputs ; 8                           ;
-;         4 data inputs ; 22                          ;
-;     extend            ; 26                          ;
-;         7 data inputs ; 26                          ;
-;     normal            ; 1479                        ;
+;         2 data inputs ; 25                          ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 3                           ;
+;     extend            ; 98                          ;
+;         7 data inputs ; 98                          ;
+;     normal            ; 1123                        ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 27                          ;
-;         2 data inputs ; 130                         ;
-;         3 data inputs ; 48                          ;
-;         4 data inputs ; 115                         ;
-;         5 data inputs ; 59                          ;
-;         6 data inputs ; 1099                        ;
+;         1 data inputs ; 7                           ;
+;         2 data inputs ; 113                         ;
+;         3 data inputs ; 46                          ;
+;         4 data inputs ; 93                          ;
+;         5 data inputs ; 62                          ;
+;         6 data inputs ; 801                         ;
 ; boundary_port         ; 129                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 19.00                       ;
-; Average LUT depth     ; 8.20                        ;
+; Max LUT depth         ; 18.00                       ;
+; Average LUT depth     ; 6.89                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1718,7 +1976,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -1728,7 +1986,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sat Nov 13 18:02:00 2021
+    Info: Processing started: Sun Nov 14 18:40:23 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS_Intermediaria -c MIPS_Intermediaria
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file conversorHex7Seg.vhd
@@ -1828,7 +2086,9 @@ Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7
 Info (276014): Found 3 instances of uninferred RAM logic
     Info (276007): RAM logic "RAM_MIPS:RAM_MIPS|memRAM" is uninferred due to asynchronous read logic File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/RAM_MIPS.vhd Line: 22
     Info (276004): RAM logic "ROM:ROM1|memROM" is uninferred due to inappropriate RAM size File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/ROM.vhd Line: 22
-    Info (276007): RAM logic "bancoRegistradores:Banco_Registradores|registrador" is uninferred due to asynchronous read logic File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/bancoRegistradores.vhd Line: 53
+    Info (276007): RAM logic "bancoRegistradores:Banco_Registradores|registrador" is uninferred due to asynchronous read logic File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/bancoRegistradores.vhd Line: 50
+Warning (113028): 55 out of 64 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.mif Line: 1
+    Warning (113027): Addresses ranging from 9 to 63 are not initialized File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.mif Line: 1
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13049): Converted tri-state buffer "RAM_MIPS:RAM_MIPS|Dado_out[12]" feeding internal logic into a wire File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/RAM_MIPS.vhd Line: 13
     Warning (13049): Converted tri-state buffer "RAM_MIPS:RAM_MIPS|Dado_out[11]" feeding internal logic into a wire File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/RAM_MIPS.vhd Line: 13
@@ -1929,7 +2189,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "ULA_B[30]" is stuck at GND File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 14
     Warning (13410): Pin "ULA_B[31]" is stuck at GND File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 14
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 512 registers lost all their fanouts during netlist optimizations.
+Info (17049): 768 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 13 input pin(s) that do not drive logic
@@ -1946,14 +2206,14 @@ Warning (21074): Design contains 13 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 16
     Warning (15610): No output dependent on input pin "KEY[2]" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 16
     Warning (15610): No output dependent on input pin "KEY[3]" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 16
-Info (21057): Implemented 4248 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3728 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 114 output pins
-    Info (21061): Implemented 4119 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 116 warnings
-    Info: Peak virtual memory: 493 megabytes
-    Info: Processing ended: Sat Nov 13 18:02:14 2021
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:28
+    Info (21061): Implemented 3599 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 118 warnings
+    Info: Peak virtual memory: 502 megabytes
+    Info: Processing ended: Sun Nov 14 18:40:42 2021
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:40
 
 
