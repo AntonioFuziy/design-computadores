@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIPS_Intermediaria
-Sun Nov 14 18:40:42 2021
+Mon Nov 15 15:57:09 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -114,7 +114,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Nov 14 18:40:42 2021       ;
+; Analysis & Synthesis Status     ; Successful - Mon Nov 15 15:57:09 2021       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; MIPS_Intermediaria                          ;
 ; Top-level Entity Name           ; MIPS_Intermediaria                          ;
@@ -236,7 +236,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
+;     Processor 2            ;   0.0%      ;
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
@@ -1986,7 +1986,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sun Nov 14 18:40:23 2021
+    Info: Processing started: Mon Nov 15 15:56:50 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS_Intermediaria -c MIPS_Intermediaria
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file conversorHex7Seg.vhd
@@ -1997,7 +1997,7 @@ Info (12021): Found 3 design units, including 1 entities, in source file edgeDet
     Info (12022): Found design unit 2: edgeDetector-bordaDescida File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/edgeDetector.vhd Line: 23
     Info (12023): Found entity 1: edgeDetector File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/edgeDetector.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file MIPS_Intermediaria.vhd
-    Info (12022): Found design unit 1: MIPS_Intermediaria-arquitetura File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 31
+    Info (12022): Found design unit 1: MIPS_Intermediaria-arquitetura File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 27
     Info (12023): Found entity 1: MIPS_Intermediaria File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file ULA_Overflow.vhd
     Info (12022): Found design unit 1: ULA_Overflow-componente File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/ULA_Overflow.vhd Line: 20
@@ -2059,30 +2059,30 @@ Info (12021): Found 2 design units, including 1 entities, in source file bancoRe
 Info (12127): Elaborating entity "MIPS_Intermediaria" for the top level hierarchy
 Warning (10541): VHDL Signal Declaration warning at MIPS_Intermediaria.vhd(13): used implicit default value for signal "ULA_A" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 13
 Warning (10541): VHDL Signal Declaration warning at MIPS_Intermediaria.vhd(14): used implicit default value for signal "ULA_B" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 14
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:PC" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 91
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MUX_JMP_BEQ" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 95
-Info (12128): Elaborating entity "deslocadorSinal" for hierarchy "deslocadorSinal:DESLOCADOR_JMP" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 104
-Info (12128): Elaborating entity "somaConstante" for hierarchy "somaConstante:somadorConstante" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 112
-Info (12128): Elaborating entity "somadorGenerico" for hierarchy "somadorGenerico:somadorMux" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 115
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MUX_RtRd" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 126
-Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "bancoRegistradores:Banco_Registradores" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 134
-Info (12128): Elaborating entity "deslocadorSinal" for hierarchy "deslocadorSinal:DESLOCADOR" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 155
-Info (12128): Elaborating entity "ROM" for hierarchy "ROM:ROM1" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 163
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:PC" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 97
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MUX_JMP_BEQ" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 104
+Info (12128): Elaborating entity "deslocadorSinal" for hierarchy "deslocadorSinal:DESLOCADOR_JMP" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 116
+Info (12128): Elaborating entity "somaConstante" for hierarchy "somaConstante:somadorConstante" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 127
+Info (12128): Elaborating entity "somadorGenerico" for hierarchy "somadorGenerico:somadorMux" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 133
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MUX_RtRd" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 150
+Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "bancoRegistradores:Banco_Registradores" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 161
+Info (12128): Elaborating entity "deslocadorSinal" for hierarchy "deslocadorSinal:DESLOCADOR" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 188
+Info (12128): Elaborating entity "ROM" for hierarchy "ROM:ROM1" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 199
 Warning (10541): VHDL Signal Declaration warning at ROM.vhd(22): used implicit default value for signal "memROM" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/ROM.vhd Line: 22
-Info (12128): Elaborating entity "RAM_MIPS" for hierarchy "RAM_MIPS:RAM_MIPS" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 170
-Info (12128): Elaborating entity "MIPS_Aula16_ULA" for hierarchy "MIPS_Aula16_ULA:ULA1" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 185
+Info (12128): Elaborating entity "RAM_MIPS" for hierarchy "RAM_MIPS:RAM_MIPS" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 209
+Info (12128): Elaborating entity "MIPS_Aula16_ULA" for hierarchy "MIPS_Aula16_ULA:ULA1" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 227
 Info (12128): Elaborating entity "ULA_31bits" for hierarchy "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_0" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Aula16_ULA.vhd Line: 38
 Info (12128): Elaborating entity "muxGenerico2x1_Bit" for hierarchy "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_0|muxGenerico2x1_Bit:MUX_entradaB" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/ULA_31bits.vhd Line: 29
 Info (12128): Elaborating entity "somadorGenerico_Bit" for hierarchy "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_0|somadorGenerico_Bit:somadorMux" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/ULA_31bits.vhd Line: 37
 Info (12128): Elaborating entity "muxGenerico4x1" for hierarchy "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_0|muxGenerico4x1:MUX_Resultado" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/ULA_31bits.vhd Line: 46
 Info (12128): Elaborating entity "ULA_Overflow" for hierarchy "MIPS_Aula16_ULA:ULA1|ULA_Overflow:ULA_31" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Aula16_ULA.vhd Line: 410
-Info (12128): Elaborating entity "estensorSinalGenerico" for hierarchy "estensorSinalGenerico:estensorSinal" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 203
-Info (12128): Elaborating entity "Decoder" for hierarchy "Decoder:Decoder" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 206
-Info (12128): Elaborating entity "DecoderOPCODE" for hierarchy "DecoderOPCODE:Decoder_OPCODE" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 209
-Info (12128): Elaborating entity "DecoderFUNCT" for hierarchy "DecoderFUNCT:Decoder_FUNCT" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 212
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MUX_ULA_CTRL" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 215
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:REG_HEX0" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 231
-Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:LED_HEX0" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 234
+Info (12128): Elaborating entity "estensorSinalGenerico" for hierarchy "estensorSinalGenerico:estensorSinal" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 251
+Info (12128): Elaborating entity "Decoder" for hierarchy "Decoder:Decoder" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 257
+Info (12128): Elaborating entity "DecoderOPCODE" for hierarchy "DecoderOPCODE:Decoder_OPCODE" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 263
+Info (12128): Elaborating entity "DecoderFUNCT" for hierarchy "DecoderFUNCT:Decoder_FUNCT" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 269
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MUX_ULA_CTRL" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 275
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:REG_HEX0" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 297
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:LED_HEX0" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd Line: 300
 Info (276014): Found 3 instances of uninferred RAM logic
     Info (276007): RAM logic "RAM_MIPS:RAM_MIPS|memRAM" is uninferred due to asynchronous read logic File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/RAM_MIPS.vhd Line: 22
     Info (276004): RAM logic "ROM:ROM1|memROM" is uninferred due to inappropriate RAM size File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/ROM.vhd Line: 22
@@ -2211,8 +2211,8 @@ Info (21057): Implemented 3728 device resources after synthesis - the final reso
     Info (21059): Implemented 114 output pins
     Info (21061): Implemented 3599 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 118 warnings
-    Info: Peak virtual memory: 502 megabytes
-    Info: Processing ended: Sun Nov 14 18:40:42 2021
+    Info: Peak virtual memory: 493 megabytes
+    Info: Processing ended: Mon Nov 15 15:57:09 2021
     Info: Elapsed time: 00:00:19
     Info: Total CPU time (on all processors): 00:00:40
 
