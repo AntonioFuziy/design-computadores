@@ -1,5 +1,5 @@
 Archive Project report for MIPS_Intermediaria
-Mon Nov 15 15:19:28 2021
+Mon Nov 15 15:57:29 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Mon Nov 15 15:19:28 2021 ;
+; Archive Project Status ; Successful - Mon Nov 15 15:57:29 2021 ;
 ; Revision Name          ; MIPS_Intermediaria                    ;
 ; Top-level Entity Name  ; MIPS_Intermediaria                    ;
 ; Family                 ; Cyclone V                             ;
@@ -60,9 +60,9 @@ Info: ----------------------------------------------------------
 Info: Generated report 'MIPS_Intermediaria.archive.rpt'
 Info (23030): Evaluation of Tcl script /home/antonio/intelFPGA_lite/20.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 582 megabytes
-    Info: Processing ended: Mon Nov 15 15:19:28 2021
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 579 megabytes
+    Info: Processing ended: Mon Nov 15 15:57:29 2021
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 
