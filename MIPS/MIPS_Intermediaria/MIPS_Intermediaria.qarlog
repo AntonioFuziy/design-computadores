@@ -1,0 +1,38 @@
+Quartus Prime Archive log --	/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.qarlog
+
+Archive:	/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.qar
+Date:		Mon Nov 15 15:19:28 2021
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/Decoder.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/DecoderFUNCT.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/DecoderOPCODE.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Aula16_ULA.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.mif
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.qpf
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.qsf
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/RAM_MIPS.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/RAMcontent.mif
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/ROM.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/ULA_31bits.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/ULA_Overflow.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/bancoRegistradores.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/conversorHex7Seg.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/deslocadorSinal.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/deslocadorSinalJMP.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/edgeDetector.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/estensorSinalGenerico.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/muxGenerico2x1.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/muxGenerico2x1_Bit.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/muxGenerico4x1.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/registradorGenerico.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/somaConstante.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/somadorGenerico.vhd
+/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/somadorGenerico_Bit.vhd
+/home/antonio/intelFPGA_lite/20.1/quartus/linux64/assignment_defaults.qdf
+	======= Total: 27 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
