@@ -23,6 +23,7 @@ source_file = 1, /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediari
 source_file = 1, /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/bancoRegistradores.vhd
 source_file = 1, /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/RAMcontent.mif
 source_file = 1, /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/MIPS_Intermediaria.mif
+source_file = 1, /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/Waveform.vwf
 source_file = 1, /home/antonio/intelFPGA_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, /home/antonio/intelFPGA_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
 source_file = 1, /home/antonio/intelFPGA_lite/20.1/quartus/libraries/vhdl/ieee/timing_b.vhd

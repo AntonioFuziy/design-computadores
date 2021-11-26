@@ -1,0 +1,52 @@
+
+-- Copyright (C) 2017  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions
+-- and other software and tools, and its AMPP partner logic
+-- functions, and any output files from any of the foregoing
+-- (including device programming or simulation files), and any
+-- associated documentation or information are expressly subject
+-- to the terms and conditions of the Intel Program License
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details.
+
+WIDTH=32;
+DEPTH=64;
+ADDRESS_RADIX=DEC;
+DATA_RADIX=HEX;
+
+CONTENT BEGIN
+    -- Inicialização do Banco de Registradores:
+    0   :   00004020; --add $t0, $0, $0;    ($t0  := 0x00000000)
+    1   :   3C090000; --lui $t1, 0x0000;
+    2   :   3529000A; --ori $t1, $t1, 0x0A;   ($t1  := 0x0000000A)
+    3   :   3C0A0000; --lui $t2, 0x0000;
+    4   :   354A000B; --ori $t2, $t2, 0x0B;   ($t2  := 0x0000000B)
+    5   :   3C0B0000; --lui $t3, 0x0000;
+    6   :   356B000C; --ori $t3, $t3, 0x0C;   ($t3  := 0x0000000C)
+    7   :   3C0C0000; --lui $t4, 0x0000;
+    8   :   358C000D; --ori $t4, $t4, 0x0D;   ($t4  := 0x0000000D)
+    9   :   3C0D0000; --lui $t5, 0x0000;
+    10  :   35AD8016; --ori $t5, $t5, 0x8016;   ($t5  := 0x00008016)
+
+    -- Ponteiro para o segmento de dados na RAM:
+    11   :   3C0F0000; --lui $t7, 0x0000;
+    12   :   35EF0000; --ori $t7, $t7, 0x0000;   ($t7  := 0x00000000)
+
+    -- O restante é igual ao teste do subconjunto A:
+    13    :   AC090008; --sw $t1 8($t7)     (m(8) := 0x0000000A)
+    14    :   8C080008; --lw $t0 8($t7)     ($t0  := 0x0000000A)
+    15    :   012A4022; --sub $t0 $t1 $t2     ($t0  := 0xFFFFFFFF)
+    16    :   012A4024; --and $t0 $t1 $t2     ($t0  := 0x0000000A)
+    17    :   012A4025; --or $t0 $t1 $t2      ($t0  := 0x0000000B)
+    18    :   012A402A; --slt $t0 $t1 $t2     ($t0  := 0x00000001)
+    19    :   010A4020; --add $t0 $t0 $t2     ($t0  := 0x0000000C)
+                       --segunda execução:   ($t0 := 0x00000017)
+    20    :   110BFFFE; --beq $t0 $t3 0xFFFE  (pc := #19)
+                       --segunda execução:   (pc := #21)
+    21    :   08000000; --j 0x000000          (pc := #0)
+    [22..63]  : 00000000;
+END;

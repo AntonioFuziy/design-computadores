@@ -1,5 +1,5 @@
 Fitter report for MIPS_Intermediaria
-Sun Nov 14 18:42:20 2021
+Thu Nov 25 18:03:04 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -64,7 +64,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Sun Nov 14 18:42:20 2021       ;
+; Fitter Status                   ; Successful - Thu Nov 25 18:03:03 2021       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; MIPS_Intermediaria                          ;
 ; Top-level Entity Name           ; MIPS_Intermediaria                          ;
@@ -155,14 +155,14 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.13        ;
+; Average used               ; 1.12        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   4.5%      ;
-;     Processor 3            ;   4.1%      ;
-;     Processor 4            ;   4.0%      ;
+;     Processor 2            ;   4.4%      ;
+;     Processor 3            ;   4.0%      ;
+;     Processor 4            ;   3.8%      ;
 +----------------------------+-------------+
 
 
@@ -2132,7 +2132,7 @@ Info (170195): Router estimated average interconnect usage is 2% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:40
-Info (11888): Total time spent on timing analysis during the Fitter is 4.04 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 4.11 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -2141,10 +2141,10 @@ Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:11
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Intermediaria/output_files/MIPS_Intermediaria.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 1600 megabytes
-    Info: Processing ended: Sun Nov 14 18:42:21 2021
+    Info: Peak virtual memory: 1601 megabytes
+    Info: Processing ended: Thu Nov 25 18:03:05 2021
     Info: Elapsed time: 00:01:38
-    Info: Total CPU time (on all processors): 00:03:03
+    Info: Total CPU time (on all processors): 00:03:04
 
 
 +----------------------------+
