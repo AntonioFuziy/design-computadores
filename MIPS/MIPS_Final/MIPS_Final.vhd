@@ -6,30 +6,30 @@ entity MIPS_Final is
 		larguraDados : natural := 32;
 		larguraDadosComprimida : natural := 16;
 		larguraAddrRegistradores : natural := 5;
-		simulacao : boolean := TRUE -- para gravar na placa, altere de TRUE para FALSE
+		simulacao : boolean := FALSE -- para gravar na placa, altere de TRUE para FALSE
   );
   port   (
   	CLOCK_50 : in std_logic;
-		ULA_A: out std_logic_vector(larguraDados-1 downto 0);
-		ULA_B: out std_logic_vector(larguraDados-1 downto 0);
+		-- ULA_A: out std_logic_vector(larguraDados-1 downto 0);
+		-- ULA_B: out std_logic_vector(larguraDados-1 downto 0);
 		KEY: in std_logic_vector(3 downto 0);
-		-- SW: in std_logic_vector(9 downto 0);
-		-- LEDR: out std_logic_vector(7 downto 0);
-		-- HEX0 : out std_logic_vector(6 downto 0);
-		-- HEX1 : out std_logic_vector(6 downto 0);
-		-- HEX2 : out std_logic_vector(6 downto 0);
-		-- HEX3 : out std_logic_vector(6 downto 0);
-		-- HEX4 : out std_logic_vector(6 downto 0);
-		-- HEX5 : out std_logic_vector(6 downto 0);
+		SW: in std_logic_vector(9 downto 0);
+		LEDR: out std_logic_vector(7 downto 0);
+		HEX0 : out std_logic_vector(6 downto 0);
+		HEX1 : out std_logic_vector(6 downto 0);
+		HEX2 : out std_logic_vector(6 downto 0);
+		HEX3 : out std_logic_vector(6 downto 0);
+		HEX4 : out std_logic_vector(6 downto 0);
+		HEX5 : out std_logic_vector(6 downto 0)
 		
-		saida_ULA_Teste: out std_logic_vector(larguraDados-1 downto 0);
-		saida_PC_Teste: out std_logic_vector(larguraDados-1 downto 0);
-		entradaA_MUX_PC: out std_logic_vector(larguraDados-1 downto 0);
-		entradaB_MUX_PC: out std_logic_vector(larguraDados-1 downto 0);
-		entradaA_MUX_BEQ: out std_logic_vector(larguraDados-1 downto 0);
-		entradaB_MUX_BEQ: out std_logic_vector(larguraDados-1 downto 0);
-		seletor_MUX_BEQ: out std_logic;
-		saida_Somador_Constant: out std_logic_vector(larguraDados-1 downto 0)
+		-- saida_ULA_Teste: out std_logic_vector(larguraDados-1 downto 0);
+		-- saida_PC_Teste: out std_logic_vector(larguraDados-1 downto 0);
+		-- entradaA_MUX_PC: out std_logic_vector(larguraDados-1 downto 0);
+		-- entradaB_MUX_PC: out std_logic_vector(larguraDados-1 downto 0);
+		-- entradaA_MUX_BEQ: out std_logic_vector(larguraDados-1 downto 0);
+		-- entradaB_MUX_BEQ: out std_logic_vector(larguraDados-1 downto 0);
+		-- seletor_MUX_BEQ: out std_logic;
+		-- saida_Somador_Constant: out std_logic_vector(larguraDados-1 downto 0)
   );
 end entity;
 
@@ -87,15 +87,15 @@ architecture arquitetura of MIPS_Final is
 	signal saidaDecoderFUNCT: std_logic_vector(2 downto 0);
 	signal Saida_MUX_CTRL: std_logic_vector(2 downto 0);
 	
-	-- signal REG_OUT_HEX0: std_logic_vector(3 downto 0);
-	-- signal REG_OUT_HEX1: std_logic_vector(3 downto 0);
-	-- signal REG_OUT_HEX2: std_logic_vector(3 downto 0);
-	-- signal REG_OUT_HEX3: std_logic_vector(3 downto 0);
-	-- signal REG_OUT_HEX4: std_logic_vector(3 downto 0);
-	-- signal REG_OUT_HEX5: std_logic_vector(3 downto 0);
-	-- signal Saida_MUX_Simulacao: std_logic_vector(larguraDados-1 downto 0);
-	-- signal Saida_LED_0to3: std_logic_vector(3 downto 0);
-	-- signal Saida_LED_4to7: std_logic_vector(3 downto 0);
+	signal REG_OUT_HEX0: std_logic_vector(3 downto 0);
+	signal REG_OUT_HEX1: std_logic_vector(3 downto 0);
+	signal REG_OUT_HEX2: std_logic_vector(3 downto 0);
+	signal REG_OUT_HEX3: std_logic_vector(3 downto 0);
+	signal REG_OUT_HEX4: std_logic_vector(3 downto 0);
+	signal REG_OUT_HEX5: std_logic_vector(3 downto 0);
+	signal Saida_MUX_Simulacao: std_logic_vector(larguraDados-1 downto 0);
+	signal Saida_LED_0to3: std_logic_vector(3 downto 0);
+	signal Saida_LED_4to7: std_logic_vector(3 downto 0);
 
 	signal saida_LUI: std_logic_vector(larguraDados-1 downto 0);
 
@@ -342,106 +342,106 @@ MUX_ULA_CTRL: entity work.muxGenerico2x1 generic map (larguraDados => 3)
 -- ==================================================================================
 -- MUX que define se a visualização na placa será do endereço atual do PC ou da Saida da ULA
 -- ==================================================================================
---MUX_PC_ULA_PLACA: entity work.muxGenerico2x1 generic map (larguraDados => larguraDados)
---		port map( 
---			entradaA_MUX => PC_ROM,
---			entradaB_MUX => Saida_ULA,
---			seletor_MUX => SW(0),
---			saida_MUX => Saida_MUX_Simulacao
---		);
+MUX_PC_ULA_PLACA: entity work.muxGenerico2x1 generic map (larguraDados => larguraDados)
+		port map( 
+			entradaA_MUX => PC_ROM,
+			entradaB_MUX => Saida_ULA,
+			seletor_MUX => SW(0),
+			saida_MUX => Saida_MUX_Simulacao
+		);
 
 -- ==================================================================================
 -- Display SevenSeg 0
 -- ==================================================================================
--- REG_HEX0 : entity work.registradorGenerico   generic map (larguraDados => 4)
--- 		port map (DIN => Saida_MUX_Simulacao(3 downto 0), DOUT => REG_OUT_HEX0, ENABLE => '1', CLK => CLK, RST => '0');
+REG_HEX0 : entity work.registradorGenerico   generic map (larguraDados => 4)
+		port map (DIN => Saida_MUX_Simulacao(3 downto 0), DOUT => REG_OUT_HEX0, ENABLE => '1', CLK => CLK, RST => '0');
 
--- LED_HEX0 :  entity work.conversorHex7Seg
--- 	 port map(dadoHex => REG_OUT_HEX0,
--- 						apaga =>  '0',
--- 						negativo => '0',
--- 						overFlow =>  '0',
--- 						saida7seg => HEX0);
+LED_HEX0 :  entity work.conversorHex7Seg
+	 port map(dadoHex => REG_OUT_HEX0,
+						apaga =>  '0',
+						negativo => '0',
+						overFlow =>  '0',
+						saida7seg => HEX0);
 
--- -- ==================================================================================
--- -- Display SevenSeg 1
--- -- ==================================================================================			 
--- REG_HEX1 : entity work.registradorGenerico   generic map (larguraDados => 4)
--- 		port map (DIN => Saida_MUX_Simulacao(7 downto 4), DOUT => REG_OUT_HEX1, ENABLE => '1', CLK => CLK, RST => '0');
+-- ==================================================================================
+-- Display SevenSeg 1
+-- ==================================================================================			 
+REG_HEX1 : entity work.registradorGenerico   generic map (larguraDados => 4)
+		port map (DIN => Saida_MUX_Simulacao(7 downto 4), DOUT => REG_OUT_HEX1, ENABLE => '1', CLK => CLK, RST => '0');
 
--- LED_HEX1 :  entity work.conversorHex7Seg
--- 	 port map(dadoHex => REG_OUT_HEX1,
--- 						apaga =>  '0',
--- 						negativo => '0',
--- 						overFlow =>  '0',
--- 						saida7seg => HEX1);
+LED_HEX1 :  entity work.conversorHex7Seg
+	 port map(dadoHex => REG_OUT_HEX1,
+						apaga =>  '0',
+						negativo => '0',
+						overFlow =>  '0',
+						saida7seg => HEX1);
 
--- -- ==================================================================================
--- -- Display SevenSeg 2
--- -- ==================================================================================
--- REG_HEX2 : entity work.registradorGenerico   generic map (larguraDados => 4)
--- 		port map (DIN => Saida_MUX_Simulacao(11 downto 8), DOUT => REG_OUT_HEX2, ENABLE => '1', CLK => CLK, RST => '0');
+-- ==================================================================================
+-- Display SevenSeg 2
+-- ==================================================================================
+REG_HEX2 : entity work.registradorGenerico   generic map (larguraDados => 4)
+		port map (DIN => Saida_MUX_Simulacao(11 downto 8), DOUT => REG_OUT_HEX2, ENABLE => '1', CLK => CLK, RST => '0');
 
--- LED_HEX2 :  entity work.conversorHex7Seg
--- 	 port map(dadoHex => REG_OUT_HEX2,
--- 						apaga =>  '0',
--- 						negativo => '0',
--- 						overFlow =>  '0',
--- 						saida7seg => HEX2);
+LED_HEX2 :  entity work.conversorHex7Seg
+	 port map(dadoHex => REG_OUT_HEX2,
+						apaga =>  '0',
+						negativo => '0',
+						overFlow =>  '0',
+						saida7seg => HEX2);
 
--- -- ==================================================================================
--- -- Display SevenSeg 3
--- -- ==================================================================================
--- REG_HEX3 : entity work.registradorGenerico   generic map (larguraDados => 4)
--- port map (DIN => Saida_MUX_Simulacao(15 downto 12), DOUT => REG_OUT_HEX3, ENABLE => '1', CLK => CLK, RST => '0');
+-- ==================================================================================
+-- Display SevenSeg 3
+-- ==================================================================================
+REG_HEX3 : entity work.registradorGenerico   generic map (larguraDados => 4)
+port map (DIN => Saida_MUX_Simulacao(15 downto 12), DOUT => REG_OUT_HEX3, ENABLE => '1', CLK => CLK, RST => '0');
 
--- LED_HEX3 :  entity work.conversorHex7Seg
--- 	 port map(dadoHex => REG_OUT_HEX3,
--- 						apaga =>  '0',
--- 						negativo => '0',
--- 						overFlow =>  '0',
--- 						saida7seg => HEX3);
+LED_HEX3 :  entity work.conversorHex7Seg
+	 port map(dadoHex => REG_OUT_HEX3,
+						apaga =>  '0',
+						negativo => '0',
+						overFlow =>  '0',
+						saida7seg => HEX3);
 
--- -- ==================================================================================
--- -- Display SevenSeg 4
--- -- ==================================================================================
--- REG_HEX4 : entity work.registradorGenerico   generic map (larguraDados => 4)
--- 		port map (DIN => Saida_MUX_Simulacao(19 downto 16), DOUT => REG_OUT_HEX4, ENABLE => '1', CLK => CLK, RST => '0');	
+-- ==================================================================================
+-- Display SevenSeg 4
+-- ==================================================================================
+REG_HEX4 : entity work.registradorGenerico   generic map (larguraDados => 4)
+		port map (DIN => Saida_MUX_Simulacao(19 downto 16), DOUT => REG_OUT_HEX4, ENABLE => '1', CLK => CLK, RST => '0');	
 
--- LED_HEX4 :  entity work.conversorHex7Seg
--- 	 port map(dadoHex => REG_OUT_HEX4,
--- 						apaga =>  '0',
--- 						negativo => '0',
--- 						overFlow =>  '0',
--- 						saida7seg => HEX4);	
+LED_HEX4 :  entity work.conversorHex7Seg
+	 port map(dadoHex => REG_OUT_HEX4,
+						apaga =>  '0',
+						negativo => '0',
+						overFlow =>  '0',
+						saida7seg => HEX4);	
 
--- -- ==================================================================================
--- -- Display SevenSeg 5
--- -- ==================================================================================			 
--- REG_HEX5 : entity work.registradorGenerico   generic map (larguraDados => 4)
--- 		port map (DIN => Saida_MUX_Simulacao(23 downto 20), DOUT => REG_OUT_HEX5, ENABLE => '1', CLK => CLK, RST => '0');
+-- ==================================================================================
+-- Display SevenSeg 5
+-- ==================================================================================			 
+REG_HEX5 : entity work.registradorGenerico   generic map (larguraDados => 4)
+		port map (DIN => Saida_MUX_Simulacao(23 downto 20), DOUT => REG_OUT_HEX5, ENABLE => '1', CLK => CLK, RST => '0');
 
--- LED_HEX5 :  entity work.conversorHex7Seg
--- 	 port map(dadoHex => REG_OUT_HEX5,
--- 						apaga =>  '0',
--- 						negativo => '0',
--- 						overFlow =>  '0',
--- 						saida7seg => HEX5);
+LED_HEX5 :  entity work.conversorHex7Seg
+	 port map(dadoHex => REG_OUT_HEX5,
+						apaga =>  '0',
+						negativo => '0',
+						overFlow =>  '0',
+						saida7seg => HEX5);
 
--- -- ==================================================================================
--- -- Saida da simulacao para os LEDS 0 a 3 da placa
--- -- ==================================================================================
--- Saida_LED_0to3 <= Saida_MUX_Simulacao(27 downto 24);
+-- ==================================================================================
+-- Saida da simulacao para os LEDS 0 a 3 da placa
+-- ==================================================================================
+Saida_LED_0to3 <= Saida_MUX_Simulacao(27 downto 24);
 
--- -- ==================================================================================
--- -- Saida da simulacao para os LEDS 4 a 7 da placa
--- -- ==================================================================================
--- Saida_LED_4to7 <= Saida_MUX_Simulacao(31 downto 28);
+-- ==================================================================================
+-- Saida da simulacao para os LEDS 4 a 7 da placa
+-- ==================================================================================
+Saida_LED_4to7 <= Saida_MUX_Simulacao(31 downto 28);
 
--- -- ==================================================================================
--- -- Concatenando a saida dos LEDS
--- -- ==================================================================================
--- LEDR <= Saida_LED_4to7 & Saida_LED_0to3;
+-- ==================================================================================
+-- Concatenando a saida dos LEDS
+-- ==================================================================================
+LEDR <= Saida_LED_4to7 & Saida_LED_0to3;
 
 -- ==================================================================================
 -- AND que checa a flag_zero e o (BEQ or BNE)
@@ -464,18 +464,5 @@ rd_flag <= Sinais_Controle(10);
 wr_flag <= Sinais_Controle(11);
 beq_flag <= Sinais_Controle(12);
 bne_flag <= Sinais_Controle(13);
-
-saida_ULA_Teste <= saida_ULA;
-saida_PC_Teste <= PC_ROM;
-ULA_A <= bancoReg_ULA_A;
-ULA_B <= saidaMuxULA;
-
-entradaA_MUX_PC <= saida_MUX_PC;
-entradaB_MUX_PC <= saida_Somador_MUXouSomador(31 downto 28) & Im_deslocado;
-
-entradaA_MUX_BEQ <= saida_Somador_MUXouSomador;
-entradaB_MUX_BEQ <= saidaSomadorGenerico;
-seletor_MUX_BEQ <= AND_FLAG_ZERO;
-saida_Somador_Constant <= saida_Somador_MUXouSomador;
 
 end architecture;

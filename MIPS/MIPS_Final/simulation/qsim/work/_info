@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 d/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Final/simulation/qsim
 Emips_final
-Z1 w1638241530
+Z1 w1638290097
 Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ^K2eeK[IVbX]]MLcdOEI91
 Z3 DPx8 cyclonev 19 cyclonev_components 0 22 GFL[QAd@dAZF:`jjOGn9>2
 Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3dzZ?YU_4FC5UU0cTXRET1
@@ -20,7 +20,7 @@ Z7 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
 Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z9 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 Z10 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
-!i122 54
+!i122 68
 R0
 Z11 8MIPS_Final.vho
 Z12 FMIPS_Final.vho
@@ -30,9 +30,9 @@ V?YMh[CbMjHU0aLklWKnjj1
 !s100 cUQ<o3i]7>Il]6kQ2ajVJ1
 Z13 OV;C;2020.1;71
 32
-!s110 1638241531
+!s110 1638290098
 !i10b 1
-Z14 !s108 1638241531.000000
+Z14 !s108 1638290098.000000
 Z15 !s90 -work|work|MIPS_Final.vho|
 Z16 !s107 MIPS_Final.vho|
 !i113 1
@@ -49,14 +49,14 @@ R8
 R9
 R10
 DEx4 work 10 mips_final 0 22 ?YMh[CbMjHU0aLklWKnjj1
-!i122 54
-l9863
-L56 97249
-VA^c19e>6`2A?[ah41d^1E0
-!s100 R9T_RelD_lW6@>?3iQEn<2
+!i122 68
+l9871
+L56 97325
+Vc`AhTGVZG3;]jYgScoZXU1
+!s100 1l>6iXCgfZo5H0DdfhWjL3
 R13
 32
-!s110 1638241532
+!s110 1638290099
 !i10b 1
 R14
 R15
@@ -65,10 +65,10 @@ R16
 R17
 R18
 Emips_final_vhd_vec_tst
-Z19 w1638241528
+Z19 w1638290095
 R8
 R9
-!i122 55
+!i122 69
 R0
 Z20 8Waveform.vwf.vht
 Z21 FWaveform.vwf.vht
@@ -78,9 +78,9 @@ VPOzz@9gHJbiPi@iHBOz6M0
 !s100 3_:UCXZSRAYg[o9oh1TzB3
 R13
 32
-Z22 !s110 1638241533
+Z22 !s110 1638290100
 !i10b 1
-Z23 !s108 1638241533.000000
+Z23 !s108 1638290100.000000
 Z24 !s90 -work|work|Waveform.vwf.vht|
 Z25 !s107 Waveform.vwf.vht|
 !i113 1
@@ -90,7 +90,7 @@ Amips_final_arch
 R8
 R9
 Z26 DEx4 work 22 mips_final_vhd_vec_tst 0 22 POzz@9gHJbiPi@iHBOz6M0
-!i122 55
+!i122 69
 l65
 Z27 L34 61
 Z28 V@[zhbBPV[`lfbOR@BGkc^0

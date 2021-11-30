@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIPS_Final
-Mon Nov 29 23:46:30 2021
+Tue Nov 30 13:42:56 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -34,43 +34,62 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
  26. Parameter Settings for User Entity Instance: muxGenerico4x1:MUX_ULA_Banco
  27. Parameter Settings for User Entity Instance: estensorSinalGenerico:estensorSinal
  28. Parameter Settings for User Entity Instance: muxGenerico2x1:MUX_ULA_CTRL
- 29. Port Connectivity Checks: "estensorSinalGenerico:estensorSinal|muxGenerico2x1_Bit:MUX_Estensor"
- 30. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_Overflow:ULA_31"
- 31. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_30"
- 32. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_29"
- 33. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_28"
- 34. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_27"
- 35. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_26"
- 36. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_25"
- 37. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_24"
- 38. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_23"
- 39. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_22"
- 40. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_21"
- 41. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_20"
- 42. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_19"
- 43. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_18"
- 44. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_17"
- 45. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_16"
- 46. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_15"
- 47. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_14"
- 48. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_13"
- 49. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_12"
- 50. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_11"
- 51. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_10"
- 52. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_9"
- 53. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_8"
- 54. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_7"
- 55. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_6"
- 56. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_5"
- 57. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_4"
- 58. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_3"
- 59. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_2"
- 60. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_1"
- 61. Port Connectivity Checks: "muxGenerico4x1:MUX_RtRd"
- 62. Port Connectivity Checks: "registradorGenerico:PC"
- 63. Post-Synthesis Netlist Statistics for Top Partition
- 64. Elapsed Time Per Partition
- 65. Analysis & Synthesis Messages
+ 29. Parameter Settings for User Entity Instance: muxGenerico2x1:MUX_PC_ULA_PLACA
+ 30. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX0
+ 31. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX1
+ 32. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX2
+ 33. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX3
+ 34. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX4
+ 35. Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX5
+ 36. Port Connectivity Checks: "conversorHex7Seg:LED_HEX5"
+ 37. Port Connectivity Checks: "registradorGenerico:REG_HEX5"
+ 38. Port Connectivity Checks: "conversorHex7Seg:LED_HEX4"
+ 39. Port Connectivity Checks: "registradorGenerico:REG_HEX4"
+ 40. Port Connectivity Checks: "conversorHex7Seg:LED_HEX3"
+ 41. Port Connectivity Checks: "registradorGenerico:REG_HEX3"
+ 42. Port Connectivity Checks: "conversorHex7Seg:LED_HEX2"
+ 43. Port Connectivity Checks: "registradorGenerico:REG_HEX2"
+ 44. Port Connectivity Checks: "conversorHex7Seg:LED_HEX1"
+ 45. Port Connectivity Checks: "registradorGenerico:REG_HEX1"
+ 46. Port Connectivity Checks: "conversorHex7Seg:LED_HEX0"
+ 47. Port Connectivity Checks: "registradorGenerico:REG_HEX0"
+ 48. Port Connectivity Checks: "estensorSinalGenerico:estensorSinal|muxGenerico2x1_Bit:MUX_Estensor"
+ 49. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_Overflow:ULA_31"
+ 50. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_30"
+ 51. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_29"
+ 52. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_28"
+ 53. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_27"
+ 54. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_26"
+ 55. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_25"
+ 56. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_24"
+ 57. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_23"
+ 58. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_22"
+ 59. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_21"
+ 60. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_20"
+ 61. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_19"
+ 62. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_18"
+ 63. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_17"
+ 64. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_16"
+ 65. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_15"
+ 66. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_14"
+ 67. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_13"
+ 68. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_12"
+ 69. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_11"
+ 70. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_10"
+ 71. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_9"
+ 72. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_8"
+ 73. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_7"
+ 74. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_6"
+ 75. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_5"
+ 76. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_4"
+ 77. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_3"
+ 78. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_2"
+ 79. Port Connectivity Checks: "MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_1"
+ 80. Port Connectivity Checks: "muxGenerico4x1:MUX_RtRd"
+ 81. Port Connectivity Checks: "registradorGenerico:PC"
+ 82. Post-Synthesis Netlist Statistics for Top Partition
+ 83. Elapsed Time Per Partition
+ 84. Analysis & Synthesis Messages
 
 
 
@@ -97,14 +116,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Nov 29 23:46:30 2021       ;
+; Analysis & Synthesis Status     ; Successful - Tue Nov 30 13:42:56 2021       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; MIPS_Final                                  ;
 ; Top-level Entity Name           ; MIPS_Final                                  ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 3104                                        ;
-; Total pins                      ; 294                                         ;
+; Total registers                 ; 3128                                        ;
+; Total pins                      ; 65                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -251,35 +270,36 @@ https://fpgasoftware.intel.com/eula.
 ; DecoderOPCODE.vhd                ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Final/DecoderOPCODE.vhd         ;         ;
 ; DecoderFUNCT.vhd                 ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Final/DecoderFUNCT.vhd          ;         ;
 ; Decoder.vhd                      ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Final/Decoder.vhd               ;         ;
+; conversorHex7Seg.vhd             ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Final/conversorHex7Seg.vhd      ;         ;
 ; bancoRegistradores.vhd           ; yes             ; User VHDL File  ; /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Final/bancoRegistradores.vhd    ;         ;
 +----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                  ;
-+---------------------------------------------+----------------+
-; Resource                                    ; Usage          ;
-+---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 2394           ;
-;                                             ;                ;
-; Combinational ALUT usage for logic          ; 1753           ;
-;     -- 7 input functions                    ; 280            ;
-;     -- 6 input functions                    ; 1017           ;
-;     -- 5 input functions                    ; 67             ;
-;     -- 4 input functions                    ; 149            ;
-;     -- <=3 input functions                  ; 240            ;
-;                                             ;                ;
-; Dedicated logic registers                   ; 3104           ;
-;                                             ;                ;
-; I/O pins                                    ; 294            ;
-;                                             ;                ;
-; Total DSP Blocks                            ; 0              ;
-;                                             ;                ;
-; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 3104           ;
-; Total fan-out                               ; 19384          ;
-; Average fan-out                             ; 3.56           ;
-+---------------------------------------------+----------------+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimate of Logic utilization (ALMs needed) ; 2407         ;
+;                                             ;              ;
+; Combinational ALUT usage for logic          ; 1791         ;
+;     -- 7 input functions                    ; 257          ;
+;     -- 6 input functions                    ; 1075         ;
+;     -- 5 input functions                    ; 67           ;
+;     -- 4 input functions                    ; 108          ;
+;     -- <=3 input functions                  ; 284          ;
+;                                             ;              ;
+; Dedicated logic registers                   ; 3128         ;
+;                                             ;              ;
+; I/O pins                                    ; 65           ;
+;                                             ;              ;
+; Total DSP Blocks                            ; 0            ;
+;                                             ;              ;
+; Maximum fan-out node                        ; KEY[0]~input ;
+; Maximum fan-out                             ; 3128         ;
+; Total fan-out                               ; 19172        ;
+; Average fan-out                             ; 3.80         ;
++---------------------------------------------+--------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -287,20 +307,21 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                  ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                  ; Entity Name         ; Library Name ;
 +---------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------+---------------------+--------------+
-; |MIPS_Final                                 ; 1753 (3)            ; 3104 (0)                  ; 0                 ; 0          ; 294  ; 0            ; |MIPS_Final                                                                          ; MIPS_Final          ; work         ;
-;    |Decoder:Decoder|                        ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|Decoder:Decoder                                                          ; Decoder             ; work         ;
-;    |DecoderFUNCT:Decoder_FUNCT|             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|DecoderFUNCT:Decoder_FUNCT                                               ; DecoderFUNCT        ; work         ;
-;    |MIPS_Aula16_ULA:ULA1|                   ; 130 (8)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1                                                     ; MIPS_Aula16_ULA     ; work         ;
-;       |ULA_31bits:ULA_0|                    ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_0                                    ; ULA_31bits          ; work         ;
+; |MIPS_Final                                 ; 1791 (1)            ; 3128 (0)                  ; 0                 ; 0          ; 65   ; 0            ; |MIPS_Final                                                                          ; MIPS_Final          ; work         ;
+;    |Decoder:Decoder|                        ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|Decoder:Decoder                                                          ; Decoder             ; work         ;
+;    |MIPS_Aula16_ULA:ULA1|                   ; 135 (8)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1                                                     ; MIPS_Aula16_ULA     ; work         ;
+;       |ULA_31bits:ULA_0|                    ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_0                                    ; ULA_31bits          ; work         ;
+;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_0|muxGenerico2x1_Bit:MUX_entradaB    ; muxGenerico2x1_Bit  ; work         ;
 ;          |muxGenerico4x1Bit:MUX_Resultado|  ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_0|muxGenerico4x1Bit:MUX_Resultado    ; muxGenerico4x1Bit   ; work         ;
 ;          |somadorGenerico_Bit:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_0|somadorGenerico_Bit:somadorMux     ; somadorGenerico_Bit ; work         ;
 ;       |ULA_31bits:ULA_10|                   ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_10                                   ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_10|muxGenerico2x1_Bit:MUX_entradaB   ; muxGenerico2x1_Bit  ; work         ;
 ;          |muxGenerico4x1Bit:MUX_Resultado|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_10|muxGenerico4x1Bit:MUX_Resultado   ; muxGenerico4x1Bit   ; work         ;
 ;          |somadorGenerico_Bit:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_10|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
-;       |ULA_31bits:ULA_11|                   ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_11                                   ; ULA_31bits          ; work         ;
+;       |ULA_31bits:ULA_11|                   ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_11                                   ; ULA_31bits          ; work         ;
+;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_11|muxGenerico2x1_Bit:MUX_entradaB   ; muxGenerico2x1_Bit  ; work         ;
 ;          |muxGenerico4x1Bit:MUX_Resultado|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_11|muxGenerico4x1Bit:MUX_Resultado   ; muxGenerico4x1Bit   ; work         ;
-;          |somadorGenerico_Bit:somadorMux|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_11|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
+;          |somadorGenerico_Bit:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_11|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
 ;       |ULA_31bits:ULA_12|                   ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_12                                   ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_12|muxGenerico2x1_Bit:MUX_entradaB   ; muxGenerico2x1_Bit  ; work         ;
 ;          |muxGenerico4x1Bit:MUX_Resultado|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_12|muxGenerico4x1Bit:MUX_Resultado   ; muxGenerico4x1Bit   ; work         ;
@@ -323,16 +344,17 @@ https://fpgasoftware.intel.com/eula.
 ;       |ULA_31bits:ULA_17|                   ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_17                                   ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_17|muxGenerico2x1_Bit:MUX_entradaB   ; muxGenerico2x1_Bit  ; work         ;
 ;          |muxGenerico4x1Bit:MUX_Resultado|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_17|muxGenerico4x1Bit:MUX_Resultado   ; muxGenerico4x1Bit   ; work         ;
-;       |ULA_31bits:ULA_18|                   ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_18                                   ; ULA_31bits          ; work         ;
+;       |ULA_31bits:ULA_18|                   ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_18                                   ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_18|muxGenerico2x1_Bit:MUX_entradaB   ; muxGenerico2x1_Bit  ; work         ;
 ;          |muxGenerico4x1Bit:MUX_Resultado|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_18|muxGenerico4x1Bit:MUX_Resultado   ; muxGenerico4x1Bit   ; work         ;
-;          |somadorGenerico_Bit:somadorMux|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_18|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
+;          |somadorGenerico_Bit:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_18|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
 ;       |ULA_31bits:ULA_19|                   ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_19                                   ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_19|muxGenerico2x1_Bit:MUX_entradaB   ; muxGenerico2x1_Bit  ; work         ;
-;          |muxGenerico4x1Bit:MUX_Resultado|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_19|muxGenerico4x1Bit:MUX_Resultado   ; muxGenerico4x1Bit   ; work         ;
-;          |somadorGenerico_Bit:somadorMux|   ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_19|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
+;          |muxGenerico4x1Bit:MUX_Resultado|  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_19|muxGenerico4x1Bit:MUX_Resultado   ; muxGenerico4x1Bit   ; work         ;
+;          |somadorGenerico_Bit:somadorMux|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_19|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
 ;       |ULA_31bits:ULA_1|                    ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_1                                    ; ULA_31bits          ; work         ;
-;          |muxGenerico4x1Bit:MUX_Resultado|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_1|muxGenerico4x1Bit:MUX_Resultado    ; muxGenerico4x1Bit   ; work         ;
+;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_1|muxGenerico2x1_Bit:MUX_entradaB    ; muxGenerico2x1_Bit  ; work         ;
+;          |muxGenerico4x1Bit:MUX_Resultado|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_1|muxGenerico4x1Bit:MUX_Resultado    ; muxGenerico4x1Bit   ; work         ;
 ;          |somadorGenerico_Bit:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_1|somadorGenerico_Bit:somadorMux     ; somadorGenerico_Bit ; work         ;
 ;       |ULA_31bits:ULA_20|                   ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_20                                   ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_20|muxGenerico2x1_Bit:MUX_entradaB   ; muxGenerico2x1_Bit  ; work         ;
@@ -348,10 +370,10 @@ https://fpgasoftware.intel.com/eula.
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_23|muxGenerico2x1_Bit:MUX_entradaB   ; muxGenerico2x1_Bit  ; work         ;
 ;          |muxGenerico4x1Bit:MUX_Resultado|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_23|muxGenerico4x1Bit:MUX_Resultado   ; muxGenerico4x1Bit   ; work         ;
 ;          |somadorGenerico_Bit:somadorMux|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_23|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
-;       |ULA_31bits:ULA_24|                   ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_24                                   ; ULA_31bits          ; work         ;
+;       |ULA_31bits:ULA_24|                   ; 7 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_24                                   ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_24|muxGenerico2x1_Bit:MUX_entradaB   ; muxGenerico2x1_Bit  ; work         ;
-;          |muxGenerico4x1Bit:MUX_Resultado|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_24|muxGenerico4x1Bit:MUX_Resultado   ; muxGenerico4x1Bit   ; work         ;
-;          |somadorGenerico_Bit:somadorMux|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_24|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
+;          |muxGenerico4x1Bit:MUX_Resultado|  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_24|muxGenerico4x1Bit:MUX_Resultado   ; muxGenerico4x1Bit   ; work         ;
+;          |somadorGenerico_Bit:somadorMux|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_24|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
 ;       |ULA_31bits:ULA_25|                   ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_25                                   ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_25|muxGenerico2x1_Bit:MUX_entradaB   ; muxGenerico2x1_Bit  ; work         ;
 ;          |muxGenerico4x1Bit:MUX_Resultado|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_25|muxGenerico4x1Bit:MUX_Resultado   ; muxGenerico4x1Bit   ; work         ;
@@ -359,16 +381,18 @@ https://fpgasoftware.intel.com/eula.
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_26|muxGenerico2x1_Bit:MUX_entradaB   ; muxGenerico2x1_Bit  ; work         ;
 ;          |muxGenerico4x1Bit:MUX_Resultado|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_26|muxGenerico4x1Bit:MUX_Resultado   ; muxGenerico4x1Bit   ; work         ;
 ;          |somadorGenerico_Bit:somadorMux|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_26|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
-;       |ULA_31bits:ULA_27|                   ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_27                                   ; ULA_31bits          ; work         ;
+;       |ULA_31bits:ULA_27|                   ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_27                                   ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_27|muxGenerico2x1_Bit:MUX_entradaB   ; muxGenerico2x1_Bit  ; work         ;
-;          |muxGenerico4x1Bit:MUX_Resultado|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_27|muxGenerico4x1Bit:MUX_Resultado   ; muxGenerico4x1Bit   ; work         ;
-;       |ULA_31bits:ULA_28|                   ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_28                                   ; ULA_31bits          ; work         ;
+;          |muxGenerico4x1Bit:MUX_Resultado|  ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_27|muxGenerico4x1Bit:MUX_Resultado   ; muxGenerico4x1Bit   ; work         ;
+;          |somadorGenerico_Bit:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_27|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
+;       |ULA_31bits:ULA_28|                   ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_28                                   ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_28|muxGenerico2x1_Bit:MUX_entradaB   ; muxGenerico2x1_Bit  ; work         ;
-;          |muxGenerico4x1Bit:MUX_Resultado|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_28|muxGenerico4x1Bit:MUX_Resultado   ; muxGenerico4x1Bit   ; work         ;
+;          |muxGenerico4x1Bit:MUX_Resultado|  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_28|muxGenerico4x1Bit:MUX_Resultado   ; muxGenerico4x1Bit   ; work         ;
 ;          |somadorGenerico_Bit:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_28|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
-;       |ULA_31bits:ULA_29|                   ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_29                                   ; ULA_31bits          ; work         ;
+;       |ULA_31bits:ULA_29|                   ; 7 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_29                                   ; ULA_31bits          ; work         ;
+;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_29|muxGenerico2x1_Bit:MUX_entradaB   ; muxGenerico2x1_Bit  ; work         ;
 ;          |muxGenerico4x1Bit:MUX_Resultado|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_29|muxGenerico4x1Bit:MUX_Resultado   ; muxGenerico4x1Bit   ; work         ;
-;          |somadorGenerico_Bit:somadorMux|   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_29|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
+;          |somadorGenerico_Bit:somadorMux|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_29|somadorGenerico_Bit:somadorMux    ; somadorGenerico_Bit ; work         ;
 ;       |ULA_31bits:ULA_2|                    ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_2                                    ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_2|muxGenerico2x1_Bit:MUX_entradaB    ; muxGenerico2x1_Bit  ; work         ;
 ;          |muxGenerico4x1Bit:MUX_Resultado|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_2|muxGenerico4x1Bit:MUX_Resultado    ; muxGenerico4x1Bit   ; work         ;
@@ -376,44 +400,59 @@ https://fpgasoftware.intel.com/eula.
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_30|muxGenerico2x1_Bit:MUX_entradaB   ; muxGenerico2x1_Bit  ; work         ;
 ;          |muxGenerico4x1Bit:MUX_Resultado|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_30|muxGenerico4x1Bit:MUX_Resultado   ; muxGenerico4x1Bit   ; work         ;
 ;       |ULA_31bits:ULA_3|                    ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_3                                    ; ULA_31bits          ; work         ;
+;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_3|muxGenerico2x1_Bit:MUX_entradaB    ; muxGenerico2x1_Bit  ; work         ;
 ;          |muxGenerico4x1Bit:MUX_Resultado|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_3|muxGenerico4x1Bit:MUX_Resultado    ; muxGenerico4x1Bit   ; work         ;
-;          |somadorGenerico_Bit:somadorMux|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_3|somadorGenerico_Bit:somadorMux     ; somadorGenerico_Bit ; work         ;
+;          |somadorGenerico_Bit:somadorMux|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_3|somadorGenerico_Bit:somadorMux     ; somadorGenerico_Bit ; work         ;
 ;       |ULA_31bits:ULA_4|                    ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_4                                    ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_4|muxGenerico2x1_Bit:MUX_entradaB    ; muxGenerico2x1_Bit  ; work         ;
 ;          |muxGenerico4x1Bit:MUX_Resultado|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_4|muxGenerico4x1Bit:MUX_Resultado    ; muxGenerico4x1Bit   ; work         ;
 ;          |somadorGenerico_Bit:somadorMux|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_4|somadorGenerico_Bit:somadorMux     ; somadorGenerico_Bit ; work         ;
-;       |ULA_31bits:ULA_5|                    ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_5                                    ; ULA_31bits          ; work         ;
-;          |muxGenerico4x1Bit:MUX_Resultado|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_5|muxGenerico4x1Bit:MUX_Resultado    ; muxGenerico4x1Bit   ; work         ;
-;          |somadorGenerico_Bit:somadorMux|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_5|somadorGenerico_Bit:somadorMux     ; somadorGenerico_Bit ; work         ;
+;       |ULA_31bits:ULA_5|                    ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_5                                    ; ULA_31bits          ; work         ;
+;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_5|muxGenerico2x1_Bit:MUX_entradaB    ; muxGenerico2x1_Bit  ; work         ;
+;          |muxGenerico4x1Bit:MUX_Resultado|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_5|muxGenerico4x1Bit:MUX_Resultado    ; muxGenerico4x1Bit   ; work         ;
+;          |somadorGenerico_Bit:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_5|somadorGenerico_Bit:somadorMux     ; somadorGenerico_Bit ; work         ;
 ;       |ULA_31bits:ULA_6|                    ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_6                                    ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_6|muxGenerico2x1_Bit:MUX_entradaB    ; muxGenerico2x1_Bit  ; work         ;
 ;          |muxGenerico4x1Bit:MUX_Resultado|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_6|muxGenerico4x1Bit:MUX_Resultado    ; muxGenerico4x1Bit   ; work         ;
 ;          |somadorGenerico_Bit:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_6|somadorGenerico_Bit:somadorMux     ; somadorGenerico_Bit ; work         ;
-;       |ULA_31bits:ULA_7|                    ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_7                                    ; ULA_31bits          ; work         ;
+;       |ULA_31bits:ULA_7|                    ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_7                                    ; ULA_31bits          ; work         ;
+;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_7|muxGenerico2x1_Bit:MUX_entradaB    ; muxGenerico2x1_Bit  ; work         ;
 ;          |muxGenerico4x1Bit:MUX_Resultado|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_7|muxGenerico4x1Bit:MUX_Resultado    ; muxGenerico4x1Bit   ; work         ;
-;          |somadorGenerico_Bit:somadorMux|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_7|somadorGenerico_Bit:somadorMux     ; somadorGenerico_Bit ; work         ;
 ;       |ULA_31bits:ULA_8|                    ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_8                                    ; ULA_31bits          ; work         ;
 ;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_8|muxGenerico2x1_Bit:MUX_entradaB    ; muxGenerico2x1_Bit  ; work         ;
 ;          |muxGenerico4x1Bit:MUX_Resultado|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_8|muxGenerico4x1Bit:MUX_Resultado    ; muxGenerico4x1Bit   ; work         ;
 ;          |somadorGenerico_Bit:somadorMux|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_8|somadorGenerico_Bit:somadorMux     ; somadorGenerico_Bit ; work         ;
-;       |ULA_31bits:ULA_9|                    ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_9                                    ; ULA_31bits          ; work         ;
+;       |ULA_31bits:ULA_9|                    ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_9                                    ; ULA_31bits          ; work         ;
+;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_9|muxGenerico2x1_Bit:MUX_entradaB    ; muxGenerico2x1_Bit  ; work         ;
 ;          |muxGenerico4x1Bit:MUX_Resultado|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_9|muxGenerico4x1Bit:MUX_Resultado    ; muxGenerico4x1Bit   ; work         ;
 ;          |somadorGenerico_Bit:somadorMux|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_9|somadorGenerico_Bit:somadorMux     ; somadorGenerico_Bit ; work         ;
 ;       |ULA_Overflow:ULA_31|                 ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_Overflow:ULA_31                                 ; ULA_Overflow        ; work         ;
-;          |muxGenerico4x1Bit:MUX_Resultado|  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_Overflow:ULA_31|muxGenerico4x1Bit:MUX_Resultado ; muxGenerico4x1Bit   ; work         ;
+;          |muxGenerico2x1_Bit:MUX_entradaB|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_Overflow:ULA_31|muxGenerico2x1_Bit:MUX_entradaB ; muxGenerico2x1_Bit  ; work         ;
+;          |muxGenerico4x1Bit:MUX_Resultado|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_Overflow:ULA_31|muxGenerico4x1Bit:MUX_Resultado ; muxGenerico4x1Bit   ; work         ;
 ;          |somadorGenerico_Bit:somadorMux|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_Overflow:ULA_31|somadorGenerico_Bit:somadorMux  ; somadorGenerico_Bit ; work         ;
 ;    |RAM_MIPS:RAM_MIPS|                      ; 799 (799)           ; 2048 (2048)               ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|RAM_MIPS:RAM_MIPS                                                        ; RAM_MIPS            ; work         ;
-;    |ROM:ROM1|                               ; 31 (31)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|ROM:ROM1                                                                 ; ROM                 ; work         ;
-;    |bancoRegistradores:Banco_Registradores| ; 553 (553)           ; 1024 (1024)               ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|bancoRegistradores:Banco_Registradores                                   ; bancoRegistradores  ; work         ;
-;    |muxGenerico2x1:MUX_JR|                  ; 58 (58)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|muxGenerico2x1:MUX_JR                                                    ; muxGenerico2x1      ; work         ;
-;    |muxGenerico2x1:MUX_PC|                  ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|muxGenerico2x1:MUX_PC                                                    ; muxGenerico2x1      ; work         ;
-;    |muxGenerico2x1:MUX_RtIm|                ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|muxGenerico2x1:MUX_RtIm                                                  ; muxGenerico2x1      ; work         ;
+;    |ROM:ROM1|                               ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|ROM:ROM1                                                                 ; ROM                 ; work         ;
+;    |bancoRegistradores:Banco_Registradores| ; 570 (570)           ; 1024 (1024)               ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|bancoRegistradores:Banco_Registradores                                   ; bancoRegistradores  ; work         ;
+;    |conversorHex7Seg:LED_HEX0|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|conversorHex7Seg:LED_HEX0                                                ; conversorHex7Seg    ; work         ;
+;    |conversorHex7Seg:LED_HEX1|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|conversorHex7Seg:LED_HEX1                                                ; conversorHex7Seg    ; work         ;
+;    |conversorHex7Seg:LED_HEX2|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|conversorHex7Seg:LED_HEX2                                                ; conversorHex7Seg    ; work         ;
+;    |conversorHex7Seg:LED_HEX3|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|conversorHex7Seg:LED_HEX3                                                ; conversorHex7Seg    ; work         ;
+;    |conversorHex7Seg:LED_HEX4|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|conversorHex7Seg:LED_HEX4                                                ; conversorHex7Seg    ; work         ;
+;    |conversorHex7Seg:LED_HEX5|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|conversorHex7Seg:LED_HEX5                                                ; conversorHex7Seg    ; work         ;
+;    |muxGenerico2x1:MUX_JR|                  ; 84 (84)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|muxGenerico2x1:MUX_JR                                                    ; muxGenerico2x1      ; work         ;
+;    |muxGenerico2x1:MUX_PC_ULA_PLACA|        ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|muxGenerico2x1:MUX_PC_ULA_PLACA                                          ; muxGenerico2x1      ; work         ;
 ;    |muxGenerico2x1:MUX_ULA_CTRL|            ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|muxGenerico2x1:MUX_ULA_CTRL                                              ; muxGenerico2x1      ; work         ;
 ;    |muxGenerico4x1:MUX_RtRd|                ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|muxGenerico4x1:MUX_RtRd                                                  ; muxGenerico4x1      ; work         ;
 ;    |muxGenerico4x1:MUX_ULA_Banco|           ; 37 (37)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|muxGenerico4x1:MUX_ULA_Banco                                             ; muxGenerico4x1      ; work         ;
-;    |registradorGenerico:PC|                 ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|registradorGenerico:PC                                                   ; registradorGenerico ; work         ;
+;    |registradorGenerico:PC|                 ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|registradorGenerico:PC                                                   ; registradorGenerico ; work         ;
+;    |registradorGenerico:REG_HEX0|           ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|registradorGenerico:REG_HEX0                                             ; registradorGenerico ; work         ;
+;    |registradorGenerico:REG_HEX1|           ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|registradorGenerico:REG_HEX1                                             ; registradorGenerico ; work         ;
+;    |registradorGenerico:REG_HEX2|           ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|registradorGenerico:REG_HEX2                                             ; registradorGenerico ; work         ;
+;    |registradorGenerico:REG_HEX3|           ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|registradorGenerico:REG_HEX3                                             ; registradorGenerico ; work         ;
+;    |registradorGenerico:REG_HEX4|           ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|registradorGenerico:REG_HEX4                                             ; registradorGenerico ; work         ;
+;    |registradorGenerico:REG_HEX5|           ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|registradorGenerico:REG_HEX5                                             ; registradorGenerico ; work         ;
 ;    |somaConstante:somadorConstante|         ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|somaConstante:somadorConstante                                           ; somaConstante       ; work         ;
-;    |somadorGenerico:somadorMux|             ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|somadorGenerico:somadorMux                                               ; somadorGenerico     ; work         ;
+;    |somadorGenerico:somadorMux|             ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |MIPS_Final|somadorGenerico:somadorMux                                               ; somadorGenerico     ; work         ;
 +---------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -423,9 +462,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 3104  ;
+; Total registers                              ; 3128  ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Synchronous Load   ; 24    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 3074  ;
@@ -438,13 +477,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |MIPS_Final|registradorGenerico:PC|DOUT[1]                                                   ;
-; 3:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; Yes        ; |MIPS_Final|registradorGenerico:PC|DOUT[26]                                                  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |MIPS_Final|registradorGenerico:PC|DOUT[0]                                                   ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |MIPS_Final|registradorGenerico:PC|DOUT[30]                                                  ;
+; 4:1                ; 25 bits   ; 50 LEs        ; 50 LEs               ; 0 LEs                  ; Yes        ; |MIPS_Final|registradorGenerico:PC|DOUT[24]                                                  ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_7|muxGenerico2x1_Bit:MUX_entradaB|saida_MUX  ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |MIPS_Final|Decoder:Decoder|OUTPUT[9]                                                        ;
-; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_30|muxGenerico4x1Bit:MUX_Resultado|saida_MUX ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |MIPS_Final|muxGenerico4x1:MUX_ULA_Banco|saida_MUX[7]                                        ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |MIPS_Final|muxGenerico4x1:MUX_ULA_Banco|saida_MUX[29]                                       ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |MIPS_Final|muxGenerico2x1:MUX_ULA_CTRL|saida_MUX[2]                                         ;
+; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |MIPS_Final|MIPS_Aula16_ULA:ULA1|ULA_31bits:ULA_28|muxGenerico4x1Bit:MUX_Resultado|saida_MUX ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |MIPS_Final|muxGenerico4x1:MUX_ULA_Banco|saida_MUX[9]                                        ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |MIPS_Final|muxGenerico4x1:MUX_ULA_Banco|saida_MUX[27]                                       ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |MIPS_Final|muxGenerico2x1:MUX_ULA_CTRL|saida_MUX[1]                                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------+
 
 
@@ -456,7 +497,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; larguraDados             ; 32    ; Signed Integer                          ;
 ; larguraDadosComprimida   ; 16    ; Signed Integer                          ;
 ; larguraAddrRegistradores ; 5     ; Signed Integer                          ;
-; simulacao                ; true  ; Enumerated                              ;
+; simulacao                ; false ; Enumerated                              ;
 +--------------------------+-------+-----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -648,6 +689,202 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; larguradados   ; 3     ; Signed Integer                                  ;
 +----------------+-------+-------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: muxGenerico2x1:MUX_PC_ULA_PLACA ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX0 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX1 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX2 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX3 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX4 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:REG_HEX5 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:LED_HEX5" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "registradorGenerico:REG_HEX5" ;
++--------+-------+----------+------------------------------+
+; Port   ; Type  ; Severity ; Details                      ;
++--------+-------+----------+------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                 ;
+; rst    ; Input ; Info     ; Stuck at GND                 ;
++--------+-------+----------+------------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:LED_HEX4" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "registradorGenerico:REG_HEX4" ;
++--------+-------+----------+------------------------------+
+; Port   ; Type  ; Severity ; Details                      ;
++--------+-------+----------+------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                 ;
+; rst    ; Input ; Info     ; Stuck at GND                 ;
++--------+-------+----------+------------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:LED_HEX3" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "registradorGenerico:REG_HEX3" ;
++--------+-------+----------+------------------------------+
+; Port   ; Type  ; Severity ; Details                      ;
++--------+-------+----------+------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                 ;
+; rst    ; Input ; Info     ; Stuck at GND                 ;
++--------+-------+----------+------------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:LED_HEX2" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "registradorGenerico:REG_HEX2" ;
++--------+-------+----------+------------------------------+
+; Port   ; Type  ; Severity ; Details                      ;
++--------+-------+----------+------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                 ;
+; rst    ; Input ; Info     ; Stuck at GND                 ;
++--------+-------+----------+------------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:LED_HEX1" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "registradorGenerico:REG_HEX1" ;
++--------+-------+----------+------------------------------+
+; Port   ; Type  ; Severity ; Details                      ;
++--------+-------+----------+------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                 ;
+; rst    ; Input ; Info     ; Stuck at GND                 ;
++--------+-------+----------+------------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:LED_HEX0" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "registradorGenerico:REG_HEX0" ;
++--------+-------+----------+------------------------------+
+; Port   ; Type  ; Severity ; Details                      ;
++--------+-------+----------+------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                 ;
+; rst    ; Input ; Info     ; Stuck at GND                 ;
++--------+-------+----------+------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------+
@@ -965,29 +1202,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 3104                        ;
+; arriav_ff             ; 3128                        ;
 ;     ENA               ; 3074                        ;
+;     SLD               ; 24                          ;
 ;     plain             ; 30                          ;
-; arriav_lcell_comb     ; 1756                        ;
-;     arith             ; 60                          ;
-;         1 data inputs ; 30                          ;
+; arriav_lcell_comb     ; 1791                        ;
+;     arith             ; 62                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 31                          ;
 ;         3 data inputs ; 1                           ;
 ;         4 data inputs ; 15                          ;
 ;         5 data inputs ; 14                          ;
-;     extend            ; 280                         ;
-;         7 data inputs ; 280                         ;
-;     normal            ; 1416                        ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 15                          ;
-;         2 data inputs ; 163                         ;
-;         3 data inputs ; 33                          ;
-;         4 data inputs ; 134                         ;
+;     extend            ; 257                         ;
+;         7 data inputs ; 257                         ;
+;     normal            ; 1472                        ;
+;         1 data inputs ; 13                          ;
+;         2 data inputs ; 158                         ;
+;         3 data inputs ; 80                          ;
+;         4 data inputs ; 93                          ;
 ;         5 data inputs ; 53                          ;
-;         6 data inputs ; 1017                        ;
-; boundary_port         ; 294                         ;
+;         6 data inputs ; 1075                        ;
+; boundary_port         ; 65                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 18.00                       ;
-; Average LUT depth     ; 8.76                        ;
+; Max LUT depth         ; 19.00                       ;
+; Average LUT depth     ; 8.68                        ;
 +-----------------------+-----------------------------+
 
 
@@ -996,7 +1234,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:06     ;
+; Top            ; 00:00:07     ;
 +----------------+--------------+
 
 
@@ -1006,7 +1244,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Nov 29 23:46:12 2021
+    Info: Processing started: Tue Nov 30 13:42:38 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS_Final -c MIPS_Final
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file muxGenerico4x1Bit.vhd
@@ -1107,6 +1345,8 @@ Info (12128): Elaborating entity "Decoder" for hierarchy "Decoder:Decoder" File:
 Info (12128): Elaborating entity "DecoderOPCODE" for hierarchy "DecoderOPCODE:Decoder_OPCODE" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Final/MIPS_Final.vhd Line: 322
 Info (12128): Elaborating entity "DecoderFUNCT" for hierarchy "DecoderFUNCT:Decoder_FUNCT" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Final/MIPS_Final.vhd Line: 328
 Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MUX_ULA_CTRL" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Final/MIPS_Final.vhd Line: 334
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:REG_HEX0" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Final/MIPS_Final.vhd Line: 356
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:LED_HEX0" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Final/MIPS_Final.vhd Line: 359
 Info (276014): Found 3 instances of uninferred RAM logic
     Info (276007): RAM logic "RAM_MIPS:RAM_MIPS|memRAM" is uninferred due to asynchronous read logic File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Final/RAM_MIPS.vhd Line: 22
     Info (276004): RAM logic "ROM:ROM1|memROM" is uninferred due to inappropriate RAM size File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Final/ROM.vhd Line: 22
@@ -1149,26 +1389,31 @@ Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13049): Converted tri-state buffer "RAM_MIPS:RAM_MIPS|Dado_out[30]" feeding internal logic into a wire File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Final/RAM_MIPS.vhd Line: 13
     Warning (13049): Converted tri-state buffer "RAM_MIPS:RAM_MIPS|Dado_out[31]" feeding internal logic into a wire File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Final/RAM_MIPS.vhd Line: 13
 Critical Warning (127004): Memory depth (64) in the design file differs from memory depth (256) in the Memory Initialization File "/home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Final/RAMcontent.mif" -- truncated remaining initial content value to fit RAM
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "entradaB_MUX_PC[0]" is stuck at GND File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Final/MIPS_Final.vhd Line: 28
-    Warning (13410): Pin "entradaB_MUX_PC[1]" is stuck at GND File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Final/MIPS_Final.vhd Line: 28
-    Warning (13410): Pin "entradaB_MUX_PC[22]" is stuck at GND File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Final/MIPS_Final.vhd Line: 28
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 4 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[0]" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Final/MIPS_Final.vhd Line: 15
+Warning (21074): Design contains 13 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLOCK_50" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Final/MIPS_Final.vhd Line: 12
     Warning (15610): No output dependent on input pin "KEY[1]" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Final/MIPS_Final.vhd Line: 15
     Warning (15610): No output dependent on input pin "KEY[2]" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Final/MIPS_Final.vhd Line: 15
     Warning (15610): No output dependent on input pin "KEY[3]" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Final/MIPS_Final.vhd Line: 15
-Info (21057): Implemented 5106 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 5 input pins
-    Info (21059): Implemented 289 output pins
-    Info (21061): Implemented 4812 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 48 warnings
-    Info: Peak virtual memory: 493 megabytes
-    Info: Processing ended: Mon Nov 29 23:46:30 2021
+    Warning (15610): No output dependent on input pin "SW[1]" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Final/MIPS_Final.vhd Line: 16
+    Warning (15610): No output dependent on input pin "SW[2]" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Final/MIPS_Final.vhd Line: 16
+    Warning (15610): No output dependent on input pin "SW[3]" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Final/MIPS_Final.vhd Line: 16
+    Warning (15610): No output dependent on input pin "SW[4]" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Final/MIPS_Final.vhd Line: 16
+    Warning (15610): No output dependent on input pin "SW[5]" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Final/MIPS_Final.vhd Line: 16
+    Warning (15610): No output dependent on input pin "SW[6]" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Final/MIPS_Final.vhd Line: 16
+    Warning (15610): No output dependent on input pin "SW[7]" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Final/MIPS_Final.vhd Line: 16
+    Warning (15610): No output dependent on input pin "SW[8]" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Final/MIPS_Final.vhd Line: 16
+    Warning (15610): No output dependent on input pin "SW[9]" File: /home/antonio/Desktop/6_semestre/descomp/MIPS/MIPS_Final/MIPS_Final.vhd Line: 16
+Info (21057): Implemented 4939 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 15 input pins
+    Info (21059): Implemented 50 output pins
+    Info (21061): Implemented 4874 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 53 warnings
+    Info: Peak virtual memory: 500 megabytes
+    Info: Processing ended: Tue Nov 30 13:42:56 2021
     Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:34
+    Info: Total CPU time (on all processors): 00:00:33
 
 

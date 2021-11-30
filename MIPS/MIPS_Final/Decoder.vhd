@@ -50,7 +50,7 @@ begin
                   "10" when (OPCODE = JAL) else
                   "00";
 
-  ori_control <= '1' when (OPCODE = ORI or OPCODE = ANDI or OPCODE = LUI) else '0';
+  ori_control <= '1' when (OPCODE = ORI or OPCODE = ANDI) else '0';
 
 	Habilita_Escrita_Reg <= '1' when (
     OPCODE = LUI or 
