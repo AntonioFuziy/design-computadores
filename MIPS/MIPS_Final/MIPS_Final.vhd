@@ -12,8 +12,8 @@ entity MIPS_Final is
   	CLOCK_50 : in std_logic;
 		ULA_A: out std_logic_vector(larguraDados-1 downto 0);
 		ULA_B: out std_logic_vector(larguraDados-1 downto 0);
-		-- SW: in std_logic_vector(9 downto 0);
 		KEY: in std_logic_vector(3 downto 0);
+		-- SW: in std_logic_vector(9 downto 0);
 		-- LEDR: out std_logic_vector(7 downto 0);
 		-- HEX0 : out std_logic_vector(6 downto 0);
 		-- HEX1 : out std_logic_vector(6 downto 0);
@@ -39,7 +39,7 @@ architecture arquitetura of MIPS_Final is
 	signal PC_ROM : std_logic_vector(larguraDados-1 downto 0);
 
 	-- vetor de bits de controle do Fluxo de dados
-	signal Sinais_Controle: std_logic_vector(10 downto 0);
+	signal Sinais_Controle: std_logic_vector(13 downto 0);
 	
 	signal somador_PC: std_logic_vector(larguraDados-1 downto 0);
 	
@@ -55,19 +55,22 @@ architecture arquitetura of MIPS_Final is
 	signal Saida_RAM: std_logic_vector(larguraDados-1 downto 0);
 	
 	-- bits de controle do Fluxo de dados
-	signal sel_MUX_JMP_BEQ: std_logic;                  --0
-	signal sel_MUX_RtRd: std_logic;                     --1
-	signal habEscritaReg: std_logic;                    --2
-	signal ori_control: std_logic;                      --3
-	signal sel_MUX_RtIm: std_logic;                     --4
-	signal Tipo_Operacao_ULA: std_logic; 					 			--5
-	signal sel_MUX_ULAMem: std_logic_vector(1 downto 0);--7 downto 6
-	signal wr_flag: std_logic;                          --8
-	signal rd_flag: std_logic;                          --9
-	signal beq_flag: std_logic;                         --10
+	signal sel_JR : std_logic;                           --0
+	signal sel_MUX_JMP_BEQ: std_logic;                   --1
+	signal sel_MUX_RtRd: std_logic_vector(1 downto 0);   --2 -> 3
+	signal habEscritaReg: std_logic;                     --4
+	signal ori_control: std_logic;                       --5
+	signal sel_MUX_RtIm: std_logic;                      --6
+	signal Tipo_Operacao_ULA: std_logic; 					 			 --7
+	signal sel_MUX_ULAMem: std_logic_vector(1 downto 0); --8 downto 9
+	signal wr_flag: std_logic;                           --10
+	signal rd_flag: std_logic;                           --11
+	signal beq_flag: std_logic;                          --12
+	signal bne_flag: std_logic;                          --13
 	
 	signal flag_zero: std_logic;
 	signal AND_FLAG_ZERO: std_logic;
+	signal OR_BEQ_BNE: std_logic;
 	
 	signal saida_Somador_MUXouSomador: std_logic_vector(larguraDados-1 downto 0);
 	signal saida_MUX_PC: std_logic_vector(larguraDados-1 downto 0);
@@ -95,6 +98,9 @@ architecture arquitetura of MIPS_Final is
 	-- signal Saida_LED_4to7: std_logic_vector(3 downto 0);
 
 	signal saida_LUI: std_logic_vector(larguraDados-1 downto 0);
+
+	signal saida_MUX_JR: std_logic_vector(larguraDados-1 downto 0);
+	signal saida_MUX_BNE: std_logic;
 	
 begin
 	
@@ -113,7 +119,7 @@ end generate;
 -- ==================================================================================
 PC : entity work.registradorGenerico   
 		 generic map (larguraDados => larguraDados)
-		 port map (DIN => saida_MUX_JMP_PC, DOUT => PC_ROM, ENABLE => '1', CLK => CLK, RST => '0');
+		 port map (DIN => saida_MUX_JR, DOUT => PC_ROM, ENABLE => '1', CLK => CLK, RST => '0');
 			 
 -- ==================================================================================
 -- MUX que define se realiza o JMP ou continua para a proxima instrucao
@@ -127,9 +133,18 @@ MUX_JMP_BEQ: entity work.muxGenerico2x1
 			saida_MUX => saida_MUX_JMP_PC
 		);
 
+MUX_JR: entity work.muxGenerico2x1  
+		generic map (larguraDados => larguraDados)
+		port map( 
+			entradaA_MUX => saida_MUX_JMP_PC,
+			entradaB_MUX => bancoReg_ULA_A,
+			seletor_MUX => sel_JR,
+			saida_MUX => saida_MUX_JR
+		);
+
 -- ==================================================================================
 -- Somador da constante 4 no endereço
--- ==================================================================================			 
+-- ==================================================================================
 somadorConstante :  entity work.somaConstante  generic map (larguraDados => larguraDados, constante => 4)
 	port map(entrada => PC_ROM, saida => saida_Somador_MUXouSomador);	
 
@@ -176,10 +191,12 @@ DESLOCADOR: entity work.deslocadorSinal
 -- ==================================================================================
 -- MUX que define de a entrada 3 do banco de Registradores será o sinal de Rt ou Rd, diferenciando se a instrução é de tipo R ou I
 -- ==================================================================================		  
-MUX_RtRd: entity work.muxGenerico2x1  generic map (larguraDados => larguraAddrRegistradores)
+MUX_RtRd: entity work.muxGenerico4x1  generic map (larguraDados => larguraAddrRegistradores)
 		port map( 
 			entradaA_MUX => instruction(20 downto 16),
 			entradaB_MUX =>  instruction(15 downto 11),
+			entradaC_MUX =>  "11111",
+			entradaD_MUX =>  "00000",
 			seletor_MUX => sel_MUX_RtRd,
 			saida_MUX => saidaMuxBancoReg
 		);
@@ -251,6 +268,17 @@ ULA1 : entity work.MIPS_Aula16_ULA  generic map(larguraDados => larguraDados)
 				operacao => Saida_MUX_CTRL(1 downto 0),
 				flagZero => flag_zero
 			);
+
+-- ==================================================================================
+--MUX do BEQ
+-- ==================================================================================
+MUX_BEQ: entity work.muxGenerico2x1_Bit
+		port map( 
+			entradaA_MUX => not(flag_zero),
+			entradaB_MUX => flag_zero,
+			seletor_MUX => beq_flag,
+			saida_MUX => saida_MUX_BNE
+		);
 			 
 -- IMPLEMENTAR O COMPONENTE LUI
 -- ==================================================================================
@@ -266,7 +294,7 @@ MUX_ULA_Banco: entity work.muxGenerico4x1
 			port map( 
 				entradaA_MUX => Saida_ULA,
 				entradaB_MUX => Saida_RAM,
-				entradaC_MUX => "00000000000000000000000000000000",
+				entradaC_MUX => saida_Somador_MUXouSomador,
 				entradaD_MUX => saida_LUI,
 				seletor_MUX => sel_MUX_ULAMem,
 				saida_MUX => saida_MuxULABanco
@@ -286,7 +314,7 @@ estensorSinal : entity work.estensorSinalGenerico   generic map (larguraDadoEntr
 -- Unidade de controledo fluxo de dados
 -- ==================================================================================
 Decoder : entity work.Decoder
-          port map (OPCODE => instruction(31 downto 26), OUTPUT => Sinais_Controle);
+          port map (OPCODE => instruction(31 downto 26), FUNCT => instruction(5 downto 0), OUTPUT => Sinais_Controle);
 
 -- ==================================================================================
 -- Decoder que define os bits do OPCODE
@@ -416,23 +444,26 @@ MUX_ULA_CTRL: entity work.muxGenerico2x1 generic map (larguraDados => 3)
 -- LEDR <= Saida_LED_4to7 & Saida_LED_0to3;
 
 -- ==================================================================================
--- AND que checa a flag_zero e o BEQ
+-- AND que checa a flag_zero e o (BEQ or BNE)
 -- ==================================================================================
-AND_FLAG_ZERO <= flag_zero and beq_flag;
+AND_FLAG_ZERO <= saida_MUX_BNE and OR_BEQ_BNE;
+OR_BEQ_BNE <= beq_flag or bne_flag;
 
 -- ==================================================================================
 -- Alias para cada sinal de instrução
 -- ==================================================================================
-sel_MUX_JMP_BEQ <= Sinais_Controle(0);
-sel_MUX_RtRd <= Sinais_Controle(1);
-ori_control <= Sinais_Controle(2);
-habEscritaReg <= Sinais_Controle(3);
-sel_MUX_RtIm <= Sinais_Controle(4);
-Tipo_Operacao_ULA <= Sinais_Controle(5);
-sel_MUX_ULAMem <= Sinais_Controle(7 downto 6);
-rd_flag <= Sinais_Controle(8);
-wr_flag <= Sinais_Controle(9);
-beq_flag <= Sinais_Controle(10);
+sel_JR <= Sinais_Controle(0);
+sel_MUX_JMP_BEQ <= Sinais_Controle(1);
+sel_MUX_RtRd <= Sinais_Controle(3 downto 2);
+ori_control <= Sinais_Controle(4);
+habEscritaReg <= Sinais_Controle(5);
+sel_MUX_RtIm <= Sinais_Controle(6);
+Tipo_Operacao_ULA <= Sinais_Controle(7);
+sel_MUX_ULAMem <= Sinais_Controle(9 downto 8);
+rd_flag <= Sinais_Controle(10);
+wr_flag <= Sinais_Controle(11);
+beq_flag <= Sinais_Controle(12);
+bne_flag <= Sinais_Controle(13);
 
 saida_ULA_Teste <= saida_ULA;
 saida_PC_Teste <= PC_ROM;

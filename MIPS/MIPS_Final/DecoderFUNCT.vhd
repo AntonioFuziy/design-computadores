@@ -15,6 +15,7 @@ architecture arch_name of DecoderFUNCT is
   constant ANDD : std_logic_vector(5 downto 0) := "100100";
   constant ORR : std_logic_vector(5 downto 0) := "100101";
   constant SLT : std_logic_vector(5 downto 0) := "101010";
+  constant JR: std_logic_vector(5 downto 0) := "001000";
   
 begin
 	

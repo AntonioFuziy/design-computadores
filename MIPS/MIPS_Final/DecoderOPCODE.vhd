@@ -16,13 +16,19 @@ architecture arch_name of DecoderOPCODE is
   constant JMP : std_logic_vector(5 downto 0) := "000010";
   constant LUI : std_logic_vector(5 downto 0) := "001111";
   constant ORI : std_logic_vector(5 downto 0) := "001101";
+  constant ANDI : std_logic_vector(5 downto 0) := "001100";
+  constant ADDI : std_logic_vector(5 downto 0) := "001000";
+  constant JAL: std_logic_vector(5 downto 0) := "000011";
+  constant SLTI: std_logic_vector(5 downto 0) := "001010";
+  constant BNE: std_logic_vector(5 downto 0) := "000101";
   constant TIPO_R : std_logic_vector(5 downto 0) := "000000";
   
 begin
 	
-	OUTPUT <= "010" when (OPCODE = LW or OPCODE = SW) else 
-            "110" when (OPCODE = BEQ) else
+	OUTPUT <= "010" when (OPCODE = LW or OPCODE = SW or OPCODE = ADDI) else 
+            "110" when (OPCODE = BEQ or OPCODE = BNE) else
             "001" when (OPCODE = ORI) else
+            "111" when (OPCODE = SLTI) else
             "000";
 	
 end architecture;
