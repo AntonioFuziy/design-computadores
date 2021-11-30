@@ -388,6 +388,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "saida_PC_Teste[0]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_PC_Teste[1]",
+					"strict" : false
+				},
+				{
 					"name" : "saida_PC_Teste[2]",
 					"strict" : false
 				},
@@ -505,6 +513,14 @@
 				},
 				{
 					"name" : "saida_PC_Teste[31]",
+					"strict" : false
+				},
+				{
+					"name" : "entradaA_MUX_PC[0]",
+					"strict" : false
+				},
+				{
+					"name" : "entradaA_MUX_PC[1]",
 					"strict" : false
 				},
 				{
@@ -724,6 +740,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "entradaB_MUX_PC[27]",
+					"strict" : false
+				},
+				{
 					"name" : "entradaB_MUX_PC[28]",
 					"strict" : false
 				},
@@ -737,6 +757,14 @@
 				},
 				{
 					"name" : "entradaB_MUX_PC[31]",
+					"strict" : false
+				},
+				{
+					"name" : "entradaA_MUX_BEQ[0]",
+					"strict" : false
+				},
+				{
+					"name" : "entradaA_MUX_BEQ[1]",
 					"strict" : false
 				},
 				{
@@ -857,6 +885,14 @@
 				},
 				{
 					"name" : "entradaA_MUX_BEQ[31]",
+					"strict" : false
+				},
+				{
+					"name" : "entradaB_MUX_BEQ[0]",
+					"strict" : false
+				},
+				{
+					"name" : "entradaB_MUX_BEQ[1]",
 					"strict" : false
 				},
 				{
@@ -981,6 +1017,14 @@
 				},
 				{
 					"name" : "seletor_MUX_BEQ",
+					"strict" : false
+				},
+				{
+					"name" : "saida_Somador_Constant[0]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_Somador_Constant[1]",
 					"strict" : false
 				},
 				{
